@@ -69,7 +69,6 @@
     <Compile Include="Assets\Scripts\TouchRotateDiamondYellow.cs" />
     <Compile Include="Assets\Scripts\TouchRotateSquarePurple.cs" />
     <Compile Include="Assets\Scripts\TouchRotateTriangleRed.cs" />
-    <None Include="Assets\Sprites\Free Platform Game Assets\Readme.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Sian/GitHub/spatial-fyp/Shapes/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
