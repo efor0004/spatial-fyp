@@ -1,11 +1,13 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_3.png" type="Texture" id=1]
-[ext_resource path="res://assets/sprites/buttons/refresh.png" type="Texture" id=2]
 [ext_resource path="res://scripts/Question.gd" type="Script" id=3]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/holey_quilt.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_1.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_2.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 192, 192 )
 
 [node name="Game" type="Node2D"]
 
@@ -17,28 +19,38 @@ position = Vector2( 328, 768 )
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 64, 64 )
 
-[node name="Option 1" type="Sprite" parent="Question"]
+[node name="Option 1" type="Area2D" parent="Question"]
 position = Vector2( 792, 768 )
+
+[node name="Sprite" type="Sprite" parent="Question/Option 1"]
 texture = ExtResource( 5 )
 region_rect = Rect2( 64, 0, 64, 64 )
 
-[node name="Option 2" type="Sprite" parent="Question"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question/Option 1"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Option 2" type="Area2D" parent="Question"]
 position = Vector2( 1256, 768 )
+
+[node name="Sprite" type="Sprite" parent="Question/Option 2"]
 texture = ExtResource( 6 )
 region_rect = Rect2( 128, 0, 64, 64 )
 
-[node name="Option 3" type="Sprite" parent="Question"]
-position = Vector2( 1720, 768 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question/Option 2"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Option 3" type="Area2D" parent="Question"]
+position = Vector2( 1721, 768 )
+
+[node name="Sprite" type="Sprite" parent="Question/Option 3"]
 texture = ExtResource( 1 )
 region_rect = Rect2( 192, 0, 64, 64 )
 
-[node name="Next Button" type="Button" parent="."]
-margin_left = 1748.0
-margin_top = 1234.0
-margin_right = 1982.0
-margin_bottom = 1467.0
-icon = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="pressed" from="Next Button" to="Question" method="_on_Next_Button_pressed"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question/Option 3"]
+visible = false
+shape = SubResource( 1 )
+[connection signal="input_event" from="Question/Option 1" to="Question" method="_on_Option_1_input_event"]
+[connection signal="input_event" from="Question/Option 2" to="Question" method="_on_Option_2_input_event"]
+[connection signal="input_event" from="Question/Option 3" to="Question" method="_on_Option_3_input_event"]

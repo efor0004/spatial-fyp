@@ -5,12 +5,12 @@ onready var current_question = 1
 onready var questions_per_level = 10
 onready var max_levels = 1
 
+onready var option_file_text = "option_"
+
 func _ready():
 	set_textures()
 
-func _on_Next_Button_pressed():
-	print("button pressed")
-	
+func next_question():
 	current_question += 1
 	
 	if (current_question > questions_per_level):
@@ -41,15 +41,14 @@ func set_holey_quilt_texture(base_path, children):
 func set_options_textures(base_path, children):
 	var indices = range(1,4)
 	var random_indices = shuffleList(indices)
-	print(indices)
-	print(random_indices)
 	for i in indices:
 		var option = children[i]
+		var option_sprite = option.get_child(0)
 		var shape_no = random_indices[i - 1]
 		var option_path_suffix = "/option_%d.png" % shape_no
 		var option_path = base_path + option_path_suffix
 		var option_texture = load(option_path)
-		option.set_texture(option_texture)
+		option_sprite.set_texture(option_texture)
 		
 func shuffleList(list):
 	var list_copy = list.duplicate()
@@ -62,3 +61,38 @@ func shuffleList(list):
 		index_list.remove(x)
 		list_copy.remove(x)
 	return shuffled_list
+
+func on_option_pressed(sprite_index):
+	print("Option %d pressed" % sprite_index)
+	var children = get_children()
+	var option = children[sprite_index]
+	var option_sprite = option.get_child(0)
+	var option_texture = option_sprite.get_texture()
+	var option_texture_path = option_texture.get_load_path()
+	
+	var option_index = option_texture_path.find(option_file_text)
+	var opt_no_index = option_index + len(option_file_text)
+	var opt_no = int(option_texture_path.substr(opt_no_index, 1))
+	
+	if (opt_no == 1):
+		next_question()
+
+func _on_Option_1_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton \
+	and event.button_index == BUTTON_LEFT \
+	and event.is_pressed():
+		on_option_pressed(1)
+
+
+func _on_Option_2_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton \
+	and event.button_index == BUTTON_LEFT \
+	and event.is_pressed():
+		on_option_pressed(2)
+
+
+func _on_Option_3_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton \
+	and event.button_index == BUTTON_LEFT \
+	and event.is_pressed():
+		on_option_pressed(3)
