@@ -3,18 +3,25 @@ extends Sprite
 onready var current_level = 1
 onready var current_question = 1
 onready var questions_per_level = 10
+onready var max_levels = 1
 
 func _on_Next_Button_pressed():
 	print("button pressed")
 	var children = get_children()
 	
-	if (current_question >= questions_per_level):
+	current_question += 1
+	
+	if (current_question > questions_per_level):
 		current_question = 1
 		current_level += 1
-	else:
-		current_question += 1
-		
+	
+	if (current_level > max_levels):
+		current_level = 1
+		current_question = 1
+	
 	var base_path = "res://assets/sprites/questions/level_%d/question_%d" % [current_level, current_question]
+	
+	print("Level %d, Question %d" % [current_level, current_question])
 	
 	set_holey_quilt_texture(base_path, children)
 	set_options_textures(base_path, children)
