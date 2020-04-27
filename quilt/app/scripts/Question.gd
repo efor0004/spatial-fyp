@@ -5,9 +5,11 @@ onready var current_question = 1
 onready var questions_per_level = 10
 onready var max_levels = 1
 
+onready var question_order = []
 onready var option_file_text = "option_"
 
 func _ready():
+	question_order = shuffle_list(range(1,questions_per_level + 1))
 	set_textures()
 
 func next_question():
@@ -16,16 +18,22 @@ func next_question():
 	if (current_question > questions_per_level):
 		current_question = 1
 		current_level += 1
+		shuffle_question_order()
 	
 	if (current_level > max_levels):
 		current_level = 1
 		current_question = 1
+		shuffle_question_order()
 	
 	set_textures()
 
+func shuffle_question_order():
+	question_order = shuffle_list(range(1,questions_per_level + 1))
+
 func set_textures():
 	var children = get_children()
-	var base_path = "res://assets/sprites/questions/level_%d/question_%d" % [current_level, current_question]
+	var shuffled_question = question_order[current_question]
+	var base_path = "res://assets/sprites/questions/level_%d/question_%d" % [current_level, shuffled_question]
 	
 	print("Level %d, Question %d" % [current_level, current_question])
 	
@@ -40,7 +48,7 @@ func set_holey_quilt_texture(base_path, children):
 
 func set_options_textures(base_path, children):
 	var indices = range(1,4)
-	var random_indices = shuffleList(indices)
+	var random_indices = shuffle_list(indices)
 	for i in indices:
 		var option = children[i]
 		var option_sprite = option.get_child(0)
@@ -50,7 +58,7 @@ func set_options_textures(base_path, children):
 		var option_texture = load(option_path)
 		option_sprite.set_texture(option_texture)
 		
-func shuffleList(list):
+func shuffle_list(list):
 	var list_copy = list.duplicate()
 	var shuffled_list = []
 	for i in range(list_copy.size()):
