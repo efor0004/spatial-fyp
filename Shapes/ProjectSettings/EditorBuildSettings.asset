@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Prefabs/Scenes/Menu.unity
     guid: f5f5d17731246924295f46d3c5310f6a
   - enabled: 1
-    path: Assets/Scenes/Lands.unity
+    path: Assets/Prefabs/Scenes/Lands.unity
     guid: 9fa00d0d0b5462b4fbc0d6d383b75c8a
   m_configObjects: {}

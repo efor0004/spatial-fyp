@@ -1,0 +1,18 @@
+
+
+ ******************NEW TEST************************ 
+
+
+ name: Background 2	 position: (0.1, 0.1, 0.0)	 rotation: (0.0, 0.0, 0.0)	 scale: (0.7, 0.8, 1.0)	 sorting layer: Background
+
+ name: CircleGreen	 position: (0.6, -0.8, 0.0)	 rotation: (0.0, 0.0, 0.0)	 scale: (0.3, 0.2, 1.0)	 sorting layer: Shape1
+
+ name: CircleOrange	 position: (1.6, -0.6, 0.0)	 rotation: (0.0, 0.0, 0.0)	 scale: (0.1, 0.1, 0.1)	 sorting layer: Shape2
+
+ name: CircleBlack	 position: (1.6, -0.5, 0.0)	 rotation: (0.0, 0.0, 0.0)	 scale: (0.0, 0.0, 0.0)	 sorting layer: Shape3
+
+ name: TriangleBlue3	 position: (0.6, 0.9, 0.0)	 rotation: (0.0, 0.0, 0.0)	 scale: (0.1, 0.1, 1.0)	 sorting layer: Shape1
+
+ name: TriangleBlue2	 position: (-2.3, -0.8, 0.0)	 rotation: (0.0, 0.0, 270.0)	 scale: (0.2, 0.1, 1.0)	 sorting layer: Shape1
+
+ name: TriangleBlue1	 position: (0.5, -0.6, 0.0)	 rotation: (0.0, 0.0, 270.0)	 scale: (0.1, 0.1, 1.0)	 sorting layer: Shape2

@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Shape
   layers:
   - Default
   - TransparentFX
@@ -16,11 +17,11 @@ TagManager:
   - Background
   - Midground
   - Foreground
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Shape1
+  - Shape2
+  - Shape3
+  - Shape4
+  - Shape5
   - 
   - 
   - 
@@ -49,4 +50,16 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1880209891
+    locked: 0
+  - name: Shape1
+    uniqueID: 3761502475
+    locked: 0
+  - name: Shape2
+    uniqueID: 2197891777
+    locked: 0
+  - name: Shape3
+    uniqueID: 2205545439
+    locked: 0
+  - name: Shape4
+    uniqueID: 1619784497
     locked: 0
