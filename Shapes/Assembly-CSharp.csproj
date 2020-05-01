@@ -65,7 +65,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ButtonBehaviour.cs" />
     <Compile Include="Assets\Scripts\DetectTouchMovement.cs" />
+    <Compile Include="Assets\Scripts\Example.cs" />
     <Compile Include="Assets\Scripts\Global.cs" />
+    <Compile Include="Assets\Scripts\JungleHandler.cs" />
+    <Compile Include="Assets\Scripts\ShapeObject.cs" />
     <Compile Include="Assets\Scripts\TestBench.cs" />
     <Compile Include="Assets\Scripts\TouchRotateDiamondYellow.cs" />
     <Compile Include="Assets\Scripts\TouchRotateSquarePurple.cs" />

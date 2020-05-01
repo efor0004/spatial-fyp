@@ -1,18 +1,35 @@
 
 
- ******************NEW TEST************************ 
+ name: Background 2	 position: (0.02f, -0.05f, 0f)	 rotation: (0f, 0f, 0f)	 scale: (0.715f, 0.787045f, 1f)	 sorting layer: Background	 colour: (1f, 1f, 1f, 1f)
 
+ name: Circle	 position: (0.58f, 0.04f, 0f)	 rotation: (0f, 0f, 0f)	 scale: (1.109f, 0.592f, 1f)	 sorting layer: Shape1	 colour: (0f, 0.4716981f, 0.02229664f, 1f)
 
- name: Background 2	 position: (0.1, 0.1, 0.0)	 rotation: (0.0, 0.0, 0.0)	 scale: (0.7, 0.8, 1.0)	 sorting layer: Background
+ name: TriangleR	 position: (-3.4f, 0.21f, 0f)	 rotation: (0f, 0f, 132.6898f)	 scale: (0.495f, 0.495f, 0.495f)	 sorting layer: Shape1	 colour: (0f, 0.5116174f, 0.7169812f, 1f)
 
- name: CircleGreen	 position: (0.6, -0.8, 0.0)	 rotation: (0.0, 0.0, 0.0)	 scale: (0.3, 0.2, 1.0)	 sorting layer: Shape1
+ name: TriangleR (1)	 position: (0.64f, 1.93f, 0f)	 rotation: (0f, 0f, 0f)	 scale: (0.291346f, 0.291346f, 0.291346f)	 sorting layer: Shape2	 colour: (0f, 0.7135715f, 1f, 1f)
 
- name: CircleOrange	 position: (1.6, -0.6, 0.0)	 rotation: (0.0, 0.0, 0.0)	 scale: (0.1, 0.1, 0.1)	 sorting layer: Shape2
+ name: TriangleR (2)	 position: (0.37f, 0.45f, 0f)	 rotation: (0f, 0f, 23.02961f)	 scale: (0.264f, 0.264f, 0.264f)	 sorting layer: Shape2	 colour: (0.495283f, 0.8554347f, 1f, 1f)
 
- name: CircleBlack	 position: (1.6, -0.5, 0.0)	 rotation: (0.0, 0.0, 0.0)	 scale: (0.0, 0.0, 0.0)	 sorting layer: Shape3
+ name: Circle (1)	 position: (1.91f, 0.39f, 0f)	 rotation: (0f, 0f, 0f)	 scale: (0.162f, 0.162f, 0.162f)	 sorting layer: Shape2	 colour: (1f, 0.4678748f, 0f, 1f)
 
- name: TriangleBlue3	 position: (0.6, 0.9, 0.0)	 rotation: (0.0, 0.0, 0.0)	 scale: (0.1, 0.1, 1.0)	 sorting layer: Shape1
+ name: Circle (2)	 position: (1.91f, 0.39f, 0f)	 rotation: (0f, 0f, 0f)	 scale: (0.1186388f, 0.1186388f, 0.1186388f)	 sorting layer: Shape3	 colour: (0f, 0f, 0f, 1f)
 
- name: TriangleBlue2	 position: (-2.3, -0.8, 0.0)	 rotation: (0.0, 0.0, 270.0)	 scale: (0.2, 0.1, 1.0)	 sorting layer: Shape1
+ *********************** NEW TEST ************************ 
 
- name: TriangleBlue1	 position: (0.5, -0.6, 0.0)	 rotation: (0.0, 0.0, 270.0)	 scale: (0.1, 0.1, 1.0)	 sorting layer: Shape2
+RenderShape("Background 2", new Vector3(0.02f, -0.05f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.715f, 0.787045f, 1f), "Background", new Vector4(1f, 1f, 1f, 1f))
+RenderShape("Circle", new Vector3(0.58f, 0.04f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.109f, 0.592f, 1f), "Shape1", new Vector4(0f, 0.4716981f, 0.02229664f, 1f))
+RenderShape("TriangleR", new Vector3(-3.4f, 0.21f, 0f), new Vector3(0f, 0f, 132.6898f), new Vector3(0.495f, 0.495f, 0.495f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f))
+RenderShape("TriangleR (1)", new Vector3(0.64f, 1.93f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.291346f, 0.291346f, 0.291346f), "Shape2", new Vector4(0f, 0.7135715f, 1f, 1f))
+RenderShape("TriangleR (2)", new Vector3(0.37f, 0.45f, 0f), new Vector3(0f, 0f, 23.02961f), new Vector3(0.264f, 0.264f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f))
+RenderShape("Circle (1)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.162f, 0.162f, 0.162f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f))
+RenderShape("Circle (2)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1186388f, 0.1186388f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f))
+
+ *********************** NEW TEST ************************ 
+
+RenderShape("Name", "Background 2", new Vector3(0.02f, -0.05f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.715f, 0.787045f, 1f), "Background", new Vector4(1f, 1f, 1f, 1f))
+RenderShape("Name", "Circle", new Vector3(0.58f, 0.04f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.109f, 0.592f, 1f), "Shape1", new Vector4(0f, 0.4716981f, 0.02229664f, 1f))
+RenderShape("Name", "TriangleR", new Vector3(-3.4f, 0.21f, 0f), new Vector3(0f, 0f, 132.6898f), new Vector3(0.495f, 0.495f, 0.495f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f))
+RenderShape("Name", "TriangleR (1)", new Vector3(0.64f, 1.93f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.291346f, 0.291346f, 0.291346f), "Shape2", new Vector4(0f, 0.7135715f, 1f, 1f))
+RenderShape("Name", "TriangleR (2)", new Vector3(0.37f, 0.45f, 0f), new Vector3(0f, 0f, 23.02961f), new Vector3(0.264f, 0.264f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f))
+RenderShape("Name", "Circle (1)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.162f, 0.162f, 0.162f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f))
+RenderShape("Name", "Circle (2)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1186388f, 0.1186388f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f))

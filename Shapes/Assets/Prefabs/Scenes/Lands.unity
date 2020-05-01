@@ -746,7 +746,7 @@ PrefabInstance:
     - target: {fileID: 6865349593717884556, guid: 526be30959ce6824c935f4b548d5bc24,
         type: 3}
       propertyPath: m_Name
-      value: Land Canvas
+      value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526be30959ce6824c935f4b548d5bc24, type: 3}
@@ -1228,7 +1228,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1527392367}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381897571}
+        m_MethodName: JungleButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1527392367
 MonoBehaviour:
   m_ObjectHideFlags: 0

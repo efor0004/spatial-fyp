@@ -25,16 +25,4 @@ public class Global : MonoBehaviour
     public static bool greenMode = false;
     public static bool redMode = false;
 
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
 }
