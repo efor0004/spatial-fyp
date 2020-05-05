@@ -42,9 +42,16 @@ func set_textures():
 
 func set_holey_quilt_texture(base_path, children):
 	var holey_quilt = children[0]
+	var hole = holey_quilt.get_child(0)
+	
 	var holey_quilt_path = base_path + "/holey_quilt.png"
+	var hole_path = base_path + "/option_1.png"
+	
 	var holey_quilt_texture = load(holey_quilt_path)
+	var hole_texture = load(hole_path)
+	
 	holey_quilt.set_texture(holey_quilt_texture)
+	hole.set_texture(hole_texture)
 
 func set_options_textures(base_path, children):
 	var indices = range(1,4)
@@ -104,3 +111,16 @@ func _on_Option_3_input_event(viewport, event, shape_idx):
 	and event.button_index == BUTTON_LEFT \
 	and event.is_pressed():
 		on_option_pressed(3)
+
+
+func _on_ColorPickerButton_color_changed(colour):
+	print(colour)
+	var children = get_children()
+	for child in children:
+		var sprite
+		if child.get_class() == "Sprite":
+			sprite = child
+		else:
+			sprite = child.get_child(0)
+		print(sprite)
+		sprite.self_modulate = colour
