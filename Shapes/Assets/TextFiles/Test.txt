@@ -33,3 +33,13 @@ RenderShape("Name", "TriangleR (1)", new Vector3(0.64f, 1.93f, 0f), new Vector3(
 RenderShape("Name", "TriangleR (2)", new Vector3(0.37f, 0.45f, 0f), new Vector3(0f, 0f, 23.02961f), new Vector3(0.264f, 0.264f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f))
 RenderShape("Name", "Circle (1)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.162f, 0.162f, 0.162f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f))
 RenderShape("Name", "Circle (2)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1186388f, 0.1186388f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f))
+
+ *********************** NEW TEST ************************ 
+
+RenderShapeFixed("Shape0", "Background 2", new Vector3(0.02f, -0.05f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.715f, 0.787045f, 1f), "Background", new Vector4(1f, 1f, 1f, 1f));
+RenderShapeVariable("Shape1", "Circle", new Vector3(0.58f, 0.04f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.109f, 0.592f, 1f), "Shape1", new Vector4(0f, 0.4716981f, 0.02229664f, 1f));
+RenderShapeVariable("Shape2", "TriangleR", new Vector3(-3.4f, 0.21f, 0f), new Vector3(0f, 0f, 132.6898f), new Vector3(0.495f, 0.495f, 0.495f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f));
+RenderShapeVariable("Shape3", "TriangleR (1)", new Vector3(0.64f, 1.93f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.291346f, 0.291346f, 0.291346f), "Shape2", new Vector4(0f, 0.7135715f, 1f, 1f));
+RenderShapeVariable("Shape4", "TriangleR (2)", new Vector3(0.37f, 0.45f, 0f), new Vector3(0f, 0f, 23.02961f), new Vector3(0.264f, 0.264f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f));
+RenderShapeVariable("Shape5", "Circle (1)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.162f, 0.162f, 0.162f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f));
+RenderShapeVariable("Shape6", "Circle (2)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1186388f, 0.1186388f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f));

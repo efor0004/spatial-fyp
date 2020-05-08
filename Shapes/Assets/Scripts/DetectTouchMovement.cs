@@ -3,9 +3,11 @@ using System.Collections;
 
 public class DetectTouchMovement : MonoBehaviour
 {
-	//adapted code from http://wiki.unity3d.com/index.php/DetectTouchMovement
 
-		//ROTATION
+	//adapted code from http://wiki.unity3d.com/index.php/DetectTouchMovement
+	//detects 2 finger rotation on screen and updates public variable turnAngle and turnAngleDelta
+
+	//ROTATION
 	const float pinchTurnRatio = (Mathf.PI / 2)/2;      //////magic number
 	const float minTurnAngle = 0;   //magic number
 	

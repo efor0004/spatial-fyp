@@ -38,9 +38,7 @@ public class JungleHandler : MonoBehaviour
     {
         //creates a sprite game object
         //renders it in the given position
-
         GameObject objToSpawn = new GameObject(Name);                                            //assign name
-        objToSpawn.AddComponent<CircleCollider2D>();                                             //assign circle collider
         objToSpawn.AddComponent<SpriteRenderer>();                                               //add a sprite renderer
         objToSpawn.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Sprite);       //assign sprite from resources folder
         objToSpawn.transform.position = Position;                                                //set position vector
@@ -48,6 +46,16 @@ public class JungleHandler : MonoBehaviour
         objToSpawn.transform.localScale = (Scale);                                               //set scale vector
         objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer;               //set sorting layer by name
         objToSpawn.GetComponent<SpriteRenderer>().color = Color;                                 //set colour vector (RGBA) 
+        //objToSpawn.AddComponent<PolygonCollider2D>();                                          //assign circle collider
+        objToSpawn.AddComponent<CircleCollider2D>();                                             //assign circle collider
+
+        Debug.Log( objToSpawn.name + " 2dcircle collider radius: " + objToSpawn.GetComponent<CircleCollider2D>().radius);
+        Debug.Log(objToSpawn.name + " 2dcircle collider bounds: " + objToSpawn.GetComponent<CircleCollider2D>().bounds);
+
+        //if (objToSpawn.GetComponent<CircleCollider2D>().bounds.extents.x < 0.6)
+        //{
+        //    objToSpawn.GetComponent<CircleCollider2D>().radius = 0.6f; 
+        //}
     }
 
     void RenderShapeVariable(string Name, string Sprite, Vector3 Position, Vector3 Rotation, Vector3 Scale, string SortingLayer, Vector4 Color) 
@@ -56,7 +64,6 @@ public class JungleHandler : MonoBehaviour
         //renders it in the toolbar and saves its target position/orientation
 
         GameObject objToSpawn = new GameObject(Name);                                            //assign name
-        objToSpawn.AddComponent<CircleCollider2D>();                                             //assign circle collider
         objToSpawn.AddComponent<SpriteRenderer>();                                               //add a sprite renderer
         objToSpawn.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Sprite);       //assign sprite from resources folder
         objToSpawn.transform.position = Position;                                                //set position vector
@@ -64,5 +71,25 @@ public class JungleHandler : MonoBehaviour
         objToSpawn.transform.localScale = (Scale);                                               //set scale vector
         objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer;               //set sorting layer by name
         objToSpawn.GetComponent<SpriteRenderer>().color = Color;                                 //set colour vector (RGBA) 
+      //objToSpawn.AddComponent<PolygonCollider2D>();                                          //assign circle collider
+        objToSpawn.AddComponent<CircleCollider2D>();                                             //assign circle collider    //sized correctly
+
+        Debug.Log(objToSpawn.name + " 2dcircle collider radius: " + objToSpawn.GetComponent<CircleCollider2D>().radius);
+        Debug.Log(objToSpawn.name + " 2dcircle collider bounds: " + objToSpawn.GetComponent<CircleCollider2D>().bounds);
+    }
+    public void DestroyShapes()
+    {
+        //destroy all current shapes by name   
+        //adapted from https://answers.unity.com/questions/1414048/destroy-specific-gameobject-with-name.html
+
+        string[] myObjectsNames = new string[] { "Shape0", "Shape1", "Shape2", "Shape3", "Shape4", "Shape5" };  //the array of shape names
+
+        foreach (string name in myObjectsNames)
+        {
+            GameObject go = GameObject.Find(name);                                                //checks if the shape exists
+                                                                                                  //if the tree exist then destroy it
+            if (go)
+                Destroy(go.gameObject);
+        }
     }
 }

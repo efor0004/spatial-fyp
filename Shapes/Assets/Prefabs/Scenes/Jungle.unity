@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 889281712}
   - component: {fileID: 889281711}
   - component: {fileID: 889281714}
+  - component: {fileID: 889281715}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -270,15 +271,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4b4941527a2074494f9b47b8a8de25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TriangleR: {fileID: 0}
-  TriangleI: {fileID: 0}
-  Circle: {fileID: 0}
-  Square: {fileID: 0}
-  Semicircle: {fileID: 0}
-  Parallelogram: {fileID: 0}
-  Trapezoid: {fileID: 0}
-  Hexagon: {fileID: 0}
-  Pentagon: {fileID: 0}
+--- !u!114 &889281715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889281710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f662ef29ec00b64c9556e4fcbdc51dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameArray:
+  - Shape0
+  - Shape1
+  - Shape2
+  - Shape3
+  - Shape4
+  - Shape5
+  positionArray:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  rotationArray:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  activeArray: 010101010101
 --- !u!1 &995938970
 GameObject:
   m_ObjectHideFlags: 0

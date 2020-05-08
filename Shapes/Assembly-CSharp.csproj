@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\JungleHandler.cs" />
     <Compile Include="Assets\Scripts\ShapeObject.cs" />
     <Compile Include="Assets\Scripts\TestBench.cs" />
+    <Compile Include="Assets\Scripts\TouchRotate.cs" />
     <Compile Include="Assets\Scripts\TouchRotateDiamondYellow.cs" />
     <Compile Include="Assets\Scripts\TouchRotateSquarePurple.cs" />
     <Compile Include="Assets\Scripts\TouchRotateTriangleRed.cs" />
