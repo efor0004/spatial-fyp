@@ -1,38 +1,5 @@
 
 
- name: Background 2	 position: (0.02f, -0.05f, 0f)	 rotation: (0f, 0f, 0f)	 scale: (0.715f, 0.787045f, 1f)	 sorting layer: Background	 colour: (1f, 1f, 1f, 1f)
-
- name: Circle	 position: (0.58f, 0.04f, 0f)	 rotation: (0f, 0f, 0f)	 scale: (1.109f, 0.592f, 1f)	 sorting layer: Shape1	 colour: (0f, 0.4716981f, 0.02229664f, 1f)
-
- name: TriangleR	 position: (-3.4f, 0.21f, 0f)	 rotation: (0f, 0f, 132.6898f)	 scale: (0.495f, 0.495f, 0.495f)	 sorting layer: Shape1	 colour: (0f, 0.5116174f, 0.7169812f, 1f)
-
- name: TriangleR (1)	 position: (0.64f, 1.93f, 0f)	 rotation: (0f, 0f, 0f)	 scale: (0.291346f, 0.291346f, 0.291346f)	 sorting layer: Shape2	 colour: (0f, 0.7135715f, 1f, 1f)
-
- name: TriangleR (2)	 position: (0.37f, 0.45f, 0f)	 rotation: (0f, 0f, 23.02961f)	 scale: (0.264f, 0.264f, 0.264f)	 sorting layer: Shape2	 colour: (0.495283f, 0.8554347f, 1f, 1f)
-
- name: Circle (1)	 position: (1.91f, 0.39f, 0f)	 rotation: (0f, 0f, 0f)	 scale: (0.162f, 0.162f, 0.162f)	 sorting layer: Shape2	 colour: (1f, 0.4678748f, 0f, 1f)
-
- name: Circle (2)	 position: (1.91f, 0.39f, 0f)	 rotation: (0f, 0f, 0f)	 scale: (0.1186388f, 0.1186388f, 0.1186388f)	 sorting layer: Shape3	 colour: (0f, 0f, 0f, 1f)
-
- *********************** NEW TEST ************************ 
-
-RenderShape("Background 2", new Vector3(0.02f, -0.05f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.715f, 0.787045f, 1f), "Background", new Vector4(1f, 1f, 1f, 1f))
-RenderShape("Circle", new Vector3(0.58f, 0.04f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.109f, 0.592f, 1f), "Shape1", new Vector4(0f, 0.4716981f, 0.02229664f, 1f))
-RenderShape("TriangleR", new Vector3(-3.4f, 0.21f, 0f), new Vector3(0f, 0f, 132.6898f), new Vector3(0.495f, 0.495f, 0.495f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f))
-RenderShape("TriangleR (1)", new Vector3(0.64f, 1.93f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.291346f, 0.291346f, 0.291346f), "Shape2", new Vector4(0f, 0.7135715f, 1f, 1f))
-RenderShape("TriangleR (2)", new Vector3(0.37f, 0.45f, 0f), new Vector3(0f, 0f, 23.02961f), new Vector3(0.264f, 0.264f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f))
-RenderShape("Circle (1)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.162f, 0.162f, 0.162f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f))
-RenderShape("Circle (2)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1186388f, 0.1186388f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f))
-
- *********************** NEW TEST ************************ 
-
-RenderShape("Name", "Background 2", new Vector3(0.02f, -0.05f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.715f, 0.787045f, 1f), "Background", new Vector4(1f, 1f, 1f, 1f))
-RenderShape("Name", "Circle", new Vector3(0.58f, 0.04f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.109f, 0.592f, 1f), "Shape1", new Vector4(0f, 0.4716981f, 0.02229664f, 1f))
-RenderShape("Name", "TriangleR", new Vector3(-3.4f, 0.21f, 0f), new Vector3(0f, 0f, 132.6898f), new Vector3(0.495f, 0.495f, 0.495f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f))
-RenderShape("Name", "TriangleR (1)", new Vector3(0.64f, 1.93f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.291346f, 0.291346f, 0.291346f), "Shape2", new Vector4(0f, 0.7135715f, 1f, 1f))
-RenderShape("Name", "TriangleR (2)", new Vector3(0.37f, 0.45f, 0f), new Vector3(0f, 0f, 23.02961f), new Vector3(0.264f, 0.264f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f))
-RenderShape("Name", "Circle (1)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.162f, 0.162f, 0.162f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f))
-RenderShape("Name", "Circle (2)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1186388f, 0.1186388f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f))
 
  *********************** NEW TEST ************************ 
 
@@ -43,3 +10,44 @@ RenderShapeVariable("Shape3", "TriangleR (1)", new Vector3(0.64f, 1.93f, 0f), ne
 RenderShapeVariable("Shape4", "TriangleR (2)", new Vector3(0.37f, 0.45f, 0f), new Vector3(0f, 0f, 23.02961f), new Vector3(0.264f, 0.264f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f));
 RenderShapeVariable("Shape5", "Circle (1)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.162f, 0.162f, 0.162f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f));
 RenderShapeVariable("Shape6", "Circle (2)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1186388f, 0.1186388f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f));
+
+ *********************** NEW TEST ************************ 
+
+RenderShapeFixed("Shape0", "Background 2", new Vector3(0.02f, -0.05f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.715f, 0.787045f, 1f), "Background", new Vector4(1f, 1f, 1f, 1f), False);
+RenderShapeVariable("Shape1", "Circle", new Vector3(0.58f, 0.04f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.109f, 0.592f, 1f), "Shape1", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), False);
+RenderShapeVariable("Shape2", "TriangleR", new Vector3(-3.4f, 0.21f, 0f), new Vector3(0f, 0f, 132.6898f), new Vector3(0.495f, 0.495f, 0.495f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), False);
+RenderShapeVariable("Shape3", "TriangleR (1)", new Vector3(0.64f, 1.93f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.291346f, 0.291346f, 0.291346f), "Shape2", new Vector4(0f, 0.7135715f, 1f, 1f), False);
+RenderShapeVariable("Shape4", "TriangleR (2)", new Vector3(0.37f, 0.45f, 0f), new Vector3(0f, 0f, 23.02961f), new Vector3(0.264f, 0.264f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f), False);
+RenderShapeVariable("Shape5", "Circle (1)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.162f, 0.162f, 0.162f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f), True);
+RenderShapeVariable("Shape6", "Circle (2)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1186388f, 0.1186388f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f), True);
+
+ *********************** NEW TEST ************************ 
+
+RenderShapeFixed("Shape0", "Background 2", new Vector3(0.02f, -0.05f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.715f, 0.787045f, 1f), "Background", new Vector4(1f, 1f, 1f, 1f), false);
+RenderShapeVariable("Shape1", "Circle", new Vector3(0.58f, 0.04f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.109f, 0.592f, 1f), "Shape1", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), false);
+RenderShapeVariable("Shape2", "TriangleR", new Vector3(-3.4f, 0.21f, 0f), new Vector3(0f, 0f, 132.6898f), new Vector3(0.495f, 0.495f, 0.495f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false);
+RenderShapeVariable("Shape3", "TriangleR (1)", new Vector3(0.64f, 1.93f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.291346f, 0.291346f, 0.291346f), "Shape2", new Vector4(0f, 0.7135715f, 1f, 1f), false);
+RenderShapeVariable("Shape4", "TriangleR (2)", new Vector3(0.37f, 0.45f, 0f), new Vector3(0f, 0f, 23.02961f), new Vector3(0.264f, 0.264f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false);
+RenderShapeVariable("Shape5", "Circle (1)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.162f, 0.162f, 0.162f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f), true);
+RenderShapeVariable("Shape6", "Circle (2)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1186388f, 0.1186388f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true);
+
+ *********************** NEW TEST ************************ 
+
+RenderShapeFixed("Shape0", "Background 2", new Vector3(0.02f, -0.05f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.715f, 0.787045f, 1f), "Background", new Vector4(1f, 1f, 1f, 1f), false, 0);
+RenderShapeVariable("Shape1", "Circle", new Vector3(0.58f, 0.04f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.109f, 0.592f, 1f), "Shape1", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), false, 1);
+RenderShapeVariable("Shape2", "TriangleR", new Vector3(-3.4f, 0.21f, 0f), new Vector3(0f, 0f, 132.6898f), new Vector3(0.495f, 0.495f, 0.495f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 2);
+RenderShapeVariable("Shape3", "TriangleR (1)", new Vector3(0.64f, 1.93f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.291346f, 0.291346f, 0.291346f), "Shape2", new Vector4(0f, 0.7135715f, 1f, 1f), false, 3);
+RenderShapeVariable("Shape4", "TriangleR (2)", new Vector3(0.37f, 0.45f, 0f), new Vector3(0f, 0f, 23.02961f), new Vector3(0.264f, 0.264f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 4);
+RenderShapeVariable("Shape5", "Circle (1)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.162f, 0.162f, 0.162f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f), true, 5);
+RenderShapeVariable("Shape6", "Circle (2)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1186388f, 0.1186388f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 6);
+
+ *********************** NEW TEST ************************ 
+
+RenderShapeFixed("Shape0", "Circle", new Vector3(0.58f, 0.04f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.109f, 0.592f, 1f), "Shape1", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), false, 0);
+RenderShapeVariable("Shape1", "TriangleR", new Vector3(-3.08f, 0.11f, 0f), new Vector3(0f, 0f, 132.6898f), new Vector3(0.42174f, 0.3764183f, 0.495f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 1);
+RenderShapeVariable("Shape2", "TriangleR (1)", new Vector3(0.65f, 1.841f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2384341f, 0.2459473f, 0.291346f), "Shape2", new Vector4(0f, 0.7135715f, 1f, 1f), false, 2);
+RenderShapeVariable("Shape3", "TriangleR (2)", new Vector3(0.37f, 0.45f, 0f), new Vector3(0f, 0f, 23.02961f), new Vector3(0.264f, 0.264f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 3);
+RenderShapeVariable("Shape4", "Circle (1)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.162f, 0.162f, 0.162f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f), true, 4);
+RenderShapeVariable("Shape5", "Circle (2)", new Vector3(1.91f, 0.39f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1186388f, 0.1186388f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 5);
+RenderShapeVariable("Shape6", "Square", new Vector3(-3.71f, -4f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.331248f, 0.334425f, 1f), "Foreground", new Vector4(1f, 1f, 1f, 1f), false, 6);
+RenderShapeVariable("Shape7", "Square (1)", new Vector3(3.79f, -3.98f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.331248f, 0.334425f, 1f), "Foreground", new Vector4(1f, 1f, 1f, 1f), false, 7);

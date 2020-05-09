@@ -32,7 +32,9 @@ public class TestBench : MonoBehaviour
 
         writer.WriteLine("\n *********************** NEW TEST ************************ \n"); //writes a heading for the start of a new test
 
-        int n = 0; 
+        float minScale = 0.2f; 
+        int n = 0;
+        bool small = false; 
 
         for (int i = 0; i < rootObjects.Count; ++i)
         {
@@ -54,6 +56,15 @@ public class TestBench : MonoBehaviour
                 //creates a function to render the sprite
                 //shapes are listed in order of creation (if the heirarchy is untouched)
                 //the first shape will be the anchor shape and it needs a separate function to render it in position
+                if (Mathf.Abs(gameObject.transform.localScale.x) < minScale && Mathf.Abs(gameObject.transform.localScale.y) < minScale && Mathf.Abs(gameObject.transform.localScale.z) < minScale)
+                {
+                    small = true;
+                }
+                else 
+                {
+                    small = false; 
+                }
+
                 if (n == 0)
                 {
                     writer.WriteLine("RenderShapeFixed(\"Shape" + n + "\", \"" + gameObject.name + "\", new Vector3("
@@ -61,7 +72,9 @@ public class TestBench : MonoBehaviour
                         + gameObject.transform.rotation.eulerAngles.x + "f, " + gameObject.transform.rotation.eulerAngles.y + "f, " + gameObject.transform.rotation.eulerAngles.z + "f), new Vector3("
                         + gameObject.transform.localScale.x + "f, " + gameObject.transform.localScale.y + "f, " + gameObject.transform.localScale.z + "f), \""
                         + gameObject.GetComponent<SpriteRenderer>().sortingLayerName + "\", new Vector4("
-                        + gameObject.GetComponent<SpriteRenderer>().color.r + "f, " + gameObject.GetComponent<SpriteRenderer>().color.g + "f, " + gameObject.GetComponent<SpriteRenderer>().color.b + "f, " + gameObject.GetComponent<SpriteRenderer>().color.a + "f));"
+                        + gameObject.GetComponent<SpriteRenderer>().color.r + "f, " + gameObject.GetComponent<SpriteRenderer>().color.g + "f, " + gameObject.GetComponent<SpriteRenderer>().color.b + "f, " + gameObject.GetComponent<SpriteRenderer>().color.a + "f), "
+                        + small.ToString().ToLower() + ", " 
+                        + n +  ");"
                         );
                 }
                 else {
@@ -70,7 +83,9 @@ public class TestBench : MonoBehaviour
                         + gameObject.transform.rotation.eulerAngles.x + "f, " + gameObject.transform.rotation.eulerAngles.y + "f, " + gameObject.transform.rotation.eulerAngles.z + "f), new Vector3("
                         + gameObject.transform.localScale.x + "f, " + gameObject.transform.localScale.y + "f, " + gameObject.transform.localScale.z + "f), \""
                         + gameObject.GetComponent<SpriteRenderer>().sortingLayerName + "\", new Vector4("
-                        + gameObject.GetComponent<SpriteRenderer>().color.r + "f, " + gameObject.GetComponent<SpriteRenderer>().color.g + "f, " + gameObject.GetComponent<SpriteRenderer>().color.b + "f, " + gameObject.GetComponent<SpriteRenderer>().color.a + "f));"
+                        + gameObject.GetComponent<SpriteRenderer>().color.r + "f, " + gameObject.GetComponent<SpriteRenderer>().color.g + "f, " + gameObject.GetComponent<SpriteRenderer>().color.b + "f, " + gameObject.GetComponent<SpriteRenderer>().color.a + "f), "
+                        + small.ToString().ToLower() + ", "
+                        + n + ");"
                         );
                 }
                 n = n + 1;
