@@ -9,6 +9,7 @@ onready var question_order = []
 onready var option_file_text = "option_"
 
 func _ready():
+	randomise_question_colour()
 	question_order = shuffle_list(range(1,questions_per_level + 1))
 	set_textures()
 
@@ -26,13 +27,14 @@ func next_question():
 		shuffle_question_order()
 	
 	set_textures()
+	randomise_question_colour()
 
 func shuffle_question_order():
 	question_order = shuffle_list(range(1,questions_per_level + 1))
 
 func set_textures():
 	var children = get_children()
-	var shuffled_question = question_order[current_question]
+	var shuffled_question = question_order[current_question - 1]
 	var base_path = "res://assets/sprites/questions/level_%d/question_%d" % [current_level, shuffled_question]
 	
 	print("Level %d, Question %d" % [current_level, current_question])
@@ -92,6 +94,25 @@ func on_option_pressed(sprite_index):
 	if (opt_no == 1):
 		next_question()
 
+func randomise_question_colour():
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	var r = rng.randf_range(0,0.9)
+	var g = rng.randf_range(0,0.9)
+	var b = rng.randf_range(0,0.9)
+	var colour = Color(r,g,b,1)
+	set_question_colour(colour)
+
+func set_question_colour(colour):
+	var children = get_children()
+	for child in children:
+		var sprite
+		if child.get_class() == "Sprite":
+			sprite = child
+		else:
+			sprite = child.get_child(0)
+		sprite.self_modulate = colour
+
 func _on_Option_1_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton \
 	and event.button_index == BUTTON_LEFT \
@@ -111,16 +132,3 @@ func _on_Option_3_input_event(viewport, event, shape_idx):
 	and event.button_index == BUTTON_LEFT \
 	and event.is_pressed():
 		on_option_pressed(3)
-
-
-func _on_ColorPickerButton_color_changed(colour):
-	print(colour)
-	var children = get_children()
-	for child in children:
-		var sprite
-		if child.get_class() == "Sprite":
-			sprite = child
-		else:
-			sprite = child.get_child(0)
-		print(sprite)
-		sprite.self_modulate = colour

@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_3.png" type="Texture" id=1]
-[ext_resource path="res://assets/sprites/buttons/colour_wheel.png" type="Texture" id=2]
 [ext_resource path="res://scripts/Question.gd" type="Script" id=3]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/holey_quilt.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_1.png" type="Texture" id=5]
@@ -9,8 +8,6 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 192, 192 )
-
-[sub_resource type="ImageTexture" id=2]
 
 [node name="Game" type="Node2D"]
 
@@ -63,25 +60,6 @@ region_rect = Rect2( 192, 0, 64, 64 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question/Option 3"]
 visible = false
 shape = SubResource( 1 )
-
-[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
-self_modulate = Color( 0.862745, 0.862745, 0.862745, 1 )
-margin_left = 1700.0
-margin_top = 1200.0
-margin_right = 1900.0
-margin_bottom = 1400.0
-icon = SubResource( 2 )
-expand_icon = true
-color = Color( 1, 1, 1, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="colour_wheel" type="Sprite" parent="ColorPickerButton"]
-position = Vector2( 100, 100 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 2 )
 [connection signal="input_event" from="Question/Option 1" to="Question" method="_on_Option_1_input_event"]
 [connection signal="input_event" from="Question/Option 2" to="Question" method="_on_Option_2_input_event"]
 [connection signal="input_event" from="Question/Option 3" to="Question" method="_on_Option_3_input_event"]
-[connection signal="color_changed" from="ColorPickerButton" to="Question" method="_on_ColorPickerButton_color_changed"]
