@@ -2,6 +2,11 @@ extends Sprite
 
 onready var current_level = 1
 onready var current_question = 1
+onready var current_colour = Color(1,1,1,1)
+onready var initial_quilt_piece_x = 1136
+onready var quilt_piece_x = initial_quilt_piece_x
+onready var quilt_piece_y = 0
+
 onready var questions_per_level = 10
 onready var max_levels = 1
 
@@ -26,6 +31,7 @@ func next_question():
 		current_question = 1
 		shuffle_question_order()
 	
+	add_quilt_piece()
 	set_textures()
 	randomise_question_colour()
 
@@ -35,19 +41,31 @@ func shuffle_question_order():
 func set_textures():
 	var children = get_children()
 	var shuffled_question = question_order[current_question - 1]
-	var base_path = "res://assets/sprites/questions/level_%d/question_%d" % [current_level, shuffled_question]
+	var level_path = get_level_path()
+	var question_path = get_question_path(shuffled_question)
 	
 	print("Level %d, Question %d" % [current_level, current_question])
 	
-	set_holey_quilt_texture(base_path, children)
-	set_options_textures(base_path, children)
+	set_holey_quilt_texture(level_path, question_path, children)
+	set_options_textures(question_path, children)
 
-func set_holey_quilt_texture(base_path, children):
+func get_level_path():
+	return "res://assets/sprites/questions/level_%d/" % current_level
+
+func get_question_path(question):
+	var level_path = get_level_path()
+	return str(level_path, "question_%d" % question)
+
+func get_holey_quilt_path():
+	var level_path = get_level_path()
+	return level_path + "/holey_quilt.png"
+
+func set_holey_quilt_texture(level_path, question_path, children):
 	var holey_quilt = children[0]
 	var hole = holey_quilt.get_child(0)
 	
-	var holey_quilt_path = base_path + "/holey_quilt.png"
-	var hole_path = base_path + "/option_1.png"
+	var holey_quilt_path = get_holey_quilt_path()
+	var hole_path = question_path + "/option_1.png"
 	
 	var holey_quilt_texture = load(holey_quilt_path)
 	var hole_texture = load(hole_path)
@@ -101,11 +119,43 @@ func randomise_question_colour():
 	var g = rng.randf_range(0,0.9)
 	var b = rng.randf_range(0,0.9)
 	var colour = Color(r,g,b,1)
+	current_colour = colour
 	set_question_colour(colour)
+
+func add_quilt_piece():
+	var piece = Sprite.new()
+	
+	var piece_path = get_holey_quilt_path()
+	var piece_texture = load(piece_path)
+	piece.texture = piece_texture
+	
+	piece.self_modulate = current_colour
+	var scale = 0.25
+	piece.scale = Vector2(scale,scale)
+	
+	var piece_rect = piece.get_rect()
+	var piece_size_x = piece_rect.size.x * scale
+	
+	quilt_piece_x = quilt_piece_x + piece_size_x
+	
+	if current_question == 2:
+		quilt_piece_x = initial_quilt_piece_x
+		var piece_size_y = piece_rect.size.y * scale
+		if quilt_piece_y == 0:
+			quilt_piece_y = quilt_piece_y + piece_size_y / 2
+		else:
+			quilt_piece_y = quilt_piece_y + piece_size_y
+	
+	var new_piece_pos = Vector2(quilt_piece_x, quilt_piece_y)
+	print(new_piece_pos)
+	piece.transform.origin = new_piece_pos
+	
+	add_child(piece)
 
 func set_question_colour(colour):
 	var children = get_children()
-	for child in children:
+	for i in range(0,4):
+		var child = children[i]
 		var sprite
 		if child.get_class() == "Sprite":
 			sprite = child

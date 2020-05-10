@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_3.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Question.gd" type="Script" id=3]
-[ext_resource path="res://assets/sprites/questions/level_1/question_1/holey_quilt.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/questions/level_1/holey_quilt.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_1.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_2.png" type="Texture" id=6]
 

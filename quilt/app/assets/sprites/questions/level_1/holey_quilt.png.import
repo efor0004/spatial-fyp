@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/holey_quilt.png-4d78037e2559c914d8ef55b53616a65b.stex"
+path="res://.import/holey_quilt.png-185cbb8080df986513995fead76c6ac6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/questions/level_1/question_6/holey_quilt.png"
-dest_files=[ "res://.import/holey_quilt.png-4d78037e2559c914d8ef55b53616a65b.stex" ]
+source_file="res://assets/sprites/questions/level_1/holey_quilt.png"
+dest_files=[ "res://.import/holey_quilt.png-185cbb8080df986513995fead76c6ac6.stex" ]
 
 [params]
 
