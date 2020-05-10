@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prefabs/Scenes/Jungle.unity
     guid: cc424ec2994240749a52f21cefbdd1fd
-  - enabled: 1
-    path: Assets/Prefabs/Scenes/TestBench.unity
-    guid: 8a4f9053758635d4d804767d9ebc6351
   m_configObjects: {}

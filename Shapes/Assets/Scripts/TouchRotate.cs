@@ -6,7 +6,7 @@ public class TouchRotate : MonoBehaviour
 {
     // controls the shape 2-finger rotation and placement
 
-    public string[] nameArray = new string[] {"Shape0", "Shape1", "Shape2", "Shape3", "Shape4", "Shape5", "Shape6", "Shape7", "Shape8", "Shape9"};  //the array of shape names
+    public static string[] nameArray = new string[] {"Shape0", "Shape1", "Shape2", "Shape3", "Shape4", "Shape5", "Shape6", "Shape7", "Shape8", "Shape9"};  //the array of shape names
 
     //values updated at puzzle instantiation
     public static Vector3[] positionArray = new[] { new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f) };
@@ -15,40 +15,37 @@ public class TouchRotate : MonoBehaviour
     public static bool[] activeArrayCopy = new bool[] { true, true, true, true, true, true, true, true, true, true, true };     //will be used to save current active status when all shapes need to be made temporarily inactive
     public static bool[] smallArray = new bool[] { false, false, false, false, false, false, false, false, false, false, false};
     public static Vector3[] toolbarArray = new[] { new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f) }; //saves "rest" position
-    private Collider2D collider; 
+    private Collider2D myCollider; 
 
-    int n; 
 
     void Start()
     {
-        //n = 1;
+
     }
 
     void Update()
     {
-                                                                                                                 //adapted code from http://wiki.unity3d.com/index.php/DetectTouchMovement
-        if (Input.touchCount > 0)                                                                               
+        //adapted code from http://wiki.unity3d.com/index.php/DetectTouchMovement
+        if (Input.touchCount == 2)                                                                                //at least one touch detected                                                                    
         {
             Vector3 wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);                             //Vector3 of the touch location on the screen
             Vector2 touchPos = new Vector2(wp.x, wp.y);                                                          //Vector2 format of touch location
 
             foreach (string name in nameArray)
             {
-                Debug.Log(name);
+
                 GameObject go = GameObject.Find(name);                                                            //checks if the shape exists
 
                 if (go)
                 {
-                    collider = go.gameObject.GetComponent<CircleCollider2D>();                                   //cannot pass the overlap test
-
-                    //if (Input.touchCount == 2 & activeArray[System.Array.IndexOf(shapeArray, go)] == true)     //controls 2 finger rotation and translation 
-                    // if (Input.touchCount == 2 & activeArray[n] == true) //controls 2 finger rotation and translation 
-                    if (collider)                                                                                //collider will not exist for the anchor shape0
+                    if (activeArray[System.Array.IndexOf(nameArray, go.name)] == true)
                     {
-                        if (collider == Physics2D.OverlapPoint(touchPos))                                        //if the touch position overlaps with the 2D collider of the shape
+                        myCollider = go.gameObject.GetComponent<CircleCollider2D>();
+
+                        if (myCollider)                                                                                //collider will not exist for the anchor shape0
                         {
-                            if (Input.touchCount == 2)                                                           //update rotation for 2 fingers only
-                            {                                      
+                            if (myCollider == Physics2D.OverlapPoint(touchPos))                                        //if the touch position overlaps with the 2D collider of the shape
+                            {
 
                                 Quaternion desiredRotation = go.gameObject.transform.rotation;                   //start desiredRotation as the current orientation of the shape
                                 DetectTouchMovement.Calculate();                                                 //determines turnAngle and turnAngleDelta from 2 finger rotation on screen
@@ -62,28 +59,156 @@ public class TouchRotate : MonoBehaviour
                                     go.gameObject.transform.rotation = desiredRotation;                          //upate the shape rotated orientation
                                 }
 
+                                                                                                                  //updates shape translated position (1 or 2 fingers)
+                                                                                                                  //https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
+                                go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
+                                                                           Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
+                                                                            0.0f);
+                     
                             }
-                                                                                                                //updates shape translated position (1 or 2 fingers)
-                                                                                                                //https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
-                            go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
-                                                                       Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
-                                                                        0.0f);
-                            //enable 1 finger drag for only small shapes?
-                        }
-                    }
 
+
+                        }
+
+                    }
                 }
 
 
             }
-           // n = n + 1;
+
         }
+        else 
+        {
+            foreach (string name in nameArray)
+            {
+
+                GameObject go = GameObject.Find(name);                                                            //checks if the shape exists
+
+                if (go)
+                {
+                    if (activeArray[System.Array.IndexOf(nameArray, go.name)] == true)
+                    {
+                        go.transform.position = toolbarArray[System.Array.IndexOf(nameArray, go.name)];
+                        go.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    }
+                }
+            }
+
+        }
+
     }//end update
 }
 
-                    //target positions - use n?
-                    //positionArray[System.Array.IndexOf(shapeArray, go)];   
-                    //rotationArray[System.Array.IndexOf(shapeArray, go)];
+//Update code with small condition/////////////////////////////////////////////////////////////////
+//void Update()
+//{
+//    //adapted code from http://wiki.unity3d.com/index.php/DetectTouchMovement
+//    if (Input.touchCount > 0)                                                                                //at least one touch detected                                                                    
+//    {
+//        Vector3 wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);                             //Vector3 of the touch location on the screen
+//        Vector2 touchPos = new Vector2(wp.x, wp.y);                                                          //Vector2 format of touch location
+
+//        foreach (string name in nameArray)
+//        {
+//            // Debug.Log(name);
+//            GameObject go = GameObject.Find(name);                                                            //checks if the shape exists
+
+//            if (go)
+//            {
+//                if (activeArray[System.Array.IndexOf(nameArray, go.name)] == true)
+//                {
+//                    Debug.Log("the name of the shape that is active: " + go.name);
+
+//                    collider = go.gameObject.GetComponent<CircleCollider2D>();
+
+//                    //if (Input.touchCount == 2 & activeArray[System.Array.IndexOf(shapeArray, go)] == true)     //controls 2 finger rotation and translation 
+//                    // if (Input.touchCount == 2 & activeArray[n] == true) //controls 2 finger rotation and translation 
+//                    if (collider)                                                                                //collider will not exist for the anchor shape0
+//                    {
+//                        if (collider == Physics2D.OverlapPoint(touchPos))                                        //if the touch position overlaps with the 2D collider of the shape
+//                        {
+//                            //Debug.Log("index of the shapes: " + System.Array.IndexOf(nameArray, go.name));
+
+//                            if (Input.touchCount == 2 & smallArray[System.Array.IndexOf(nameArray, go.name)] == false)       //rotate and translate for non-small shapes
+//                            {
+//                                Quaternion desiredRotation = go.gameObject.transform.rotation;                   //start desiredRotation as the current orientation of the shape
+//                                DetectTouchMovement.Calculate();                                                 //determines turnAngle and turnAngleDelta from 2 finger rotation on screen
+
+//                                if (Mathf.Abs(DetectTouchMovement.turnAngleDelta) > 0)                           //if the detected turn angle is large enough
+//                                {
+//                                    Vector3 rotationDeg = Vector3.zero;
+//                                    rotationDeg.z = DetectTouchMovement.turnAngleDelta;
+//                                    desiredRotation *= Quaternion.Euler(rotationDeg);                            //update the desiredRotation to include this change in angle
+
+//                                    go.gameObject.transform.rotation = desiredRotation;                          //upate the shape rotated orientation
+//                                }
+
+//                                //updates shape translated position (1 or 2 fingers)
+//                                //https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
+//                                go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
+//                                                                           Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
+//                                                                            0.0f);
+//                            }
+
+//                            if (Input.touchCount == 1 & smallArray[System.Array.IndexOf(nameArray, go.name)] == true)  //if small shape can translate with 1 finger
+//                            {
+//                                go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
+//                                                                          Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
+//                                                                           0.0f);
+//                            }
+
+
+//                            //enable 1 finger drag for only small shapes?
+//                        }
+//                    }
+
+//                }
+//            }
+
+
+//        }
+
+//    }
+
+//    foreach (string name in nameArray)
+//    {
+//        //Debug.Log(name);
+//        GameObject go = GameObject.Find(name);
+
+//        if (go)
+//        {
+//            if (activeArray[System.Array.IndexOf(nameArray, go.name)] == true)
+//            {
+
+//                if (Input.touchCount < 2 & smallArray[System.Array.IndexOf(nameArray, go.name)] == false)             //if not-small and touches less than 2, return to rest position and 0 orientation
+//                {
+//                    go.transform.position = toolbarArray[System.Array.IndexOf(nameArray, go.name)];
+//                    go.transform.rotation = Quaternion.Euler(0, 0, 0);
+//                }
+//                else if (Input.touchCount < 1 & smallArray[System.Array.IndexOf(nameArray, go.name)] == true)         //if small and touches less than 1, return to rest position keep orientation
+//                {
+//                    go.transform.position = toolbarArray[System.Array.IndexOf(nameArray, go.name)];
+//                    // go.transform.rotation = Quaternion.Euler(0, 0, 0);  //could also equal to the target orientation but should not be able to change that
+//                }
+//            }
+//        }
+//    }
+
+
+
+//}//end update
+
+
+
+
+
+
+
+
+//old reset code////////////////////////////////////////////////////////////////////////////////////
+//target positions - use n?
+//positionArray[System.Array.IndexOf(shapeArray, go)];   
+//rotationArray[System.Array.IndexOf(shapeArray, go)];
 
 //if (Input.touchCount < 2)  //controls the resting place of the shape (in the toolbar or the correct placement on screen )
 //{

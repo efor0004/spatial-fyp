@@ -7,7 +7,8 @@ public class Global : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public static Vector3 shapeOffset = new Vector3(3, 0, 0);
+    //public static Vector3 shapeOffset = new Vector3(3, 0, 0);
+    public static Vector3 shapeOffset = new Vector3(2.5f, 0f, 0f);
 
     public static Vector3 currentVal1 = new Vector3(0, 0, 0);
     public static Vector3 currentVal2 = new Vector3(0, 0, 0);

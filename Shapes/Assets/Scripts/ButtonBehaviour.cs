@@ -13,6 +13,25 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by left arrow controlling the displayed shapes in the toolbar in a given puzzle
         //selection of this button shifts all displayed shapes right letting the user "scroll left"
 
+        //foreach (Vector3 Position in TouchRotate.toolbarArray)
+        //{
+        //    TouchRotate.toolbarArray[System.Array.IndexOf(TouchRotate.toolbarArray, Position)] = Position + Global.shapeOffset; 
+        //}
+
+       // Debug.Log("entered left arrow"); 
+
+
+
+        for (int i = 0; i < TouchRotate.toolbarArray.Length; i++)
+        {
+           // Debug.Log("before: " + TouchRotate.toolbarArray[i]); 
+            TouchRotate.toolbarArray[i]  = TouchRotate.toolbarArray[i] + Global.shapeOffset;
+            //Debug.Log("after: " + TouchRotate.toolbarArray[i]);
+        }
+
+
+        
+
         //if (TouchRotateSquarePurple.Active == true)
         //{
         //    GameObject.Find("SquarePurple").transform.position += Global.shapeOffset;
@@ -37,6 +56,17 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //triggered by right arrow controlling the displayed shapes in the toolbar in a given puzzle
         //selection of this button shifts all displayed shapes left letting the user "scroll right"
+
+        //foreach (Vector3 Position in TouchRotate.toolbarArray)
+        //{
+        //    TouchRotate.toolbarArray[System.Array.IndexOf(TouchRotate.toolbarArray, Position)] = Position - Global.shapeOffset; 
+        //}
+
+        for (int i = 0; i < TouchRotate.toolbarArray.Length; i++)
+        {
+            TouchRotate.toolbarArray[i] = TouchRotate.toolbarArray[i] - Global.shapeOffset;
+        }
+
 
         //if (TouchRotateSquarePurple.Active == true)
         //{
