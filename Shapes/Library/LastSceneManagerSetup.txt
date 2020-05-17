@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Prefabs/Scenes/Jungle.unity
+- path: Assets/Prefabs/Scenes/Mouse.unity
   isLoaded: 1
   isActive: 1

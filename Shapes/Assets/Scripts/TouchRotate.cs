@@ -22,15 +22,9 @@ public class TouchRotate : MonoBehaviour
     {
         //this is activating too early
         //need to wait for shapes to load
-        StartCoroutine(Wait()); //
+    
     }
 
-    IEnumerator Wait()
-    {
-       // Debug.Log("Waiting for shapes to load...");
-        yield return new WaitUntil(() => Global.puzzleLoaded == true);
-       // Debug.Log("Shapes are all here!");
-    }
     void Update()
     {
         //adapted code from http://wiki.unity3d.com/index.php/DetectTouchMovement
@@ -106,6 +100,7 @@ public class TouchRotate : MonoBehaviour
                         {
                                                                                                                    //could make this snap to position
                             activeArray[System.Array.IndexOf(nameArray, go.name)] = false;                          //make inactive
+                            Global.piecesPlaced++;                                                                  //update 
                         }
                         else                                                                                        //not in the correct position, return to toolbar
                         {

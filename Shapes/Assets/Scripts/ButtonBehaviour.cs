@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+using UnityEngine.UI; 
 
 public class ButtonBehaviour : MonoBehaviour
 {
@@ -13,42 +14,12 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by left arrow controlling the displayed shapes in the toolbar in a given puzzle
         //selection of this button shifts all displayed shapes right letting the user "scroll left"
 
-        //foreach (Vector3 Position in TouchRotate.toolbarArray)
-        //{
-        //    TouchRotate.toolbarArray[System.Array.IndexOf(TouchRotate.toolbarArray, Position)] = Position + Global.shapeOffset; 
-        //}
-
-       // Debug.Log("entered left arrow"); 
-
-
-
         for (int i = 0; i < TouchRotate.toolbarArray.Length; i++)
         {
            // Debug.Log("before: " + TouchRotate.toolbarArray[i]); 
             TouchRotate.toolbarArray[i]  = TouchRotate.toolbarArray[i] + Global.shapeOffset;
             //Debug.Log("after: " + TouchRotate.toolbarArray[i]);
         }
-
-
-        
-
-        //if (TouchRotateSquarePurple.Active == true)
-        //{
-        //    GameObject.Find("SquarePurple").transform.position += Global.shapeOffset;
-        //    TouchRotateSquarePurple.shapeLoc = GameObject.Find("SquarePurple").transform.position;
-        //}
-
-        //if (TouchRotateTriangleRed.Active == true)
-        //{
-        //    GameObject.Find("TriangleRed").transform.position += Global.shapeOffset;
-        //    TouchRotateTriangleRed.shapeLoc = GameObject.Find("TriangleRed").transform.position;
-        //}
-
-        //if (TouchRotateDiamondYellow.Active == true)
-        //{
-        //    GameObject.Find("DiamondYellow").transform.position += Global.shapeOffset;
-        //    TouchRotateDiamondYellow.shapeLoc = GameObject.Find("DiamondYellow").transform.position;
-        //}
 
     }
 
@@ -57,43 +28,19 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by right arrow controlling the displayed shapes in the toolbar in a given puzzle
         //selection of this button shifts all displayed shapes left letting the user "scroll right"
 
-        //foreach (Vector3 Position in TouchRotate.toolbarArray)
-        //{
-        //    TouchRotate.toolbarArray[System.Array.IndexOf(TouchRotate.toolbarArray, Position)] = Position - Global.shapeOffset; 
-        //}
-
         for (int i = 0; i < TouchRotate.toolbarArray.Length; i++)
         {
             TouchRotate.toolbarArray[i] = TouchRotate.toolbarArray[i] - Global.shapeOffset;
         }
 
-
-        //if (TouchRotateSquarePurple.Active == true)
-        //{
-        //    GameObject.Find("SquarePurple").transform.position -= Global.shapeOffset;
-        //    TouchRotateSquarePurple.shapeLoc = GameObject.Find("SquarePurple").transform.position;
-        //}
-
-        //if (TouchRotateTriangleRed.Active == true)
-        //{
-        //    GameObject.Find("TriangleRed").transform.position -= Global.shapeOffset;
-        //    TouchRotateTriangleRed.shapeLoc = GameObject.Find("TriangleRed").transform.position;
-        //}
-
-        //if (TouchRotateDiamondYellow.Active == true)
-        //{
-        //    GameObject.Find("DiamondYellow").transform.position -= Global.shapeOffset;
-        //    TouchRotateDiamondYellow.shapeLoc = GameObject.Find("DiamondYellow").transform.position;
-        //}
     }
 
     public void StartButton()
     {
         //triggered by start button on home screen
-        //moves home screen menu out of view to the left and brings the mode selection menu into view
+        //loads the World Selection scene
 
-        GameObject.Find("MainMenu").transform.localPosition = Global.leftPosition;
-        GameObject.Find("ModeMenu").transform.localPosition = Global.centrePosition;
+        SceneManager.LoadScene("Worlds");
     }
 
     public void SettingsButton()
@@ -141,29 +88,6 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("ParentalinfoMenu").transform.localPosition = Global.topPosition;
     }
 
-    public void GreenModeButton()
-    {
-        //sets the mode of the puzzle to green mode and loads the land selections scene
-        // in green mode only the shapes necessary to complete the puzzle will be shown in the toolbar
-
-        Global.greenMode = true;
-        Global.redMode = false;
-
-        SceneManager.LoadScene("Lands"); 
-
-    }
-
-    public void RedModeButton()
-    {
-        //sets the mode of the puzzle to red mode and loads the land selection scene
-        // in red mode more shapes than are necessary to complete the puzzle will be shown in the toolbar
-
-        Global.redMode = true;
-        Global.greenMode = false;
-
-        SceneManager.LoadScene("Lands");
-    }
-
     public void ModeInfoButton()
     {
         //triggered by the info button on the mode selection menu
@@ -189,11 +113,70 @@ public class ButtonBehaviour : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void JungleButton()
+    public void StartNewPuzzle()
     {
-        //is triggered by the Jungleland button on the land selection menu
-        //loads the jungle scene
+        //is triggered when the START button is pressed on the popup after a puzzle is complete
+       
+        Debug.Log("do soemthing clever here");
 
-        SceneManager.LoadScene("Jungle");
+        GameObject.Find("PopupStart").transform.localPosition = Global.rightPosition;     //moves the pop-up box out of screen
+
+        GameObject.Find("HomeButton").GetComponent<Button>().interactable = true;         //activates buttons
+        GameObject.Find("LeftArrow").GetComponent<Button>().interactable = true;
+        GameObject.Find("RightArrow").GetComponent<Button>().interactable = true;
+
+        Global.DestroyShapes();                                                           //destroy all existing shapes
+
+        Global.NextPuzzleReady = true;                                                    //allow next puzzle to load
+
+
+    }
+
+    public void PlaygroundButton()
+    {
+        //is triggered by the Playground button on the land selection menu
+        //loads the Playground scene
+
+        //SceneManager.LoadScene("Playground");
+    }
+
+    public void TriangleButton()
+    {
+        //is triggered by the Triangle City button on the land selection menu
+        //loads the Triangle scene
+
+       // SceneManager.LoadScene("Triangle");
+    }
+
+    public void MouseButton()
+    {
+        //is triggered by the Mouse Shapes button on the land selection menu
+        //loads the Mouse scene
+
+       SceneManager.LoadScene("Mouse");
+    }
+
+    public void WildButton()
+    {
+        //is triggered by the Wild button on the land selection menu
+        //loads the Wild scene
+
+        //SceneManager.LoadScene("Wild");
+    }
+
+    public void FarmButton()
+    {
+        //is triggered by the Farm button on the land selection menu
+        //loads the Farm scene
+
+       // SceneManager.LoadScene("Farm");
+    }
+
+    public void FreeplayButton()
+    {
+        //is triggered by the Free Play button on the land selection menu
+        //loads the Free Play scene
+
+        //SceneManager.LoadScene("FreePlay");
     }
 }
