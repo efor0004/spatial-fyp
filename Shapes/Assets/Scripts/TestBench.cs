@@ -67,7 +67,7 @@ public class TestBench : MonoBehaviour
 
                 if (n == 0)
                 {
-                    writer.WriteLine("RenderShapeFixed(\"Shape" + n + "\", \"" + gameObject.name + "\", new Vector3("
+                    writer.WriteLine("RenderShapeFixed(\"Shape" + n + "\", \"" + gameObject.GetComponent<SpriteRenderer>().sprite.name + "\", new Vector3("
                         + gameObject.transform.position.x + "f, " + gameObject.transform.position.y + "f, " + gameObject.transform.position.z + "f), new Vector3("
                         + gameObject.transform.rotation.eulerAngles.x + "f, " + gameObject.transform.rotation.eulerAngles.y + "f, " + gameObject.transform.rotation.eulerAngles.z + "f), new Vector3("
                         + gameObject.transform.localScale.x + "f, " + gameObject.transform.localScale.y + "f, " + gameObject.transform.localScale.z + "f), \""
@@ -78,7 +78,7 @@ public class TestBench : MonoBehaviour
                         );
                 }
                 else {
-                    writer.WriteLine("RenderShapeVariable(\"Shape" + n + "\", \"" + gameObject.name + "\", new Vector3("
+                    writer.WriteLine("RenderShapeVariable(\"Shape" + n + "\", \"" + gameObject.GetComponent<SpriteRenderer>().sprite.name + "\", new Vector3("
                         + gameObject.transform.position.x + "f, " + gameObject.transform.position.y + "f, " + gameObject.transform.position.z + "f), new Vector3("
                         + gameObject.transform.rotation.eulerAngles.x + "f, " + gameObject.transform.rotation.eulerAngles.y + "f, " + gameObject.transform.rotation.eulerAngles.z + "f), new Vector3("
                         + gameObject.transform.localScale.x + "f, " + gameObject.transform.localScale.y + "f, " + gameObject.transform.localScale.z + "f), \""

@@ -11,8 +11,8 @@ public class TouchRotate : MonoBehaviour
     //values updated at puzzle instantiation
     public static Vector3[] positionArray = new[] { new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f) };
     public static Vector3[] rotationArray = new[] { new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f) };
-    public static bool[] activeArray = new bool[] { true, true, true, true, true, true, true, true, true, true, true};
-    public static bool[] activeArrayCopy = new bool[] { true, true, true, true, true, true, true, true, true, true, true };     //will be used to save current active status when all shapes need to be made temporarily inactive
+    public static bool[] activeArray = new bool[] { false, false, false, false, false, false, false, false, false, false, false };
+    public static bool[] activeArrayCopy = new bool[] { false, false, false, false, false, false, false, false, false, false, false };    //will be used to save current active status when all shapes need to be made temporarily inactive
     public static bool[] smallArray = new bool[] { false, false, false, false, false, false, false, false, false, false, false};
     public static Vector3[] toolbarArray = new[] { new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f) }; //saves "rest" position
     private Collider2D myCollider; 
@@ -20,9 +20,17 @@ public class TouchRotate : MonoBehaviour
 
     void Start()
     {
-
+        //this is activating too early
+        //need to wait for shapes to load
+        StartCoroutine(Wait()); //
     }
 
+    IEnumerator Wait()
+    {
+       // Debug.Log("Waiting for shapes to load...");
+        yield return new WaitUntil(() => Global.puzzleLoaded == true);
+       // Debug.Log("Shapes are all here!");
+    }
     void Update()
     {
         //adapted code from http://wiki.unity3d.com/index.php/DetectTouchMovement
@@ -50,13 +58,15 @@ public class TouchRotate : MonoBehaviour
                                 Quaternion desiredRotation = go.gameObject.transform.rotation;                   //start desiredRotation as the current orientation of the shape
                                 DetectTouchMovement.Calculate();                                                 //determines turnAngle and turnAngleDelta from 2 finger rotation on screen
 
-                                if (Mathf.Abs(DetectTouchMovement.turnAngleDelta) > 0)                           //if the detected turn angle is large enough
+                                if (Mathf.Abs(DetectTouchMovement.turnAngleDelta) > 0 & smallArray[System.Array.IndexOf(nameArray, go.name)] == false)   //if the detected turn angle is large enough and the shape is not small
                                 {
                                     Vector3 rotationDeg = Vector3.zero;
                                     rotationDeg.z = DetectTouchMovement.turnAngleDelta;
                                     desiredRotation *= Quaternion.Euler(rotationDeg);                            //update the desiredRotation to include this change in angle
 
                                     go.gameObject.transform.rotation = desiredRotation;                          //upate the shape rotated orientation
+
+                                   // Debug.Log("rotation:  " + desiredRotation + " position: " + go.gameObject.transform.position);
                                 }
 
                                                                                                                   //updates shape translated position (1 or 2 fingers)
@@ -77,23 +87,36 @@ public class TouchRotate : MonoBehaviour
             }
 
         }
-        else 
+        else
         {
             foreach (string name in nameArray)
             {
-
-                GameObject go = GameObject.Find(name);                                                            //checks if the shape exists
+                GameObject go = GameObject.Find(name);                                                              //checks if the shape exists
 
                 if (go)
                 {
-                    if (activeArray[System.Array.IndexOf(nameArray, go.name)] == true)
+                    if (activeArray[System.Array.IndexOf(nameArray, go.name)] == true)                              // if a piece is active and there are less than 2 fingers on the screen 
                     {
-                        go.transform.position = toolbarArray[System.Array.IndexOf(nameArray, go.name)];
-                        go.transform.rotation = Quaternion.Euler(0, 0, 0);
+                        Vector3 TargetPosition = positionArray[System.Array.IndexOf(nameArray, go.name)];
+                        Vector3 TargetRotation = rotationArray[System.Array.IndexOf(nameArray, go.name)];
+
+                        if ((TargetPosition.x - Global.positionTolerance) < go.transform.position.x & go.transform.position.x < (TargetPosition.x + Global.positionTolerance)    //if shape is placed within tolerances leave it
+                            & (TargetPosition.y - Global.positionTolerance) < go.transform.position.y & go.transform.position.y < (TargetPosition.y + Global.positionTolerance)
+                            & (TargetRotation.z - Global.rotationTolerance) < go.transform.rotation.eulerAngles.z & go.transform.rotation.eulerAngles.z < (TargetRotation.z + Global.rotationTolerance))                                                                                     //in the correct position, leave where it is
+                        {
+                                                                                                                   //could make this snap to position
+                            activeArray[System.Array.IndexOf(nameArray, go.name)] = false;                          //make inactive
+                        }
+                        else                                                                                        //not in the correct position, return to toolbar
+                        {
+                            //Debug.Log("name: " + go.name + " target rotaion: " + rotationArray[System.Array.IndexOf(nameArray, go.name)] + " actual rotation: " + go.transform.rotation.eulerAngles); //compare rotation of shapes that fail
+
+                            go.transform.position = toolbarArray[System.Array.IndexOf(nameArray, go.name)];
+                            go.transform.rotation = Quaternion.Euler(0, 0, 0);                                      //check this line if things fuck up/////////////////////////////////////////////////////
+                        }
                     }
                 }
             }
-
         }
 
     }//end update
