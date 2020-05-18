@@ -30,16 +30,16 @@ public class Global : MonoBehaviour
     public static int puzzlePieces = 11; //in use
     public static int piecesPlaced = 0; //in use
 
-    public static int PlaygroundLevel;               //keeps track of progress
-    public static int PlaygroundPuzzle;
-    public static int TriangleLevel;
-    public static int TrianglesPuzzle;
-    public static int MouseLevel;
-    public static int MousePuzzle;
-    public static int WildLevel;
-    public static int WildPuzzle;
-    public static int FarmLevel;
-    public static int FarmPuzzle;
+    public static int PlaygroundLevel = 1;               //keeps track of progress
+    public static int PlaygroundPuzzle = 0;
+    public static int TriangleLevel = 1;
+    public static int TrianglesPuzzle = 0;
+    public static int MouseLevel = 1;
+    public static int MousePuzzle = 0;
+    public static int WildLevel = 1;
+    public static int WildPuzzle = 0;
+    public static int FarmLevel = 1;
+    public static int FarmPuzzle = 0;
 
     public static bool NextPuzzleReady = true; 
 

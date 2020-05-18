@@ -12,15 +12,31 @@ public class MouseHandler : MonoBehaviour
     // float toolbarXstart = -3.75f; //(-2.5/2) 
     float toolbarXstart = -4.8f;
 
-    // Start is called before the first frame update
+    delegate void PuzzleMethod();                                      //creates an empty method
+    List<PuzzleMethod> Puzzle = new List<PuzzleMethod>();              //creates a list of empty methods
+    void CreateList()                                 
+    {
+        //populates the list of empty methods with a function call for each puzzle
+
+        Puzzle.Add(Puzzle1);
+        Puzzle.Add(Puzzle2);
+        Puzzle.Add(Puzzle3);
+    }
+
+    
     void Start()
     {
+        // Start is called before the first frame update
 
-        Puzzle1();
-
+        Global.NextPuzzleReady = true;                                     //set as true every time the scene is opened
+        //CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
+        //Puzzle1();
+        Puzzle3(); 
     }
         void Update()
         {
+        //called each frame
+
             if (Global.piecesPlaced == Global.puzzlePieces)                    //puzzle completion 
                 {
                     PuzzleComplete(); 
@@ -28,12 +44,12 @@ public class MouseHandler : MonoBehaviour
 
         if (Global.NextPuzzleReady == true)
         {
-            
-        
+            int n;
+            n = (Global.MouseLevel - 1) * 5 + Global.MousePuzzle;              //index of array = puzzle number -1
+            Puzzle[n]();                                                       //calls the puzzle by indexing the array of function calls
         }
 
-
-        }
+    }
 
        
 
@@ -183,6 +199,33 @@ public class MouseHandler : MonoBehaviour
 
         //spawn target image
         RenderPuzzleImage("Puzzle2");  //has the touchrotate script attached --> run after all shapes are loaded
+    }
+
+    void Puzzle3()
+    {
+        // puzzle 3 in the Mouse Shapes scene
+
+        Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
+
+        //record level and puzzle numbers
+        Global.MouseLevel = 1;
+        Global.MousePuzzle = 3;
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 6;
+
+        //spawn anchor shape
+        RenderShapeFixed("Shape0", "Circle", new Vector3(-0.05f, -0.87f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.7549642f, 0.7549642f, 0.7549642f), "Shape1", new Vector4(1f, 0.4678748f, 0f, 1f), false, 0);
+        
+        RenderShapeVariable("Shape1", "TriangleI", new Vector3(-1.87f, 0.59f, 0f), new Vector3(0f, 0f, 51.07933f), new Vector3(0.2188039f, 0.3065733f, 1f), "Shape2", new Vector4(1f, 0.3632075f, 0.3965594f, 1f), false, 1);
+        RenderShapeVariable("Shape2", "TriangleR", new Vector3(1.8f, 0.58f, 0.02f), new Vector3(0f, 0f, 310.699f), new Vector3(0.3250957f, 0.3028033f, 1.116f), "Shape2", new Vector4(1f, 0.3632075f, 0.3965594f, 1f), false, 2);
+        RenderShapeVariable("Shape3", "Circle", new Vector3(-0.7f, -0.52f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.12425f, 0.12425f, 0.12425f), "Shape3", new Vector4(0.3820755f, 0.6195526f, 1f, 1f), true, 3);
+        RenderShapeVariable("Shape4", "Semicircle", new Vector3(0.736f, -0.439f, 0f), new Vector3(0f, 0f, 34.34164f), new Vector3(0.136999f, 0.1496053f, 0.1518836f), "Shape3", new Vector4(0.3820755f, 0.6195526f, 1f, 1f), true, 4);
+        RenderShapeVariable("Shape5", "TriangleI", new Vector3(-0.01f, -1.28f, 0f), new Vector3(0f, 0f, 179.3278f), new Vector3(0.1430812f, 0.135563f, 0.1174722f), "Shape3", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), true, 5);
+        RenderShapeVariable("Shape6", "TriangleI", new Vector3(0.01f, -1.817f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1753337f, 0.08821746f, 0.1523316f), "Shape2", new Vector4(0f, 0f, 0f, 1f), true, 6);
+
+        //spawn target image
+        RenderPuzzleImage("Puzzle3");  //has the touchrotate script attached --> run after all shapes are loaded
     }
 
 }
