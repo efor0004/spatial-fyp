@@ -7,22 +7,30 @@
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_1.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_2.png" type="Texture" id=6]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 192, 192 )
-
-[sub_resource type="CanvasItemMaterial" id=3]
+[sub_resource type="CanvasItemMaterial" id=2]
 light_mode = 2
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 192, 192 )
 
 [node name="Game" type="Node2D"]
 
 [node name="Question" type="Sprite" parent="."]
 script = ExtResource( 3 )
 
-[node name="Holey Quilt" type="Light2D" parent="Question"]
+[node name="HoleyQuilt" type="Node2D" parent="Question"]
 position = Vector2( 356, 768 )
+
+[node name="Light2D" type="Light2D" parent="Question/HoleyQuilt"]
 texture = ExtResource( 4 )
 texture_scale = 1.5
 mode = 2
+
+[node name="Fabric Texture 0" type="Sprite" parent="Question/HoleyQuilt"]
+material = SubResource( 2 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="Option 1" type="Area2D" parent="Question"]
 position = Vector2( 792, 768 )
@@ -36,7 +44,13 @@ range_height = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question/Option 1"]
 visible = false
 z_index = 1
-shape = SubResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Fabric Texture 1" type="Sprite" parent="Question/Option 1"]
+material = SubResource( 2 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="Option 2" type="Area2D" parent="Question"]
 position = Vector2( 1256, 768 )
@@ -50,7 +64,13 @@ range_height = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question/Option 2"]
 visible = false
 z_index = 1
-shape = SubResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Fabric Texture 2" type="Sprite" parent="Question/Option 2"]
+material = SubResource( 2 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="Option 3" type="Area2D" parent="Question"]
 position = Vector2( 1721, 768 )
@@ -64,13 +84,13 @@ range_height = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question/Option 3"]
 visible = false
 z_index = 1
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
-[node name="Fabric Texture 1" type="Sprite" parent="Question"]
-material = SubResource( 3 )
-scale = Vector2( 3, 3 )
+[node name="Fabric Texture 3" type="Sprite" parent="Question/Option 3"]
+material = SubResource( 2 )
 texture = ExtResource( 2 )
-centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 384, 384 )
 [connection signal="input_event" from="Question/Option 1" to="Question" method="_on_Option_1_input_event"]
 [connection signal="input_event" from="Question/Option 2" to="Question" method="_on_Option_2_input_event"]
 [connection signal="input_event" from="Question/Option 3" to="Question" method="_on_Option_3_input_event"]

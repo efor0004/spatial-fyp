@@ -2,6 +2,8 @@ extends Sprite
 
 onready var current_level = 1
 onready var current_question = 1
+onready var current_shuffled_question = 1
+
 onready var current_colour = Color(1,1,1,1)
 onready var initial_quilt_piece_x = 1136
 onready var quilt_piece_x = initial_quilt_piece_x
@@ -14,9 +16,15 @@ onready var question_order = []
 onready var option_file_text = "option_"
 onready var all_textures_path = "res://assets/sprites/textures"
 
+const FileUtils = preload("utilities/files.gd")
+onready var file_utils = FileUtils.new()
+
+const GeneralUtils = preload("utilities/general.gd")
+onready var general_utils = GeneralUtils.new()
+
 func _ready():
 	randomise_question_texture()
-	question_order = shuffle_list(range(1,questions_per_level + 1))
+	question_order = general_utils.shuffle_list(range(1,questions_per_level + 1))
 	set_shapes()
 
 func next_question():
@@ -38,12 +46,12 @@ func next_question():
 	randomise_question_texture()
 
 func shuffle_question_order():
-	question_order = shuffle_list(range(1,questions_per_level + 1))
+	question_order = general_utils.shuffle_list(range(1,questions_per_level + 1))
 
 func set_shapes():
-	var shuffled_question = question_order[current_question - 1]
+	current_shuffled_question = question_order[current_question - 1]
 	var level_path = get_level_path()
-	var question_path = get_question_path(shuffled_question)
+	var question_path = get_question_path()
 	
 	print("Level %d, Question %d" % [current_level, current_question])
 	
@@ -53,48 +61,45 @@ func set_shapes():
 func get_level_path():
 	return "res://assets/sprites/questions/level_%d/" % current_level
 
-func get_question_path(question):
+func get_question_path():
 	var level_path = get_level_path()
-	return str(level_path, "question_%d" % question)
+	return str(level_path, "question_%d" % current_shuffled_question)
 
 func get_holey_quilt_path():
-	var question_path = get_question_path(current_question)
+	var question_path = get_question_path()
 	return question_path + "/holey_quilt.png"
 
+func get_holey_quilt_texture():
+	var holey_quilt = get_child(0)
+	var holey_quilt_texture = holey_quilt.get_child(1)
+	return holey_quilt_texture
+
+func get_holey_quilt_shape():
+	var holey_quilt = get_child(0)
+	var holey_quilt_shape = holey_quilt.get_child(0)
+	return holey_quilt_shape
+
 func set_holey_quilt_shape(level_path, question_path):
-	var children = get_children()
-	var holey_quilt = children[0]
+	var holey_quilt_shape = get_holey_quilt_shape()
 	
 	var holey_quilt_path = get_holey_quilt_path()
+	print(holey_quilt_path)
 	
-	var holey_quilt_shape = load(holey_quilt_path)
-	
-	holey_quilt.set_texture(holey_quilt_shape)
+	var shape = load(holey_quilt_path)
+	print(holey_quilt_shape)
+	holey_quilt_shape.set_texture(shape)
 
 func set_options_shapes(base_path):
-	var children = get_children()
 	var indices = range(1,4)
-	var random_indices = shuffle_list(indices)
+	var random_indices = general_utils.shuffle_list(indices)
 	for i in indices:
-		var option = children[i]
+		var option = get_child(i)
 		var option_mask = option.get_child(0)
 		var shape_no = random_indices[i - 1]
 		var option_path_suffix = "/option_%d.png" % shape_no
 		var option_path = base_path + option_path_suffix
 		var option_shape = load(option_path)
 		option_mask.set_texture(option_shape)
-		
-func shuffle_list(list):
-	var list_copy = list.duplicate()
-	var shuffled_list = []
-	for i in range(list_copy.size()):
-		var index_list = range(list_copy.size())
-		randomize()
-		var x = randi() % index_list.size()
-		shuffled_list.append(list_copy[x])
-		index_list.remove(x)
-		list_copy.remove(x)
-	return shuffled_list
 
 func on_option_pressed(sprite_index):
 	print("Option %d pressed" % sprite_index)
@@ -112,7 +117,7 @@ func on_option_pressed(sprite_index):
 		next_question()
 
 func randomise_question_texture():
-	var textures = get_files_in_directory(all_textures_path)
+	var textures = file_utils.get_files_in_directory(all_textures_path)
 	
 	randomize()
 	var x = randi() % textures.size()
@@ -153,25 +158,13 @@ func add_quilt_piece():
 
 func set_question_texture(texture_path):
 	var texture = load(texture_path)
-	var texture_node = get_child(0)
-	texture_node.set_texture(texture)
-
-func get_files_in_directory(path):
-	var files = []
-	var dir = Directory.new()
-	dir.open(path)
-	dir.list_dir_begin()
-
-	while true:
-		var file = dir.get_next()
-		if file == "":
-			break
-		elif not file.begins_with(".") and not file.ends_with(".import"):
-			files.append(file)
-
-	dir.list_dir_end()
-
-	return files
+	var holey_quilt_texture = get_holey_quilt_texture()
+	holey_quilt_texture.set_texture(texture)
+	
+	for i in range(1,4):
+		var option = get_child(i)
+		var option_texture = option.get_child(2)
+		option_texture.set_texture(texture)
 
 func _on_Option_1_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton \
