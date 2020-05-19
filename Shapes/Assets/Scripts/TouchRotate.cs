@@ -14,7 +14,10 @@ public class TouchRotate : MonoBehaviour
     public static bool[] activeArray = new bool[] { false, false, false, false, false, false, false, false, false, false, false };
     public static bool[] activeArrayCopy = new bool[] { false, false, false, false, false, false, false, false, false, false, false };    //will be used to save current active status when all shapes need to be made temporarily inactive
     public static bool[] smallArray = new bool[] { false, false, false, false, false, false, false, false, false, false, false};
+    public static bool[] circleArray = new bool[] { false, false, false, false, false, false, false, false, false, false, false };
     public static Vector3[] toolbarArray = new[] { new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f) }; //saves "rest" position
+    public static Vector3[] toolbarRotationArray = new[] { new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f) }; //saves rest orientation
+
     private Collider2D myCollider; 
 
 
@@ -52,7 +55,7 @@ public class TouchRotate : MonoBehaviour
                                 Quaternion desiredRotation = go.gameObject.transform.rotation;                   //start desiredRotation as the current orientation of the shape
                                 DetectTouchMovement.Calculate();                                                 //determines turnAngle and turnAngleDelta from 2 finger rotation on screen
 
-                                if (Mathf.Abs(DetectTouchMovement.turnAngleDelta) > 0 & smallArray[System.Array.IndexOf(nameArray, go.name)] == false)   //if the detected turn angle is large enough and the shape is not small
+                                if (Mathf.Abs(DetectTouchMovement.turnAngleDelta) > 0 && smallArray[System.Array.IndexOf(nameArray, go.name)] == false && circleArray[System.Array.IndexOf(nameArray, go.name)] == false)   //if the detected turn angle is large enough and the shape is not small
                                 {
                                     Vector3 rotationDeg = Vector3.zero;
                                     rotationDeg.z = DetectTouchMovement.turnAngleDelta;
@@ -107,7 +110,8 @@ public class TouchRotate : MonoBehaviour
                             //Debug.Log("name: " + go.name + " target rotaion: " + rotationArray[System.Array.IndexOf(nameArray, go.name)] + " actual rotation: " + go.transform.rotation.eulerAngles); //compare rotation of shapes that fail
 
                             go.transform.position = toolbarArray[System.Array.IndexOf(nameArray, go.name)];
-                            go.transform.rotation = Quaternion.Euler(0, 0, 0);                                      //check this line if things fuck up/////////////////////////////////////////////////////
+                          //  go.transform.rotation = Quaternion.Euler(0, 0, 0);                                            //check this line if things fuck up/////////////////////////////////////////////////////
+                            go.transform.rotation = Quaternion.Euler(toolbarRotationArray[System.Array.IndexOf(nameArray, go.name)]);
                         }
                     }
                 }

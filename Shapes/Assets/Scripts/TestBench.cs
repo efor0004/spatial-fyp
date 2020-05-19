@@ -34,25 +34,15 @@ public class TestBench : MonoBehaviour
 
         float minScale = 0.2f; 
         int n = 0;
-        bool small = false; 
+        bool small = false;
+        bool circle = false; 
 
         for (int i = 0; i < rootObjects.Count; ++i)
         {
             GameObject gameObject = rootObjects[i];                                          //for every game object in the list that renders a sprite
             if (gameObject.GetComponent<SpriteRenderer>())                                   //write its name (variant of the image rendered), position, rotation, scale, sorting layer and colour 
             {
-                //prints out values in natural format
-                // writer.WriteLine("\n name: " + gameObject.name + "\t position: " + gameObject.transform.position + "\t rotation: " + gameObject.transform.rotation.eulerAngles + "\t scale: " + gameObject.transform.localScale + "\t sorting layer: " + gameObject.GetComponent<SpriteRenderer>().sortingLayerName + "\t colour: " + gameObject.GetComponent<SpriteRenderer>().color);
-
-                //prints out values in (0.0f, 0.1f, 0.2f) format
-                //writer.WriteLine("\n name: " + gameObject.name 
-                //    + "\t position: (" + gameObject.transform.position.x + "f, " + gameObject.transform.position.y + "f, " + gameObject.transform.position.z + "f)" 
-                //    + "\t rotation: (" + gameObject.transform.rotation.eulerAngles.x + "f, " + gameObject.transform.rotation.eulerAngles.y + "f, " + gameObject.transform.rotation.eulerAngles.z + "f)" 
-                //    + "\t scale: (" + gameObject.transform.localScale.x + "f, " + gameObject.transform.localScale.y + "f, " + gameObject.transform.localScale.z + "f)"  
-                //    + "\t sorting layer: " + gameObject.GetComponent<SpriteRenderer>().sortingLayerName 
-                //    + "\t colour: (" + gameObject.GetComponent<SpriteRenderer>().color.r + "f, " + gameObject.GetComponent<SpriteRenderer>().color.g + "f, " + gameObject.GetComponent<SpriteRenderer>().color.b + "f, " + gameObject.GetComponent<SpriteRenderer>().color.a + "f)"
-                //    );
-
+              
                 //creates a function to render the sprite
                 //shapes are listed in order of creation (if the heirarchy is untouched)
                 //the first shape will be the anchor shape and it needs a separate function to render it in position
@@ -65,6 +55,15 @@ public class TestBench : MonoBehaviour
                     small = false; 
                 }
 
+                if (gameObject.GetComponent<SpriteRenderer>().sprite.name == "Circle" && (gameObject.transform.localScale.x / gameObject.transform.localScale.y) > 0.95f && (gameObject.transform.localScale.x / gameObject.transform.localScale.y) < 1.05f)
+                {
+                    circle = true;
+                }
+                else 
+                {
+                    circle = false; 
+                }
+
                 if (n == 0)
                 {
                     writer.WriteLine("RenderShapeFixed(\"Shape" + n + "\", \"" + gameObject.GetComponent<SpriteRenderer>().sprite.name + "\", new Vector3("
@@ -74,7 +73,8 @@ public class TestBench : MonoBehaviour
                         + gameObject.GetComponent<SpriteRenderer>().sortingLayerName + "\", new Vector4("
                         + gameObject.GetComponent<SpriteRenderer>().color.r + "f, " + gameObject.GetComponent<SpriteRenderer>().color.g + "f, " + gameObject.GetComponent<SpriteRenderer>().color.b + "f, " + gameObject.GetComponent<SpriteRenderer>().color.a + "f), "
                         + small.ToString().ToLower() + ", " 
-                        + n +  ");"
+                        + n + ", "
+                        + circle.ToString().ToLower() + ");"
                         );
                 }
                 else {
@@ -85,7 +85,8 @@ public class TestBench : MonoBehaviour
                         + gameObject.GetComponent<SpriteRenderer>().sortingLayerName + "\", new Vector4("
                         + gameObject.GetComponent<SpriteRenderer>().color.r + "f, " + gameObject.GetComponent<SpriteRenderer>().color.g + "f, " + gameObject.GetComponent<SpriteRenderer>().color.b + "f, " + gameObject.GetComponent<SpriteRenderer>().color.a + "f), "
                         + small.ToString().ToLower() + ", "
-                        + n + ");"
+                        + n + "," 
+                        + circle.ToString().ToLower() + ");"
                         );
                 }
                 n = n + 1;
@@ -97,3 +98,16 @@ public class TestBench : MonoBehaviour
     }
 
 }
+
+
+//prints out values in natural format
+// writer.WriteLine("\n name: " + gameObject.name + "\t position: " + gameObject.transform.position + "\t rotation: " + gameObject.transform.rotation.eulerAngles + "\t scale: " + gameObject.transform.localScale + "\t sorting layer: " + gameObject.GetComponent<SpriteRenderer>().sortingLayerName + "\t colour: " + gameObject.GetComponent<SpriteRenderer>().color);
+
+//prints out values in (0.0f, 0.1f, 0.2f) format
+//writer.WriteLine("\n name: " + gameObject.name 
+//    + "\t position: (" + gameObject.transform.position.x + "f, " + gameObject.transform.position.y + "f, " + gameObject.transform.position.z + "f)" 
+//    + "\t rotation: (" + gameObject.transform.rotation.eulerAngles.x + "f, " + gameObject.transform.rotation.eulerAngles.y + "f, " + gameObject.transform.rotation.eulerAngles.z + "f)" 
+//    + "\t scale: (" + gameObject.transform.localScale.x + "f, " + gameObject.transform.localScale.y + "f, " + gameObject.transform.localScale.z + "f)"  
+//    + "\t sorting layer: " + gameObject.GetComponent<SpriteRenderer>().sortingLayerName 
+//    + "\t colour: (" + gameObject.GetComponent<SpriteRenderer>().color.r + "f, " + gameObject.GetComponent<SpriteRenderer>().color.g + "f, " + gameObject.GetComponent<SpriteRenderer>().color.b + "f, " + gameObject.GetComponent<SpriteRenderer>().color.a + "f)"
+//    );
