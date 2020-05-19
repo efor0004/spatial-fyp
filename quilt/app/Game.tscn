@@ -1,16 +1,16 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_3.png" type="Texture" id=1]
-[ext_resource path="res://assets/sprites/textures/texture_1.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/fabrics/fabric_1.jpg" type="Texture" id=2]
 [ext_resource path="res://scripts/Question.gd" type="Script" id=3]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/holey_quilt.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_1.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_2.png" type="Texture" id=6]
 
-[sub_resource type="CanvasItemMaterial" id=2]
+[sub_resource type="CanvasItemMaterial" id=1]
 light_mode = 2
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 192, 192 )
 
 [node name="Game" type="Node2D"]
@@ -18,7 +18,7 @@ extents = Vector2( 192, 192 )
 [node name="Question" type="Sprite" parent="."]
 script = ExtResource( 3 )
 
-[node name="HoleyQuilt" type="Node2D" parent="Question"]
+[node name="HoleyQuilt" type="Sprite" parent="Question"]
 position = Vector2( 356, 768 )
 
 [node name="Light2D" type="Light2D" parent="Question/HoleyQuilt"]
@@ -27,7 +27,7 @@ texture_scale = 1.5
 mode = 2
 
 [node name="Fabric Texture 0" type="Sprite" parent="Question/HoleyQuilt"]
-material = SubResource( 2 )
+material = SubResource( 1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 384, 384 )
@@ -44,10 +44,10 @@ range_height = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question/Option 1"]
 visible = false
 z_index = 1
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Fabric Texture 1" type="Sprite" parent="Question/Option 1"]
-material = SubResource( 2 )
+material = SubResource( 1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 384, 384 )
@@ -64,10 +64,10 @@ range_height = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question/Option 2"]
 visible = false
 z_index = 1
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Fabric Texture 2" type="Sprite" parent="Question/Option 2"]
-material = SubResource( 2 )
+material = SubResource( 1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 384, 384 )
@@ -84,10 +84,10 @@ range_height = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question/Option 3"]
 visible = false
 z_index = 1
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Fabric Texture 3" type="Sprite" parent="Question/Option 3"]
-material = SubResource( 2 )
+material = SubResource( 1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 384, 384 )
