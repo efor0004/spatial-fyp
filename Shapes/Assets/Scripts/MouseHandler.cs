@@ -19,10 +19,12 @@ public class MouseHandler : MonoBehaviour
     void CreateList()                                 
     {
         //populates the list of empty methods with a function call for each puzzle
+        //adapted from https://answers.unity.com/questions/873650/how-to-make-a-list-or-array-of-functions-with-type.html 
 
         Puzzle.Add(Puzzle1);
         Puzzle.Add(Puzzle2);
         Puzzle.Add(Puzzle3);
+        Puzzle.Add(Puzzle4);
     }
 
     
@@ -32,9 +34,8 @@ public class MouseHandler : MonoBehaviour
 
         Global.NextPuzzleReady = true;                                     //set as true every time the scene is opened
         CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
-        //Puzzle1();
-        //Puzzle2(); 
-       // Puzzle3(); 
+        //Puzzle2();
+    
     }
         void Update()
         {
@@ -163,6 +164,7 @@ public class MouseHandler : MonoBehaviour
     void Puzzle1()
     {
         //puzzle 1 in the Mouse Shapes scene
+        // the fish
 
         Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
 
@@ -190,6 +192,7 @@ public class MouseHandler : MonoBehaviour
     void Puzzle2()
     {
         //puzzle 2 in the Mouse Shapes scene
+        //the house by the tree
 
         Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
 
@@ -216,6 +219,7 @@ public class MouseHandler : MonoBehaviour
     void Puzzle3()
     {
         // puzzle 3 in the Mouse Shapes scene
+        // the cat face
 
         Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
 
@@ -238,6 +242,40 @@ public class MouseHandler : MonoBehaviour
 
         //spawn target image
         RenderPuzzleImage("Puzzle3");  //has the touchrotate script attached --> run after all shapes are loaded
+    }
+
+    void Puzzle4()
+    {
+        // puzzle 4 in the Mouse Shapes scene
+        // the square mouse
+
+        Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
+
+        //record level and puzzle numbers
+        Global.MouseLevel = 1;
+        Global.MousePuzzle = 4;
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 12;
+
+        //spawn anchor shape
+        RenderShapeFixed("Shape0", "Square", new Vector3(0.01f, -1.12f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.4252922f, 0.4252922f, 0.4252922f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f), false, 0, false);
+       
+        RenderShapeVariable("Shape1", "TriangleI", new Vector3(0.08f, 0.4966f, 0f), new Vector3(0f, 0f, 329.6572f), new Vector3(0.3603483f, 0.3603483f, 0.3603483f), "Shape3", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), false, 1, false);
+        RenderShapeVariable("Shape2", "Circle", new Vector3(-0.992f, 0.319f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 2, true);
+        RenderShapeVariable("Shape3", "Circle", new Vector3(-0.193f, -0.1f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.100943f, 0.100943f, 0.100943f), "Shape5", new Vector4(0.0201524f, 0f, 0.754717f, 1f), true, 3, true);
+        RenderShapeVariable("Shape4", "Square", new Vector3(-0.944f, -2.238f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2043088f, 0.06833726f, 1f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 4, false);
+        RenderShapeVariable("Shape5", "Circle", new Vector3(-0.199f, -0.095f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1396197f, 0.1396197f, 0.1396197f), "Shape4", new Vector4(1f, 0.3026949f, 0f, 1f), true, 5, true);
+        RenderShapeVariable("Shape6", "Circle", new Vector3(0.45f, 1.086f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(1f, 0f, 0.05237484f, 1f), false, 6, true);
+        RenderShapeVariable("Shape7", "Circle", new Vector3(0.452f, 0.224f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1412264f, 0.1412264f, 0.1412264f), "Shape4", new Vector4(1f, 0.6183392f, 0.1179245f, 1f), true, 7, true);
+        RenderShapeVariable("Shape8", "Circle", new Vector3(0.463f, 0.231f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09614316f, 0.09614316f, 0.09614316f), "Shape5", new Vector4(0f, 0.3845291f, 1f, 1f), true, 8, true);
+        RenderShapeVariable("Shape9", "Square", new Vector3(0.964f, -2.237f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2043088f, 0.06833726f, 1f), "Shape1", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 9, false);
+        RenderShapeVariable("Shape10", "Square", new Vector3(-1.417f, -0.552f, 0f), new Vector3(0f, 0f, 337.8174f), new Vector3(0.254487f, 0.03690138f, 1f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 10, false);
+        RenderShapeVariable("Shape11", "Square", new Vector3(1.448f, -0.533f, 0f), new Vector3(0f, 0f, 22.80273f), new Vector3(0.254487f, 0.03690138f, 1f), "Shape1", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 11, false);
+        RenderShapeVariable("Shape12", "Semicircle", new Vector3(-1.48f, -1.49f, 0f), new Vector3(0f, 0f, 139.4809f), new Vector3(0.25952f, 0.129645f, 1f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 12, false);
+
+        //spawn target image
+        RenderPuzzleImage("Puzzle4");  //has the touchrotate script attached --> run after all shapes are loaded
     }
 
 }

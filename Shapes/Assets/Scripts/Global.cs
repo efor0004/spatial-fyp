@@ -23,7 +23,7 @@ public class Global : MonoBehaviour
     public static Vector3 popupPosition = new Vector3(0, 625, 0); //for popup boxes
 
 
-    public static float positionTolerance = 0.7f;  // x y     // in use
+    public static float positionTolerance = 0.8f;  // x y     // in use
     public static float rotationTolerance = 15.0f;  //z        // in use
 
 
