@@ -8,13 +8,13 @@ public class Global : MonoBehaviour
     // Start is called before the first frame update
 
     //public static Vector3 shapeOffset = new Vector3(3, 0, 0);
-    public static Vector3 shapeOffset = new Vector3(2.5f, 0f, 0f);  //in use
+    public static Vector3 shapeOffset = new Vector3(2.5f, 0f, 0f);  //TouchRotate (toolbar)
 
     public static Vector3 currentVal1 = new Vector3(0, 0, 0);
     public static Vector3 currentVal2 = new Vector3(0, 0, 0);
 
 
-    public static Vector3 leftPosition = new Vector3(-2000, -60, 0);  //in use for menus
+    public static Vector3 leftPosition = new Vector3(-2000, -60, 0);  //ButtonVehaviour
     public static Vector3 rightPosition = new Vector3(2000, -60, 0);
     public static Vector3 bottomPosition = new Vector3(0, -2000, 0);
     public static Vector3 topPosition = new Vector3(0, 2000, 0);
@@ -23,12 +23,12 @@ public class Global : MonoBehaviour
     public static Vector3 popupPosition = new Vector3(0, 625, 0); //for popup boxes
 
 
-    public static float positionTolerance = 0.8f;  // x y     // in use
-    public static float rotationTolerance = 15.0f;  //z        // in use
+    public static float positionTolerance = 0.5f;  //TouchRotate
+    public static float rotationTolerance = 12.0f;  
 
 
-    public static int puzzlePieces = 11; //in use
-    public static int piecesPlaced = 0; //in use
+    public static int puzzlePieces = 11; //Touch Rotate
+    public static int piecesPlaced = 0; 
 
     public static int PlaygroundLevel = 1;               //keeps track of progress
     public static int PlaygroundPuzzle = 0;
@@ -41,7 +41,10 @@ public class Global : MonoBehaviour
     public static int FarmLevel = 1;
     public static int FarmPuzzle = 0;
 
-    public static bool NextPuzzleReady = true; 
+    public static bool NextPuzzleReady = true; //"Scene"Handler
+
+    public static bool PieceActive = false;  //TouchRotate
+    public static string ActiveName; 
 
     public static void DestroyShapes()
     {

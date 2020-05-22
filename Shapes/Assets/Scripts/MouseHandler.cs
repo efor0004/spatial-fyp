@@ -91,20 +91,20 @@ public class MouseHandler : MonoBehaviour
 
         if (Small == true)
         {
-            objToSpawn.transform.rotation = Quaternion.Euler(Rotation);                          //small shapes spawn in their final orientation
-            TouchRotate.toolbarRotationArray[n] = Rotation;                                     // save rest orientation
+            objToSpawn.transform.rotation = Quaternion.Euler(Rotation);                           //small shapes spawn in their final orientation 
+           TouchRotate.toolbarRotationArray[n] = Rotation;
             objToSpawn.GetComponent<CircleCollider2D>().radius = smallCollider;                 //small shapes get a much larger circle collider
         }
         else if (Circle == true)
         {
             objToSpawn.transform.rotation = Quaternion.Euler(Rotation);                          //circular shapes spawn in their final orientation
-            TouchRotate.toolbarRotationArray[n] = Rotation;                                     // save rest orientation
+            TouchRotate.toolbarRotationArray[n] = Rotation;                                     
             objToSpawn.GetComponent<CircleCollider2D>().radius = regularCollider;
         }
         else
         {
-            objToSpawn.transform.rotation = Quaternion.Euler(0f, 0f, 0f);                        //large and non-circle shapes are set a neutral orientation
-            TouchRotate.toolbarRotationArray[n] = new Vector3(0f, 0f, 0f);                       //save rest orientation
+            objToSpawn.transform.rotation = Quaternion.Euler(0f, 0f, 0f);                        
+            TouchRotate.toolbarRotationArray[n] = new Vector3(0f, 0f, 0f);                       
             objToSpawn.GetComponent<CircleCollider2D>().radius = regularCollider;                          
         }
 
@@ -230,7 +230,7 @@ public class MouseHandler : MonoBehaviour
         Global.puzzlePieces = 12;
 
         //spawn anchor shape
-        RenderShapeFixed("Shape0", "Square", new Vector3(0.01f, -1.12f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.4252922f, 0.4252922f, 0.4252922f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f), false, 0, false);
+        RenderShapeFixed("Shape0", "Square", new Vector3(0.01f, -1.12f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.4252922f, 0.4252922f, 0.4252922f), "Shape1", new Vector4(1f, 0.4678748f, 0f, 1f), false, 0, false);
        
         RenderShapeVariable("Shape1", "TriangleI", new Vector3(0.08f, 0.4966f, 0f), new Vector3(0f, 0f, 329.6572f), new Vector3(0.3603483f, 0.3603483f, 0.3603483f), "Shape3", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), false, 1, false);
         RenderShapeVariable("Shape2", "Circle", new Vector3(-0.992f, 0.319f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 2, true);
@@ -248,5 +248,7 @@ public class MouseHandler : MonoBehaviour
         //spawn target image
         RenderPuzzleImage("Puzzle3");  //has the touchrotate script attached --> run after all shapes are loaded
     }
+
+
 
 }

@@ -61,15 +61,6 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("ParentalinfoMenu").transform.localPosition = Global.centrePosition;
     }
 
-    public void ModeBackButton()
-    {
-        //triggered by the back button on mode selection menu
-        //moves the mode selection menu out of view to the left and brings the home menu into view
-
-        GameObject.Find("MainMenu").transform.localPosition = Global.centrePosition;
-        GameObject.Find("ModeMenu").transform.localPosition = Global.leftPosition;
-    }
-
     public void SettingsBackButton()
     {
         //triggered by the back button on settings menu
@@ -86,23 +77,6 @@ public class ButtonBehaviour : MonoBehaviour
 
         GameObject.Find("MainMenu").transform.localPosition = Global.centrePosition;
         GameObject.Find("ParentalinfoMenu").transform.localPosition = Global.topPosition;
-    }
-
-    public void ModeInfoButton()
-    {
-        //triggered by the info button on the mode selection menu
-        //a popup is brought into view on top of the mode selection menu
-
-        GameObject.Find("InfoPopup").transform.localPosition = Global.centrePosition;
-    }
-
-    public void InfoCloseButton()
-    {
-        //triggered by the sloe button on the info popup in the mode selection menu
-        //the popup is moved out of view to the right
-
-        Debug.Log("Entered closs button"); 
-        GameObject.Find("InfoPopup").transform.localPosition = Global.rightPosition;
     }
 
     public void HomeButton()
