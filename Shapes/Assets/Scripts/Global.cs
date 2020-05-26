@@ -5,15 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Global : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    //public static Vector3 shapeOffset = new Vector3(3, 0, 0);
-    public static Vector3 shapeOffset = new Vector3(2.5f, 0f, 0f);  //TouchRotate (toolbar)
-
-    public static Vector3 currentVal1 = new Vector3(0, 0, 0);
-    public static Vector3 currentVal2 = new Vector3(0, 0, 0);
-
-
+    //ButtonBehaviour
     public static Vector3 leftPosition = new Vector3(-2000, -60, 0);  //ButtonVehaviour
     public static Vector3 rightPosition = new Vector3(2000, -60, 0);
     public static Vector3 bottomPosition = new Vector3(0, -2000, 0);
@@ -22,15 +14,23 @@ public class Global : MonoBehaviour
 
     public static Vector3 popupPosition = new Vector3(0, 625, 0); //for popup boxes
 
+    public static bool LeftArrowActive = true;
+    public static bool RightArrowActive = true; 
 
-    public static float positionTolerance = 0.5f;  //TouchRotate
+
+    //TouchRotate
+    public static Vector3 shapeOffset = new Vector3(2.5f, 0f, 0f);  //toolbar shifting
+
+    public static Vector3 currentVal1 = new Vector3(0, 0, 0);
+    public static Vector3 currentVal2 = new Vector3(0, 0, 0);
+
+    public static float positionTolerance = 0.5f;         //tolerance in placement
     public static float rotationTolerance = 12.0f;  
 
-
-    public static int puzzlePieces = 11; //Touch Rotate
+    public static int puzzlePieces = 11;                //tracking puzzle completion
     public static int piecesPlaced = 0; 
 
-    public static int PlaygroundLevel = 1;               //keeps track of progress
+    public static int PlaygroundLevel = 1;              //tracking progress
     public static int PlaygroundPuzzle = 0;
     public static int TriangleLevel = 1;
     public static int TrianglesPuzzle = 0;
@@ -41,10 +41,22 @@ public class Global : MonoBehaviour
     public static int FarmLevel = 1;
     public static int FarmPuzzle = 0;
 
-    public static bool NextPuzzleReady = true; //"Scene"Handler
+    public static bool PieceActive = false;        //tracking active piece
+    public static string ActiveName;
 
-    public static bool PieceActive = false;  //TouchRotate
-    public static string ActiveName; 
+    public static Vector4 ColourOffset = new Vector4(0.2f,0.2f,0.2f,0f);
+    //public static Vector4 FlashColour = new Vector4(1f, 1f, 1f, 1f); 
+
+    //"Scene"Handler
+    public static bool NextPuzzleReady = true;   
+
+    public static float toolbarY = -4f;
+    public static float toolbarXoffset = 2.5f;                  // -3.75f; //(-2.5/2) 
+    public static float toolbarXstart = -4.8f;
+
+    public static float smallCollider = 4.5f;                   //a larger collider for small shapes
+    public static float regularCollider = 2.5f;                 //a regular sized collider for regular shapes
+
 
     public static void DestroyShapes()
     {

@@ -7,13 +7,6 @@ public class MouseHandler : MonoBehaviour
 {
     //the script that controls all of the puzzles in the Mouse Shapes scene
 
-    float toolbarY = -4f;
-    float toolbarXoffset = 2.5f;                                        // -3.75f; //(-2.5/2) 
-    float toolbarXstart = -4.8f;
-
-    float smallCollider = 4.5f;                                         //a larger collider for small shapes
-    float regularCollider = 2.5f;                                       //a regular sized collider for regular shapes
-
     delegate void PuzzleMethod();                                       //creates an empty method
     List<PuzzleMethod> Puzzle = new List<PuzzleMethod>();               //creates a list of empty methods
     void CreateList()                                 
@@ -69,8 +62,9 @@ public class MouseHandler : MonoBehaviour
             objToSpawn.transform.localScale = (Scale);                                               //set scale vector
             objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer;               //set sorting layer by name
             objToSpawn.GetComponent<SpriteRenderer>().color = Color;                                 //set colour vector (RGBA) 
-            //no 2d collider required 
-        
+         // objToSpawn.GetComponent<SpriteRenderer>().color = Color - Global.ColourOffset;           // 
+                                                                                                                       //no 2d collider required 
+
             TouchRotate.activeArray[n] = false;                                                      //instantiate anchor shape as inactive
             TouchRotate.toolbarArray[n] = objToSpawn.transform.position;                            //save "rest" position
         }
@@ -93,23 +87,22 @@ public class MouseHandler : MonoBehaviour
         {
             objToSpawn.transform.rotation = Quaternion.Euler(Rotation);                           //small shapes spawn in their final orientation 
            TouchRotate.toolbarRotationArray[n] = Rotation;
-            objToSpawn.GetComponent<CircleCollider2D>().radius = smallCollider;                 //small shapes get a much larger circle collider
+            objToSpawn.GetComponent<CircleCollider2D>().radius = Global.smallCollider;                 //small shapes get a much larger circle collider
         }
         else if (Circle == true)
         {
             objToSpawn.transform.rotation = Quaternion.Euler(Rotation);                          //circular shapes spawn in their final orientation
             TouchRotate.toolbarRotationArray[n] = Rotation;                                     
-            objToSpawn.GetComponent<CircleCollider2D>().radius = regularCollider;
+            objToSpawn.GetComponent<CircleCollider2D>().radius = Global.regularCollider;
         }
         else
         {
             objToSpawn.transform.rotation = Quaternion.Euler(0f, 0f, 0f);                        
             TouchRotate.toolbarRotationArray[n] = new Vector3(0f, 0f, 0f);                       
-            objToSpawn.GetComponent<CircleCollider2D>().radius = regularCollider;                          
+            objToSpawn.GetComponent<CircleCollider2D>().radius = Global.regularCollider;                          
         }
 
-        objToSpawn.transform.position = new Vector3(toolbarXstart + n * toolbarXoffset, toolbarY, 0f);  //place in the toolbar
-
+        objToSpawn.transform.position = new Vector3(Global.toolbarXstart + n * Global.toolbarXoffset, Global.toolbarY, 0f);  //place in the toolbar
 
         TouchRotate.positionArray[n] = Position;                                                //save target location  
         TouchRotate.rotationArray[n] = Rotation;                                                //save target rotatation
@@ -147,14 +140,15 @@ public class MouseHandler : MonoBehaviour
 
     void PuzzleComplete()
     {
+        //is triggered when a puzzle is completed correctly
+
         Global.piecesPlaced = 0;                                                                //reset to avoid looping
         Debug.Log("PUZZLE COMPLETE!");
 
         GameObject.Find("PopupStart").transform.localPosition = Global.popupPosition;          //creates a popup
 
-        GameObject.Find("HomeButton").GetComponent<Button>().interactable = false;            //set home button to inactive
-        GameObject.Find("LeftArrow").GetComponent<Button>().interactable = false;   
-        GameObject.Find("RightArrow").GetComponent<Button>().interactable = false;         
+        Global.LeftArrowActive = false;
+        Global.RightArrowActive = false; 
 
     }
 

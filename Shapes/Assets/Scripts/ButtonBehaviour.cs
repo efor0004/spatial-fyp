@@ -16,11 +16,34 @@ public class ButtonBehaviour : MonoBehaviour
 
         for (int i = 0; i < TouchRotate.toolbarArray.Length; i++)
         {
-           // Debug.Log("before: " + TouchRotate.toolbarArray[i]); 
             TouchRotate.toolbarArray[i]  = TouchRotate.toolbarArray[i] + Global.shapeOffset;
-            //Debug.Log("after: " + TouchRotate.toolbarArray[i]);
         }
 
+        int Index = 0;
+        for (int j = 0; j < Global.puzzlePieces; j++)
+        {
+            if (TouchRotate.activeArray[j] == true)
+            {
+                Index = j; //return index of first active shape
+                break;
+            }
+        }
+
+        if (TouchRotate.toolbarArray[Index].x >= 0.15f) //if the x coord of the first active shape is
+        {
+            
+          GameObject.Find("LeftArrow").GetComponent<Image>().color = Color.red;
+           //Global.LeftArrowActive = false;
+        }
+        else
+        {
+        
+          GameObject.Find("LeftArrow").GetComponent<Image>().color = Color.white;
+            //Global.LeftArrowActive = true;
+        }
+ 
+        GameObject.Find("RightArrow").GetComponent<Image>().color = Color.white;
+        //Global.RightArrowActive = true;
     }
 
     public void RightArrow()
@@ -33,6 +56,31 @@ public class ButtonBehaviour : MonoBehaviour
             TouchRotate.toolbarArray[i] = TouchRotate.toolbarArray[i] - Global.shapeOffset;
         }
 
+        int Index = 0;
+        for (int j = Global.puzzlePieces; j > 0; j--)
+        {
+            if (TouchRotate.activeArray[j] == true)
+            {
+                Index = j; //return index of first active shape
+                break;
+            }
+        }
+
+        if (TouchRotate.toolbarArray[Index].x <= 1.5f) //if the x coord of the first active shape is
+        {
+           
+            GameObject.Find("RightArrow").GetComponent<Image>().color = Color.red; 
+            //Global.RightArrowActive = false; 
+        }
+        else
+        {
+            
+            GameObject.Find("RightArrow").GetComponent<Image>().color = Color.white;
+           // Global.RightArrowActive = true;
+        }
+
+        GameObject.Find("LeftArrow").GetComponent<Image>().color = Color.white;
+        //Global.LeftArrowActive = true;
     }
 
     public void StartButton()
