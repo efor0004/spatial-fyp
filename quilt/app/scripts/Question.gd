@@ -8,6 +8,7 @@ var current_fabric = ''
 var questions_per_level = 10
 
 var question_order = []
+var option_positions = [Vector2(821, 768), Vector2(1256, 768), Vector2(1721, 768)]
 
 const FileUtils = preload("utilities/files.gd")
 onready var file_utils = FileUtils.new()
@@ -26,6 +27,8 @@ func _ready():
 
 func next_question():
 	progress_quilt.add_quilt_piece(current_question, current_fabric)
+	
+	reset_option_positions()
 	
 	current_question += 1
 	
@@ -47,10 +50,9 @@ func shuffle_question_order():
 
 func set_shapes():
 	current_shuffled_question = question_order[current_question - 1]
-	var level_path = get_level_path()
 	var question_path = get_question_path()
 	
-	set_holey_quilt_shape(level_path, question_path)
+	set_holey_quilt_shape()
 	set_options_shapes(question_path)
 
 func get_level_path():
@@ -73,7 +75,7 @@ func get_holey_quilt_shape():
 	var holey_quilt_shape = get_node("Layer1/HoleyQuilt/Light2D")
 	return holey_quilt_shape
 
-func set_holey_quilt_shape(level_path, question_path):
+func set_holey_quilt_shape():
 	var holey_quilt_shape = get_holey_quilt_shape()
 	
 	var holey_quilt_path = get_holey_quilt_path()
@@ -108,3 +110,9 @@ func set_question_fabric(fabric_path):
 		var node_path = "AnimationPlayer%d/Layer%d/Option %d/Fabric Texture" % [i, i+1, i]
 		var option_fabric = get_node(node_path)
 		option_fabric.set_texture(fabric)
+
+func reset_option_positions():
+	for i in range(1,4):
+		var node_path = "AnimationPlayer%d/Layer%d/Option %d" % [i, i+1, i]
+		var option = get_node(node_path)
+		option.transform.origin = option_positions[i - 1]
