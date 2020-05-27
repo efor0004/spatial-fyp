@@ -1,19 +1,14 @@
 extends Sprite
 
-onready var current_level = 1
-onready var current_question = 1
-onready var current_shuffled_question = 1
-onready var current_fabric = ''
+var current_level = 1
+var current_question = 1
+var current_shuffled_question = 1
+var current_fabric = ''
 
-onready var initial_quilt_piece_x = 1136
-onready var quilt_piece_x = initial_quilt_piece_x
-onready var quilt_piece_y = 0
+var questions_per_level = 10
 
-onready var questions_per_level = 10
-onready var quilt_size = 384
-
-onready var question_order = []
-onready var option_file_text = "option_"
+var question_order = []
+var option_file_text = "option_"
 
 const FileUtils = preload("utilities/files.gd")
 onready var file_utils = FileUtils.new()
@@ -23,13 +18,15 @@ onready var max_levels = file_utils.get_number_of_levels()
 const GeneralUtils = preload("utilities/general.gd")
 onready var general_utils = GeneralUtils.new()
 
+onready var progress_quilt = get_parent().get_node("Progress Quilt")
+
 func _ready():
 	randomise_question_fabric()
 	question_order = general_utils.shuffle_list(range(1,questions_per_level + 1))
 	set_shapes()
 
 func next_question():
-	add_quilt_piece()
+	progress_quilt.add_quilt_piece(current_question, current_fabric)
 	
 	current_question += 1
 	
@@ -80,15 +77,6 @@ func get_holey_quilt_shape():
 	var holey_quilt_shape = holey_quilt.get_child(0)
 	return holey_quilt_shape
 
-func get_quilt_square():
-	var path = "res://assets/sprites/questions/square.png"
-	var square = load(path)
-	return square
-
-func get_current_fabric():
-	var fabric = load(current_fabric)
-	return fabric
-
 func set_holey_quilt_shape(level_path, question_path):
 	var holey_quilt_shape = get_holey_quilt_shape()
 	
@@ -128,52 +116,6 @@ func randomise_question_fabric():
 	current_fabric = fabric_path
 	
 	set_question_fabric(fabric_path)
-
-func add_quilt_piece():
-	var scale = 0.25
-	var width_height = quilt_size * scale
-	
-	var piece = Sprite.new()
-	var mask = Light2D.new()
-	mask.mode = Light2D.MODE_MIX
-	mask.scale = Vector2(scale,scale)
-	
-	var fabric = Sprite.new()
-	fabric.region_enabled = true
-	fabric.region_rect = Rect2(0, 0, quilt_size, quilt_size)
-	fabric.scale = Vector2(scale,scale)
-	
-	var fabric_canvas = CanvasItemMaterial.new()
-	fabric_canvas.blend_mode = BLEND_MODE_MIX
-	fabric_canvas.light_mode = CanvasItemMaterial.LIGHT_MODE_LIGHT_ONLY
-	
-	piece.add_child(mask)
-	fabric.material = fabric_canvas
-	piece.add_child(fabric)
-	
-	var piece_shape = get_quilt_square()
-	mask.set_texture(piece_shape)
-	
-	var piece_fabric = get_current_fabric()
-	fabric.set_texture(piece_fabric)
-	
-	var piece_size_x = width_height
-	
-	quilt_piece_x = quilt_piece_x + piece_size_x
-
-	if current_question == 1:
-		quilt_piece_x = initial_quilt_piece_x
-		var piece_size_y = width_height
-		if quilt_piece_y == 0:
-			quilt_piece_y = quilt_piece_y + piece_size_y / 2
-		else:
-			quilt_piece_y = quilt_piece_y + piece_size_y
-	
-	var new_piece_pos = Vector2(quilt_piece_x, quilt_piece_y)
-	print(new_piece_pos)
-	piece.transform.origin = new_piece_pos
-	
-	add_child(piece)
 
 func set_question_fabric(fabric_path):
 	var fabric = load(fabric_path)

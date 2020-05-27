@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_3.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/fabrics/fabric_1.jpg" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/holey_quilt.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_1.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_2.png" type="Texture" id=6]
+[ext_resource path="res://scripts/Progress Quilt.gd" type="Script" id=7]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 light_mode = 2
@@ -91,6 +92,9 @@ material = SubResource( 1 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 384, 384 )
+
+[node name="Progress Quilt" type="Sprite" parent="."]
+script = ExtResource( 7 )
 [connection signal="input_event" from="Question/Option 1" to="Question" method="_on_Option_1_input_event"]
 [connection signal="input_event" from="Question/Option 2" to="Question" method="_on_Option_2_input_event"]
 [connection signal="input_event" from="Question/Option 3" to="Question" method="_on_Option_3_input_event"]
