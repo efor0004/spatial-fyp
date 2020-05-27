@@ -47,7 +47,6 @@ func add_quilt_piece(current_question, fabric_path):
 			quilt_piece_y = quilt_piece_y + piece_size_y
 	
 	var new_piece_pos = Vector2(quilt_piece_x, quilt_piece_y)
-	print(new_piece_pos)
 	piece.transform.origin = new_piece_pos
 	
 	add_child(piece)
