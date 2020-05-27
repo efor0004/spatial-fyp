@@ -10,15 +10,15 @@ onready var quilt_piece_x = initial_quilt_piece_x
 onready var quilt_piece_y = 0
 
 onready var questions_per_level = 10
-onready var max_levels = 1
 onready var quilt_size = 384
 
 onready var question_order = []
 onready var option_file_text = "option_"
-onready var all_fabrics_path = "res://assets/sprites/fabrics"
 
 const FileUtils = preload("utilities/files.gd")
 onready var file_utils = FileUtils.new()
+
+onready var max_levels = file_utils.get_number_of_levels()
 
 const GeneralUtils = preload("utilities/general.gd")
 onready var general_utils = GeneralUtils.new()
@@ -124,12 +124,7 @@ func on_option_pressed(sprite_index):
 		next_question()
 
 func randomise_question_fabric():
-	var fabrics = file_utils.get_files_in_directory(all_fabrics_path)
-	
-	randomize()
-	var x = randi() % fabrics.size()
-	var file_name = fabrics[x]
-	var fabric_path = "%s/%s" % [all_fabrics_path, file_name]
+	var fabric_path = file_utils.get_random_fabric_path()
 	current_fabric = fabric_path
 	
 	set_question_fabric(fabric_path)
