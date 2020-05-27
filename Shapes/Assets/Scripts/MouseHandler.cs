@@ -26,8 +26,7 @@ public class MouseHandler : MonoBehaviour
 
         Global.NextPuzzleReady = true;                                     //set as true every time the scene is opened
         CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
-        //Puzzle2();
-    
+       // Puzzle2(); 
     }
         void Update()
         {
@@ -176,7 +175,7 @@ public class MouseHandler : MonoBehaviour
         RenderShapeVariable("Shape5", "Circle", new Vector3(1.71f, -0.549f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1362686f, 0.1318552f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 5, true);
 
         //spawn target image
-        RenderPuzzleImage("Puzzle1");  //has the touchrotate script attached --> run after all shapes are loaded
+        RenderPuzzleImage("MS1");  //has the touchrotate script attached --> run after all shapes are loaded
 
     }
 
@@ -206,7 +205,7 @@ public class MouseHandler : MonoBehaviour
         RenderShapeVariable("Shape6", "TriangleI", new Vector3(0.01f, -1.817f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1753337f, 0.08821746f, 0.1523316f), "Shape2", new Vector4(0f, 0f, 0f, 1f), true, 6, false);
 
         //spawn target image
-        RenderPuzzleImage("Puzzle2");  //has the touchrotate script attached --> run after all shapes are loaded
+        RenderPuzzleImage("MS2");  //has the touchrotate script attached --> run after all shapes are loaded
     }
 
     void Puzzle3()
@@ -240,7 +239,7 @@ public class MouseHandler : MonoBehaviour
         RenderShapeVariable("Shape12", "Semicircle", new Vector3(-1.48f, -1.49f, 0f), new Vector3(0f, 0f, 139.4809f), new Vector3(0.25952f, 0.129645f, 1f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 12, false);
 
         //spawn target image
-        RenderPuzzleImage("Puzzle3");  //has the touchrotate script attached --> run after all shapes are loaded
+        RenderPuzzleImage("MS3");  //has the touchrotate script attached --> run after all shapes are loaded
     }
 
 

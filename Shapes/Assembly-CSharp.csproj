@@ -65,10 +65,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ButtonBehaviour.cs" />
     <Compile Include="Assets\Scripts\DetectTouchMovement.cs" />
+    <Compile Include="Assets\Scripts\FarmHandler.cs" />
+    <Compile Include="Assets\Scripts\FreeplayHandler.cs" />
     <Compile Include="Assets\Scripts\Global.cs" />
     <Compile Include="Assets\Scripts\MouseHandler.cs" />
+    <Compile Include="Assets\Scripts\PlaygroundHandler.cs" />
     <Compile Include="Assets\Scripts\TestBench.cs" />
     <Compile Include="Assets\Scripts\TouchRotate.cs" />
+    <Compile Include="Assets\Scripts\TriangleHandler.cs" />
+    <Compile Include="Assets\Scripts\WildHandler.cs" />
     <None Include="Assets\TextFiles\Test.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Sian/GitHub/spatial-fyp/Shapes/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

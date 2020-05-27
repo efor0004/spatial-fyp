@@ -35,40 +35,47 @@ public class TouchRotate : MonoBehaviour
 
     void Update()
     {
-        //NON WORKING CODE FOR ARROW DIRECTIONAL LIMIT
-
-        //if (Global.PieceActive == true || Global.LeftArrowActive == false)
-        //{
-        //    GameObject.Find("LeftArrow").GetComponent<Button>().interactable = false;
-        //}
-
-        //else if (Global.PieceActive == true || Global.RightArrowActive == false)
-        //{
-        //    GameObject.Find("RightArrow").GetComponent<Button>().interactable = false;
-        //}
-
-        //else if (Global.PieceActive == false && Global.LeftArrowActive == true)   //only needs to be true in one
-        //{
-        //    GameObject.Find("LeftArrow").GetComponent<Button>().interactable = true;
-        //}
-
-        //else if (Global.PieceActive == false && Global.RightArrowActive == true) //only needs to be true in one
-        //{
-        //    GameObject.Find("RightArrow").GetComponent<Button>().interactable = true;
-        //}
-
-        //WORKING CODE FOR NO ARROW DIRECTIONAL LIMIT
-
+        //WORKING CODE FOR ARROW DIRECTIONAL LIMIT
         if (Global.PieceActive == true)
         {
-            GameObject.Find("LeftArrow").GetComponent<Button>().interactable = false;
-            GameObject.Find("RightArrow").GetComponent<Button>().interactable = false;
+                GameObject.Find("LeftArrow").GetComponent<Button>().interactable = false;
+                GameObject.Find("RightArrow").GetComponent<Button>().interactable = false;
         }
         else if (Global.PieceActive == false)
         {
-            GameObject.Find("LeftArrow").GetComponent<Button>().interactable = true;
-            GameObject.Find("RightArrow").GetComponent<Button>().interactable = true;
+            if (Global.LeftArrowActive == true)
+            {
+                GameObject.Find("LeftArrow").GetComponent<Button>().interactable = true;
+            }
+            else if (Global.LeftArrowActive == false)
+            {
+                GameObject.Find("LeftArrow").GetComponent<Button>().interactable = false;
+            }
+
+            if (Global.RightArrowActive == true)
+            {
+                GameObject.Find("RightArrow").GetComponent<Button>().interactable = true;
+            }
+            else if (Global.RightArrowActive == false)
+            {
+                GameObject.Find("RightArrow").GetComponent<Button>().interactable = false;
+            }
+
         }
+
+
+        //WORKING CODE FOR NO ARROW DIRECTIONAL LIMIT
+
+        //if (Global.PieceActive == true)
+        //{
+        //    GameObject.Find("LeftArrow").GetComponent<Button>().interactable = false;
+        //    GameObject.Find("RightArrow").GetComponent<Button>().interactable = false;
+        //}
+        //else if (Global.PieceActive == false)
+        //{
+        //    GameObject.Find("LeftArrow").GetComponent<Button>().interactable = true;
+        //    GameObject.Find("RightArrow").GetComponent<Button>().interactable = true;
+        //}
 
 
         //adapted code from http://wiki.unity3d.com/index.php/DetectTouchMovement
@@ -160,10 +167,15 @@ public class TouchRotate : MonoBehaviour
                                 }
                             }
 
+                            go.transform.position = TargetPosition;                            //snap to position
+                            go.transform.rotation = Quaternion.Euler(TargetRotation);          //snap to orientation
+
                             Vector4 OldColour = go.GetComponent<SpriteRenderer>().color;
                             Vector4 NewColour = OldColour + Global.ColourOffset;
                            
                             StartCoroutine(FlashObject(go, OldColour, NewColour, 0.5f, 0.125f));                                                         //make correclty placed piece flash
+
+                            Global.CheckArrows(); 
 
                         }
                         else if (go.transform.position.y < Camera.main.ScreenToWorldPoint(GameObject.Find("Divider").transform.position).y)              //if piece is released inside toolbar
@@ -218,6 +230,7 @@ public class TouchRotate : MonoBehaviour
             }
         }
     }
+
 
 }
 

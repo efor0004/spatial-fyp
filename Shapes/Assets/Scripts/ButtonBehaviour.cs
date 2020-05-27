@@ -16,34 +16,12 @@ public class ButtonBehaviour : MonoBehaviour
 
         for (int i = 0; i < TouchRotate.toolbarArray.Length; i++)
         {
-            TouchRotate.toolbarArray[i]  = TouchRotate.toolbarArray[i] + Global.shapeOffset;
+            TouchRotate.toolbarArray[i]  = TouchRotate.toolbarArray[i] + Global.shapeOffset; 
         }
 
-        int Index = 0;
-        for (int j = 0; j < Global.puzzlePieces; j++)
-        {
-            if (TouchRotate.activeArray[j] == true)
-            {
-                Index = j; //return index of first active shape
-                break;
-            }
-        }
+        Global.RightArrowActive = true;                      //if the left arrow is pushed, the right arrow must become active
 
-        if (TouchRotate.toolbarArray[Index].x >= 0.15f) //if the x coord of the first active shape is
-        {
-            
-          GameObject.Find("LeftArrow").GetComponent<Image>().color = Color.red;
-           //Global.LeftArrowActive = false;
-        }
-        else
-        {
-        
-          GameObject.Find("LeftArrow").GetComponent<Image>().color = Color.white;
-            //Global.LeftArrowActive = true;
-        }
- 
-        GameObject.Find("RightArrow").GetComponent<Image>().color = Color.white;
-        //Global.RightArrowActive = true;
+        Global.CheckArrows();                                //checks whether arrows need to be disabled in one direction
     }
 
     public void RightArrow()
@@ -56,31 +34,10 @@ public class ButtonBehaviour : MonoBehaviour
             TouchRotate.toolbarArray[i] = TouchRotate.toolbarArray[i] - Global.shapeOffset;
         }
 
-        int Index = 0;
-        for (int j = Global.puzzlePieces; j > 0; j--)
-        {
-            if (TouchRotate.activeArray[j] == true)
-            {
-                Index = j; //return index of first active shape
-                break;
-            }
-        }
+        Global.LeftArrowActive = true;                     //if the right arrow is pushed, the left arrow must become active
 
-        if (TouchRotate.toolbarArray[Index].x <= 1.5f) //if the x coord of the first active shape is
-        {
-           
-            GameObject.Find("RightArrow").GetComponent<Image>().color = Color.red; 
-            //Global.RightArrowActive = false; 
-        }
-        else
-        {
-            
-            GameObject.Find("RightArrow").GetComponent<Image>().color = Color.white;
-           // Global.RightArrowActive = true;
-        }
+        Global.CheckArrows();                              //checks whether arrows need to be disabled in one direction
 
-        GameObject.Find("LeftArrow").GetComponent<Image>().color = Color.white;
-        //Global.LeftArrowActive = true;
     }
 
     public void StartButton()
@@ -140,6 +97,9 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered when the START button is pressed on the popup after a puzzle is complete
 
         GameObject.Find("PopupStart").transform.localPosition = Global.rightPosition;     //moves the pop-up box out of screen
+
+        Global.LeftArrowActive = true;
+        Global.RightArrowActive = true;
 
         GameObject.Find("HomeButton").GetComponent<Button>().interactable = true;         //activates buttons
         GameObject.Find("LeftArrow").GetComponent<Button>().interactable = true;
