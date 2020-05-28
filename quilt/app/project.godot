@@ -9,18 +9,12 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "AnimationPlayer",
-"class": "AnimationPlayerWait",
-"language": "GDScript",
-"path": "res://scripts/AnimationPlayerWait.gd"
-}, {
 "base": "Area2D",
 "class": "Option",
 "language": "GDScript",
 "path": "res://scripts/Option.gd"
 } ]
 _global_script_class_icons={
-"AnimationPlayerWait": "",
 "Option": ""
 }
 

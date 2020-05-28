@@ -13,12 +13,11 @@ func pressed():
 	
 	if is_correct:
 		animation_player.play("Correct")
-		yield(animation_player, "stop_waiting")
+		yield(animation_player, "animation_finished")
 		question.next_question()
 	else:
 		animation_player.play("Incorrect")
-		yield(animation_player, "stop_waiting")
-		print('incorrect')
+		yield(animation_player, "animation_finished")
 
 func is_correct_answer():
 	var option_sprite = self.get_node("Light2D")
@@ -51,10 +50,10 @@ func is_animation_happening():
 	return is_animating
 
 func get_all_animation_players():
-	var all_animation_players = []
+	var list = []
 	
 	for node in question.get_children():
-		if node is AnimationPlayerWait:
-			all_animation_players.append(node)
+		if node is AnimationPlayer:
+			list.append(node)
 	
-	return all_animation_players
+	return list

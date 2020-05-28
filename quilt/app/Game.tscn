@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_3.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/fabrics/fabric_1.jpg" type="Texture" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://assets/sprites/questions/level_1/question_1/option_2.png" type="Texture" id=6]
 [ext_resource path="res://scripts/Progress Quilt.gd" type="Script" id=7]
 [ext_resource path="res://scripts/Option.gd" type="Script" id=8]
-[ext_resource path="res://scripts/AnimationPlayerWait.gd" type="Script" id=9]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 light_mode = 2
@@ -319,7 +318,6 @@ region_rect = Rect2( 0, 0, 384, 384 )
 [node name="AnimationPlayer1" type="AnimationPlayer" parent="Question"]
 anims/Correct = SubResource( 2 )
 anims/Incorrect = SubResource( 3 )
-script = ExtResource( 9 )
 
 [node name="Layer2" type="CanvasLayer" parent="Question/AnimationPlayer1"]
 layer = 2
@@ -363,7 +361,6 @@ region_rect = Rect2( 0, 0, 384, 384 )
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Question"]
 anims/Correct = SubResource( 5 )
 anims/Incorrect = SubResource( 6 )
-script = ExtResource( 9 )
 
 [node name="Layer3" type="CanvasLayer" parent="Question/AnimationPlayer2"]
 layer = 3
@@ -405,7 +402,6 @@ region_rect = Rect2( 0, 0, 384, 384 )
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Question"]
 anims/Correct = SubResource( 7 )
 anims/Incorrect = SubResource( 8 )
-script = ExtResource( 9 )
 
 [node name="Layer4" type="CanvasLayer" parent="Question/AnimationPlayer3"]
 layer = 4
@@ -449,6 +445,3 @@ __meta__ = {
 
 [node name="Progress Quilt" type="Sprite" parent="."]
 script = ExtResource( 7 )
-[connection signal="animation_finished" from="Question/AnimationPlayer1" to="Question/AnimationPlayer1" method="_on_AnimationPlayer1_animation_finished"]
-[connection signal="animation_finished" from="Question/AnimationPlayer2" to="Question/AnimationPlayer2" method="_on_AnimationPlayer2_animation_finished"]
-[connection signal="animation_finished" from="Question/AnimationPlayer3" to="Question/AnimationPlayer3" method="_on_AnimationPlayer3_animation_finished"]
