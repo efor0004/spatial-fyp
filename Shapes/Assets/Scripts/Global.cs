@@ -17,6 +17,9 @@ public class Global : MonoBehaviour
     public static bool LeftArrowActive = true;
     public static bool RightArrowActive = true;
 
+    public static bool Music = true;
+    public static bool SoundEffects = true;
+
 
     //TouchRotate
     public static Vector3 shapeOffset = new Vector3(2.5f, 0f, 0f);  //toolbar shifting

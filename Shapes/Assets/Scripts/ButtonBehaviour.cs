@@ -75,6 +75,41 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("SettingsMenu").transform.localPosition = Global.rightPosition;
     }
 
+    public void MusicButton()
+    {
+        //is triggered by toggling the music button on the settings menu
+        //toggles themusic on and off
+
+        Global.Music = !Global.Music;
+
+        if (Global.Music == true)
+        {
+            GameObject.Find("MusicButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("on");
+        }
+        else
+        {
+            GameObject.Find("MusicButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("off");
+        }
+    }
+
+    public void SoundEffectsButton()
+    {
+        //is triggered by toggling the sound effects button on the settings menu
+        //toggles the sound effects on and off
+
+        Global.SoundEffects = !Global.SoundEffects;
+
+        if (Global.SoundEffects == true)
+        {
+            GameObject.Find("SoundEffectsButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("on");
+        }
+        else
+        {
+            GameObject.Find("SoundEffectsButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("off");
+        }
+    }
+
+
     public void ParentalinfoBackButton()
     {
         //triggered by the back button on the parental info menu
@@ -108,7 +143,6 @@ public class ButtonBehaviour : MonoBehaviour
         Global.DestroyShapes();                                                           //destroy all existing shapes
 
         Global.NextPuzzleReady = true;                                                    //allow next puzzle to load
-
 
     }
 
