@@ -1,19 +1,14 @@
 extends Sprite
 
-onready var current_level = 1
-onready var current_question = 1
-onready var current_shuffled_question = 1
-onready var current_fabric = ''
+var current_level = 1
+var current_question = 1
+var current_shuffled_question = 1
+var current_fabric = ''
 
-onready var initial_quilt_piece_x = 1136
-onready var quilt_piece_x = initial_quilt_piece_x
-onready var quilt_piece_y = 0
+var questions_per_level = 10
 
-onready var questions_per_level = 10
-onready var quilt_size = 384
-
-onready var question_order = []
-onready var option_file_text = "option_"
+var question_order = []
+var option_positions = [Vector2(821, 768), Vector2(1256, 768), Vector2(1721, 768)]
 
 const FileUtils = preload("utilities/files.gd")
 onready var file_utils = FileUtils.new()
@@ -23,6 +18,10 @@ onready var max_levels = file_utils.get_number_of_levels()
 const GeneralUtils = preload("utilities/general.gd")
 onready var general_utils = GeneralUtils.new()
 
+onready var progress_quilt = get_parent().get_node("Progress Quilt")
+
+signal piece_added
+
 func _ready():
 	randomise_question_fabric()
 	question_order = general_utils.shuffle_list(range(1,questions_per_level + 1))
@@ -30,6 +29,9 @@ func _ready():
 
 func next_question():
 	add_quilt_piece()
+	yield(self, "piece_added")
+	
+	reset_option_positions()
 	
 	current_question += 1
 	
@@ -51,12 +53,9 @@ func shuffle_question_order():
 
 func set_shapes():
 	current_shuffled_question = question_order[current_question - 1]
-	var level_path = get_level_path()
 	var question_path = get_question_path()
 	
-	print("Level %d, Question %d" % [current_level, current_question])
-	
-	set_holey_quilt_shape(level_path, question_path)
+	set_holey_quilt_shape()
 	set_options_shapes(question_path)
 
 func get_level_path():
@@ -70,26 +69,19 @@ func get_holey_quilt_path():
 	var question_path = get_question_path()
 	return question_path + "/holey_quilt.png"
 
+func get_holey_quilt():
+	var holey_quilt = get_node("Layer1/HoleyQuilt")
+	return holey_quilt
+
 func get_holey_quilt_fabric():
-	var holey_quilt = get_child(0)
-	var holey_quilt_fabric = holey_quilt.get_child(1)
+	var holey_quilt_fabric = get_node("Layer1/HoleyQuilt/Fabric Texture")
 	return holey_quilt_fabric
 
 func get_holey_quilt_shape():
-	var holey_quilt = get_child(0)
-	var holey_quilt_shape = holey_quilt.get_child(0)
+	var holey_quilt_shape = get_node("Layer1/HoleyQuilt/Light2D")
 	return holey_quilt_shape
 
-func get_quilt_square():
-	var path = "res://assets/sprites/questions/square.png"
-	var square = load(path)
-	return square
-
-func get_current_fabric():
-	var fabric = load(current_fabric)
-	return fabric
-
-func set_holey_quilt_shape(level_path, question_path):
+func set_holey_quilt_shape():
 	var holey_quilt_shape = get_holey_quilt_shape()
 	
 	var holey_quilt_path = get_holey_quilt_path()
@@ -101,27 +93,13 @@ func set_options_shapes(base_path):
 	var indices = range(1,4)
 	var random_indices = general_utils.shuffle_list(indices)
 	for i in indices:
-		var option = get_child(i)
-		var option_mask = option.get_child(0)
+		var node_path = "AnimationPlayer%d/Layer%d/Option %d/Light2D" % [i, i+1, i]
+		var option_mask = get_node(node_path)
 		var shape_no = random_indices[i - 1]
 		var option_path_suffix = "/option_%d.png" % shape_no
 		var option_path = base_path + option_path_suffix
 		var option_shape = load(option_path)
 		option_mask.set_texture(option_shape)
-
-func on_option_pressed(sprite_index):
-	var children = get_children()
-	var option = children[sprite_index]
-	var option_sprite = option.get_child(0)
-	var option_shape = option_sprite.get_texture()
-	var option_shape_path = option_shape.get_load_path()
-	
-	var option_index = option_shape_path.find(option_file_text)
-	var opt_no_index = option_index + len(option_file_text)
-	var opt_no = int(option_shape_path.substr(opt_no_index, 1))
-	
-	if (opt_no == 1):
-		next_question()
 
 func randomise_question_fabric():
 	var fabric_path = file_utils.get_random_fabric_path()
@@ -129,78 +107,38 @@ func randomise_question_fabric():
 	
 	set_question_fabric(fabric_path)
 
-func add_quilt_piece():
-	var scale = 0.25
-	var width_height = quilt_size * scale
-	
-	var piece = Sprite.new()
-	var mask = Light2D.new()
-	mask.mode = Light2D.MODE_MIX
-	mask.scale = Vector2(scale,scale)
-	
-	var fabric = Sprite.new()
-	fabric.region_enabled = true
-	fabric.region_rect = Rect2(0, 0, quilt_size, quilt_size)
-	fabric.scale = Vector2(scale,scale)
-	
-	var fabric_canvas = CanvasItemMaterial.new()
-	fabric_canvas.blend_mode = BLEND_MODE_MIX
-	fabric_canvas.light_mode = CanvasItemMaterial.LIGHT_MODE_LIGHT_ONLY
-	
-	piece.add_child(mask)
-	fabric.material = fabric_canvas
-	piece.add_child(fabric)
-	
-	var piece_shape = get_quilt_square()
-	mask.set_texture(piece_shape)
-	
-	var piece_fabric = get_current_fabric()
-	fabric.set_texture(piece_fabric)
-	
-	var piece_size_x = width_height
-	
-	quilt_piece_x = quilt_piece_x + piece_size_x
-
-	if current_question == 1:
-		quilt_piece_x = initial_quilt_piece_x
-		var piece_size_y = width_height
-		if quilt_piece_y == 0:
-			quilt_piece_y = quilt_piece_y + piece_size_y / 2
-		else:
-			quilt_piece_y = quilt_piece_y + piece_size_y
-	
-	var new_piece_pos = Vector2(quilt_piece_x, quilt_piece_y)
-	print(new_piece_pos)
-	piece.transform.origin = new_piece_pos
-	
-	add_child(piece)
-
 func set_question_fabric(fabric_path):
 	var fabric = load(fabric_path)
 	var holey_quilt_fabric = get_holey_quilt_fabric()
 	holey_quilt_fabric.set_texture(fabric)
 	
 	for i in range(1,4):
-		var option = get_child(i)
-		var option_fabric = option.get_child(2)
+		var node_path = "AnimationPlayer%d/Layer%d/Option %d/Fabric Texture" % [i, i+1, i]
+		var option_fabric = get_node(node_path)
 		option_fabric.set_texture(fabric)
 
-func _on_Option_1_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton \
-	and event.button_index == BUTTON_LEFT \
-	and event.is_pressed():
-		on_option_pressed(1)
+func reset_option_positions():
+	var holey_quilt = get_holey_quilt()
+	holey_quilt.visible = true
+	
+	for i in range(1,4):
+		var node_path = "AnimationPlayer%d/Layer%d/Option %d" % [i, i+1, i]
+		var option = get_node(node_path)
+		option.visible = true
+		option.transform.origin = option_positions[i - 1]
 
-
-func _on_Option_2_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton \
-	and event.button_index == BUTTON_LEFT \
-	and event.is_pressed():
-		on_option_pressed(2)
-
-
-func _on_Option_3_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton \
-	and event.button_index == BUTTON_LEFT \
-	and event.is_pressed():
-		on_option_pressed(3)
+func add_quilt_piece():
+	
+	progress_quilt.add_quilt_piece(current_fabric)
+	
+	var holey_quilt = get_holey_quilt()
+	holey_quilt.visible = false
+	
+	for i in range(1,4):
+		var node_path = "AnimationPlayer%d/Layer%d/Option %d" % [i, i+1, i]
+		var option = get_node(node_path)
+		option.visible = false
+	
+	progress_quilt.animate_quilt_piece(current_question)
+	yield(progress_quilt, "done_animating")
+	emit_signal("piece_added")
