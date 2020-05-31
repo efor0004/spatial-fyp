@@ -94,21 +94,20 @@ tracks/2/keys = {
 "values": [ Vector2( 821, 768 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=11]
+[sub_resource type="CanvasItemMaterial" id=4]
 light_mode = 2
 
-[sub_resource type="Gradient" id=9]
+[sub_resource type="Gradient" id=5]
 colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1 )
 
-[sub_resource type="GradientTexture" id=10]
-gradient = SubResource( 9 )
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
 width = 368
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 192, 192 )
 
-[sub_resource type="Animation" id=5]
-resource_name = "Correct"
+[sub_resource type="Animation" id=8]
 length = 6.0
 step = 0.5
 tracks/0/type = "value"
@@ -148,8 +147,7 @@ tracks/2/keys = {
 "values": [ Vector2( 1256, 768 ), Vector2( 356, 768 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "Incorrect"
+[sub_resource type="Animation" id=9]
 length = 7.0
 step = 0.5
 tracks/0/type = "value"
@@ -189,18 +187,17 @@ tracks/2/keys = {
 "values": [ Vector2( 1256, 768 ), Vector2( 358, 768 ), Vector2( 358, 768 ), Vector2( 358, 1750 ) ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=14]
+[sub_resource type="CanvasItemMaterial" id=10]
 light_mode = 2
 
-[sub_resource type="Gradient" id=12]
+[sub_resource type="Gradient" id=11]
 colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1 )
 
-[sub_resource type="GradientTexture" id=13]
-gradient = SubResource( 12 )
+[sub_resource type="GradientTexture" id=12]
+gradient = SubResource( 11 )
 width = 384
 
-[sub_resource type="Animation" id=7]
-resource_name = "Correct"
+[sub_resource type="Animation" id=13]
 length = 7.0
 step = 0.5
 tracks/0/type = "value"
@@ -240,8 +237,7 @@ tracks/2/keys = {
 "values": [ Vector2( 1721, 768 ), Vector2( 358, 768 ) ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "Incorrect"
+[sub_resource type="Animation" id=14]
 length = 9.0
 step = 0.5
 tracks/0/type = "value"
@@ -332,10 +328,10 @@ layer = 2
 
 [node name="Colour Overlay" type="Sprite" parent="Question/AnimationPlayer1/Layer2/Option 1/Sub Layer"]
 self_modulate = Color( 1, 1, 1, 0 )
-material = SubResource( 11 )
+material = SubResource( 4 )
 position = Vector2( 821, 768 )
 z_index = 1
-texture = SubResource( 10 )
+texture = SubResource( 6 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 368, 368 )
 
@@ -349,7 +345,7 @@ range_layer_max = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question/AnimationPlayer1/Layer2/Option 1"]
 visible = false
 z_index = 1
-shape = SubResource( 4 )
+shape = SubResource( 7 )
 
 [node name="Fabric Texture" type="Sprite" parent="Question/AnimationPlayer1/Layer2/Option 1"]
 material = SubResource( 1 )
@@ -359,8 +355,8 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Question"]
-anims/Correct = SubResource( 5 )
-anims/Incorrect = SubResource( 6 )
+anims/Correct = SubResource( 8 )
+anims/Incorrect = SubResource( 9 )
 
 [node name="Layer3" type="CanvasLayer" parent="Question/AnimationPlayer2"]
 layer = 3
@@ -375,9 +371,9 @@ layer = 3
 
 [node name="Colour Overlay" type="Sprite" parent="Question/AnimationPlayer2/Layer3/Option 2/SubLayer"]
 self_modulate = Color( 1, 1, 1, 0 )
-material = SubResource( 14 )
+material = SubResource( 10 )
 position = Vector2( 1256, 768 )
-texture = SubResource( 13 )
+texture = SubResource( 12 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 384, 384 )
 
@@ -391,7 +387,7 @@ range_layer_max = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question/AnimationPlayer2/Layer3/Option 2"]
 visible = false
 z_index = 1
-shape = SubResource( 4 )
+shape = SubResource( 7 )
 
 [node name="Fabric Texture" type="Sprite" parent="Question/AnimationPlayer2/Layer3/Option 2"]
 material = SubResource( 1 )
@@ -400,8 +396,8 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Question"]
-anims/Correct = SubResource( 7 )
-anims/Incorrect = SubResource( 8 )
+anims/Correct = SubResource( 13 )
+anims/Incorrect = SubResource( 14 )
 
 [node name="Layer4" type="CanvasLayer" parent="Question/AnimationPlayer3"]
 layer = 4
@@ -432,7 +428,7 @@ range_layer_max = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question/AnimationPlayer3/Layer4/Option 3"]
 visible = false
 z_index = 1
-shape = SubResource( 4 )
+shape = SubResource( 7 )
 
 [node name="Fabric Texture" type="Sprite" parent="Question/AnimationPlayer3/Layer4/Option 3"]
 material = SubResource( 1 )

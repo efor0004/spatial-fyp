@@ -128,6 +128,9 @@ func reset_option_positions():
 		option.transform.origin = option_positions[i - 1]
 
 func add_quilt_piece():
+	
+	progress_quilt.add_quilt_piece(current_fabric)
+	
 	var holey_quilt = get_holey_quilt()
 	holey_quilt.visible = false
 	
@@ -135,8 +138,6 @@ func add_quilt_piece():
 		var node_path = "AnimationPlayer%d/Layer%d/Option %d" % [i, i+1, i]
 		var option = get_node(node_path)
 		option.visible = false
-	
-	progress_quilt.add_quilt_piece(current_fabric)
 	
 	progress_quilt.animate_quilt_piece(current_question)
 	yield(progress_quilt, "done_animating")

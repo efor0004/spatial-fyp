@@ -4,6 +4,7 @@ var quilt_size = 384
 
 var holey_quilt_x = 358
 var holey_quilt_y = 768
+var holey_quilt_position = Vector2(holey_quilt_x, holey_quilt_y)
 
 var initial_quilt_piece_x = 1136
 var quilt_piece_x = initial_quilt_piece_x
@@ -18,32 +19,39 @@ var current_piece_index = 0
 signal done_animating
 
 func add_quilt_piece(fabric_path):
+	var piece_pos = holey_quilt_position
 	current_piece_index += 1
 	
 	var piece = AnimationPlayer.new()
+	
 	var piece_sprite = Sprite.new()
 	piece_sprite.set_name(get_sprite_name())
+	piece_sprite.set_position(piece_pos)
+	
 	var mask = Light2D.new()
 	mask.mode = Light2D.MODE_MIX
+	# mask.set_position(piece_pos)
 	
 	var fabric = Sprite.new()
 	fabric.region_enabled = true
 	fabric.region_rect = Rect2(0, 0, quilt_size, quilt_size)
+	# fabric.set_position(piece_pos)
 	
 	var fabric_canvas = CanvasItemMaterial.new()
 	fabric_canvas.blend_mode = BLEND_MODE_MIX
 	fabric_canvas.light_mode = CanvasItemMaterial.LIGHT_MODE_LIGHT_ONLY
 	
-	piece_sprite.add_child(mask)
 	fabric.material = fabric_canvas
 	piece_sprite.add_child(fabric)
-	piece.add_child(piece_sprite)
 	
 	var piece_shape = get_quilt_square()
 	mask.set_texture(piece_shape)
 	
 	var piece_fabric = get_fabric(fabric_path)
 	fabric.set_texture(piece_fabric)
+	
+	piece_sprite.add_child(mask)
+	piece.add_child(piece_sprite)
 	
 	add_child(piece)
 
@@ -76,7 +84,7 @@ func animate_quilt_piece(current_question):
 	emit_signal("done_animating")
 
 func get_piece_animation(end_pos, piece_sprite, mask_node, fabric_node):
-	var start_pos = Vector2(holey_quilt_x, holey_quilt_y)
+	var start_pos = holey_quilt_position
 	
 	var piece_animation = Animation.new()
 	piece_animation.set_length(animation_duration)
