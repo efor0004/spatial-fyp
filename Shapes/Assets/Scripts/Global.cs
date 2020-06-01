@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI; 
 
 public class Global : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class Global : MonoBehaviour
     public static Vector3 currentVal2 = new Vector3(0, 0, 0);
 
     public static float positionTolerance = 0.5f;         //tolerance in placement
-    public static float rotationTolerance = 12.0f;
+    public static float rotationTolerance = 15.0f;
 
     public static int puzzlePieces = 11;                //tracking puzzle completion
     public static int piecesPlaced = 0;
@@ -121,5 +122,24 @@ public class Global : MonoBehaviour
         }
 
 
+    }
+
+    public static void ProgressBar(int max, int current, Image mask, Text Text, int Level)
+    {
+        //updates the progress bar and level X at the top right hand of the puzzle screen
+        //called in the puzzlex() function
+
+        float fillAmount = (float)current / (float)max;
+        mask.fillAmount = fillAmount;
+        Text.text = "Level " + Level; 
+    }
+
+    public static void ProgressCircle(int max, int current, Image mask)
+    {
+        //updates the progress circles on the World Select menu
+        //triggered when the World scene is loaded
+
+        float fillAmount = (float)current / (float)max;
+        mask.fillAmount = fillAmount;
     }
 }

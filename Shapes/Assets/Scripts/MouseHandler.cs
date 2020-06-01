@@ -9,6 +9,11 @@ public class MouseHandler : MonoBehaviour
 
     delegate void PuzzleMethod();                                       //creates an empty method
     List<PuzzleMethod> Puzzle = new List<PuzzleMethod>();               //creates a list of empty methods
+
+    int PuzzlesPerLevel = 5;
+    Image Mask;
+    Text LevelText;
+
     void CreateList()                                 
     {
         //populates the list of empty methods with a function call for each puzzle
@@ -26,7 +31,8 @@ public class MouseHandler : MonoBehaviour
 
         Global.NextPuzzleReady = true;                                     //set as true every time the scene is opened
         CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
-       // Puzzle2(); 
+        Mask = GameObject.Find("Mask").GetComponent<Image>();
+        LevelText = GameObject.Find("LevelText").GetComponent<Text>();
     }
         void Update()
         {
@@ -121,7 +127,8 @@ public class MouseHandler : MonoBehaviour
         //also attach the rotate script here
 
 
-        Vector3 Position = new Vector3(0.1035244f, 3.630444f, 0f);
+        //Vector3 Position = new Vector3(0.1035244f, 3.630444f, 0f);
+        Vector3 Position = new Vector3(-0.2f, 3.630444f, 0f);
         Vector3 Rotation = new Vector3(0f, 0f, 0f);
         Vector3 Scale = new Vector3(1f, 1f, 1f);
         string SortingLayer = "Foreground";
@@ -162,17 +169,19 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 1;
         Global.MousePuzzle = 1;
 
+        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;
 
         //spawn anchor shape
         RenderShapeFixed("Shape0", "Circle", new Vector3(0.45f, -0.97f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.109f, 0.592f, 1f), "Shape1", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), false, 0, false);
         //spawn movable shapes   
-        RenderShapeVariable("Shape1", "TriangleR", new Vector3(-3.23f, -0.86f, 0f), new Vector3(0f, 0f, 132.8008f), new Vector3(0.4183661f, 0.3734069f, 0.495f), "Shape2", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 1, false);
+        RenderShapeVariable("Shape1", "TriangleR", new Vector3(-3.23f, -0.86f, 0f), new Vector3(0f, 0f, 132.8008f), new Vector3(0.4183661f, 0.3734069f, 0.495f), "Shape3", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 1, false);
         RenderShapeVariable("Shape2", "TriangleR", new Vector3(0.48f, 0.62f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.4347749f, 0.1773904f, 0.291346f), "Shape2", new Vector4(0f, 0.7135715f, 1f, 1f), false, 2, false);
         RenderShapeVariable("Shape3", "TriangleR", new Vector3(0.259f, -0.721f, 0f), new Vector3(0f, 0f, 27.04025f), new Vector3(0.3475402f, 0.2874415f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 3, false);
-        RenderShapeVariable("Shape4", "Circle", new Vector3(1.6992f, -0.5492f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1752192f, 0.1752192f, 0.162f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f), true, 4, true);
-        RenderShapeVariable("Shape5", "Circle", new Vector3(1.71f, -0.549f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1362686f, 0.1318552f, 0.1186388f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 5, true);
+        RenderShapeVariable("Shape4", "Circle", new Vector3(1.6992f, -0.5492f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1752192f, 0.1752192f, 0.162f), "Shape3", new Vector4(1f, 0.4678748f, 0f, 1f), true, 4, true);
+        RenderShapeVariable("Shape5", "Circle", new Vector3(1.71f, -0.549f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1362686f, 0.1318552f, 0.1186388f), "Shape4", new Vector4(0f, 0f, 0f, 1f), true, 5, true);
 
         //spawn target image
         RenderPuzzleImage("MS1");  //has the touchrotate script attached --> run after all shapes are loaded
@@ -190,6 +199,8 @@ public class MouseHandler : MonoBehaviour
         //record level and puzzle numbers
         Global.MouseLevel = 1;
         Global.MousePuzzle = 2;
+
+        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -218,6 +229,8 @@ public class MouseHandler : MonoBehaviour
         //record level and puzzle numbers
         Global.MouseLevel = 1;
         Global.MousePuzzle = 3;
+
+        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 12;

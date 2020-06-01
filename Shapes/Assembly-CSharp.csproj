@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\TouchRotate.cs" />
     <Compile Include="Assets\Scripts\TriangleHandler.cs" />
     <Compile Include="Assets\Scripts\WildHandler.cs" />
+    <Compile Include="Assets\Scripts\World.cs" />
     <None Include="Assets\TextFiles\Test.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Sian/GitHub/spatial-fyp/Shapes/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

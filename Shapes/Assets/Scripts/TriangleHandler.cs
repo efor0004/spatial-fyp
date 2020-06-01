@@ -9,6 +9,12 @@ public class TriangleHandler : MonoBehaviour
 
     delegate void PuzzleMethod();                                       //creates an empty method
     List<PuzzleMethod> Puzzle = new List<PuzzleMethod>();               //creates a list of empty methods
+
+    int PuzzlesPerLevel = 5;
+    Image Mask;
+    Text LevelText;
+
+
     void CreateList()                                 
     {
         //populates the list of empty methods with a function call for each puzzle
@@ -24,7 +30,9 @@ public class TriangleHandler : MonoBehaviour
 
         Global.NextPuzzleReady = true;                                     //set as true every time the scene is opened
         CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
-    
+        Mask = GameObject.Find("Mask").GetComponent<Image>();
+        LevelText = GameObject.Find("LevelText").GetComponent<Text>();
+
     }
         void Update()
         {
@@ -119,7 +127,8 @@ public class TriangleHandler : MonoBehaviour
         //also attach the rotate script here
 
 
-        Vector3 Position = new Vector3(0.1035244f, 3.630444f, 0f);
+        //Vector3 Position = new Vector3(0.1035244f, 3.630444f, 0f);
+        Vector3 Position = new Vector3(-0.2f, 3.630444f, 0f);
         Vector3 Rotation = new Vector3(0f, 0f, 0f);
         Vector3 Scale = new Vector3(1f, 1f, 1f);
         string SortingLayer = "Foreground";
@@ -159,6 +168,8 @@ public class TriangleHandler : MonoBehaviour
         //record level and puzzle numbers
         Global.TriangleLevel = 1;
         Global.TrianglePuzzle = 1;
+
+        Global.ProgressBar(PuzzlesPerLevel, Global.TrianglePuzzle - 1, Mask, LevelText, Global.TriangleLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;

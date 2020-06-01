@@ -151,7 +151,7 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the Playground button on the land selection menu
         //loads the Playground scene
 
-        //SceneManager.LoadScene("Playground");
+        SceneManager.LoadScene("Playground");
     }
 
     public void TriangleButton()
@@ -159,7 +159,7 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the Triangle City button on the land selection menu
         //loads the Triangle scene
 
-       // SceneManager.LoadScene("Triangle");
+       SceneManager.LoadScene("Triangle");
     }
 
     public void MouseButton()
@@ -175,7 +175,7 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the Wild button on the land selection menu
         //loads the Wild scene
 
-        //SceneManager.LoadScene("Wild");
+        SceneManager.LoadScene("Wild");
     }
 
     public void FarmButton()
@@ -183,7 +183,7 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the Farm button on the land selection menu
         //loads the Farm scene
 
-       // SceneManager.LoadScene("Farm");
+       SceneManager.LoadScene("Farm");
     }
 
     public void FreeplayButton()
