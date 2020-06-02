@@ -21,7 +21,11 @@ public class MouseHandler : MonoBehaviour
 
         Puzzle.Add(Puzzle1);
         Puzzle.Add(Puzzle2);
-        Puzzle.Add(Puzzle3);
+        Puzzle.Add(Puzzle9);
+        Puzzle.Add(Puzzle10);
+        Puzzle.Add(Puzzle11);
+        Puzzle.Add(Puzzle12);
+        Puzzle.Add(Puzzle13);
     }
 
     
@@ -29,10 +33,12 @@ public class MouseHandler : MonoBehaviour
     {
         // Start is called before the first frame update
 
-        Global.NextPuzzleReady = true;                                     //set as true every time the scene is opened
-        CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
+        Global.NextPuzzleReady = true;                                     //set as true every time the scene is opened        
         Mask = GameObject.Find("Mask").GetComponent<Image>();
         LevelText = GameObject.Find("LevelText").GetComponent<Text>();
+
+        //CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
+        Puzzle9();
     }
         void Update()
         {
@@ -219,15 +225,154 @@ public class MouseHandler : MonoBehaviour
         RenderPuzzleImage("MS2");  //has the touchrotate script attached --> run after all shapes are loaded
     }
 
-    void Puzzle3()
+    void Puzzle9()
     {
-        // puzzle 3 in the Mouse Shapes scene
+        // puzzle 9 in the Mouse Shapes scene
+        // the arm-less mouse
+
+        Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
+
+        //record level and puzzle numbers
+        Global.MouseLevel = 2;
+        Global.MousePuzzle = 4;
+
+        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 9;
+
+        //spawn anchor shape
+        RenderShapeFixed("Shape0", "Circle", new Vector3(0.06f, -1.02f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.5137529f, 0.4958907f, 0.4252922f), "Shape2", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 0, true);
+       
+        RenderShapeVariable("Shape1", "TriangleI", new Vector3(0.05999997f, -0.1f, 0.01f), new Vector3(0f, 0f, 179.1464f), new Vector3(0.3603483f, 0.4349289f, 0.3603483f), "Shape3", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 1, false);
+        RenderShapeVariable("Shape2", "Circle", new Vector3(-0.71f, 0.71f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2379704f, 0.2379704f, 0.2379704f), "Shape4", new Vector4(1f, 0.6183392f, 0.1179245f, 1f), false, 2, true);
+        RenderShapeVariable("Shape3", "Circle", new Vector3(0.86f, 0.71f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2471231f, 0.2471231f, 0.2471231f), "Shape4", new Vector4(1f, 0.3026949f, 0f, 1f), false, 3, true);
+        RenderShapeVariable("Shape4", "Circle", new Vector3(-0.25f, -0.17f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1485383f, 0.1485383f, 0.1485383f), "Shape4", new Vector4(0.9750406f, 1f, 0f, 1f), true, 4, true);
+        RenderShapeVariable("Shape5", "Circle", new Vector3(0.438f, -0.19f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.145177f, 0.145177f, 0.145177f), "Shape4", new Vector4(1f, 0.7064719f, 0f, 1f), true, 5, true);
+        RenderShapeVariable("Shape6", "Circle", new Vector3(-0.241f, -0.18f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09979951f, 0.09979951f, 0.09979952f), "Shape5", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), true, 6, true);
+        RenderShapeVariable("Shape7", "Circle", new Vector3(0.448f, -0.198f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09902804f, 0.09902804f, 0.09902804f), "Shape5", new Vector4(0f, 0.7735849f, 0.03656648f, 1f), true, 7, true);
+        RenderShapeVariable("Shape8", "Square", new Vector3(0.9f, -2.28f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.208962f, 0.08692878f, 1f), "Shape3", new Vector4(1f, 0.3026949f, 0f, 1f), false, 8, false);
+        RenderShapeVariable("Shape9", "Square", new Vector3(-0.643f, -2.288f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2065063f, 0.08454575f, 1f), "Shape3", new Vector4(1f, 0.6183392f, 0.1179245f, 1f), false, 9, false);
+
+
+        //spawn target image
+        RenderPuzzleImage("MS9");  //has the touchrotate script attached --> run after all shapes are loaded
+    }
+
+    void Puzzle10()
+    {
+        // puzzle 10 in the Mouse Shapes scene
+        // the collapsed mouse
+
+        Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
+
+        //record level and puzzle numbers
+        Global.MouseLevel = 2;
+        Global.MousePuzzle = 5;
+
+        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 7;
+
+        //spawn anchor shape
+        RenderShapeFixed("Shape0", "Circle", new Vector3(0.06f, -1.02f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.5137529f, 0.4958907f, 0.4252922f), "Shape2", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), false, 0, true);
+       
+        RenderShapeVariable("Shape1", "TriangleI", new Vector3(-0.85f, -2.03f, 0f), new Vector3(358.8159f, 357.4445f, 128.5431f), new Vector3(0.3603483f, 0.464489f, 0.3603483f), "Shape3", new Vector4(1f, 0.3766058f, 0f, 1f), false, 1, false);
+        RenderShapeVariable("Shape2", "Circle", new Vector3(-0.69f, -0.7f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 2, true);
+        RenderShapeVariable("Shape3", "Circle", new Vector3(0.49f, -1.94f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(1f, 0f, 0.05237484f, 1f), false, 3, true);
+        RenderShapeVariable("Shape4", "Circle", new Vector3(-0.92f, -1.64f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1562903f, 0.1562903f, 0.1562903f), "Shape4", new Vector4(0.9750406f, 1f, 0f, 1f), true, 4, true);
+        RenderShapeVariable("Shape5", "Circle", new Vector3(-0.43f, -2.18f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1562387f, 0.1562387f, 0.1562387f), "Shape4", new Vector4(1f, 0.7064719f, 0f, 1f), true, 5, true);
+        RenderShapeVariable("Shape6", "Circle", new Vector3(-0.92f, -1.65f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09426609f, 0.09426609f, 0.0942661f), "Shape5", new Vector4(0.0201524f, 0f, 0.754717f, 1f), true, 6, true);
+        RenderShapeVariable("Shape7", "Circle", new Vector3(-0.4f, -2.18f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09814046f, 0.09814046f, 0.09814046f), "Shape5", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), true, 7, true);
+
+
+        //spawn target image
+        RenderPuzzleImage("MS10");  //has the touchrotate script attached --> run after all shapes are loaded
+    }
+
+    void Puzzle11()
+    {
+        // puzzle 11 in the Mouse Shapes scene
         // the square mouse
 
         Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
 
         //record level and puzzle numbers
-        Global.MouseLevel = 1;
+        Global.MouseLevel = 3;
+        Global.MousePuzzle = 1;
+
+        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 12;
+
+        //spawn anchor shape
+        RenderShapeFixed("Shape0", "Square", new Vector3(0.01f, -1.12f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.4252922f, 0.4252922f, 0.4252922f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f), false, 0, false);
+       
+        RenderShapeVariable("Shape1", "TriangleI", new Vector3(0.08f, 0.4966f, 0f), new Vector3(0f, 0f, 329.6572f), new Vector3(0.3603483f, 0.3603483f, 0.3603483f), "Shape3", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), false, 1, false);
+        RenderShapeVariable("Shape2", "Circle", new Vector3(-0.992f, 0.319f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 2, true);
+        RenderShapeVariable("Shape3", "Circle", new Vector3(0.45f, 1.086f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(1f, 0f, 0.05237484f, 1f), false, 3, true);
+        RenderShapeVariable("Shape4", "Circle", new Vector3(-0.199f, -0.095f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1396197f, 0.1396197f, 0.1396197f), "Shape4", new Vector4(1f, 0.3026949f, 0f, 1f), true, 4, true);
+        RenderShapeVariable("Shape5", "Circle", new Vector3(0.452f, 0.224f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1412264f, 0.1412264f, 0.1412264f), "Shape4", new Vector4(1f, 0.6183392f, 0.1179245f, 1f), true, 5, true);
+        RenderShapeVariable("Shape6", "Circle", new Vector3(-0.1930001f, -0.0999999f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.100943f, 0.100943f, 0.100943f), "Shape5", new Vector4(0.0201524f, 0f, 0.754717f, 1f), true, 6, true);
+        RenderShapeVariable("Shape7", "Circle", new Vector3(0.463f, 0.231f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09614316f, 0.09614316f, 0.09614316f), "Shape5", new Vector4(0f, 0.3845291f, 1f, 1f), true, 7, true);
+        RenderShapeVariable("Shape8", "Square", new Vector3(-0.9736f, -2.2652f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2177115f, 0.08069123f, 1f), "Shape3", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 8, false);
+        RenderShapeVariable("Shape9", "Square", new Vector3(0.9936f, -2.2647f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2177115f, 0.08089081f, 1f), "Shape3", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 9, false);
+        RenderShapeVariable("Shape10", "Square", new Vector3(-1.4952f, -0.5604f, 0f), new Vector3(0f, 0f, 337.8174f), new Vector3(0.2858144f, 0.06361307f, 1f), "Shape3", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 10, false);
+        RenderShapeVariable("Shape11", "Square", new Vector3(1.5275f, -0.5197f, 0f), new Vector3(0f, 0f, 22.80273f), new Vector3(0.2899614f, 0.06707884f, 1f), "Shape3", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 11, false);
+        RenderShapeVariable("Shape12", "Semicircle", new Vector3(-1.5312f, -1.3971f, 0f), new Vector3(0f, 0f, 139.4809f), new Vector3(0.3010172f, 0.1875972f, 1f), "Shape3", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 12, false);
+
+        //spawn target image
+        RenderPuzzleImage("MS11");  //has the touchrotate script attached --> run after all shapes are loaded
+    }
+
+    void Puzzle12()
+    {
+        // puzzle 12 in the Mouse Shapes scene
+        // the red circle mouse 
+
+        Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
+
+        //record level and puzzle numbers
+        Global.MouseLevel = 3;
+        Global.MousePuzzle = 2;
+
+        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 12;
+
+        //spawn anchor shape
+        RenderShapeFixed("Shape0", "Circle", new Vector3(0.06f, -1.02f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.5137529f, 0.4958907f, 0.4252922f), "Shape2", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 0, true);
+       
+        RenderShapeVariable("Shape1", "TriangleI", new Vector3(0.42f, 0.25f, 0f), new Vector3(-2.134434E-07f, 357.0003f, 292.9856f), new Vector3(0.3603483f, 0.3603483f, 0.3603483f), "Shape3", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 1, false);
+        RenderShapeVariable("Shape2", "Circle", new Vector3(-0.514f, 0.655f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(1f, 0.4678748f, 0f, 1f), false, 2, true);
+        RenderShapeVariable("Shape3", "Circle", new Vector3(0.995f, 0.534f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 3, true);
+        RenderShapeVariable("Shape4", "Circle", new Vector3(-0.159f, -0.149f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1396197f, 0.1396197f, 0.1396197f), "Shape4", new Vector4(0.9750406f, 1f, 0f, 1f), true, 4, true);
+        RenderShapeVariable("Shape5", "Circle", new Vector3(0.485f, -0.168f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1412264f, 0.1412264f, 0.1412264f), "Shape4", new Vector4(1f, 0.7064719f, 0f, 1f), true, 5, true);
+        RenderShapeVariable("Shape6", "Circle", new Vector3(-0.159f, -0.154f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.100943f, 0.100943f, 0.100943f), "Shape5", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), true, 6, true);
+        RenderShapeVariable("Shape7", "Circle", new Vector3(0.485f, -0.17f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1014791f, 0.1014791f, 0.1014791f), "Shape5", new Vector4(0f, 0.7735849f, 0.03656648f, 1f), true, 7, true);
+        RenderShapeVariable("Shape8", "Square", new Vector3(-0.928f, -2.193f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2177115f, 0.08069123f, 1f), "Shape3", new Vector4(1f, 0.3766058f, 0f, 1f), false, 8, false);
+        RenderShapeVariable("Shape9", "Square", new Vector3(0.939f, -2.219f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2177115f, 0.08089081f, 1f), "Shape3", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 9, false);
+        RenderShapeVariable("Shape10", "Square", new Vector3(-1.033f, -0.056f, 0f), new Vector3(359.8121f, 359.8167f, 314.2907f), new Vector3(0.2858144f, 0.06361307f, 1f), "Shape3", new Vector4(1f, 0.3766058f, 0f, 1f), false, 10, false);
+        RenderShapeVariable("Shape11", "Square", new Vector3(1.47f, -0.264f, 0f), new Vector3(0f, 0f, 43.73672f), new Vector3(0.2899614f, 0.06707884f, 1f), "Shape3", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 11, false);
+        RenderShapeVariable("Shape12", "TriangleR", new Vector3(-1.693f, -1.458f, -0.004f), new Vector3(357.9538f, 9.454397f, 92.49583f), new Vector3(-0.08116494f, 0.2991237f, 1f), "Shape3", new Vector4(1f, 0.3766058f, 0f, 1f), false, 12, false);
+
+
+        //spawn target image
+        RenderPuzzleImage("MS12");  //has the touchrotate script attached --> run after all shapes are loaded
+    }
+
+    void Puzzle13()
+    {
+        // puzzle 13 in the Mouse Shapes scene
+        // the green circle mouse 
+
+        Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
+
+        //record level and puzzle numbers
+        Global.MouseLevel = 3;
         Global.MousePuzzle = 3;
 
         Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
@@ -236,24 +381,26 @@ public class MouseHandler : MonoBehaviour
         Global.puzzlePieces = 12;
 
         //spawn anchor shape
-        RenderShapeFixed("Shape0", "Square", new Vector3(0.01f, -1.12f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.4252922f, 0.4252922f, 0.4252922f), "Shape1", new Vector4(1f, 0.4678748f, 0f, 1f), false, 0, false);
-       
-        RenderShapeVariable("Shape1", "TriangleI", new Vector3(0.08f, 0.4966f, 0f), new Vector3(0f, 0f, 329.6572f), new Vector3(0.3603483f, 0.3603483f, 0.3603483f), "Shape3", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), false, 1, false);
-        RenderShapeVariable("Shape2", "Circle", new Vector3(-0.992f, 0.319f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 2, true);
-        RenderShapeVariable("Shape3", "Circle", new Vector3(-0.193f, -0.1f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.100943f, 0.100943f, 0.100943f), "Shape5", new Vector4(0.0201524f, 0f, 0.754717f, 1f), true, 3, true);
-        RenderShapeVariable("Shape4", "Square", new Vector3(-0.944f, -2.238f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2043088f, 0.06833726f, 1f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 4, false);
-        RenderShapeVariable("Shape5", "Circle", new Vector3(-0.199f, -0.095f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1396197f, 0.1396197f, 0.1396197f), "Shape4", new Vector4(1f, 0.3026949f, 0f, 1f), true, 5, true);
-        RenderShapeVariable("Shape6", "Circle", new Vector3(0.45f, 1.086f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(1f, 0f, 0.05237484f, 1f), false, 6, true);
-        RenderShapeVariable("Shape7", "Circle", new Vector3(0.452f, 0.224f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1412264f, 0.1412264f, 0.1412264f), "Shape4", new Vector4(1f, 0.6183392f, 0.1179245f, 1f), true, 7, true);
-        RenderShapeVariable("Shape8", "Circle", new Vector3(0.463f, 0.231f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09614316f, 0.09614316f, 0.09614316f), "Shape5", new Vector4(0f, 0.3845291f, 1f, 1f), true, 8, true);
-        RenderShapeVariable("Shape9", "Square", new Vector3(0.964f, -2.237f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2043088f, 0.06833726f, 1f), "Shape1", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 9, false);
-        RenderShapeVariable("Shape10", "Square", new Vector3(-1.417f, -0.552f, 0f), new Vector3(0f, 0f, 337.8174f), new Vector3(0.254487f, 0.03690138f, 1f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 10, false);
-        RenderShapeVariable("Shape11", "Square", new Vector3(1.448f, -0.533f, 0f), new Vector3(0f, 0f, 22.80273f), new Vector3(0.254487f, 0.03690138f, 1f), "Shape1", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 11, false);
-        RenderShapeVariable("Shape12", "Semicircle", new Vector3(-1.48f, -1.49f, 0f), new Vector3(0f, 0f, 139.4809f), new Vector3(0.25952f, 0.129645f, 1f), "Shape1", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 12, false);
+        RenderShapeFixed("Shape0", "Circle", new Vector3(0.06f, -1.02f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.5137529f, 0.4958907f, 0.4252922f), "Shape2", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), false, 0, true);
+      
+        RenderShapeVariable("Shape1", "TriangleI", new Vector3(0.42f, 0.25f, 0f), new Vector3(-2.134434E-07f, 357.0003f, 292.9856f), new Vector3(0.3603483f, 0.3603483f, 0.3603483f), "Shape3", new Vector4(1f, 0.3766058f, 0f, 1f), false, 1, false);
+        RenderShapeVariable("Shape2", "Circle", new Vector3(-0.514f, 0.655f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 2, true);
+        RenderShapeVariable("Shape3", "Circle", new Vector3(0.995f, 0.534f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2179216f, 0.2179216f, 0.2179216f), "Shape4", new Vector4(1f, 0f, 0.05237484f, 1f), false, 3, true);
+        RenderShapeVariable("Shape4", "Circle", new Vector3(-0.203f, -0.142f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1562903f, 0.1562903f, 0.1562903f), "Shape4", new Vector4(0.9750406f, 1f, 0f, 1f), true, 4, true);
+        RenderShapeVariable("Shape5", "Circle", new Vector3(0.5182f, -0.2012f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1562387f, 0.1562387f, 0.1562387f), "Shape4", new Vector4(1f, 0.7064719f, 0f, 1f), true, 5, true);
+        RenderShapeVariable("Shape6", "Circle", new Vector3(-0.203f, -0.1473f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09426609f, 0.09426609f, 0.0942661f), "Shape5", new Vector4(0.0201524f, 0f, 0.754717f, 1f), true, 6, true);
+        RenderShapeVariable("Shape7", "Circle", new Vector3(0.529f, -0.199f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09814046f, 0.09814046f, 0.09814046f), "Shape5", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), true, 7, true);
+        RenderShapeVariable("Shape8", "Square", new Vector3(-0.928f, -2.193f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2177115f, 0.08069123f, 1f), "Shape3", new Vector4(1f, 0.3766058f, 0f, 1f), false, 8, false);
+        RenderShapeVariable("Shape9", "Square", new Vector3(0.939f, -2.219f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2177115f, 0.08089081f, 1f), "Shape3", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 9, false);
+        RenderShapeVariable("Shape10", "Square", new Vector3(-1.512f, -0.203f, 0f), new Vector3(359.8121f, 359.8167f, 330.4486f), new Vector3(0.2858144f, 0.06361307f, 1f), "Shape3", new Vector4(1f, 0.3766058f, 0f, 1f), false, 10, false);
+        RenderShapeVariable("Shape11", "Square", new Vector3(1.308f, -0.823f, 0f), new Vector3(0f, 0f, 13.58755f), new Vector3(0.2899614f, 0.06707884f, 1f), "Shape3", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 11, false);
+        RenderShapeVariable("Shape12", "Semicircle", new Vector3(1.645f, -1.528f, -0.569f), new Vector3(0f, 0f, 203.4635f), new Vector3(-0.2493712f, 0.2019982f, 1f), "Shape1", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 12, false);
+
 
         //spawn target image
-        RenderPuzzleImage("MS3");  //has the touchrotate script attached --> run after all shapes are loaded
+        RenderPuzzleImage("MS13");  //has the touchrotate script attached --> run after all shapes are loaded
     }
+
 
 
 
