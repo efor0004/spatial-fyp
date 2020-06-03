@@ -28,8 +28,8 @@ public class Global : MonoBehaviour
     public static Vector3 currentVal1 = new Vector3(0, 0, 0);
     public static Vector3 currentVal2 = new Vector3(0, 0, 0);
 
-    public static float positionTolerance = 0.5f;         //tolerance in placement
-    public static float rotationTolerance = 15.0f;
+    public static float positionTolerance = 0.8f;         //tolerance in placement //0.5
+    public static float rotationTolerance = 20.0f;  //15
 
     public static int puzzlePieces = 11;                //tracking puzzle completion
     public static int piecesPlaced = 0;

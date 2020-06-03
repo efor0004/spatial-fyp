@@ -46,7 +46,7 @@ public class TestBench : MonoBehaviour
                 //creates a function to render the sprite
                 //shapes are listed in order of creation (if the heirarchy is untouched)
                 //the first shape will be the anchor shape and it needs a separate function to render it in position
-                if (Mathf.Abs(gameObject.transform.localScale.x) < minScale && Mathf.Abs(gameObject.transform.localScale.y) < minScale && Mathf.Abs(gameObject.transform.localScale.z) < minScale)
+                if (Mathf.Abs(gameObject.transform.localScale.x) < minScale && Mathf.Abs(gameObject.transform.localScale.y) < minScale)
                 {
                     small = true;
                 }

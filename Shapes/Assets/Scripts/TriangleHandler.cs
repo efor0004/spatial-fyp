@@ -128,7 +128,7 @@ public class TriangleHandler : MonoBehaviour
 
 
         //Vector3 Position = new Vector3(0.1035244f, 3.630444f, 0f);
-        Vector3 Position = new Vector3(-0.2f, 3.630444f, 0f);
+        Vector3 Position = new Vector3(-0.4f, 3.630444f, 0f);
         Vector3 Rotation = new Vector3(0f, 0f, 0f);
         Vector3 Scale = new Vector3(1f, 1f, 1f);
         string SortingLayer = "Foreground";
