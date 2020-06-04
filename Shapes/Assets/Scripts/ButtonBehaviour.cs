@@ -186,11 +186,11 @@ public class ButtonBehaviour : MonoBehaviour
        SceneManager.LoadScene("Farm");
     }
 
-    public void FreeplayButton()
+    public void MovieMakerButton()
     {
         //is triggered by the Free Play button on the land selection menu
         //loads the Free Play scene
 
-        //SceneManager.LoadScene("FreePlay");
+        SceneManager.LoadScene("Moviemaker");
     }
 }

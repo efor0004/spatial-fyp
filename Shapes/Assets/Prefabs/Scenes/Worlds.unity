@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 452583778}
   - component: {fileID: 452583777}
   m_Layer: 5
-  m_Name: FreeplayButton
+  m_Name: MovieMakerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,8 +483,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 767.77, y: -1822}
-  m_SizeDelta: {x: 729.9, y: 173.5}
+  m_AnchoredPosition: {x: 739.42, y: -1822}
+  m_SizeDelta: {x: 889.05, y: 173.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &452583777
 MonoBehaviour:
@@ -527,7 +527,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 381897571}
-        m_MethodName: FreeplayButton
+        m_MethodName: MovieMakerButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7448c27737617764abe02673e6c1a84f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4b009dc9665f414fb8b0ad5f6013609, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

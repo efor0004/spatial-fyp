@@ -29,6 +29,14 @@ public class World : MonoBehaviour
         Global.ProgressCircle(LevelsPerWorld, Global.MouseLevel - 1, MouseMask);
         Global.ProgressCircle(LevelsPerWorld, Global.WildLevel - 1, WildMask);
         Global.ProgressCircle(LevelsPerWorld, Global.FarmLevel - 1, FarmMask);
+
+
+        //disable Worlds while not populated
+        GameObject.Find("PlaygroundButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("TriangleButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("WildButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("MovieMakerButton").GetComponent<Button>().interactable = false;
+
     }
 
     // Update is called once per frame
