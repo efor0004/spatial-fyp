@@ -126,6 +126,7 @@ public class Global : MonoBehaviour
 
     public static void ProgressBar(int max, int current, Image mask, Text Text, int Level)
     {
+        // adapted from https://www.youtube.com/watch?v=J1ng1zA3-Pk
         //updates the progress bar and level X at the top right hand of the puzzle screen
         //called in the puzzlex() function
 
@@ -136,6 +137,7 @@ public class Global : MonoBehaviour
 
     public static void ProgressCircle(int max, int current, Image mask)
     {
+        //adapted from https://www.youtube.com/watch?v=J1ng1zA3-Pk
         //updates the progress circles on the World Select menu
         //triggered when the World scene is loaded
 
