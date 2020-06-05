@@ -239,12 +239,14 @@ public class Global : MonoBehaviour
     public static void PuzzleComplete()
     {
         //is triggered when a puzzle is completed correctly
+        //popup asks if the user wants to play another puzzle or go home
 
         piecesPlaced = 0;                                                                //reset to avoid looping
         Debug.Log("PUZZLE COMPLETE!");
 
         GameObject.Find("PopupStart").transform.localPosition = popupPosition;          //creates a popup
 
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
         LeftArrowActive = false;
         RightArrowActive = false;
 

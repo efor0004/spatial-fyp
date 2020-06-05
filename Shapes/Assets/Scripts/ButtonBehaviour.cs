@@ -124,6 +124,10 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the home button on the land selection menu
         //loads the home scene
 
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = true; //reactivate buttons globally
+        Global.LeftArrowActive = true;
+        Global.RightArrowActive = true;
+
         SceneManager.LoadScene("Menu");
     }
 
@@ -133,18 +137,248 @@ public class ButtonBehaviour : MonoBehaviour
 
         GameObject.Find("PopupStart").transform.localPosition = Global.rightPosition;     //moves the pop-up box out of screen
 
+        Global.piecesPlaced = 0;
+
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //activates buttons
         Global.LeftArrowActive = true;
         Global.RightArrowActive = true;
-
-        GameObject.Find("HomeButton").GetComponent<Button>().interactable = true;         //activates buttons
-        GameObject.Find("LeftArrow").GetComponent<Button>().interactable = true;
-        GameObject.Find("RightArrow").GetComponent<Button>().interactable = true;
 
         Global.DestroyShapes();                                                           //destroy all existing shapes
 
         Global.NextPuzzleReady = true;                                                    //allow next puzzle to load
+    }
+
+    public void MenuButton()
+    {
+        //pop-up displays menu options
+        //triggered when hamburdher symbol is pressed in puzzle 
+
+        GameObject.Find("PopupMenu").transform.localPosition = Global.centrePosition;     //moves the pop-up into centre of screen
+        
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;         //de-activates buttons
+        Global.LeftArrowActive = false;
+        Global.RightArrowActive = false;
+
+       // de - activate shapes
+        //foreach (string name in TouchRotate.nameArray)
+        //{
+        //    GameObject go = GameObject.Find(name);                                                //checks if the shape exists
+        //                                                                                          //if the tree exist then destroy it
+        //    if (go)
+        //        go.SetActive(false);
+        //}
+    }
+
+    public void MenuHomeButton()
+    {
+        //loads home menu
+        //also remembers that the current puzzle is incomplete
+        //triggered by pressing home button in hamburger popup menu within puzzle
+
+        GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
+
+        string scene = GameObject.Find("PopupMenu").scene.name;
+
+        switch (scene)                                            //find which scene it was called in, and reduce puzzle number by 1
+        {
+            case "Mouse":
+                if (Global.MousePuzzle != 1)
+                {
+                    Global.MousePuzzle = Global.MousePuzzle - 1;
+                }
+
+                else
+                {
+                    Global.MousePuzzle = 5;
+                    Global.MouseLevel = Global.MouseLevel - 1;
+                }
+                break;
+            case "Farm":
+                if (Global.FarmPuzzle != 1)
+                {
+                    Global.FarmPuzzle = Global.FarmPuzzle - 1;
+                }
+
+                else
+                {
+                    Global.FarmPuzzle = 5;
+                    Global.FarmLevel = Global.FarmLevel - 1;
+                }
+                break;
+            case "Wild":
+                if (Global.WildPuzzle != 1)
+                {
+                    Global.WildPuzzle = Global.WildPuzzle - 1;
+                }
+
+                else
+                {
+                    Global.WildPuzzle = 5;
+                    Global.WildLevel = Global.WildLevel - 1;
+                }
+                break;
+            case "Playground":
+                if (Global.PlaygroundPuzzle != 1)
+                {
+                    Global.PlaygroundPuzzle = Global.PlaygroundPuzzle - 1;
+                }
+
+                else
+                {
+                    Global.PlaygroundPuzzle = 5;
+                    Global.PlaygroundLevel = Global.PlaygroundLevel - 1;
+                }
+                break;
+            case "Triangle":
+                if (Global.TrianglePuzzle != 1)
+                {
+                    Global.TrianglePuzzle = Global.TrianglePuzzle - 1;
+                }
+
+                else
+                {
+                    Global.TrianglePuzzle = 5;
+                    Global.TriangleLevel = Global.TriangleLevel - 1;
+                }
+                break;
+
+
+            default:
+                Debug.Log("Error in Switch Statement/ RestartButton()");
+                break;
+        }
+
+        Global.piecesPlaced = 0;  //reset placed pieces
+
+        //re-activate each shape
+        //foreach (string name in TouchRotate.nameArray)
+        //{
+        //    GameObject go = GameObject.Find(name);                                                //checks if the shape exists
+        //                                                                                          //if the tree exist then destroy it
+        //    if (go)
+        //        go.SetActive(true);
+        //}
+
+        SceneManager.LoadScene("Menu");
 
     }
+
+    public void MenuClose()
+    {
+        //closes the menu pop up
+        //triggered by pressing the X button on the menu pop-up within a puzzle 
+
+
+        GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
+
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //activates buttons
+        Global.LeftArrowActive = true;
+        Global.RightArrowActive = true;
+
+        //re - activate each shape
+        //foreach (string name in TouchRotate.nameArray)
+        //{
+        //    GameObject go = GameObject.Find(name);                                                //checks if the shape exists
+        //                                                                                          //if the tree exist then destroy it
+        //    if (go)
+        //        go.SetActive(true);
+        //}
+
+    }
+
+    public void RestartButton()
+    {
+        //starts the puzzle over from the beginning
+        //triggered by pressing the restart button in the hamburdger menu within a puzzle
+
+        GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
+
+        string name = GameObject.Find("PopupMenu").scene.name;
+
+       
+            switch (name)                                            //find which scene it was called in, and reduce puzzle number by 1
+            {
+                case "Mouse":
+                if (Global.MousePuzzle != 1)                          
+                {
+                    Global.MousePuzzle = Global.MousePuzzle - 1;
+                }
+
+                else
+                {
+                    Global.MousePuzzle = 5;
+                    Global.MouseLevel = Global.MouseLevel - 1;
+                }
+                    break;
+            case "Farm":
+                if (Global.FarmPuzzle != 1)
+                {
+                    Global.FarmPuzzle = Global.FarmPuzzle - 1;
+                }
+
+                else
+                {
+                    Global.FarmPuzzle = 5;
+                    Global.FarmLevel = Global.FarmLevel - 1;
+                }
+                break;
+            case "Wild":
+                if (Global.WildPuzzle != 1)
+                {
+                    Global.WildPuzzle = Global.WildPuzzle - 1;
+                }
+
+                else
+                {
+                    Global.WildPuzzle = 5;
+                    Global.WildLevel = Global.WildLevel - 1;
+                }
+                break;
+            case "Playground":
+                if (Global.PlaygroundPuzzle != 1)
+                {
+                    Global.PlaygroundPuzzle = Global.PlaygroundPuzzle - 1;
+                }
+
+                else
+                {
+                    Global.PlaygroundPuzzle = 5;
+                    Global.PlaygroundLevel = Global.PlaygroundLevel - 1;
+                }
+                break;
+            case "Triangle":
+                if (Global.TrianglePuzzle != 1)
+                {
+                    Global.TrianglePuzzle = Global.TrianglePuzzle - 1;
+                }
+
+                else
+                {
+                    Global.TrianglePuzzle = 5;
+                    Global.TriangleLevel = Global.TriangleLevel - 1;
+                }
+                break;
+
+
+            default:
+                    Debug.Log("Error in Switch Statement/ RestartButton()");
+                    break;
+            }
+       
+        StartNewPuzzle();    //start the same puzzle, as the puzzle index has been set back by 1 
+    }
+
+    public void SkipButton()
+    {
+        //skips current puzzle and starts next sequential ouzzle
+        //triggered by pressing the skip button in the hamburdger menu within a puzzle
+
+        GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
+
+        StartNewPuzzle();  //start next puzzle
+
+    }
+
 
     public void PlaygroundButton()
     {
