@@ -21,14 +21,11 @@ func pressed():
 
 func is_correct_answer():
 	var option_sprite = self.get_node("Light2D")
-	var option_shape = option_sprite.get_texture()
-	var option_shape_path = option_shape.get_load_path()
+	var x_offset = option_sprite.offset.x
 	
-	var option_index = option_shape_path.find(option_file_text)
-	var opt_no_index = option_index + len(option_file_text)
-	var opt_no = int(option_shape_path.substr(opt_no_index, 1))
+	print(x_offset)
 	
-	return opt_no == 1
+	return x_offset == 192
 
 func _input_event(_viewport, event, _shape_idx):
 	if is_animation_happening():
