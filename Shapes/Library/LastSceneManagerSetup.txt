@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Prefabs/Scenes/Worlds.unity
+- path: Assets/Prefabs/Scenes/Menu.unity
   isLoaded: 1
   isActive: 1

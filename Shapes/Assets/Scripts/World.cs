@@ -12,8 +12,13 @@ public class World : MonoBehaviour
     Image WildMask;
     Image FarmMask;
 
-    int LevelsPerWorld = 5;
- 
+    //how many levels are in this world
+    int PlaygroundLevelsPerWorld = 5;
+    int TriangleLevelsPerWorld = 5;
+    int MouseLevelsPerWorld = 3;
+    int WildLevelsPerWorld = 5;
+    int FarmLevelsPerWorld = 5;
+
     void Start()
     {
         //assign mask images for each progress bar
@@ -24,11 +29,11 @@ public class World : MonoBehaviour
         FarmMask = GameObject.Find("FarmMask").GetComponent<Image>();
 
         //update each progress bar
-        Global.ProgressCircle(LevelsPerWorld, Global.PlaygroundLevel - 1, PlaygroundMask);
-        Global.ProgressCircle(LevelsPerWorld, Global.TriangleLevel - 1, TriangleMask);
-        Global.ProgressCircle(LevelsPerWorld, Global.MouseLevel - 1, MouseMask);
-        Global.ProgressCircle(LevelsPerWorld, Global.WildLevel - 1, WildMask);
-        Global.ProgressCircle(LevelsPerWorld, Global.FarmLevel - 1, FarmMask);
+        Global.ProgressCircle(PlaygroundLevelsPerWorld, Global.PlaygroundLevel - 1, PlaygroundMask);
+        Global.ProgressCircle(TriangleLevelsPerWorld, Global.TriangleLevel - 1, TriangleMask);
+        Global.ProgressCircle(MouseLevelsPerWorld, Global.MouseLevel - 1, MouseMask);
+        Global.ProgressCircle(WildLevelsPerWorld, Global.WildLevel - 1, WildMask);
+        Global.ProgressCircle(FarmLevelsPerWorld, Global.FarmLevel - 1, FarmMask);
 
 
         //disable Worlds while not populated

@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\DetectTouchMovement.cs" />
     <Compile Include="Assets\Scripts\FarmHandler.cs" />
     <Compile Include="Assets\Scripts\Global.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\MouseHandler.cs" />
     <Compile Include="Assets\Scripts\MovieMaker.cs" />
     <Compile Include="Assets\Scripts\PlaygroundHandler.cs" />

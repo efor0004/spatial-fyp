@@ -10,7 +10,7 @@ public class WildHandler : MonoBehaviour
     delegate void PuzzleMethod();                                       //creates an empty method
     List<PuzzleMethod> Puzzle = new List<PuzzleMethod>();               //creates a list of empty methods
 
-    int PuzzlesPerLevel = 5;
+   // int PuzzlesPerLevel = 5;
     Image Mask;
     Text LevelText;
 
@@ -63,7 +63,7 @@ public class WildHandler : MonoBehaviour
         Global.WildLevel = 1;
         Global.WildPuzzle = 1;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.WildPuzzle - 1, Mask, LevelText, Global.WildLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.WildPuzzle - 1, Mask, LevelText, Global.WildLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;

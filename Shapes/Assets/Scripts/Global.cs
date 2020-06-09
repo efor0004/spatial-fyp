@@ -21,6 +21,18 @@ public class Global : MonoBehaviour
     public static bool Music = true;
     public static bool SoundEffects = true;
 
+    public static bool Easy = false;
+    public static bool Medium = true;
+    public static bool Hard = false;
+
+    public static float EasyPositionTolerance = 1.2f;
+    public static float EasyRotationTolerance = 30.0f;
+
+    public static float MediumPositionTolerance = 0.8f;
+    public static float MediumRotationTolerance = 20.0f;
+
+    public static float HardPositionTolerance = 0.4f;
+    public static float HardRotationTolerance = 10.0f;
 
     //TouchRotate
     public static Vector3 shapeOffset = new Vector3(2.5f, 0f, 0f);  //toolbar shifting
@@ -28,8 +40,8 @@ public class Global : MonoBehaviour
     public static Vector3 currentVal1 = new Vector3(0, 0, 0);
     public static Vector3 currentVal2 = new Vector3(0, 0, 0);
 
-    public static float positionTolerance = 0.8f;         //tolerance in placement //0.5
-    public static float rotationTolerance = 20.0f;  //15
+    public static float positionTolerance = MediumPositionTolerance;         //tolerance in placement //0.5
+    public static float rotationTolerance = MediumRotationTolerance;        //15
 
     public static int puzzlePieces = 11;                //tracking puzzle completion
     public static int piecesPlaced = 0;
@@ -47,6 +59,7 @@ public class Global : MonoBehaviour
 
     public static bool PieceActive = false;        //tracking active piece
     public static string ActiveName;
+    public static string ActiveNameCopy;
 
     public static Vector4 ColourOffset = new Vector4(0.2f, 0.2f, 0.2f, 0f);
     //public static Vector4 FlashColour = new Vector4(1f, 1f, 1f, 1f); 
@@ -60,6 +73,9 @@ public class Global : MonoBehaviour
 
     public static float smallCollider = 4.5f;                   //a larger collider for small shapes
     public static float regularCollider = 2.5f;                 //a regular sized collider for regular shapes
+
+    public static int PuzzlesPerLevel = 5;
+
 
 
     public static void DestroyShapes()
@@ -257,6 +273,8 @@ public class Global : MonoBehaviour
       //triggered when the 5th puzzle within a level is completed
 
         Debug.Log("Level Complete!"); 
+
+
     
     }
 }

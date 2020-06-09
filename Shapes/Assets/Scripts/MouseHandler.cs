@@ -10,7 +10,7 @@ public class MouseHandler : MonoBehaviour
     delegate void PuzzleMethod();                                       //creates an empty method
     List<PuzzleMethod> Puzzle = new List<PuzzleMethod>();               //creates a list of empty methods
 
-    int PuzzlesPerLevel = 5;
+   // int PuzzlesPerLevel = 5;
     Image Mask;
     Text LevelText;
 
@@ -85,7 +85,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 1;
         Global.MousePuzzle = 1;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 1;
@@ -111,7 +111,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 1;
         Global.MousePuzzle = 2;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 1;
@@ -137,7 +137,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 1;
         Global.MousePuzzle = 3;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 4;
@@ -167,7 +167,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 1;
         Global.MousePuzzle = 4;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;
@@ -198,7 +198,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 1;
         Global.MousePuzzle = 5;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 2;
@@ -225,7 +225,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 2;
         Global.MousePuzzle = 1;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 1;
@@ -250,7 +250,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 2;
         Global.MousePuzzle = 2;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;
@@ -281,7 +281,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 2;
         Global.MousePuzzle = 3;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 9;
@@ -314,7 +314,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 2;
         Global.MousePuzzle = 4;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 8;
@@ -349,7 +349,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 2;
         Global.MousePuzzle = 5;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;
@@ -381,7 +381,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 3;
         Global.MousePuzzle = 1;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 12;
@@ -417,7 +417,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 3;
         Global.MousePuzzle = 2;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 12;
@@ -454,7 +454,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 3;
         Global.MousePuzzle = 3;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 12;
@@ -491,7 +491,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 3;
         Global.MousePuzzle = 4;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 4;
@@ -519,7 +519,7 @@ public class MouseHandler : MonoBehaviour
         Global.MouseLevel = 3;
         Global.MousePuzzle = 5;
 
-        Global.ProgressBar(PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;

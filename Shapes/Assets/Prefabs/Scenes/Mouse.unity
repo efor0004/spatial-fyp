@@ -1080,7 +1080,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "WELL DONE! \nPuzzle complete! \nPress START to continue"
+  m_Text: "WELL DONE! \nPuzzle complete! \nPress OK to continue"
 --- !u!222 &1337986791
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1612,7 +1612,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 29cad0ea3c4a7e74eaa58c86dae23f42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a9f0280ab5da454a92b4073e620c765, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1746,11 +1746,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: PopupMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2960719307883297329, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2a0fe60c0108c0149806c14b926ad115,
+        type: 3}
     - target: {fileID: 2960719307883297330, guid: 22ce5d07898fdac419d80347a9326f8f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1021997910}
+    - target: {fileID: 2960719307883297331, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -155.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960719307883297331, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 221.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960719307883297331, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 129.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960719307883297331, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -135.9
+      objectReference: {fileID: 0}
     - target: {fileID: 2960719308795337242, guid: 22ce5d07898fdac419d80347a9326f8f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

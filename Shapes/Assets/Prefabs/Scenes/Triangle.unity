@@ -612,8 +612,28 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a169f7e73d096bf4896f966d1a0d0ee6,
+      objectReference: {fileID: 21300000, guid: 9787e5fb20a934a438bdc1ddfaceaec7,
         type: 3}
+    - target: {fileID: 2960719307883297331, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -163.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960719307883297331, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 134.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960719307883297331, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -157.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960719307883297331, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 225.85
+      objectReference: {fileID: 0}
     - target: {fileID: 2960719308240157327, guid: 22ce5d07898fdac419d80347a9326f8f,
         type: 3}
       propertyPath: m_Color.r
@@ -945,7 +965,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "AMAZING! \nPuzzle complete! \nPress START to continue"
+  m_Text: "AMAZING! \nPuzzle complete! \nPress OK to continue"
 --- !u!222 &1337986791
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1788,7 +1808,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 250732d84ab21dd409a9d50536d26d7e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31beb8beac7291a428f525a69855ef27, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

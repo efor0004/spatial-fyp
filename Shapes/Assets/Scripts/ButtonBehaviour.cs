@@ -109,6 +109,56 @@ public class ButtonBehaviour : MonoBehaviour
         }
     }
 
+    public void EasyButton()
+    {
+        //sets game to Easy mode (larger tolerances in placement)
+        //triggered by tapping Easy button in Settings in main menu
+
+        Global.Easy = true;
+        Global.Medium = false;
+        Global.Hard = false;
+
+        Global.positionTolerance = Global.EasyPositionTolerance;
+        Global.rotationTolerance = Global.EasyRotationTolerance;
+
+        GameObject.Find("EasyButton").GetComponent<Image>().color = Color.white;
+        GameObject.Find("MediumButton").GetComponent<Image>().color = Color.black;
+        GameObject.Find("HardButton").GetComponent<Image>().color = Color.black;
+    }
+
+    public void MediumButton()
+    {
+        // sets game to Medium mode(standard tolerances in placement)
+        //triggered by tapping Medium button in Settings in main menu
+
+        Global.Easy = false;
+        Global.Medium = true;
+        Global.Hard = false;
+
+        Global.positionTolerance = Global.MediumPositionTolerance;
+        Global.rotationTolerance = Global.MediumRotationTolerance;
+
+        GameObject.Find("EasyButton").GetComponent<Image>().color = Color.black;
+        GameObject.Find("MediumButton").GetComponent<Image>().color = Color.white;
+        GameObject.Find("HardButton").GetComponent<Image>().color = Color.black;
+    }
+
+    public void HardButton()
+    {
+        // sets game to Hard mode(smaller tolerances in placement)
+        //triggered by tapping Hard button in Settings in main menu
+
+        Global.Easy = false;
+        Global.Medium = false;
+        Global.Hard = true;
+
+        Global.positionTolerance = Global.HardPositionTolerance;
+        Global.rotationTolerance = Global.HardRotationTolerance;
+
+        GameObject.Find("EasyButton").GetComponent<Image>().color = Color.black;
+        GameObject.Find("MediumButton").GetComponent<Image>().color = Color.black;
+        GameObject.Find("HardButton").GetComponent<Image>().color = Color.white;
+    }
 
     public void ParentalinfoBackButton()
     {
@@ -159,14 +209,10 @@ public class ButtonBehaviour : MonoBehaviour
         Global.LeftArrowActive = false;
         Global.RightArrowActive = false;
 
-       // de - activate shapes
-        //foreach (string name in TouchRotate.nameArray)
-        //{
-        //    GameObject go = GameObject.Find(name);                                                //checks if the shape exists
-        //                                                                                          //if the tree exist then destroy it
-        //    if (go)
-        //        go.SetActive(false);
-        //}
+        // de - activate shapes
+        Global.PieceActive = true;
+        Global.ActiveNameCopy = Global.ActiveName;
+        Global.ActiveName = "null"; 
     }
 
     public void MenuHomeButton()
@@ -250,14 +296,9 @@ public class ButtonBehaviour : MonoBehaviour
 
         Global.piecesPlaced = 0;  //reset placed pieces
 
-        //re-activate each shape
-        //foreach (string name in TouchRotate.nameArray)
-        //{
-        //    GameObject go = GameObject.Find(name);                                                //checks if the shape exists
-        //                                                                                          //if the tree exist then destroy it
-        //    if (go)
-        //        go.SetActive(true);
-        //}
+        // re - activate shapes
+        Global.PieceActive = false;
+        Global.ActiveName = Global.ActiveNameCopy;
 
         SceneManager.LoadScene("Menu");
 
@@ -275,14 +316,9 @@ public class ButtonBehaviour : MonoBehaviour
         Global.LeftArrowActive = true;
         Global.RightArrowActive = true;
 
-        //re - activate each shape
-        //foreach (string name in TouchRotate.nameArray)
-        //{
-        //    GameObject go = GameObject.Find(name);                                                //checks if the shape exists
-        //                                                                                          //if the tree exist then destroy it
-        //    if (go)
-        //        go.SetActive(true);
-        //}
+        // re - activate shapes
+        Global.PieceActive = false;
+        Global.ActiveName = Global.ActiveNameCopy;
 
     }
 
@@ -364,7 +400,11 @@ public class ButtonBehaviour : MonoBehaviour
                     Debug.Log("Error in Switch Statement/ RestartButton()");
                     break;
             }
-       
+
+        // re - activate shapes
+        Global.PieceActive = false;
+        Global.ActiveName = Global.ActiveNameCopy;
+
         StartNewPuzzle();    //start the same puzzle, as the puzzle index has been set back by 1 
     }
 
@@ -374,6 +414,10 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by pressing the skip button in the hamburdger menu within a puzzle
 
         GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
+
+        // re - activate shapes
+        Global.PieceActive = false;
+        Global.ActiveName = Global.ActiveNameCopy;
 
         StartNewPuzzle();  //start next puzzle
 

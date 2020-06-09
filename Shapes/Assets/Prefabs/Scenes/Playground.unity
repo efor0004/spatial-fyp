@@ -1206,7 +1206,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "FANTASTIC! \nPuzzle complete! \nPress START to continue"
+  m_Text: "FANTASTIC! \nPuzzle complete! \nPress OK to continue"
 --- !u!222 &1337986791
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1614,7 +1614,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9f261dae69ccc6f4c97f6dfab7aaaf54, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76828bc21492c584a962d193b8d6622a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1788,8 +1788,28 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 11cf6d57fd7f6d845ad9372ee55b8e91,
+      objectReference: {fileID: 21300000, guid: eee0319894953084bb980df1f74e12cf,
         type: 3}
+    - target: {fileID: 2960719307883297331, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -156.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960719307883297331, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -157.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960719307883297331, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 216.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960719307883297331, guid: 22ce5d07898fdac419d80347a9326f8f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 128.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2960719308240157327, guid: 22ce5d07898fdac419d80347a9326f8f,
         type: 3}
       propertyPath: m_Color.r
