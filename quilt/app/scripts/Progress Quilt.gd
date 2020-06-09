@@ -30,12 +30,10 @@ func add_quilt_piece(fabric_path):
 	
 	var mask = Light2D.new()
 	mask.mode = Light2D.MODE_MIX
-	# mask.set_position(piece_pos)
 	
 	var fabric = Sprite.new()
 	fabric.region_enabled = true
 	fabric.region_rect = Rect2(0, 0, quilt_size, quilt_size)
-	# fabric.set_position(piece_pos)
 	
 	var fabric_canvas = CanvasItemMaterial.new()
 	fabric_canvas.blend_mode = BLEND_MODE_MIX
@@ -49,6 +47,8 @@ func add_quilt_piece(fabric_path):
 	
 	var piece_fabric = get_fabric(fabric_path)
 	fabric.set_texture(piece_fabric)
+	fabric.region_enabled = true
+	fabric.region_rect = Rect2(80, 80, 384, 384)
 	
 	piece_sprite.add_child(mask)
 	piece.add_child(piece_sprite)
