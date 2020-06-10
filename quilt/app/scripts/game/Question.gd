@@ -1,8 +1,5 @@
 extends Sprite
 
-var current_level = 1
-var current_question = 1
-var current_shuffled_question = 1
 onready var current_fabric = get_current_fabric()
 
 var quilt_size = 384
@@ -10,16 +7,13 @@ var initial_texture_y = 3650
 var initial_quilt_texture_offset = Vector2(576, initial_texture_y)
 var initial_options_texture_offset = [Vector2(192, initial_texture_y), Vector2(-192, initial_texture_y), Vector2(-576, initial_texture_y)]
 
-var questions_per_level = 2
-var questions_available_per_level = 20
-
-var question_order = []
 var option_positions = [Vector2(821, 768), Vector2(1256, 768), Vector2(1721, 768)]
 
-var max_levels = 2
+const GeneralUtils = preload("../utilities/general.gd")
+var general_utils = GeneralUtils.new()
 
-const GeneralUtils = preload("utilities/general.gd")
-onready var general_utils = GeneralUtils.new()
+const SaveUtils = preload("../utilities/save.gd")
+var save_utils = SaveUtils.new()
 
 onready var progress_quilt = get_parent().get_node("Progress Quilt")
 
@@ -27,8 +21,12 @@ signal piece_added
 signal set_next_question
 
 func _ready():
-	shuffle_question_order()
+	save_utils.set_state_for_player()
+	set_textures_for_level()
 	set_shapes()
+	set_question_fabric()
+	save_utils.save_progress()
+	progress_quilt.add_all_pieces_for_state()
 
 func next_question():
 	add_quilt_piece()
@@ -36,26 +34,23 @@ func next_question():
 	
 	reset_option_positions()
 	
-	current_question += 1
+	global.current_question += 1
 	
-	if (current_question > questions_per_level):
-		current_question = 1
-		current_level += 1
+	if (global.current_question > global.questions_per_level):
+		global.current_question = 1
+		global.current_level += 1
 		
-		if (current_level > max_levels):
-			current_level = 1
-			current_question = 1
+		if (global.current_level > global.max_levels):
+			global.current_level = 1
+			global.current_question = 1
 		
 		set_textures_for_level()
-		shuffle_question_order()
+		general_utils.shuffle_question_order()
 	
 	set_shapes()
 	set_question_fabric()
 	emit_signal("set_next_question")
-
-func shuffle_question_order():
-	var shuffled_questions = general_utils.shuffle_list(range(1, questions_available_per_level + 1))
-	question_order = shuffled_questions.slice(0, questions_per_level + 1)
+	save_utils.save_progress()
 
 func set_textures_for_level():
 	var path = get_level_path()
@@ -69,13 +64,13 @@ func set_textures_for_level():
 		option_shape.set_texture(level_texture)
 
 func set_shapes():
-	current_shuffled_question = question_order[current_question - 1]
+	global.current_shuffled_question = global.question_order[global.current_question - 1]
 	
 	set_holey_quilt_shape()
 	set_options_shapes()
 
 func get_level_path():
-	return "res://assets/sprites/questions/level_%d.png" % current_level
+	return "res://assets/sprites/questions/level_%d.png" % global.current_level
 
 func get_holey_quilt():
 	var holey_quilt = get_node("Layer1/HoleyQuilt")
@@ -90,7 +85,7 @@ func get_holey_quilt_shape():
 	return holey_quilt_shape
 
 func get_new_y_offset(y_offset):
-	var new_y_offset = y_offset - (quilt_size * (current_shuffled_question - 1))
+	var new_y_offset = y_offset - (quilt_size * (global.current_shuffled_question - 1))
 	return new_y_offset
 
 func set_holey_quilt_shape():
@@ -134,7 +129,7 @@ func set_question_fabric():
 		option_fabric.set_texture(fabric)
 
 func get_current_fabric():
-	var fabric_path = "res://assets/sprites/fabrics/level_%d/fabric_%d.jpg" % [current_level, current_question]
+	var fabric_path = general_utils.get_fabric(global.current_level, global.current_question)
 	return fabric_path
 
 func reset_option_positions():
@@ -149,7 +144,7 @@ func reset_option_positions():
 
 func add_quilt_piece():
 	
-	progress_quilt.add_quilt_piece(current_fabric)
+	progress_quilt.add_pre_animation_piece(current_fabric)
 	
 	var holey_quilt = get_holey_quilt()
 	holey_quilt.visible = false
@@ -159,6 +154,6 @@ func add_quilt_piece():
 		var option = get_node(node_path)
 		option.visible = false
 	
-	progress_quilt.animate_quilt_piece(current_question)
+	progress_quilt.animate_quilt_piece()
 	yield(progress_quilt, "done_animating")
 	emit_signal("piece_added")

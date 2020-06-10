@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "Option",
 "language": "GDScript",
-"path": "res://scripts/Option.gd"
+"path": "res://scripts/game/Option.gd"
 } ]
 _global_script_class_icons={
 "Option": ""
@@ -21,8 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="quilt-app"
-run/main_scene="res://Game.tscn"
+run/main_scene="res://Main Menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+global="*res://scripts/utilities/global.gd"
 
 [display]
 

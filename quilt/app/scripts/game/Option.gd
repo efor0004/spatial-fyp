@@ -8,7 +8,7 @@ onready var animation_player = get_parent().get_parent()
 onready var question = animation_player.get_parent()
 onready var all_animation_players = get_all_animation_players()
 
-const Constants = preload("utilities/constants.gd")
+const Constants = preload("../utilities/constants.gd")
 onready var constants = Constants.new()
 
 func pressed():
@@ -81,8 +81,8 @@ func get_option_index():
 		return 0
 
 func get_option_rotation():
-	var current_level_index = question.current_level - 1
-	var current_question_index = question.current_shuffled_question - 1
+	var current_level_index = global.current_level - 1
+	var current_question_index = global.current_shuffled_question - 1
 	
 	var level_rotations = constants.level_option_rotations[current_level_index]
 	var option_rotation = 0
