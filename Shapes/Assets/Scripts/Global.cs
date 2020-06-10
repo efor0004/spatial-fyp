@@ -266,6 +266,8 @@ public class Global : MonoBehaviour
         LeftArrowActive = false;
         RightArrowActive = false;
 
+        Save.SaveProgress();                                                           //save game progress
+
     }
 
     public static void LevelComplete()
@@ -277,4 +279,13 @@ public class Global : MonoBehaviour
 
     
     }
+
+    public static void WorldComplete()
+    { //event to signify the world is complete
+      //triggered when final puzzle in final level is completed
+
+
+    
+    }
+
 }

@@ -70,7 +70,9 @@
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\MouseHandler.cs" />
     <Compile Include="Assets\Scripts\MovieMaker.cs" />
+    <Compile Include="Assets\Scripts\PlayerPrefsX.cs" />
     <Compile Include="Assets\Scripts\PlaygroundHandler.cs" />
+    <Compile Include="Assets\Scripts\Save.cs" />
     <Compile Include="Assets\Scripts\TestBench.cs" />
     <Compile Include="Assets\Scripts\TouchRotate.cs" />
     <Compile Include="Assets\Scripts\TriangleHandler.cs" />
