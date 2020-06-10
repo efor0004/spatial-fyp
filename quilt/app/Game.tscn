@@ -1,11 +1,8 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://assets/sprites/questions/level_1/question_1/option_3.png" type="Texture" id=1]
-[ext_resource path="res://assets/sprites/fabrics/fabric_1.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/fabrics/level_1/fabric_1.jpg" type="Texture" id=1]
 [ext_resource path="res://scripts/Question.gd" type="Script" id=3]
-[ext_resource path="res://assets/sprites/questions/level_1/question_1/holey_quilt.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/questions/level_1/question_1/option_1.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/questions/level_1/question_1/option_2.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/questions/level_1.png" type="Texture" id=4]
 [ext_resource path="res://scripts/Progress Quilt.gd" type="Script" id=7]
 [ext_resource path="res://scripts/Option.gd" type="Script" id=8]
 
@@ -14,7 +11,7 @@ light_mode = 2
 
 [sub_resource type="Animation" id=2]
 resource_name = "Correct"
-length = 5.0
+length = 6.5
 step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer1/Layer2/Option 1:position")
@@ -35,7 +32,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 2.5, 3, 3.5, 4, 4.5 ),
+"times": PoolRealArray( 0, 4.5, 5, 5.5, 6, 6.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ) ]
@@ -52,10 +49,22 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 821, 768 ), Vector2( 356, 768 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer1/Layer2/Option 1:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.5, 3, 4, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "Incorrect"
-length = 7.0
+length = 9.0
 step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer1/Layer2/Option 1:position")
@@ -64,7 +73,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2, 5, 7 ),
+"times": PoolRealArray( 0, 2, 7, 9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 821, 768 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
@@ -76,7 +85,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 2.5, 3, 3.5, 4, 4.5 ),
+"times": PoolRealArray( 0, 4.5, 5, 5.5, 6, 6.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ) ]
@@ -88,10 +97,22 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 2, 5, 7 ),
+"times": PoolRealArray( 0, 2, 7, 9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 821, 768 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer1/Layer2/Option 1:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.5, 3, 4, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="CanvasItemMaterial" id=4]
@@ -108,7 +129,7 @@ width = 368
 extents = Vector2( 192, 192 )
 
 [sub_resource type="Animation" id=8]
-length = 6.0
+length = 7.5
 step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer2/Layer3/Option 2:position")
@@ -129,7 +150,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 3.5, 4, 4.5, 5, 5.5 ),
+"times": PoolRealArray( 0, 5.5, 6, 6.5, 7, 7.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ) ]
@@ -146,9 +167,21 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 1256, 768 ), Vector2( 356, 768 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer2/Layer3/Option 2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 3.5, 4, 5, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=9]
-length = 7.0
+length = 9.0
 step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer2/Layer3/Option 2:position")
@@ -157,7 +190,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2, 5, 7 ),
+"times": PoolRealArray( 0, 2, 7, 9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1256, 768 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
@@ -169,7 +202,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 2.5, 3, 3.5, 4, 4.5 ),
+"times": PoolRealArray( 0, 4.5, 5, 5.5, 6, 6.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ) ]
@@ -181,10 +214,22 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 2, 5, 7 ),
+"times": PoolRealArray( 0, 2, 7, 9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1256, 768 ), Vector2( 358, 768 ), Vector2( 358, 768 ), Vector2( 358, 1750 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer2/Layer3/Option 2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.5, 3, 4, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="CanvasItemMaterial" id=10]
@@ -198,7 +243,7 @@ gradient = SubResource( 11 )
 width = 384
 
 [sub_resource type="Animation" id=13]
-length = 7.0
+length = 8.5
 step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer3/Layer4/Option 3:position")
@@ -213,32 +258,44 @@ tracks/0/keys = {
 "values": [ Vector2( 1721, 768 ), Vector2( 356, 768 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationPlayer3/Layer4/Option 3/SubLayer/Colour Overlay:self_modulate")
+tracks/1/path = NodePath("AnimationPlayer3/Layer4/Option 3:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 4.5, 5, 5.5, 6, 6.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 4.5, 5, 6, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer3/Layer4/Option 3/SubLayer/Colour Overlay:position")
+tracks/2/path = NodePath("AnimationPlayer3/Layer4/Option 3/SubLayer/Colour Overlay:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
+"times": PoolRealArray( 6.5, 7, 7.5, 8, 8.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer3/Layer4/Option 3/SubLayer/Colour Overlay:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
 "times": PoolRealArray( 0, 4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1721, 768 ), Vector2( 358, 768 ) ]
+"values": [ Vector2( 1721, 768 ), Vector2( 356, 768 ) ]
 }
 
 [sub_resource type="Animation" id=14]
-length = 9.0
+length = 11.0
 step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer3/Layer4/Option 3:position")
@@ -247,45 +304,47 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 4, 7, 9 ),
+"times": PoolRealArray( 0, 4, 9, 11 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1721, 768 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationPlayer3/Layer4/Option 3/SubLayer/Colour Overlay:self_modulate")
+tracks/1/path = NodePath("AnimationPlayer3/Layer4/Option 3:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 4.5, 5, 5.5, 6, 6.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 4.5, 5, 6, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer3/Layer4/Option 3/SubLayer/Colour Overlay:position")
+tracks/2/path = NodePath("AnimationPlayer3/Layer4/Option 3/SubLayer/Colour Overlay:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 4, 7, 9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 6.5, 7, 7.5, 8, 8.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1721, 768 ), Vector2( 358, 768 ), Vector2( 358, 768 ), Vector2( 358, 1750 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ) ]
 }
-
-[sub_resource type="CanvasItemMaterial" id=15]
-light_mode = 2
-
-[sub_resource type="Gradient" id=16]
-colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1 )
-
-[sub_resource type="GradientTexture" id=17]
-gradient = SubResource( 16 )
-width = 384
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer3/Layer4/Option 3/SubLayer/Colour Overlay:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1721, 768 ), Vector2( 356, 768 ) ]
+}
 
 [node name="Game" type="Node2D"]
 
@@ -299,7 +358,7 @@ position = Vector2( 356, 768 )
 
 [node name="Light2D" type="Light2D" parent="Question/Layer1/HoleyQuilt"]
 texture = ExtResource( 4 )
-texture_scale = 1.5
+offset = Vector2( 576, 3650 )
 mode = 2
 range_layer_min = 1
 range_layer_max = 1
@@ -307,9 +366,9 @@ range_layer_max = 1
 [node name="Fabric Texture" type="Sprite" parent="Question/Layer1/HoleyQuilt"]
 material = SubResource( 1 )
 z_index = 5
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 384, 384 )
+region_rect = Rect2( 80, 80, 384, 384 )
 
 [node name="AnimationPlayer1" type="AnimationPlayer" parent="Question"]
 anims/Correct = SubResource( 2 )
@@ -336,7 +395,8 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 368, 368 )
 
 [node name="Light2D" type="Light2D" parent="Question/AnimationPlayer1/Layer2/Option 1"]
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
+offset = Vector2( 192, 3650 )
 mode = 2
 range_height = 1.0
 range_layer_min = 2
@@ -350,9 +410,9 @@ shape = SubResource( 7 )
 [node name="Fabric Texture" type="Sprite" parent="Question/AnimationPlayer1/Layer2/Option 1"]
 material = SubResource( 1 )
 z_index = 4
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 384, 384 )
+region_rect = Rect2( 80, 80, 384, 384 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Question"]
 anims/Correct = SubResource( 8 )
@@ -378,7 +438,8 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="Light2D" type="Light2D" parent="Question/AnimationPlayer2/Layer3/Option 2"]
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
+offset = Vector2( -192, 3650 )
 mode = 2
 range_height = 1.0
 range_layer_min = 3
@@ -391,9 +452,9 @@ shape = SubResource( 7 )
 
 [node name="Fabric Texture" type="Sprite" parent="Question/AnimationPlayer2/Layer3/Option 2"]
 material = SubResource( 1 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 384, 384 )
+region_rect = Rect2( 80, 80, 384, 384 )
 
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Question"]
 anims/Correct = SubResource( 13 )
@@ -412,14 +473,15 @@ layer = 4
 
 [node name="Colour Overlay" type="Sprite" parent="Question/AnimationPlayer3/Layer4/Option 3/SubLayer"]
 self_modulate = Color( 1, 1, 1, 0 )
-material = SubResource( 15 )
+material = SubResource( 10 )
 position = Vector2( 1721, 768 )
-texture = SubResource( 17 )
+texture = SubResource( 12 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="Light2D" type="Light2D" parent="Question/AnimationPlayer3/Layer4/Option 3"]
-texture = ExtResource( 1 )
+texture = ExtResource( 4 )
+offset = Vector2( -576, 3650 )
 mode = 2
 range_height = 1.0
 range_layer_min = 4
@@ -432,12 +494,15 @@ shape = SubResource( 7 )
 
 [node name="Fabric Texture" type="Sprite" parent="Question/AnimationPlayer3/Layer4/Option 3"]
 material = SubResource( 1 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 384, 384 )
+region_rect = Rect2( 80, 80, 384, 384 )
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="Progress Quilt" type="Sprite" parent="."]
 script = ExtResource( 7 )
+[connection signal="set_next_question" from="Question" to="Question/AnimationPlayer3/Layer4/Option 3" method="_on_Question_set_next_question"]
+[connection signal="set_next_question" from="Question" to="Question/AnimationPlayer1/Layer2/Option 1" method="_on_Question_set_next_question"]
+[connection signal="set_next_question" from="Question" to="Question/AnimationPlayer2/Layer3/Option 2" method="_on_Question_set_next_question"]
