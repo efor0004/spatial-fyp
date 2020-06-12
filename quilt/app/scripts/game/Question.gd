@@ -45,7 +45,7 @@ func next_question():
 			global.current_question = 1
 		
 		set_textures_for_level()
-		general_utils.shuffle_question_order()
+		global.question_order = general_utils.shuffle_question_order()
 	
 	set_shapes()
 	set_question_fabric()

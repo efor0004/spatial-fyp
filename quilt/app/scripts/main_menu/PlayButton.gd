@@ -15,5 +15,5 @@ func _on_Play_Button_button_down():
 
 func _on_Play_Button_button_up():
 	set_button_icon(normal_texture)
-	global.player_name = "Test"
-	get_tree().change_scene("res://Game.tscn")
+	global.character_name = "Test"
+	get_tree().change_scene("res://Character Menu.tscn")
