@@ -7,8 +7,23 @@ public class Menu : MonoBehaviour
 {
     // Controls the Menu scene
     // In particular loading Settings
+
+    bool StartUp = true;                                                   //true if the game is opened
     void Start()
     {
+
+        if (StartUp)
+        {
+            Save.LoadGame();             //load saved data
+            StartUp = false;
+        }
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
         //update difficulty display
         if (Global.Easy)
         {
@@ -39,9 +54,9 @@ public class Menu : MonoBehaviour
             GameObject.Find("HardButton").GetComponent<Image>().color = Color.white;
 
         }
-        else 
+        else
         {
-            Debug.Log("Error. neither easy nor medium nor hard is true"); 
+            Debug.Log("Error. neither easy nor medium nor hard is true");
         }
 
         //update sound effects display
@@ -54,7 +69,7 @@ public class Menu : MonoBehaviour
             GameObject.Find("SoundEffectsButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("off");
         }
 
-       
+
         //update music display
         if (Global.Music == true)
         {
@@ -65,11 +80,5 @@ public class Menu : MonoBehaviour
             GameObject.Find("MusicButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("off");
         }
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

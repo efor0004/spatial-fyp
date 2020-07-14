@@ -71,6 +71,9 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by the back button on settings menu
         //moves thesettings menu out of view to the right and brings the home menu into view
 
+       
+        Save.SaveSettings();                                                                          //save changes to settings
+
         GameObject.Find("MainMenu").transform.localPosition = Global.centrePosition;
         GameObject.Find("SettingsMenu").transform.localPosition = Global.rightPosition;
     }
@@ -470,5 +473,14 @@ public class ButtonBehaviour : MonoBehaviour
         //loads the Free Play scene
 
         SceneManager.LoadScene("Moviemaker");
+    }
+
+    public void ResetDataButton()
+    {
+        //resets all saved data and returns settings to default value 
+        //triggered by pressing reset data in settings menu
+
+        Save.ResetData(); 
+
     }
 }
