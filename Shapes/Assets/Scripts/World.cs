@@ -88,6 +88,7 @@ public class World : MonoBehaviour
         GameObject.Find("TriangleButton").GetComponent<Button>().interactable = false;
         GameObject.Find("WildButton").GetComponent<Button>().interactable = false;
         GameObject.Find("MovieMakerButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("FarmButton").GetComponent<Button>().interactable = false;
 
     }
 
