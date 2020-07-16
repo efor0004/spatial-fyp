@@ -2184,19 +2184,24 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
+    m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The purpose of the following game is to faciliate the learning of spatials
-    skills such as translation, rotation, scale and perspective. aejhsfikhrflsefjhsldfkjhdsfljhslkdjffffflsdjfhlskjdfhskljfhasikhfkjshdfkjhskjdfhksjdhfksjhfkjhsdlkfjhksljdhflkjshdfkjhldkshakfhkjlkjhklj
+  m_Text: This is a spatial mobile game app for one player. By playing this game,
+    children learn to recognise shapes, rotate shapes, assemble a collection of shapes
+    by following a pattern,  and use spatial language. Shape recognition and mental
+    rotation are important spatial reasoning skills that help with everyday tasks
+    such as packing the car, navigating, assembling furniture and are critical in
+    STEM occupations. Hearing and speaking spatial language also help children further
+    develop their spatial skills.
 --- !u!222 &1646832351
 CanvasRenderer:
   m_ObjectHideFlags: 0
