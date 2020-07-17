@@ -433,6 +433,8 @@ public class ButtonBehaviour : MonoBehaviour
         Global.PieceActive = false;
         Global.ActiveName = Global.ActiveNameCopy;
 
+        Save.SaveProgress(); 
+
         StartNewPuzzle();  //start next puzzle
 
     }
@@ -443,6 +445,15 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the Playground button on the land selection menu
         //loads the Playground scene
 
+        if (Global.PlaygroundComplete == 1)
+        {
+            //resets progress if World is completed
+            Global.PlaygroundLevel = 1;
+            Global.PlaygroundPuzzle = 0;
+
+            Global.PlaygroundComplete = 0;
+        }
+
         SceneManager.LoadScene("Playground");
     }
 
@@ -451,7 +462,17 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the Triangle City button on the land selection menu
         //loads the Triangle scene
 
-       SceneManager.LoadScene("Triangle");
+        if (Global.TriangleComplete == 1)
+        {
+            //resets progress if World is completed
+            Global.TriangleLevel = 1;
+            Global.TrianglePuzzle = 0;
+
+            Global.TriangleComplete = 0;
+        }
+
+
+        SceneManager.LoadScene("Triangle");
     }
 
     public void MouseButton()
@@ -459,13 +480,31 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the Mouse Shapes button on the land selection menu
         //loads the Mouse scene
 
-       SceneManager.LoadScene("Mouse");
+        if (Global.MouseComplete == 1)
+        {
+            //resets progress if World is completed
+            Global.MouseLevel = 1;
+            Global.MousePuzzle = 0;
+
+            Global.MouseComplete = 0;
+        }
+
+        SceneManager.LoadScene("Mouse");
     }
 
     public void WildButton()
     {
         //is triggered by the Wild button on the land selection menu
         //loads the Wild scene
+
+        if (Global.WildComplete == 1)
+        {
+            //resets progress if World is completed
+            Global.WildLevel = 1;
+            Global.WildPuzzle = 0;
+
+            Global.WildComplete = 0;
+        }
 
         SceneManager.LoadScene("Wild");
     }
@@ -475,7 +514,16 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the Farm button on the land selection menu
         //loads the Farm scene
 
-       SceneManager.LoadScene("Farm");
+        if (Global.FarmComplete == 1)
+        {
+            //resets progress if World is completed
+            Global.FarmLevel = 1;
+            Global.FarmPuzzle = 0;
+
+            Global.FarmComplete = 0;
+        }
+
+        SceneManager.LoadScene("Farm");
     }
 
     public void MovieMakerButton()

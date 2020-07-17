@@ -54,7 +54,7 @@ public class Save : MonoBehaviour
 		//loads game data - progress and settings preferences
 		//triggered when app opens after being closed
 
-		if (PlayerPrefs.HasKey("Music")) //if one piece of data exists, assume rest of data exists
+		if (PlayerPrefs.HasKey("MouseLevel")) //if one piece of data exists, assume rest of data exists
 		{
 
 			//Global.PlaygroundLevel = PlayerPrefs.GetInt("PlaygroundLevel");

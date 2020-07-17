@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MouseHandler : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class MouseHandler : MonoBehaviour
    // int PuzzlesPerLevel = 5;
     Image Mask;
     Text LevelText;
+    int TotalPuzzles = 15;
+    int n = 0;
 
     void CreateList()                                 
     {
@@ -53,22 +56,36 @@ public class MouseHandler : MonoBehaviour
         void Update()
         {
         //called each frame
-
-            if (Global.piecesPlaced == Global.puzzlePieces)                    //puzzle completion 
-            {
-                if (Global.MousePuzzle == 5)
-                {
-                    Global.LevelComplete();                                       //run level complete event when the 5th puzzle in a level is completed 
-                }
-
-             Global.PuzzleComplete(); 
+        if (Global.piecesPlaced == Global.puzzlePieces)                    //puzzle completion 
+        {
+            if (n + 1 == TotalPuzzles)
+            {                                                            //if this is the last puzzle in the world
+                Global.WorldComplete();
             }
+
+            else if (Global.MousePuzzle == 5)
+            {                                                            //if this is the last puzzle in the level
+                Global.LevelComplete();
+            }
+
+            else
+            {
+                Global.PuzzleComplete();
+            }
+        }
 
         if (Global.NextPuzzleReady == true)
         {
-            int n;
-            n = (Global.MouseLevel - 1) * 5 + Global.MousePuzzle;              //index of array = puzzle number -1
-            Puzzle[n]();                                                       //calls the puzzle by indexing the array of function calls
+            if (n + 1 == TotalPuzzles) //if there are no more games
+            {
+                Global.MouseComplete = 1;
+                SceneManager.LoadScene("Worlds"); //go to main menu
+            }
+            else
+            {
+                n = (Global.MouseLevel - 1) * 5 + Global.MousePuzzle;              //index of array = puzzle number -1
+                Puzzle[n]();                                                       //calls the puzzle by indexing the array of function calls
+            }
         }
 
     }

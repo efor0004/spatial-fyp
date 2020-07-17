@@ -7,15 +7,14 @@ public class Menu : MonoBehaviour
 {
     // Controls the Menu scene
     // In particular loading Settings
-
-    bool StartUp = true;                                                   //true if the game is opened
+                                               //true if the game is opened
     void Start()
     {
 
-        if (StartUp)
+        if (Global.StartUp)
         {
             Save.LoadGame();             //load saved data
-            StartUp = false;
+            Global.StartUp = false;
         }
 
         GameObject.Find("MusicButton").GetComponent<Button>().interactable = false;

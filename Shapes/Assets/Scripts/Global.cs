@@ -76,6 +76,14 @@ public class Global : MonoBehaviour
 
     public static int PuzzlesPerLevel = 5;
 
+    public static int PlaygroundComplete = 0;                //determines whether a world is complete
+    public static int TriangleComplete = 0;
+    public static int MouseComplete = 0;
+    public static int WildComplete = 0;
+    public static int FarmComplete = 0;
+
+    // Menu
+    public static bool StartUp = true;
 
 
     public static void DestroyShapes()
@@ -257,8 +265,8 @@ public class Global : MonoBehaviour
         //is triggered when a puzzle is completed correctly
         //popup asks if the user wants to play another puzzle or go home
 
+        Debug.Log("Puzzle Complete!");
         piecesPlaced = 0;                                                                //reset to avoid looping
-        Debug.Log("PUZZLE COMPLETE!");
 
         //GameObject.Find("PopupStart").transform.localPosition = popupPosition;          //creates a popup
         GameObject.Find("PopupPuzzle").transform.localPosition = popupPosition;          //creates a popup
@@ -275,18 +283,36 @@ public class Global : MonoBehaviour
     { //event to signifiy a level is complete
       //triggered when the 5th puzzle within a level is completed
 
-        Debug.Log("Level Complete!"); 
+        Debug.Log("Level Complete!");
+        piecesPlaced = 0;                                                                //reset to avoid looping
 
+        //GameObject.Find("PopupStart").transform.localPosition = popupPosition;          //creates a popup
+        GameObject.Find("PopupLevel").transform.localPosition = popupPosition;          //creates a popup
 
-    
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
+        LeftArrowActive = false;
+        RightArrowActive = false;
+
+        Save.SaveProgress();
+
     }
 
     public static void WorldComplete()
     { //event to signify the world is complete
       //triggered when final puzzle in final level is completed
+       
+        Debug.Log("World Complete!");
+        piecesPlaced = 0;                                                                //reset to avoid looping
 
+        //GameObject.Find("PopupStart").transform.localPosition = popupPosition;          //creates a popup
+        GameObject.Find("PopupWorld").transform.localPosition = popupPosition;          //creates a popup
 
-    
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
+        LeftArrowActive = false;
+        RightArrowActive = false;
+
+        Save.SaveProgress();
+
     }
 
 }
