@@ -198,7 +198,8 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //is triggered when the START button is pressed on the popup after a puzzle is complete
 
-        GameObject.Find("PopupStart").transform.localPosition = Global.rightPosition;     //moves the pop-up box out of screen
+        //GameObject.Find("PopupStart").transform.localPosition = Global.rightPosition;     //moves the pop-up box out of screen
+        GameObject.Find("PopupPuzzle").transform.localPosition = Global.rightPosition;     //moves the pop-up box out of screen
 
         Global.piecesPlaced = 0;
 

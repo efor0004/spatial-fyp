@@ -260,7 +260,8 @@ public class Global : MonoBehaviour
         piecesPlaced = 0;                                                                //reset to avoid looping
         Debug.Log("PUZZLE COMPLETE!");
 
-        GameObject.Find("PopupStart").transform.localPosition = popupPosition;          //creates a popup
+        //GameObject.Find("PopupStart").transform.localPosition = popupPosition;          //creates a popup
+        GameObject.Find("PopupPuzzle").transform.localPosition = popupPosition;          //creates a popup
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
         LeftArrowActive = false;
