@@ -18,6 +18,9 @@ public class Menu : MonoBehaviour
             StartUp = false;
         }
 
+        GameObject.Find("MusicButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("SoundEffectsButton").GetComponent<Button>().interactable = false;
+
     }
 
     // Update is called once per frame

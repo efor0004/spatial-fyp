@@ -172,14 +172,24 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("ParentalinfoMenu").transform.localPosition = Global.topPosition;
     }
 
-    public void HomeButton()
+    public void CompleteHomeButton()
     {
-        //is triggered by the home button on the land selection menu
+        //is triggered by the home button on the completed puzzle popup
         //loads the home scene
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = true; //reactivate buttons globally
         Global.LeftArrowActive = true;
         Global.RightArrowActive = true;
+
+        Global.DestroyShapes();                 //***                                         
+        Global.NextPuzzleReady = true;          //***
+
+        SceneManager.LoadScene("Menu");
+    }
+    public void HomeButton()
+    {
+        //is triggered by the home button on the world selection menu
+        //loads the home scene
 
         SceneManager.LoadScene("Menu");
     }
