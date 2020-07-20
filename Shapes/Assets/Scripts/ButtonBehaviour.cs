@@ -176,13 +176,11 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //is triggered by the home button on the completed puzzle popup
         //loads the home scene
+        //note: do not add destroyshapes and nextpuzzle ready or a puzzle is skipped
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = true; //reactivate buttons globally
         Global.LeftArrowActive = true;
         Global.RightArrowActive = true;
-
-        Global.DestroyShapes();                 //***                                         
-        Global.NextPuzzleReady = true;          //***
 
         SceneManager.LoadScene("Menu");
     }
@@ -426,6 +424,7 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //skips current puzzle and starts next sequential ouzzle
         //triggered by pressing the skip button in the hamburdger menu within a puzzle
+        //note: do not add destroyshapes and nextpuzzle ready or a puzzle is skipped
 
         GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
 
