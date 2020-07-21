@@ -53,7 +53,7 @@ public class MouseHandler : MonoBehaviour
         CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
         //Puzzle15();
     }
-        void Update()
+    void Update()
         {
         //called each frame
         if (Global.piecesPlaced == Global.puzzlePieces)                    //puzzle completion 
@@ -104,7 +104,7 @@ public class MouseHandler : MonoBehaviour
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
 
-        //set number of pieces in the puzzle
+        //set number of pieces in the puzzle (those to be placed)
         Global.puzzlePieces = 1;
 
         //spawn shapes

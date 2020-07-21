@@ -96,14 +96,14 @@ public class Save : MonoBehaviour
 	    Global.Medium = true;
 	    Global.Hard = false;
 
-		Global.PlaygroundLevel = 1;              
-		Global.PlaygroundPuzzle = 0;
-		Global.TriangleLevel = 1;
-		Global.TrianglePuzzle = 0;
+	//	Global.PlaygroundLevel = 1;              
+	//	Global.PlaygroundPuzzle = 0;
+	//	Global.TriangleLevel = 1;
+	//	Global.TrianglePuzzle = 0;
 		Global.MouseLevel = 1;
 		Global.MousePuzzle = 0;
-		Global.WildLevel = 1;
-		Global.WildPuzzle = 0;
+	//	Global.WildLevel = 1;
+	//	Global.WildPuzzle = 0;
 		Global.FarmLevel = 1;
 		Global.FarmPuzzle = 0;
 

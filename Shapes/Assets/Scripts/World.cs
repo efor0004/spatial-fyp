@@ -13,11 +13,11 @@ public class World : MonoBehaviour
     Image FarmMask;
 
     //how many levels are in this world
-    int PlaygroundLevelsPerWorld = 5;
-    int TriangleLevelsPerWorld = 5;
-    int MouseLevelsPerWorld = 3;
-    int WildLevelsPerWorld = 5;
-    int FarmLevelsPerWorld = 5;
+    int PlaygroundLevelsPerWorld = 5; //?
+    int TriangleLevelsPerWorld = 5; //?
+    int MouseLevelsPerWorld = 3; 
+    int WildLevelsPerWorld = 5; //?
+    int FarmLevelsPerWorld = 10;
 
     void Start()
     {
@@ -88,7 +88,7 @@ public class World : MonoBehaviour
         GameObject.Find("TriangleButton").GetComponent<Button>().interactable = false;
         GameObject.Find("WildButton").GetComponent<Button>().interactable = false;
         GameObject.Find("MovieMakerButton").GetComponent<Button>().interactable = false;
-        GameObject.Find("FarmButton").GetComponent<Button>().interactable = false;
+       
 
     }
 
