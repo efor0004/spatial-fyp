@@ -6,27 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Prefabs/Scenes/Menu.unity
+    path: Assets/Scenes/Menu.unity
     guid: f5f5d17731246924295f46d3c5310f6a
   - enabled: 1
-    path: Assets/Prefabs/Scenes/Worlds.unity
+    path: Assets/Scenes/Worlds.unity
     guid: 9fa00d0d0b5462b4fbc0d6d383b75c8a
   - enabled: 1
-    path: Assets/Prefabs/Scenes/Mouse.unity
+    path: Assets/Scenes/Mouse.unity
     guid: cc424ec2994240749a52f21cefbdd1fd
   - enabled: 1
-    path: Assets/Prefabs/Scenes/Farm.unity
+    path: Assets/Scenes/Farm.unity
     guid: 2eceb3e1ab718b0438caf4f8c4bfa596
   - enabled: 1
-    path: Assets/Prefabs/Scenes/MovieMaker.unity
+    path: Assets/Scenes/MovieMaker.unity
     guid: 70d6ba0aaf42b12458ab83a2bc90a687
   - enabled: 1
-    path: Assets/Prefabs/Scenes/Playground.unity
+    path: Assets/Scenes/Playground.unity
     guid: b9c62bc8fda088a40b192d1385098614
   - enabled: 1
-    path: Assets/Prefabs/Scenes/Triangle.unity
+    path: Assets/Scenes/Triangle.unity
     guid: e88f93366ed62974cbab65f82125c93d
   - enabled: 1
-    path: Assets/Prefabs/Scenes/Wild.unity
+    path: Assets/Scenes/Wild.unity
     guid: c47c33c0d47d6d848a657e3c1d913614
   m_configObjects: {}
