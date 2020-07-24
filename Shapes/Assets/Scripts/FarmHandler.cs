@@ -57,6 +57,18 @@ public class FarmHandler : MonoBehaviour
         Puzzle.Add(Puzzle28);
         Puzzle.Add(Puzzle29);
         Puzzle.Add(Puzzle30);
+
+        Puzzle.Add(Puzzle31);
+        Puzzle.Add(Puzzle32);
+        Puzzle.Add(Puzzle33);
+        Puzzle.Add(Puzzle34);
+        Puzzle.Add(Puzzle35);
+
+        Puzzle.Add(Puzzle36);
+        Puzzle.Add(Puzzle37);
+        Puzzle.Add(Puzzle38);
+        Puzzle.Add(Puzzle39);
+        Puzzle.Add(Puzzle40);
     }
 
     
@@ -69,7 +81,7 @@ public class FarmHandler : MonoBehaviour
         LevelText = GameObject.Find("LevelText").GetComponent<Text>();
 
        // CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
-        Puzzle30();
+        Puzzle40();
 
     }
     void Update()
@@ -1007,5 +1019,324 @@ public class FarmHandler : MonoBehaviour
         //spawn target image
         Global.RenderPuzzleImage("F30");
     }
+
+    void Puzzle31()
+    {
+        //puzzle 31 in the Farm scene
+        //the sheep front on
+
+        Global.NextPuzzleReady = false;
+
+        //record level and puzzle numbers
+        Global.FarmLevel = 7;
+        Global.FarmPuzzle = 1;
+
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 5;
+
+        //spawn anchor shape
+        Global.RenderShapeFixed("Shape0", "Circle", new Vector3(0.06f, -0.76f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.495274f, 0.583305f, 1f), "Shape1", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), false, 0, false);
+
+        //spawn movable shapes 
+        Global.RenderShapeVariable("Shape1", "Circle", new Vector3(-0.001f, 0.53f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.221259f, 0.3477088f, 1.126f), "Shape2", new Vector4(0f, 0f, 0f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape2", "Semicircle", new Vector3(-0.71f, 1.21f, 0f), new Vector3(0f, 0f, 338.1617f), new Vector3(0.1734229f, 0.1509278f, 1.147f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 2, false);
+        Global.RenderShapeVariable("Shape3", "Semicircle", new Vector3(0.75f, 1.18f, 0f), new Vector3(0f, 0f, 15.84028f), new Vector3(0.1775053f, 0.1544806f, 1.174f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 3, false);
+        Global.RenderShapeVariable("Shape4", "Square", new Vector3(-0.435f, -2.161f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.065f, 0.241f, 1f), "Shape2", new Vector4(0f, 0f, 0f, 1f), false, 4, false);
+        Global.RenderShapeVariable("Shape5", "Square", new Vector3(0.55f, -2.17f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.065f, 0.241f, 1f), "Shape2", new Vector4(0.7075472f, 0.7075472f, 0.7075472f, 1f), false, 5, false);
+
+        //spawn target image
+        Global.RenderPuzzleImage("F31");
+    }
+
+    void Puzzle32()
+    {
+        //puzzle 32 in the Farm scene
+        //the sheep side on
+
+        Global.NextPuzzleReady = false;
+
+        //record level and puzzle numbers
+        Global.FarmLevel = 7;
+        Global.FarmPuzzle = 2;
+
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 6;
+
+        //spawn anchor shape
+        Global.RenderShapeFixed("Shape0", "Circle", new Vector3(0.1f, -0.76f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.8217031f, 0.583305f, 1f), "Shape1", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), false, 0, false);
+
+        //spawn movable shapes 
+        Global.RenderShapeVariable("Shape1", "Circle", new Vector3(-1.69f, -0.97f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.221259f, 0.3477088f, 1.126f), "Shape2", new Vector4(0f, 0f, 0f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape2", "Semicircle", new Vector3(-2.41f, -0.26f, 0f), new Vector3(0f, 0f, 338.1617f), new Vector3(0.1734229f, 0.1509278f, 1.147f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 2, false);
+        Global.RenderShapeVariable("Shape3", "Semicircle", new Vector3(-0.95f, -0.22f, 0f), new Vector3(0f, 0f, 15.84028f), new Vector3(0.1775053f, 0.1544806f, 1.174f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 3, false);
+        Global.RenderShapeVariable("Shape4", "Square", new Vector3(-0.79f, -2.19f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.065f, 0.241f, 1f), "Shape2", new Vector4(0f, 0f, 0f, 1f), false, 4, false);
+        Global.RenderShapeVariable("Shape5", "Square", new Vector3(0.82f, -2.2f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.065f, 0.241f, 1f), "Shape2", new Vector4(0.7075472f, 0.7075472f, 0.7075472f, 1f), false, 5, false);
+        Global.RenderShapeVariable("Shape6", "Circle", new Vector3(2.04f, -0.74f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.14656f, 0.14656f, 0.14656f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 6, true);
+
+        //spawn target image
+        Global.RenderPuzzleImage("F32");
+    }
+
+    void Puzzle33()
+    {
+        //puzzle 33 in the Farm scene
+        //the cow front on
+
+        Global.NextPuzzleReady = false;
+
+        //record level and puzzle numbers
+        Global.FarmLevel = 7;
+        Global.FarmPuzzle = 3;
+
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 7;
+
+        //spawn anchor shape
+        Global.RenderShapeFixed("Shape0", "Circle", new Vector3(0f, -0.8f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.5710837f, 0.583305f, 1f), "Shape1", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 0, true);
+
+        //spawn movable shapes 
+        Global.RenderShapeVariable("Shape1", "Circle", new Vector3(0.03f, 0.33f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.221259f, 0.3477088f, 1.126f), "Shape2", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape2", "Circle", new Vector3(-0.671f, 0.942f, 0f), new Vector3(0f, 0f, 338.1617f), new Vector3(0.1603307f, 0.086056f, 1.147f), "Shape3", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), true, 2, false);
+        Global.RenderShapeVariable("Shape3", "Circle", new Vector3(0.74f, 0.93f, 0f), new Vector3(0f, 0f, 15.84028f), new Vector3(0.1670325f, 0.08172022f, 1.174f), "Shape3", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), true, 3, false);
+        Global.RenderShapeVariable("Shape4", "Square", new Vector3(-0.73f, -2.163f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.065f, 0.241f, 1f), "Shape2", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), false, 4, false);
+        Global.RenderShapeVariable("Shape5", "Square", new Vector3(0.777f, -2.153f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.065f, 0.241f, 1f), "Shape2", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 5, false);
+        Global.RenderShapeVariable("Shape6", "Semicircle", new Vector3(0.04f, -0.23f, 0f), new Vector3(0f, 0f, 180.7273f), new Vector3(0.1942161f, 0.2004828f, 1f), "Shape3", new Vector4(1f, 0.7122642f, 0.7264733f, 1f), true, 6, false);
+        Global.RenderShapeVariable("Shape7", "Circle", new Vector3(0.02f, -1.4f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2965688f, 0.3193749f, 1f), "Shape2", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 7, false);
+
+        //spawn target image
+        Global.RenderPuzzleImage("F33");
+    }
+
+    void Puzzle34()
+    {
+        //puzzle 34 in the Farm scene
+        //the cow side on
+
+        Global.NextPuzzleReady = false;
+
+        //record level and puzzle numbers
+        Global.FarmLevel = 7;
+        Global.FarmPuzzle = 4;
+
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 9;
+
+        //spawn anchor shape
+        Global.RenderShapeFixed("Shape0", "Semicircle", new Vector3(0.29f, -0.514f, 0f), new Vector3(0f, 0f, 180.5274f), new Vector3(0.8275002f, 0.8863484f, 1f), "Shape1", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 0, false);
+
+        //spawn movable shapes 
+        Global.RenderShapeVariable("Shape1", "Circle", new Vector3(-1.45f, 0.12f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.221259f, 0.3477088f, 1.126f), "Shape2", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape2", "Circle", new Vector3(-2.07f, 0.84f, 0f), new Vector3(0f, 0f, 338.1617f), new Vector3(0.1603307f, 0.086056f, 1.147f), "Shape3", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), true, 2, false);
+        Global.RenderShapeVariable("Shape3", "Circle", new Vector3(-0.78f, 0.74f, 0f), new Vector3(0f, 0f, 15.84028f), new Vector3(0.1670325f, 0.08172022f, 1.174f), "Shape3", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), true, 3, false);
+        Global.RenderShapeVariable("Shape4", "Semicircle", new Vector3(-1.47f, -0.42f, 0f), new Vector3(0f, 0f, 180.7273f), new Vector3(0.1942161f, 0.2004828f, 1f), "Shape3", new Vector4(1f, 0.7122642f, 0.7264733f, 1f), true, 4, false);
+        Global.RenderShapeVariable("Shape5", "Circle", new Vector3(0.28f, -1.12f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.4915673f, 0.1782112f, 1f), "Shape2", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 5, false);
+        Global.RenderShapeVariable("Shape6", "Square", new Vector3(-0.697f, -1.689f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.08098886f, 0.2866454f, 1f), "Shape2", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), false, 6, false);
+        Global.RenderShapeVariable("Shape7", "Square", new Vector3(1.214f, -1.7f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.07551896f, 0.286549f, 1f), "Shape2", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 7, false);
+        Global.RenderShapeVariable("Shape8", "Square", new Vector3(2.44f, 0.03f, 0f), new Vector3(0f, 0f, 44.07355f), new Vector3(0.045045f, 0.241f, 1f), "Shape3", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), true, 8, false);
+        Global.RenderShapeVariable("Shape9", "TriangleI", new Vector3(2.84f, -0.39f, 0f), new Vector3(0f, 0f, 38.78345f), new Vector3(0.1136403f, 0.1263334f, 1f), "Shape4", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), true, 9, false);
+
+        //spawn target image
+        Global.RenderPuzzleImage("F34");
+    }
+
+    void Puzzle35()
+    {
+        //puzzle 35 in the Farm scene
+        //the windmill
+
+        Global.NextPuzzleReady = false;
+
+        //record level and puzzle numbers
+        Global.FarmLevel = 7;
+        Global.FarmPuzzle = 5;
+
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 6;
+
+        //spawn anchor shape
+        Global.RenderShapeFixed("Shape0", "Trapezoid", new Vector3(0.009f, -1.37f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.296325f, 0.5325553f, 0.846f), "Shape1", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 0, false);
+
+        //spawn movable shapes 
+        Global.RenderShapeVariable("Shape1", "Semicircle", new Vector3(0.0086f, -0.0065f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2427757f, 0.1968183f, 0.8450585f), "Shape2", new Vector4(1f, 0.4678748f, 0f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape2", "Trapezoid", new Vector3(-0.776f, -0.679f, 0f), new Vector3(0f, 0f, 308.0613f), new Vector3(0.11244f, 0.366168f, 1f), "Shape3", new Vector4(0.6981132f, 0.6445877f, 0.5631008f, 1f), false, 2, false);
+        Global.RenderShapeVariable("Shape3", "Trapezoid", new Vector3(0.68f, -0.772f, 0f), new Vector3(0f, 0f, 44.32429f), new Vector3(0.11244f, 0.366168f, 1f), "Shape3", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), false, 3, false);
+        Global.RenderShapeVariable("Shape4", "Trapezoid", new Vector3(0.773f, 0.591f, 0f), new Vector3(0f, 0f, 129.069f), new Vector3(0.11244f, 0.366168f, 1f), "Shape3", new Vector4(0f, 0f, 0f, 1f), false, 4, false);
+        Global.RenderShapeVariable("Shape5", "Trapezoid", new Vector3(-0.645f, 0.71f, 0f), new Vector3(0f, 0f, 221.0829f), new Vector3(0.11244f, 0.366168f, 1f), "Shape3", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), false, 5, false);
+        Global.RenderShapeVariable("Shape6", "Hexagon", new Vector3(0f, -0.05f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.0765585f, 0.0762644f, 1f), "Shape4", new Vector4(0f, 0f, 0f, 1f), true, 6, false);
+
+        //spawn target image
+        Global.RenderPuzzleImage("F35");
+    }
+
+    void Puzzle36()
+    {
+        //puzzle 36 in the Farm scene
+        //the pink barn
+
+        Global.NextPuzzleReady = false;
+
+        //record level and puzzle numbers
+        Global.FarmLevel = 8;
+        Global.FarmPuzzle = 1;
+
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 5;
+
+        //spawn anchor shape
+        Global.RenderShapeFixed("Shape0", "Square", new Vector3(-0.803f, -1.261f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.57486f, 0.38522f, 1f), "Shape1", new Vector4(1f, 0.7122642f, 0.7264733f, 1f), false, 0, false);
+
+        //spawn movable shapes 
+        Global.RenderShapeVariable("Shape1", "Trapezoid", new Vector3(0.9387f, -1.2649f, 1.0763f), new Vector3(5.122642E-06f, 310.388f, 269.6192f), new Vector3(0.2637552f, 0.3396441f, 1f), "Shape2", new Vector4(0.9150943f, 0.6690548f, 0.679166f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape2", "TriangleI", new Vector3(-0.8151f, 0.0582f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.474591f, 0.2143158f, 1f), "Shape2", new Vector4(1f, 0.3632075f, 0.3965594f, 1f), false, 2, false);
+        Global.RenderShapeVariable("Shape3", "Parallelogram", new Vector3(0.262f, 0.302f, 0f), new Vector3(0f, 0f, 323.7875f), new Vector3(0.3021032f, 0.2094022f, 1f), "Shape3", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 3, false);
+        Global.RenderShapeVariable("Shape4", "TriangleI", new Vector3(0.9291f, -0.3893f, 0f), new Vector3(0f, 0f, 94.10343f), new Vector3(0.1635611f, 0.2103845f, 1f), "Shape3", new Vector4(0.8679245f, 0.6018156f, 0.6103997f, 1f), true, 4, false);
+        Global.RenderShapeVariable("Shape5", "Square", new Vector3(-0.828f, -1.632f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.132319f, 0.217288f, 1f), "Shape3", new Vector4(1f, 0.3632075f, 0.3965594f, 1f), false, 5, false);
+
+        //spawn target image
+        Global.RenderPuzzleImage("F36");
+    }
+
+    void Puzzle37()
+    {
+        //puzzle 37 in the Farm scene
+        //the pig side on
+
+        Global.NextPuzzleReady = false;
+
+        //record level and puzzle numbers
+        Global.FarmLevel = 8;
+        Global.FarmPuzzle = 2;
+
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 7;
+
+        //spawn anchor shape
+        Global.RenderShapeFixed("Shape0", "Circle", new Vector3(0.39f, -0.537f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.7069083f, 0.6107688f, 0.7069083f), "Shape1", new Vector4(0.8679245f, 0.6018156f, 0.6103997f, 1f), false, 0, false);
+
+        //spawn movable shapes 
+        Global.RenderShapeVariable("Shape1", "Circle", new Vector3(-1.266f, 0.094f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.3847501f, 0.3204969f, 0.3847501f), "Shape2", new Vector4(1f, 0.7122642f, 0.7264733f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape2", "Circle", new Vector3(-1.3f, 0.02f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1598488f, 0.118144f, 1.136f), "Shape3", new Vector4(0.7830189f, 0.4764596f, 0.4899844f, 1f), true, 2, false);
+        Global.RenderShapeVariable("Shape3", "Square", new Vector3(1.16f, -2.057f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.0745668f, 0.2127864f, 1f), "Shape2", new Vector4(1f, 0.7122642f, 0.7264733f, 1f), false, 3, false);
+        Global.RenderShapeVariable("Shape4", "Square", new Vector3(-0.44f, -2.03f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.0693f, 0.2181877f, 1f), "Shape2", new Vector4(0.7830189f, 0.4764596f, 0.4899844f, 1f), false, 4, false);
+        Global.RenderShapeVariable("Shape5", "TriangleI", new Vector3(-2f, 0.78f, 0f), new Vector3(0f, 0f, 38.57444f), new Vector3(0.1365692f, 0.16618f, 1.186f), "Shape3", new Vector4(1f, 0.7122642f, 0.7264733f, 1f), true, 5, false);
+        Global.RenderShapeVariable("Shape6", "TriangleI", new Vector3(-0.44f, 0.76f, 0f), new Vector3(0f, 0f, 318.5152f), new Vector3(0.1308116f, 0.1591741f, 1.136f), "Shape3", new Vector4(1f, 0.7122642f, 0.7264733f, 1f), true, 6, false);
+        Global.RenderShapeVariable("Shape7", "Semicircle", new Vector3(2.245f, -0.021f, 0f), new Vector3(0f, 0f, 222.0782f), new Vector3(0.1598404f, 0.169926f, 1f), "Shape3", new Vector4(1f, 0.7122642f, 0.7264733f, 1f), true, 7, false);
+
+        //spawn target image
+        Global.RenderPuzzleImage("F37");
+    }
+
+    void Puzzle38()
+    {
+        //puzzle 38 in the Farm scene
+        //the pig front on
+
+        Global.NextPuzzleReady = false;
+
+        //record level and puzzle numbers
+        Global.FarmLevel = 8;
+        Global.FarmPuzzle = 3;
+
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 6;
+
+        //spawn anchor shape
+        Global.RenderShapeFixed("Shape0", "Circle", new Vector3(0.02f, -0.537f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.7069083f, 0.6107688f, 0.7069083f), "Shape1", new Vector4(0.8679245f, 0.6018156f, 0.6103997f, 1f), false, 0, false);
+
+        //spawn movable shapes 
+        Global.RenderShapeVariable("Shape1", "Circle", new Vector3(0.016f, 0.352f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.3847501f, 0.3204969f, 0.3847501f), "Shape2", new Vector4(1f, 0.7122642f, 0.7264733f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape2", "Circle", new Vector3(0.028f, 0.128f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1598488f, 0.118144f, 1.136f), "Shape3", new Vector4(0.7830189f, 0.4764596f, 0.4899844f, 1f), true, 2, false);
+        Global.RenderShapeVariable("Shape3", "Square", new Vector3(0.41f, -2.048f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.0745668f, 0.2127864f, 1f), "Shape2", new Vector4(0.7830189f, 0.4764596f, 0.4899844f, 1f), false, 3, false);
+        Global.RenderShapeVariable("Shape4", "Square", new Vector3(-0.387f, -2.03f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.0693f, 0.2181877f, 1f), "Shape2", new Vector4(1f, 0.7122642f, 0.7264733f, 1f), false, 4, false);
+        Global.RenderShapeVariable("Shape5", "TriangleI", new Vector3(-0.784f, 1.009f, 0f), new Vector3(0f, 0f, 38.57444f), new Vector3(0.1365692f, 0.16618f, 1.186f), "Shape3", new Vector4(1f, 0.7122642f, 0.7264733f, 1f), true, 5, false);
+        Global.RenderShapeVariable("Shape6", "TriangleI", new Vector3(0.839f, 1.026f, 0f), new Vector3(0f, 0f, 318.5152f), new Vector3(0.1308116f, 0.1591741f, 1.136f), "Shape3", new Vector4(1f, 0.7122642f, 0.7264733f, 1f), true, 6, false);
+
+        //spawn target image
+        Global.RenderPuzzleImage("F38");
+    }
+
+    void Puzzle39()
+    {
+        //puzzle 39 in the Farm scene
+        //the horse front on
+
+        Global.NextPuzzleReady = false;
+
+        //record level and puzzle numbers
+        Global.FarmLevel = 8;
+        Global.FarmPuzzle = 4;
+
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 7;
+
+        //spawn anchor shape
+        Global.RenderShapeFixed("Shape0", "Circle", new Vector3(-0.021f, -0.3756f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.441f, 0.5215853f, 1f), "Shape1", new Vector4(0.6320754f, 0.3734991f, 0.1580189f, 1f), false, 0, false);
+
+        //spawn movable shapes 
+        Global.RenderShapeVariable("Shape1", "Trapezoid", new Vector3(-0.004f, 0.252f, 0f), new Vector3(0f, 0f, 179.6705f), new Vector3(0.168f, 0.3159279f, 1f), "Shape2", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape2", "Semicircle", new Vector3(0.0013f, -0.62f, 0f), new Vector3(0f, 0f, 180.0177f), new Vector3(0.1411781f, 0.1691712f, 1f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 2, false);
+        Global.RenderShapeVariable("Shape3", "TriangleR", new Vector3(0.326f, 1.221f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09971964f, 0.1293104f, 1f), "Shape3", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), true, 3, false);
+        Global.RenderShapeVariable("Shape4", "TriangleR", new Vector3(-0.328f, 1.224f, 0f), new Vector3(0f, 0f, 0f), new Vector3(-0.09305574f, 0.1293104f, 1f), "Shape3", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), true, 4, false);
+        Global.RenderShapeVariable("Shape5", "TriangleI", new Vector3(-0.0055f, 0.7504f, 0f), new Vector3(0f, 0f, 179.1448f), new Vector3(0.07403725f, 0.1028722f, 1f), "Shape4", new Vector4(0f, 0f, 0f, 1f), true, 5, false);
+        Global.RenderShapeVariable("Shape6", "Trapezoid", new Vector3(-0.458f, -2.0875f, 0f), new Vector3(0f, 0f, 178.7963f), new Vector3(0.06039895f, 0.3638402f, 1f), "Shape2", new Vector4(0.6320754f, 0.3734991f, 0.1580189f, 1f), true, 6, false);
+        Global.RenderShapeVariable("Shape7", "Trapezoid", new Vector3(0.342f, -2.097f, 0f), new Vector3(0f, 0f, 178.7963f), new Vector3(0.06039895f, 0.3638402f, 1f), "Shape2", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), true, 7, false);
+
+        //spawn target image
+        Global.RenderPuzzleImage("F39");
+    }
+
+    void Puzzle40()
+    {
+        //puzzle 40 in the Farm scene
+        //the horse side on
+
+        //note: fixed glitches by changing layers
+
+        Global.NextPuzzleReady = false;
+
+        //record level and puzzle numbers
+        Global.FarmLevel = 8;
+        Global.FarmPuzzle = 5;
+
+        Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+
+        //set number of pieces in the puzzle
+        Global.puzzlePieces = 8;
+
+        //spawn anchor shape
+        Global.RenderShapeFixed("Shape0", "Circle", new Vector3(0.88f, -0.57f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.820701f, 0.3990127f, 1f), "Shape1", new Vector4(0.6320754f, 0.3734991f, 0.1580189f, 1f), false, 0, false);
+
+        //spawn movable shapes 
+        Global.RenderShapeVariable("Shape1", "Trapezoid", new Vector3(-1.04f, 0.02f, 0f), new Vector3(0f, 0f, 60.92901f), new Vector3(0.1716367f, 0.377431f, 1f), "Shape2", new Vector4(0.6320754f, 0.3734991f, 0.1580189f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape2", "Trapezoid", new Vector3(-2.03f, 0.31f, 0f), new Vector3(0f, 0f, 142.1716f), new Vector3(0.168f, 0.3159279f, 1f), "Shape3", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), false, 2, false);
+        Global.RenderShapeVariable("Shape3", "Trapezoid", new Vector3(0.24f, -2.06f, 0f), new Vector3(0f, 0f, 178.7963f), new Vector3(0.07778376f, 0.3412392f, 1f), "Shape3", new Vector4(0.6320754f, 0.3734991f, 0.1580189f, 1f), true, 3, false);
+        Global.RenderShapeVariable("Shape4", "Trapezoid", new Vector3(1.69f, -2.04f, 0f), new Vector3(0f, 0f, 182.9477f), new Vector3(0.07725798f, 0.3317f, 1f), "Shape4", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), true, 4, false);
+        Global.RenderShapeVariable("Shape5", "TriangleI", new Vector3(2.89f, -1.24f, 0f), new Vector3(0f, 0f, 12.8708f), new Vector3(0.1753545f, 0.417f, 1f), "Shape5", new Vector4(0f, 0f, 0f, 1f), false, 5, false);
+        Global.RenderShapeVariable("Shape6", "Semicircle", new Vector3(-2.52f, -0.35f, 0f), new Vector3(0f, 0f, 144.2929f), new Vector3(0.1411781f, 0.1691712f, 1f), "Shape4", new Vector4(0f, 0f, 0f, 1f), true, 6, false);
+        Global.RenderShapeVariable("Shape7", "TriangleR", new Vector3(-1.91f, 1.22f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09971964f, 0.1293104f, 1f), "Shape4", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), true, 7, false);
+        Global.RenderShapeVariable("Shape8", "Semicircle", new Vector3(-0.97f, 0.32f, 0f), new Vector3(0f, 0f, 152.841f), new Vector3(0.37f, 0.183f, 1f), "Shape4", new Vector4(0f, 0f, 0f, 1f), true, 8, false);
+
+        //spawn target image
+        Global.RenderPuzzleImage("F40");
+    }
+
 
 }
