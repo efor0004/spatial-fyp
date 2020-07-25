@@ -66,6 +66,9 @@ TagManager:
   - name: Shape5
     uniqueID: 3688433873
     locked: 0
+  - name: Shape6
+    uniqueID: 1193813405
+    locked: 0
   - name: Popup
     uniqueID: 3541524617
     locked: 0

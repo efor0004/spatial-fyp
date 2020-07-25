@@ -1,12 +1,39 @@
 
  *********************** NEW TEST ************************ 
 
-Global.RenderShapeFixed("Shape0", "Circle", new Vector3(0.88f, -0.57f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.820701f, 0.3990127f, 1f), "Shape1", new Vector4(0.6320754f, 0.3734991f, 0.1580189f, 1f), false, 0, false);
-Global.RenderShapeVariable("Shape1", "Trapezoid", new Vector3(-1.04f, 0.02f, 0f), new Vector3(0f, 0f, 60.92901f), new Vector3(0.1716367f, 0.377431f, 1f), "Shape2", new Vector4(0.6320754f, 0.3734991f, 0.1580189f, 1f), false, 1,false);
-Global.RenderShapeVariable("Shape2", "Trapezoid", new Vector3(-2.03f, 0.31f, 0f), new Vector3(0f, 0f, 142.1716f), new Vector3(0.168f, 0.3159279f, 1f), "Shape3", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), false, 2,false);
-Global.RenderShapeVariable("Shape3", "Trapezoid", new Vector3(0.24f, -2.06f, 0f), new Vector3(0f, 0f, 178.7963f), new Vector3(0.07778376f, 0.3412392f, 1f), "Shape2", new Vector4(0.6320754f, 0.3734991f, 0.1580189f, 1f), false, 3,false);
-Global.RenderShapeVariable("Shape4", "Trapezoid", new Vector3(1.69f, -2.04f, 0f), new Vector3(0f, 0f, 182.9477f), new Vector3(0.07725798f, 0.3317f, 1f), "Shape3", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), false, 4,false);
-Global.RenderShapeVariable("Shape5", "TriangleI", new Vector3(2.89f, -1.24f, 0f), new Vector3(0f, 0f, 12.8708f), new Vector3(0.1753545f, 0.417f, 1f), "Shape4", new Vector4(0f, 0f, 0f, 1f), false, 5,false);
-Global.RenderShapeVariable("Shape6", "Semicircle", new Vector3(-2.52f, -0.35f, 0f), new Vector3(0f, 0f, 144.2929f), new Vector3(0.1411781f, 0.1691712f, 1f), "Shape4", new Vector4(0f, 0f, 0f, 1f), true, 6,false);
-Global.RenderShapeVariable("Shape7", "TriangleR", new Vector3(-1.91f, 1.22f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09971964f, 0.1293104f, 1f), "Shape4", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), true, 7,false);
-Global.RenderShapeVariable("Shape8", "Semicircle", new Vector3(-0.97f, 0.32f, 0f), new Vector3(0f, 0f, 152.841f), new Vector3(0.37f, 0.183f, 1f), "Shape4", new Vector4(0f, 0f, 0f, 1f), false, 8,false);
+Global.RenderShapeFixed("Shape0", "Square", new Vector3(-0.66f, -0.93f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.5282902f, 0.3872038f, 0.7838133f), "Shape1", new Vector4(0.9528302f, 0.8443089f, 0.5797881f, 1f), false, 0, false);
+Global.RenderShapeVariable("Shape1", "TriangleI", new Vector3(-0.677f, 0.41f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.423522f, 0.2263f, 0.775f), "Shape2", new Vector4(0.9528302f, 0.8443089f, 0.5797881f, 1f), false, 1,false);
+Global.RenderShapeVariable("Shape2", "Parallelogram", new Vector3(1.0044f, -0.9486f, 0f), new Vector3(0f, 0f, 13.4149f), new Vector3(0.2042979f, 0.3228592f, 0.805113f), "Shape2", new Vector4(0.8679245f, 0.6018156f, 0.6103997f, 1f), false, 2,false);
+Global.RenderShapeVariable("Shape3", "Parallelogram", new Vector3(0.409f, 0.455f, 0f), new Vector3(0f, 0f, 312.0205f), new Vector3(0.3775654f, 0.2335096f, 0.8106824f), "Shape3", new Vector4(0.7830189f, 0.4764596f, 0.4899844f, 1f), false, 3,false);
+Global.RenderShapeVariable("Shape4", "Square", new Vector3(-1.323f, 0.413f, 0f), new Vector3(0f, 0f, 313.2704f), new Vector3(0.03986017f, 0.3765796f, 1f), "Shape3", new Vector4(0.8679245f, 0.6018156f, 0.6103997f, 1f), false, 4,false);
+Global.RenderShapeVariable("Shape5", "Semicircle", new Vector3(-0.784f, -1.248f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1716156f, 0.4920554f, 1f), "Shape2", new Vector4(0.7075472f, 0.7075472f, 0.7075472f, 1f), false, 5,false);
+Global.RenderShapeVariable("Shape6", "Square", new Vector3(-1.7153f, -2.1625f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.04787672f, 0.1879005f, 1f), "Shape3", new Vector4(0.7075472f, 0.7075472f, 0.7075472f, 1f), true, 6,false);
+Global.RenderShapeVariable("Shape7", "Parallelogram", new Vector3(-0.8596f, -2.1792f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1437185f, 0.1879517f, 1f), "Shape3", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), true, 7,false);
+Global.RenderShapeVariable("Shape8", "Square", new Vector3(0.501f, -2.1625f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.04787672f, 0.1879005f, 1f), "Shape3", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), true, 8,false);
+Global.RenderShapeVariable("Shape9", "Square", new Vector3(1.472f, -1.957f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.04787672f, 0.1879005f, 1f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 9,false);
+
+ *********************** NEW TEST ************************ 
+
+Global.RenderShapeFixed("Shape0", "Square", new Vector3(-0.66f, -0.93f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.5282902f, 0.3872038f, 0.7838133f), "Shape1", new Vector4(0.9528302f, 0.8443089f, 0.5797881f, 1f), false, 0, false);
+Global.RenderShapeVariable("Shape1", "TriangleI", new Vector3(-0.677f, 0.41f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.423522f, 0.2263f, 0.775f), "Shape2", new Vector4(0.9528302f, 0.8443089f, 0.5797881f, 1f), false, 1,false);
+Global.RenderShapeVariable("Shape2", "Parallelogram", new Vector3(0.9963f, -0.9486f, 0f), new Vector3(0f, 0f, 13.4149f), new Vector3(0.2066882f, 0.3236986f, 0.805113f), "Shape2", new Vector4(0.8679245f, 0.6018156f, 0.6103997f, 1f), false, 2,false);
+Global.RenderShapeVariable("Shape3", "Parallelogram", new Vector3(0.409f, 0.455f, 0f), new Vector3(0f, 0f, 312.0205f), new Vector3(0.3775654f, 0.2335096f, 0.8106824f), "Shape3", new Vector4(0.7830189f, 0.4764596f, 0.4899844f, 1f), false, 3,false);
+Global.RenderShapeVariable("Shape4", "Square", new Vector3(-1.323f, 0.413f, 0f), new Vector3(0f, 0f, 313.2704f), new Vector3(0.03986017f, 0.3765796f, 1f), "Shape3", new Vector4(0.8679245f, 0.6018156f, 0.6103997f, 1f), false, 4,false);
+Global.RenderShapeVariable("Shape5", "Semicircle", new Vector3(-0.784f, -1.248f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1716156f, 0.4920554f, 1f), "Shape2", new Vector4(0.7075472f, 0.7075472f, 0.7075472f, 1f), false, 5,false);
+Global.RenderShapeVariable("Shape6", "Square", new Vector3(-1.7153f, -2.1625f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.04787672f, 0.1879005f, 1f), "Shape3", new Vector4(0.7075472f, 0.7075472f, 0.7075472f, 1f), true, 6,false);
+Global.RenderShapeVariable("Shape7", "Parallelogram", new Vector3(-0.8596f, -2.1792f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1437185f, 0.1879517f, 1f), "Shape3", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), true, 7,false);
+Global.RenderShapeVariable("Shape8", "Square", new Vector3(0.501f, -2.1625f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.04787672f, 0.1879005f, 1f), "Shape3", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), true, 8,false);
+Global.RenderShapeVariable("Shape9", "Square", new Vector3(1.472f, -1.957f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.04787672f, 0.1879005f, 1f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 9,false);
+
+ *********************** NEW TEST ************************ 
+
+Global.RenderShapeFixed("Shape0", "Square", new Vector3(-0.66f, -0.93f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.5282902f, 0.3872038f, 0.7838133f), "Shape1", new Vector4(0.9528302f, 0.8443089f, 0.5797881f, 1f), false, 0, false);
+Global.RenderShapeVariable("Shape1", "TriangleI", new Vector3(-0.677f, 0.41f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.423522f, 0.2263f, 0.775f), "Shape2", new Vector4(0.9528302f, 0.8443089f, 0.5797881f, 1f), false, 1,false);
+Global.RenderShapeVariable("Shape2", "Parallelogram", new Vector3(0.9963f, -0.9486f, 0f), new Vector3(0f, 0f, 13.4149f), new Vector3(0.2066882f, 0.3236986f, 0.805113f), "Shape2", new Vector4(0.8679245f, 0.6018156f, 0.6103997f, 1f), false, 2,false);
+Global.RenderShapeVariable("Shape3", "Parallelogram", new Vector3(0.409f, 0.455f, 0f), new Vector3(0f, 0f, 312.0205f), new Vector3(0.3775654f, 0.2335096f, 0.8106824f), "Shape3", new Vector4(0.7830189f, 0.4764596f, 0.4899844f, 1f), false, 3,false);
+Global.RenderShapeVariable("Shape4", "Square", new Vector3(-1.323f, 0.413f, 0f), new Vector3(0f, 0f, 313.2704f), new Vector3(0.03986017f, 0.3765796f, 1f), "Shape3", new Vector4(0.8679245f, 0.6018156f, 0.6103997f, 1f), false, 4,false);
+Global.RenderShapeVariable("Shape5", "Square", new Vector3(-1.7153f, -2.1625f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.04787672f, 0.1879005f, 1f), "Shape3", new Vector4(0.7075472f, 0.7075472f, 0.7075472f, 1f), true, 5,false);
+Global.RenderShapeVariable("Shape6", "Square", new Vector3(0.501f, -2.1625f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.04787672f, 0.1879005f, 1f), "Shape3", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), true, 6,false);
+Global.RenderShapeVariable("Shape7", "Square", new Vector3(1.472f, -1.957f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.04787672f, 0.1879005f, 1f), "Shape3", new Vector4(0f, 0f, 0f, 1f), true, 7,false);
+Global.RenderShapeVariable("Shape8", "Semicircle", new Vector3(-0.784f, -1.248f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1716156f, 0.4920554f, 1f), "Shape2", new Vector4(0.7075472f, 0.7075472f, 0.7075472f, 1f), false, 8,false);
+Global.RenderShapeVariable("Shape9", "Parallelogram", new Vector3(-0.8596f, -2.1792f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1437185f, 0.1879517f, 1f), "Shape3", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), true, 9,false);
