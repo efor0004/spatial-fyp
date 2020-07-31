@@ -96,6 +96,8 @@ public class MouseHandler : MonoBehaviour
         //puzzle 1 in the Mouse Shapes scene
         //the house 
 
+        GameObject.Find("PreviousButton").GetComponent<Button>().interactable = false; //make previous button false on first puzzle
+
         Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
 
         //record level and puzzle numbers
@@ -121,6 +123,8 @@ public class MouseHandler : MonoBehaviour
     {
         //puzzle 2 in the Mouse Shapes scene
         //the tree 
+
+        GameObject.Find("PreviousButton").GetComponent<Button>().interactable = true; //make previous button true on second puzzle
 
         Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
 

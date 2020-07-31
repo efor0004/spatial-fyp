@@ -223,7 +223,7 @@ public class ButtonBehaviour : MonoBehaviour
 
         // de - activate shapes
         Global.PieceActive = true;
-        Global.ActiveNameCopy = Global.ActiveName;
+        Global.ActiveNameCopy = Global.ActiveName;  //saving the current active shape so that all shapes can be made inactive while menu is open
         Global.ActiveName = "null"; 
     }
 
@@ -435,6 +435,145 @@ public class ButtonBehaviour : MonoBehaviour
         Save.SaveProgress(); 
 
         StartNewPuzzle();  //start next puzzle
+
+    }
+
+    public void PreviousButton()
+    {
+        //loads previous puzzle
+        //triggered by pressing the previousbutton in the hamburdger menu within a puzzle
+
+        GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
+
+        string name = GameObject.Find("PopupMenu").scene.name;
+
+        switch (name)                                            //find which scene it was called in, and reduce puzzle number by 1
+        {
+            case "Mouse":
+                if (Global.MouseLevel == 1)
+                {
+                    Global.MousePuzzle = Global.MousePuzzle-2;
+                }
+
+                else if (Global.MousePuzzle == 1)
+                {
+                    Global.MouseLevel = Global.MouseLevel - 1;
+                    Global.MousePuzzle = 4;
+                }
+
+                else if (Global.MousePuzzle == 2)
+                {
+                    Global.MouseLevel = Global.MouseLevel - 1;
+                    Global.MousePuzzle = 5;
+                }
+
+                else
+                {
+                    Global.MouseLevel = Global.MouseLevel - 1;
+                }
+                break;
+            case "Farm":
+                if (Global.FarmLevel == 1)
+                {
+                    Global.FarmPuzzle = Global.FarmPuzzle - 2;
+                }
+
+                else if (Global.FarmPuzzle == 1)
+                {
+                    Global.FarmLevel = Global.FarmLevel - 1;
+                    Global.FarmPuzzle = 4;
+                }
+
+                else if (Global.FarmPuzzle == 2)
+                {
+                    Global.FarmLevel = Global.FarmLevel - 1;
+                    Global.FarmPuzzle = 5;
+                }
+
+                else
+                {
+                    Global.FarmLevel = Global.FarmLevel - 1;
+                }
+                break;
+            case "Wild":
+                if (Global.WildLevel == 1)
+                {
+                    Global.WildPuzzle = Global.WildPuzzle - 2;
+                }
+
+                else if (Global.WildPuzzle == 1)
+                {
+                    Global.WildLevel = Global.WildLevel - 1;
+                    Global.WildPuzzle = 4;
+                }
+
+                else if (Global.WildPuzzle == 2)
+                {
+                    Global.WildLevel = Global.WildLevel - 1;
+                    Global.WildPuzzle = 5;
+                }
+
+                else
+                {
+                    Global.WildLevel = Global.WildLevel - 1;
+                }
+                break;
+            case "Playground":
+                if (Global.PlaygroundLevel == 1)
+                {
+                    Global.PlaygroundPuzzle = Global.PlaygroundPuzzle - 2;
+                }
+
+                else if (Global.PlaygroundPuzzle == 1)
+                {
+                    Global.PlaygroundLevel = Global.PlaygroundLevel - 1;
+                    Global.PlaygroundPuzzle = 4;
+                }
+
+                else if (Global.PlaygroundPuzzle == 2)
+                {
+                    Global.PlaygroundLevel = Global.PlaygroundLevel - 1;
+                    Global.PlaygroundPuzzle = 5;
+                }
+
+                else
+                {
+                    Global.PlaygroundLevel = Global.PlaygroundLevel - 1;
+                }
+                break;
+            case "Triangle":
+                if (Global.TriangleLevel == 1)
+                {
+                    Global.TrianglePuzzle = Global.TrianglePuzzle - 2;
+                }
+
+                else if (Global.TrianglePuzzle == 1)
+                {
+                    Global.TriangleLevel = Global.TriangleLevel - 1;
+                    Global.TrianglePuzzle = 4;
+                }
+
+                else if (Global.TrianglePuzzle == 2)
+                {
+                    Global.TriangleLevel = Global.TriangleLevel - 1;
+                    Global.TrianglePuzzle = 5;
+                }
+
+                else
+                {
+                    Global.TriangleLevel = Global.TriangleLevel - 1;
+                }
+                break;
+            default:
+                Debug.Log("Error in Switch Statement/ RestartButton()");
+                break;
+        }
+
+        // re - activate shapes
+        Global.PieceActive = false;
+        Global.ActiveName = Global.ActiveNameCopy;
+
+        StartNewPuzzle();    //start the same puzzle, as the puzzle index has been set back by 1 
 
     }
 

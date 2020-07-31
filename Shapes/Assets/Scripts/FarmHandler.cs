@@ -92,8 +92,8 @@ public class FarmHandler : MonoBehaviour
         Mask = GameObject.Find("Mask").GetComponent<Image>();
         LevelText = GameObject.Find("LevelText").GetComponent<Text>();
 
-       // CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
-        Puzzle27();
+        CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
+        //Puzzle27();
 
     }
     void Update()
@@ -138,6 +138,8 @@ public class FarmHandler : MonoBehaviour
         //puzzle 1 in the Farm scene
         //the round hay bale
 
+        GameObject.Find("PreviousButton").GetComponent<Button>().interactable = false; //make previous button false on first puzzle
+
         Global.NextPuzzleReady = false;
 
         //record level and puzzle numbers
@@ -166,6 +168,8 @@ public class FarmHandler : MonoBehaviour
     {
         //puzzle 2 in the Farm scene
         //the triangle tree
+
+        GameObject.Find("PreviousButton").GetComponent<Button>().interactable = true; //make previous button true on second puzzle
 
         Global.NextPuzzleReady = false;
 
