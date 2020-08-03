@@ -17,7 +17,7 @@ func pressed():
 	var is_correct = is_correct_answer()
 	
 	if is_correct:
-		if (option_rotation != 0):
+		if (typeof(option_rotation) == TYPE_STRING || option_rotation != 0):
 			add_option_rotation_animation(option_rotation)
 		
 		animation_player.play("Correct")
@@ -36,13 +36,30 @@ func add_option_rotation_animation(option_rotation):
 	
 	correct_animation.add_track(Animation.TYPE_VALUE, new_track_num)
 	var path = self.get_path()
-	var rotation_path = "%s:rotation_degrees" % path
+	
+	var animation_name = ""
+	var animation_start_value = 0
+	var animation_end_value = 0
+	
+	if (typeof(option_rotation) == TYPE_STRING):
+		animation_name = "scale"
+		animation_start_value = Vector2(1, 1)
+		if (option_rotation == constants.FLIP_VERTICAL):
+			animation_end_value = Vector2(-1, 1)
+		else:
+			animation_end_value = Vector2(1, -1)
+	else:
+		animation_name = "rotation_degrees"
+		animation_start_value = 0
+		animation_end_value = option_rotation
+	
+	var rotation_path = "%s:%s" % [path, animation_name]
 	
 	var animation_duration = get_translation_duration(correct_animation)
 	
 	correct_animation.track_set_path(new_track_num, rotation_path)
-	correct_animation.track_insert_key(new_track_num, 0, 0)
-	correct_animation.track_insert_key(new_track_num, animation_duration, option_rotation)
+	correct_animation.track_insert_key(new_track_num, 0, animation_start_value)
+	correct_animation.track_insert_key(new_track_num, animation_duration, animation_end_value)
 
 func reset_rotation():
 	self.rotation_degrees = 0
@@ -83,20 +100,26 @@ func get_option_index():
 func get_option_rotation():
 	var current_level_index = global.current_level - 1
 	var current_question_index = global.current_shuffled_question - 1
+	var current_level_difficulty = global.current_level_difficulty
 	
-	var level_rotations = constants.level_option_rotations[current_level_index]
+	var level_rotations = constants.level_option_rotations[current_level_index][current_level_difficulty]
 	var option_rotation = 0
 	
 	if (typeof(level_rotations) == TYPE_ARRAY):
 		option_rotation = level_rotations[current_question_index]
-	elif (typeof(level_rotations) == TYPE_INT):
+	else:
 		option_rotation = level_rotations
 	
 	return option_rotation
 
 func rotate_fabric(fabric_rotation):
 	var fabric = get_node("Fabric Texture")
-	fabric.rotation_degrees = fabric_rotation
+	if (typeof(fabric_rotation) == TYPE_INT):
+		fabric.rotation_degrees = fabric_rotation
+	elif (fabric_rotation == constants.FLIP_VERTICAL):
+		fabric.flip_v = true
+	else:
+		fabric.flip_h = true
 
 func _on_Question_set_next_question():
 	if (is_correct_answer()):

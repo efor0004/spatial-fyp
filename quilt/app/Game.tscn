@@ -512,8 +512,8 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="set_next_question" from="Question" to="Question/AnimationPlayer1/Layer2/Option 1" method="_on_Question_set_next_question"]
 [connection signal="set_next_question" from="Question" to="Question/AnimationPlayer2/Layer3/Option 2" method="_on_Question_set_next_question"]
 [connection signal="set_next_question" from="Question" to="Question/AnimationPlayer3/Layer4/Option 3" method="_on_Question_set_next_question"]
-[connection signal="set_next_question" from="Question" to="Question/AnimationPlayer1/Layer2/Option 1" method="_on_Question_set_next_question"]
 [connection signal="button_down" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_down"]
 [connection signal="button_up" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_up"]
