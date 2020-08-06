@@ -21,6 +21,7 @@ var save_utils = SaveUtils.new()
 onready var progress_quilt = get_parent().get_node("Progress Quilt")
 
 signal piece_added
+signal ready_for_options
 signal set_next_question
 
 func _ready():
@@ -30,6 +31,7 @@ func _ready():
 	set_question_fabric()
 	save_utils.save_progress()
 	progress_quilt.add_all_pieces_for_state()
+	emit_signal("ready_for_options")
 
 func next_question():
 	add_quilt_piece()
@@ -49,6 +51,7 @@ func next_question():
 	if (global.current_question > constants.questions_per_level):
 		global.current_question = 1
 		global.current_level += 1
+		global.current_level_difficulty = "normal"
 		
 		if (global.current_level > constants.max_levels):
 			global.current_level = 1
