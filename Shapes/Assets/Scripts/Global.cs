@@ -268,16 +268,15 @@ public class Global : MonoBehaviour
         Debug.Log("Puzzle Complete!");
         piecesPlaced = 0;                                                                //reset to avoid looping
 
-        //GameObject.Find("PopupStart").transform.localPosition = popupPosition;          //creates a popup
         GameObject.Find("PopupPuzzle").transform.localPosition = popupPosition;          //creates a popup
-      //  GameObject.Find("PopupPuzzle").GetComponent<AudioSource>().Play(); //
+                                                                                         //  GameObject.Find("PopupPuzzle").GetComponent<AudioSource>().Play(); //
+        FindObjectOfType<AudioManager>().Play("Level"); //plays end of level sound
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
         LeftArrowActive = false;
         RightArrowActive = false;
 
         Save.SaveProgress();                                                           //save game progress
-
     }
 
     public static void LevelComplete()
@@ -287,9 +286,9 @@ public class Global : MonoBehaviour
         Debug.Log("Level Complete!");
         piecesPlaced = 0;                                                                //reset to avoid looping
 
-        //GameObject.Find("PopupStart").transform.localPosition = popupPosition;          //creates a popup
         GameObject.Find("PopupLevel").transform.localPosition = popupPosition;          //creates a popup
-      //  GameObject.Find("PopupLevel").GetComponent<AudioSource>().Play(); //
+                                                                                        //  GameObject.Find("PopupLevel").GetComponent<AudioSource>().Play(); //
+        FindObjectOfType<AudioManager>().Play("Level"); //plays end of level sound
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
         LeftArrowActive = false;
@@ -303,21 +302,18 @@ public class Global : MonoBehaviour
     { //event to signify the world is complete
       //triggered when final puzzle in final level is completed
 
-        
-
         Debug.Log("World Complete!");
         piecesPlaced = 0;                                                                //reset to avoid looping
 
-        //GameObject.Find("PopupStart").transform.localPosition = popupPosition;          //creates a popup
         GameObject.Find("PopupWorld").transform.localPosition = popupPosition;          //creates a popup
-        //GameObject.Find("PopupWorld").GetComponent<AudioSource>().Play(); //
+        
+        FindObjectOfType<AudioManager>().Play("Level"); //plays end of level sound
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
         LeftArrowActive = false;
         RightArrowActive = false;
 
         Save.SaveProgress();
-
     }
 
 }
