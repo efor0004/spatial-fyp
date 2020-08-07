@@ -17,8 +17,8 @@ public class Menu : MonoBehaviour
             Global.StartUp = false;
         }
 
-        GameObject.Find("MusicButton").GetComponent<Button>().interactable = false;
-        GameObject.Find("SoundEffectsButton").GetComponent<Button>().interactable = false;
+        //GameObject.Find("MusicButton").GetComponent<Button>().interactable = false;
+       // GameObject.Find("SoundEffectsButton").GetComponent<Button>().interactable = false;
 
     }
 

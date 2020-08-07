@@ -270,6 +270,7 @@ public class Global : MonoBehaviour
 
         //GameObject.Find("PopupStart").transform.localPosition = popupPosition;          //creates a popup
         GameObject.Find("PopupPuzzle").transform.localPosition = popupPosition;          //creates a popup
+      //  GameObject.Find("PopupPuzzle").GetComponent<AudioSource>().Play(); //
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
         LeftArrowActive = false;
@@ -288,6 +289,7 @@ public class Global : MonoBehaviour
 
         //GameObject.Find("PopupStart").transform.localPosition = popupPosition;          //creates a popup
         GameObject.Find("PopupLevel").transform.localPosition = popupPosition;          //creates a popup
+      //  GameObject.Find("PopupLevel").GetComponent<AudioSource>().Play(); //
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
         LeftArrowActive = false;
@@ -300,12 +302,15 @@ public class Global : MonoBehaviour
     public static void WorldComplete()
     { //event to signify the world is complete
       //triggered when final puzzle in final level is completed
-       
+
+        
+
         Debug.Log("World Complete!");
         piecesPlaced = 0;                                                                //reset to avoid looping
 
         //GameObject.Find("PopupStart").transform.localPosition = popupPosition;          //creates a popup
         GameObject.Find("PopupWorld").transform.localPosition = popupPosition;          //creates a popup
+        //GameObject.Find("PopupWorld").GetComponent<AudioSource>().Play(); //
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
         LeftArrowActive = false;
