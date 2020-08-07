@@ -28,23 +28,22 @@ var level_2_option_transformations = [
 	{ "rotation": 90, "flip": FLIP_NONE },
 	{ "rotation": 90, "flip": FLIP_NONE },
 	{ "rotation": 45, "flip": FLIP_NONE },
-	{ "rotation": 45, "flip": FLIP_NONE },
-	{ "rotation": 90, "flip": FLIP_NONE },
-	{ "rotation": 90, "flip": FLIP_NONE },
-	{ "rotation": 180, "flip": FLIP_NONE },
-	{ "rotation": 180, "flip": FLIP_NONE },
-	{ "rotation": 90, "flip": FLIP_NONE },
-	{ "rotation": 180, "flip": FLIP_NONE },
-	{ "rotation": 90, "flip": FLIP_NONE },
-	{ "rotation": 180, "flip": FLIP_NONE },
-	{ "rotation": 270, "flip": FLIP_NONE },
-	{ "rotation": 270, "flip": FLIP_NONE },
-	{ "rotation": 90, "flip": FLIP_NONE },
-	{ "rotation": 90, "flip": FLIP_NONE },
-	{ "rotation": 135, "flip": FLIP_NONE },
+	{ "rotation": -22.5, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
 	{ "rotation": 45, "flip": FLIP_NONE },
 	{ "rotation": 45, "flip": FLIP_NONE },
-	{ "rotation": 135, "flip": FLIP_NONE }
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": -22.5, "flip": FLIP_NONE },
+	{ "rotation": 22.5, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": -15, "flip": FLIP_NONE },
+	{ "rotation": 180, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": 22.5, "flip": FLIP_NONE },
+	{ "rotation": 22.5, "flip": FLIP_NONE }
 ]
 
 export(Array) var level_option_transformations = [
@@ -53,7 +52,7 @@ export(Array) var level_option_transformations = [
 ]
 
 export(Array) var num_hard_questions_per_level = [
-	{ "required": 9, "available": 13 }, # level 1
+	{ "required": 4, "available": 13 }, # level 1
 	{ "required": 0, "available": 0 } # level 2
 ]
 
@@ -61,7 +60,7 @@ export var questions_per_level = 10
 
 export(Array) var questions_available_per_level = [
 	30, # level 1
-	20 # level 2
+	19 # level 2
 ]
 
 export var max_levels = 2

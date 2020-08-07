@@ -9,13 +9,13 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="576"
    inkscape:export-xdpi="576"
-   inkscape:export-filename="/Users/Eleanor/monash/spatial-fyp/quilt/app/assets/sprites/questions/level_2.png"
+   inkscape:export-filename="/Users/Eleanor/monash/spatial-fyp/quilt/app/assets/sprites/questions/level_2/level_2.png"
    inkscape:version="1.0 (4035a4f, 2020-05-01)"
    sodipodi:docname="level_2.svg"
    id="SVGRoot"
    version="1.1"
-   viewBox="0 0 256 1280"
-   height="1280"
+   viewBox="0 0 256 1216"
+   height="1216"
    width="256">
   <sodipodi:namedview
      inkscape:document-rotation="0"
@@ -33,14 +33,14 @@
      inkscape:window-maximized="1"
      inkscape:window-y="23"
      inkscape:window-x="0"
-     inkscape:window-height="809"
-     inkscape:window-width="1440"
+     inkscape:window-height="1318"
+     inkscape:window-width="2560"
      showgrid="true"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="1218.1496"
-     inkscape:cx="113.73118"
-     inkscape:zoom="2.16"
+     inkscape:cy="669.5"
+     inkscape:cx="151"
+     inkscape:zoom="2"
      inkscape:pageshadow="0"
      inkscape:pageopacity="0"
      borderopacity="1.0"
@@ -60,6 +60,204 @@
   </sodipodi:namedview>
   <defs
      id="defs42">
+    <inkscape:path-effect
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths."
+       hide_clip="false"
+       flatten="false"
+       inverse="true"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect412"
+       effect="powerclip" />
+    <inkscape:path-effect
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths."
+       hide_clip="false"
+       flatten="false"
+       inverse="true"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect397"
+       effect="powerclip" />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1788"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths."
+       hide_clip="false"
+       flatten="false"
+       inverse="true"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect1779"
+       effect="powerclip" />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1773"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1745"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1721"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths."
+       hide_clip="false"
+       flatten="false"
+       inverse="true"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect1712"
+       effect="powerclip" />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1706"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1682"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths."
+       hide_clip="false"
+       flatten="false"
+       inverse="true"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect1340"
+       effect="powerclip" />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1331"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths."
+       hide_clip="false"
+       flatten="false"
+       inverse="true"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect1322"
+       effect="powerclip" />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1316"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths."
+       hide_clip="false"
+       flatten="false"
+       inverse="true"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect1267"
+       effect="powerclip" />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1258"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths."
+       hide_clip="false"
+       flatten="false"
+       inverse="true"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect1248"
+       effect="powerclip" />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1242"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths."
+       hide_clip="false"
+       flatten="false"
+       inverse="true"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect1210"
+       effect="powerclip" />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1204"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths."
+       hide_clip="false"
+       flatten="false"
+       inverse="true"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect1176"
+       effect="powerclip" />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1170"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
     <inkscape:path-effect
        message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths."
        hide_clip="false"
@@ -683,7 +881,8 @@
          sodipodi:sides="6"
          id="path1237"
          style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         sodipodi:type="star" />
+         sodipodi:type="star"
+         d="M 52,1247.9995 42,1265.32 H 22 l -10,-17.3205 10,-17.3205 h 20 z" />
     </clipPath>
     <clipPath
        id="clipPath1253"
@@ -875,24 +1074,14 @@
          id="path265-3"
          style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 52,726 v 20 H 12 v -20 z" />
-      <path
-         id="lpe_path-effect267"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         class="powerclip"
-         d="m -4.5,699.5 h 73 v 73 h -73 z M 52,726 H 12 v 20 h 40 z" />
     </clipPath>
     <clipPath
        id="clipath_lpe_path-effect469"
        clipPathUnits="userSpaceOnUse">
       <path
          d="m 52,726 v 20 H 12 v -20 z"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path471" />
-      <path
-         d="m -4.5,699.5 h 73 v 73 h -73 z M 52,726 H 12 v 20 h 40 z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="lpe_path-effect469" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -912,26 +1101,16 @@
        clipPathUnits="userSpaceOnUse">
       <path
          d="m 22,652 h 20 v 40 H 22 Z"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path536" />
-      <path
-         d="m -4.5,635.5 h 73 v 73 h -73 z M 22,652 v 40 h 20 v -40 z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="lpe_path-effect534" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath601">
       <path
          id="path603"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.775634;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.775634;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 43.313705,148.68629 v 22.62742 H 20.686289 v -22.62742 z" />
-      <path
-         id="lpe_path-effect605"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.775634;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         class="powerclip"
-         d="m -4.5,123.5 h 73 v 73 h -73 z m 47.813705,25.18629 H 20.686289 v 22.62742 h 22.627416 z" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -951,39 +1130,24 @@
        clipPathUnits="userSpaceOnUse">
       <path
          d="M 31.999996,144 47.999999,160 31.999997,176 15.999995,160 Z"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.775634;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.775634;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path654" />
-      <path
-         d="m -4.5,123.5 h 73 v 73 h -73 z m 36.499996,20.5 -16.000001,16 16.000002,16 16.000002,-16 z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.775634;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="lpe_path-effect652" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath705">
       <path
          id="path707"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.05828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.05828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="M 32,304 A 12,16 0 0 1 20,288 12,16 0 0 1 32,272 12,16 0 0 1 44,288 12,16 0 0 1 32,304" />
-      <path
-         id="lpe_path-effect709"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.05828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         class="powerclip"
-         d="m -4.5,251.5 h 73 v 73 h -73 z M 32,304 a 12,16 0 0 0 12,-16 12,16 0 0 0 -12,-16 12,16 0 0 0 -12,16 12,16 0 0 0 12,16" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath713">
       <path
          id="path715"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.05828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.05828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="M 48,352 A 16,12 0 0 1 32,364 16,12 0 0 1 16,352 16,12 0 0 1 32,340 16,12 0 0 1 48,352" />
-      <path
-         id="lpe_path-effect717"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.05828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         class="powerclip"
-         d="m -4.5,315.5 h 73 v 73 h -73 z M 48,352 a 16,12 0 0 0 -16,-12 16,12 0 0 0 -16,12 16,12 0 0 0 16,12 16,12 0 0 0 16,-12" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -1022,13 +1186,8 @@
          d="M 48.000001,464.16411 39.938303,480.08205 31.876604,496 l -7.938302,-16 -7.938301,-16 16,0.082 z"
          inkscape:transform-center-y="5.2786316"
          inkscape:transform-center-x="-0.041132009"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.889851;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.889851;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path805" />
-      <path
-         d="m -4.5,443.5 h 73 v 73 h -73 z m 52.500001,20.66411 -16,-0.0821 -16,-0.082 7.938301,16 7.938302,16 8.061699,-15.91795 z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.889851;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="lpe_path-effect801" />
     </clipPath>
     <clipPath
        id="clipath_lpe_path-effect803"
@@ -1037,13 +1196,8 @@
          d="M 47.999997,431.8359 32.000001,431.9179 16,431.9999 l 7.938302,-16 7.938301,-16 8.061699,15.91794 z"
          inkscape:transform-center-y="-5.2786154"
          inkscape:transform-center-x="-0.041134303"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.14409;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.14409;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path810" />
-      <path
-         d="m -4.5,379.5 h 73 v 73 h -73 z m 52.499997,52.3359 -8.061695,-15.91806 -8.061699,-15.91794 -7.938301,16 -7.938302,16 16.000001,-0.082 z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.14409;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="lpe_path-effect803" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -1084,13 +1238,8 @@
        clipPathUnits="userSpaceOnUse">
       <path
          d="m 32.00051,1140 -17.3205,-10 v -20 l 17.3205,-10 17.3205,10 v 20 z"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path917" />
-      <path
-         d="m -4.5,1083.5 h 73 v 73 h -73 z m 36.50051,56.5 17.3205,-10 v -20 l -17.3205,-10 -17.3205,10 v 20 z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="lpe_path-effect915" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -1112,13 +1261,8 @@
       <path
          d="m 32,1203.021 20,-14.5307 -7.63932,-23.5113 H 19.63932 L 12,1188.4903 Z"
          inkscape:transform-center-y="2.0081962"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.657162;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.657162;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path970" />
-      <path
-         d="m -4.5,1147.5 h 73 v 73 h -73 z m 36.5,55.521 20,-14.5307 -7.63932,-23.5113 H 19.63932 L 12,1188.4903 Z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.657162;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="lpe_path-effect968" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -1138,27 +1282,17 @@
        clipPathUnits="userSpaceOnUse">
       <path
          d="m 32.00051,1140 -17.3205,-10 v -20 l 17.3205,-10 17.3205,10 v 20 z"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path1011" />
-      <path
-         d="m -4.5,1083.5 h 73 v 73 h -73 z m 36.50051,56.5 17.3205,-10 v -20 l -17.3205,-10 -17.3205,10 v 20 z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="lpe_path-effect1009" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipath_lpe_path-effect1037">
       <path
          id="path1039"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.657162;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.657162;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:transform-center-y="2.0081962"
          d="m 32,1203.021 20,-14.5307 -7.63932,-23.5113 H 19.63932 L 12,1188.4903 Z" />
-      <path
-         id="lpe_path-effect1037"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.657162;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         class="powerclip"
-         d="m -4.5,1147.5 h 73 v 73 h -73 z m 36.5,55.521 20,-14.5307 -7.63932,-23.5113 H 19.63932 L 12,1188.4903 Z" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -1179,12 +1313,7 @@
       <path
          id="path1080"
          d="m 44,916 v 24 H 20 Z"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         d="m -4.5,891.5 h 73 v 73 h -73 z M 44,916 20,940 h 24 z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="lpe_path-effect1078" />
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -1203,14 +1332,9 @@
        id="clipath_lpe_path-effect1118"
        clipPathUnits="userSpaceOnUse">
       <path
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="M 20,1004 V 980 H 44 Z"
          id="path1120" />
-      <path
-         d="m -4.5,955.5 h 73 v 73 h -73 z M 20,1004 44,980 H 20 Z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="lpe_path-effect1118" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -1229,14 +1353,9 @@
        id="clipath_lpe_path-effect1160"
        clipPathUnits="userSpaceOnUse">
       <path
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="M 44,876 H 20 v -24 z"
          id="path1162" />
-      <path
-         d="m -4.5,827.5 h 73 v 73 h -73 z M 44,876 20,852 v 24 z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="lpe_path-effect1160" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -1260,19 +1379,14 @@
       <path
          id="path275-2"
          d="m 20,788 h 24 v 24 z"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         d="m -4.5,763.5 h 73 v 73 h -73 z M 20,788 44,812 v -24 z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="lpe_path-effect277" />
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </clipPath>
     <clipPath
        id="clipPath263-8"
        clipPathUnits="userSpaceOnUse">
       <path
          d="m 52,726 v 20 H 12 v -20 z"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path265-1" />
       <path
          d="m -4.5,699.5 h 73 v 73 h -73 z M 52,726 H 12 v 20 h 40 z"
@@ -1285,39 +1399,301 @@
        id="clipath_lpe_path-effect1443">
       <path
          id="path1445"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 52,726 v 20 H 12 v -20 z" />
-      <path
-         id="lpe_path-effect1443"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         class="powerclip"
-         d="m -4.5,699.5 h 73 v 73 h -73 z M 52,726 H 12 v 20 h 40 z" />
     </clipPath>
     <clipPath
        id="clipath_lpe_path-effect1460"
        clipPathUnits="userSpaceOnUse">
       <path
          d="m 52,726 v 20 H 12 v -20 z"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path1462" />
-      <path
-         d="m -4.5,699.5 h 73 v 73 h -73 z M 52,726 H 12 v 20 h 40 z"
-         class="powerclip"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="lpe_path-effect1460" />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipath_lpe_path-effect1469">
       <path
          id="path1471"
-         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 52,726 v 20 H 12 v -20 z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1166">
       <path
-         id="lpe_path-effect1469"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path1168"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke-width:0.351563"
+         d="m 32.5,9.5 19.485572,11.25 v 22.5 L 32.5,54.5 13.014428,43.25 v -22.5 z" />
+    </clipPath>
+    <clipPath
+       id="clipath_lpe_path-effect1176"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         d="m 32.5,9.5 19.485572,11.25 v 22.5 L 32.5,54.5 13.014428,43.25 v -22.5 z"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke-width:0.351563"
+         id="path1178" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1200">
+      <path
+         id="path1202"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75"
+         d="m 20,148 h 24 v 24 H 20 Z" />
+      <path
+         id="lpe_path-effect1204"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75"
          class="powerclip"
-         d="m -4.5,699.5 h 73 v 73 h -73 z M 52,726 H 12 v 20 h 40 z" />
+         d="m -4.5,123.5 h 73 v 73 h -73 z M 20,148 v 24 h 24 v -24 z" />
+    </clipPath>
+    <clipPath
+       id="clipath_lpe_path-effect1210"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         d="m 20,148 h 24 v 24 H 20 Z"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75"
+         id="path1216" />
+      <path
+         d="m -4.5,123.5 h 73 v 73 h -73 z M 20,148 v 24 h 24 v -24 z"
+         class="powerclip"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75"
+         id="lpe_path-effect1210" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1238">
+      <path
+         id="path1240"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02301"
+         d="m 12,275.5 h 40 v 25 H 12 Z"
+         clip-path="none" />
+      <path
+         id="lpe_path-effect1242"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02301"
+         class="powerclip"
+         d="m -4.5,251.5 h 73 v 73 h -73 z m 16.5,24 v 25 h 40 v -25 z" />
+    </clipPath>
+    <clipPath
+       id="clipath_lpe_path-effect1248"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         clip-path="none"
+         d="m 12,275.5 h 40 v 25 H 12 Z"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02301"
+         id="path1250" />
+      <path
+         d="m -4.5,251.5 h 73 v 73 h -73 z m 16.5,24 v 25 h 40 v -25 z"
+         class="powerclip"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02301"
+         id="lpe_path-effect1248" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipath_lpe_path-effect1258">
+      <path
+         id="path1260"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02301"
+         d="m 12,275.5 h 40 v 25 H 12 Z"
+         clip-path="none" />
+      <path
+         id="lpe_path-effect1258"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02301"
+         class="powerclip"
+         d="m -4.5,251.5 h 73 v 73 h -73 z m 16.5,24 v 25 h 40 v -25 z" />
+    </clipPath>
+    <clipPath
+       id="clipath_lpe_path-effect1267"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         clip-path="none"
+         d="m 12,275.5 h 40 v 25 H 12 Z"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02301"
+         id="path1269" />
+      <path
+         d="m -4.5,251.5 h 73 v 73 h -73 z m 16.5,24 v 25 h 40 v -25 z"
+         class="powerclip"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02301"
+         id="lpe_path-effect1267" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1312">
+      <path
+         id="path1314"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none"
+         d="m 50.5,544.5 a 19,12.5 0 0 1 -19,12.5 19,12.5 0 0 1 -19,-12.5 19,12.5 0 0 1 19,-12.5 19,12.5 0 0 1 19,12.5 z" />
+      <path
+         id="lpe_path-effect1316"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         class="powerclip"
+         d="m -4.5,507.5 h 73 v 73 h -73 z m 55,37 a 19,12.5 0 0 0 -19,-12.5 19,12.5 0 0 0 -19,12.5 19,12.5 0 0 0 19,12.5 19,12.5 0 0 0 19,-12.5 z" />
+    </clipPath>
+    <clipPath
+       id="clipath_lpe_path-effect1322"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         d="m 50.5,544.5 a 19,12.5 0 0 1 -19,12.5 19,12.5 0 0 1 -19,-12.5 19,12.5 0 0 1 19,-12.5 19,12.5 0 0 1 19,12.5 z"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="path1324" />
+      <path
+         d="m -4.5,507.5 h 73 v 73 h -73 z m 55,37 a 19,12.5 0 0 0 -19,-12.5 19,12.5 0 0 0 -19,12.5 19,12.5 0 0 0 19,12.5 19,12.5 0 0 0 19,-12.5 z"
+         class="powerclip"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="lpe_path-effect1322" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipath_lpe_path-effect1331">
+      <path
+         id="path1333"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none"
+         d="m 50.5,544.5 a 19,12.5 0 0 1 -19,12.5 19,12.5 0 0 1 -19,-12.5 19,12.5 0 0 1 19,-12.5 19,12.5 0 0 1 19,12.5 z" />
+      <path
+         id="lpe_path-effect1331"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         class="powerclip"
+         d="m -4.5,507.5 h 73 v 73 h -73 z m 55,37 a 19,12.5 0 0 0 -19,-12.5 19,12.5 0 0 0 -19,12.5 19,12.5 0 0 0 19,12.5 19,12.5 0 0 0 19,-12.5 z" />
+    </clipPath>
+    <clipPath
+       id="clipath_lpe_path-effect1340"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         d="m 50.5,544.5 a 19,12.5 0 0 1 -19,12.5 19,12.5 0 0 1 -19,-12.5 19,12.5 0 0 1 19,-12.5 19,12.5 0 0 1 19,12.5 z"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="path1342" />
+      <path
+         d="m -4.5,507.5 h 73 v 73 h -73 z m 55,37 a 19,12.5 0 0 0 -19,-12.5 19,12.5 0 0 0 -19,12.5 19,12.5 0 0 0 19,12.5 19,12.5 0 0 0 19,-12.5 z"
+         class="powerclip"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="lpe_path-effect1340" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1678">
+      <path
+         id="path1680"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.520833"
+         inkscape:transform-center-x="-5.2879234e-06"
+         inkscape:transform-center-y="-4.1666634"
+         d="m 32,788.00002 14.433756,25 H 17.566244 Z" />
+      <path
+         id="lpe_path-effect1682"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.520833"
+         class="powerclip"
+         d="m -4.5,763.5 h 73 v 73 h -73 z m 36.5,24.50002 -14.433756,25 h 28.867512 z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1702">
+      <path
+         id="path1704"
+         d="M 45,876 H 21 v -24 z"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="lpe_path-effect1706"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         class="powerclip"
+         d="m -4.5,827.5 h 73 v 73 h -73 z M 45,876 21,852 v 24 z" />
+    </clipPath>
+    <clipPath
+       id="clipath_lpe_path-effect1712"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 45,876 H 21 v -24 z"
+         id="path1714" />
+      <path
+         d="m -4.5,827.5 h 73 v 73 h -73 z M 45,876 21,852 v 24 z"
+         class="powerclip"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="lpe_path-effect1712" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipath_lpe_path-effect1721">
+      <path
+         id="path1723"
+         d="M 45,876 H 21 v -24 z"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="lpe_path-effect1721"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         class="powerclip"
+         d="m -4.5,827.5 h 73 v 73 h -73 z M 45,876 21,852 v 24 z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipath_lpe_path-effect1745">
+      <path
+         id="path1749"
+         style="display:block;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75"
+         d="m 20,148 h 24 v 24 H 20 Z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1769">
+      <path
+         id="path1771"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.8125"
+         d="M 13.61514,1056 31.999916,1037.6152 50.384692,1056 31.999916,1074.3848 Z" />
+      <path
+         id="lpe_path-effect1773"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.8125"
+         class="powerclip"
+         d="m -4.5,1019.5 h 73 v 73 h -73 z M 13.61514,1056 31.999916,1074.3848 50.384692,1056 31.999916,1037.6152 Z" />
+    </clipPath>
+    <clipPath
+       id="clipath_lpe_path-effect1779"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         d="M 13.61514,1056 31.999916,1037.6152 50.384692,1056 31.999916,1074.3848 Z"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.8125"
+         id="path1781" />
+      <path
+         d="m -4.5,1019.5 h 73 v 73 h -73 z M 13.61514,1056 31.999916,1074.3848 50.384692,1056 31.999916,1037.6152 Z"
+         class="powerclip"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.8125"
+         id="lpe_path-effect1779" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipath_lpe_path-effect1788">
+      <path
+         id="path1790"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.8125"
+         d="M 13.61514,1056 31.999916,1037.6152 50.384692,1056 31.999916,1074.3848 Z" />
+      <path
+         id="lpe_path-effect1788"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.8125"
+         class="powerclip"
+         d="m -4.5,1019.5 h 73 v 73 h -73 z M 13.61514,1056 31.999916,1074.3848 50.384692,1056 31.999916,1037.6152 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath393"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         d="M 54.5,96 43.25,115.48557 H 20.75 L 9.5,96 20.75,76.514428 h 22.5 z"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke-width:0.351563"
+         id="path395" />
+      <path
+         d="m -4.5,59.5 h 73 v 73 h -73 z M 54.5,96 43.25,76.514428 H 20.75 L 9.5,96 20.75,115.48557 h 22.5 z"
+         class="powerclip"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.351563"
+         id="lpe_path-effect397" />
+    </clipPath>
+    <clipPath
+       id="clipPath408"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         d="m 32.000072,9.5 19.485572,11.25 v 22.5 L 32.000072,54.5 12.5145,43.25 v -22.5 z"
+         style="display:none;fill:#ffffff;fill-opacity:1;stroke-width:0.351563"
+         id="path410" />
+      <path
+         d="m -4.5,-4.5 h 73 v 73 h -73 z M 32.000072,9.5 12.5145,20.75 v 22.5 L 32.000072,54.5 51.485644,43.25 v -22.5 z"
+         class="powerclip"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.351563"
+         id="lpe_path-effect412" />
     </clipPath>
   </defs>
   <metadata
@@ -1328,7 +1704,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1337,789 +1713,673 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       inkscape:export-ydpi="576"
-       inkscape:export-xdpi="576"
-       inkscape:export-filename="/Users/Eleanor/monash/spatial-fyp/quilt/app/assets/sprites/questions/level_1/question_7/option_1.png"
-       transform="matrix(1.0660671,0,0,1.2278318,-6.4658352,-20.258094)"
-       inkscape:transform-center-y="-5.2786154"
-       inkscape:transform-center-x="-0.041134303"
-       d="m 111.12418,419.51511 -15.008433,0.0668 -15.008437,0.0668 7.446344,-13.0311 7.446343,-13.0311 7.562093,12.96427 z"
-       inkscape:randomized="0"
-       inkscape:rounded="0"
-       inkscape:flatsided="false"
-       sodipodi:arg2="1.5663437"
-       sodipodi:arg1="0.51914611"
-       sodipodi:r2="8.6652107"
-       sodipodi:r1="17.330421"
-       sodipodi:cy="410.91681"
-       sodipodi:cx="96.077164"
-       sodipodi:sides="3"
-       id="path5106"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="star" />
-    <path
-       y="320.5"
-       x="0.5"
-       height="63"
-       width="63"
-       id="rect701"
-       style="fill:#ffffff;stroke-width:1.18334"
-       clip-path="url(#clipPath713)"
-       inkscape:path-effect="#path-effect717"
-       d="m 0.5,320.5 h 63 v 63 h -63 z"
-       sodipodi:type="rect" />
-    <path
-       style="fill:#ffffff;stroke-width:1.18334"
-       id="rect699"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       id="rect1758"
        width="63"
        height="63"
        x="0.5"
-       y="256.5"
-       clip-path="url(#clipPath705)"
-       inkscape:path-effect="#path-effect709"
-       d="m 0.5,256.5 h 63 v 63 h -63 z"
-       sodipodi:type="rect" />
-    <path
-       style="fill:#ffffff;stroke-width:1.8813"
-       id="rect590"
-       width="63"
-       height="63"
-       x="0.5"
-       y="128.5"
+       y="1024.5"
        sodipodi:type="rect"
-       d="m 0.5,128.5 h 63 v 63 h -63 z"
-       clip-path="url(#clipPath601)"
-       inkscape:path-effect="#path-effect605" />
+       clip-path="url(#clipPath1769)"
+       inkscape:path-effect="#path-effect1773"
+       d="m 0.5,1024.5 h 63 v 63 h -63 z" />
     <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect1279"
-       width="63"
-       height="63"
-       x="0.5"
-       y="704.5"
-       clip-path="url(#clipath_lpe_path-effect469)"
-       inkscape:path-effect="#path-effect469"
-       sodipodi:type="rect"
-       transform="translate(0,-704)"
-       d="m 0.5,704.5 h 63 v 63 h -63 z" />
-    <rect
-       y="12"
-       x="86"
-       height="40"
-       width="20"
-       id="rect980"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <rect
-       style="fill:#ffffff;stroke-width:1.03127"
-       id="rect491"
-       width="40"
-       height="10"
-       x="140"
-       y="27" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 236,44 H 212 V 20 Z"
-       id="path1091" />
-    <path
-       y="640.5"
-       x="0.5"
-       height="63"
-       width="63"
-       id="rect1277"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       clip-path="url(#clipath_lpe_path-effect534)"
-       inkscape:path-effect="#path-effect534"
-       sodipodi:type="rect"
-       transform="translate(0,-576)"
-       d="m 0.5,640.5 h 63 v 63 h -63 z" />
-    <rect
-       transform="rotate(90)"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect1037"
-       width="20"
-       height="40"
-       x="86"
-       y="-116" />
-    <rect
-       style="fill:#ffffff;stroke-width:1.01051"
-       id="rect556"
-       width="40"
-       height="50"
-       x="140"
-       y="71" />
-    <circle
-       r="17.5"
-       cy="96"
-       cx="224"
-       id="path1041"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.998909;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <rect
-       transform="rotate(45)"
-       y="33.941124"
-       x="169.70563"
-       height="22.627417"
-       width="22.627417"
-       id="rect5062"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.775634;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <rect
-       y="144"
-       x="144"
-       height="32"
-       width="32"
-       id="rect5052"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.94749;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <rect
-       y="-244"
-       x="150"
-       height="40"
-       width="20"
-       id="rect624"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       transform="rotate(90)" />
-    <path
-       y="128.5"
-       x="0.5"
-       height="63"
-       width="63"
-       id="rect160"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       clip-path="url(#clipath_lpe_path-effect652)"
-       inkscape:path-effect="#path-effect652"
-       sodipodi:type="rect"
-       transform="translate(0,64)"
-       d="m 0.5,128.5 h 63 v 63 h -63 z" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.775634;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect659"
-       width="22.627417"
-       height="22.627417"
-       x="212.68629"
-       y="-107.31371"
-       transform="rotate(90)" />
-    <path
-       transform="matrix(-0.64244536,0,0,0.37045193,57.148615,277.25449)"
-       inkscape:transform-center-y="-2.6533261"
-       inkscape:transform-center-x="-0.020043505"
-       d="m -135.18875,-143.75547 -24.90484,-0.054 -24.90484,-0.054 12.49922,-21.54121 12.49921,-21.54121 12.40563,21.59525 z"
-       inkscape:randomized="0"
-       inkscape:rounded="0"
-       inkscape:flatsided="false"
-       sodipodi:arg2="1.5729661"
-       sodipodi:arg1="0.52576853"
-       sodipodi:r2="14.378851"
-       sodipodi:r1="28.757702"
-       sodipodi:cy="-158.18832"
-       sodipodi:cx="-160.06239"
-       sodipodi:sides="3"
-       id="path5067"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="star" />
-    <ellipse
-       ry="12"
-       rx="16"
-       cy="224"
-       cx="224"
-       id="path5098"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.05828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <ellipse
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.05828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="ellipse691"
-       cx="96"
-       cy="288"
-       rx="16"
-       ry="12" />
-    <ellipse
-       transform="rotate(90)"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.05828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="ellipse695"
-       cx="352"
-       cy="-96"
-       rx="16"
-       ry="12" />
-    <ellipse
-       ry="24"
-       rx="12"
-       cy="288"
-       cx="160"
-       id="path5094"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.30186;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <rect
-       transform="rotate(90)"
-       y="-236.5"
-       x="275.5"
-       height="25"
-       width="25"
-       id="rect736"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.856963;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <ellipse
-       style="fill:#ffffff;stroke-width:1.07183"
-       id="path738"
-       cx="160"
-       cy="352"
-       rx="17.5"
-       ry="5" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 236,364 H 212 V 340 Z"
-       id="path1091-6" />
-    <path
-       transform="matrix(0.82916333,0,0,0.95498032,16.276925,-47.505973)"
-       inkscape:transform-center-y="5.2786316"
-       inkscape:transform-center-x="-0.041132009"
-       d="m 115.44538,467.727 -9.72269,16.66835 -9.722691,16.66835 -9.57387,-16.75427 -9.573869,-16.75427 19.29656,0.0859 z"
-       inkscape:randomized="0"
-       inkscape:rounded="0"
-       inkscape:flatsided="false"
-       sodipodi:arg2="0.52805144"
-       sodipodi:arg1="-0.51914611"
-       sodipodi:r2="11.140985"
-       sodipodi:r1="22.281969"
-       sodipodi:cy="478.78195"
-       sodipodi:cx="96.099213"
-       sodipodi:sides="3"
-       id="path5112"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="star" />
-    <path
-       y="384.5"
-       x="0.5"
-       height="63"
-       width="63"
-       id="rect1269"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       clip-path="url(#clipath_lpe_path-effect803)"
-       inkscape:path-effect="#path-effect803"
-       sodipodi:type="rect"
-       d="m 0.5,384.5 h 63 v 63 h -63 z" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect1271"
-       width="63"
-       height="63"
-       x="0.5"
-       y="448.5"
-       clip-path="url(#clipath_lpe_path-effect801)"
-       inkscape:path-effect="#path-effect801"
-       sodipodi:type="rect"
-       d="m 0.5,448.5 h 63 v 63 h -63 z" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.856963;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect836"
-       width="25"
-       height="25"
-       x="403.5"
-       y="-172.5"
-       transform="rotate(90)" />
-    <rect
-       transform="rotate(90)"
-       y="-249"
-       x="403.5"
-       height="50"
-       width="25"
-       id="rect838"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.21193;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.775634;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect849"
-       width="22.627417"
-       height="22.627417"
-       x="441.23462"
-       y="214.96046"
-       transform="rotate(45)" />
-    <circle
-       style="fill:#ffffff;stroke-width:0.946251"
-       id="path851"
-       cx="224"
-       cy="480"
-       r="16" />
-    <path
-       d="m 180,1119.9995 -10,17.3205 h -20 l -10,-17.3205 10,-17.3205 h 20 z"
-       inkscape:randomized="0"
-       inkscape:rounded="0"
-       inkscape:flatsided="true"
-       sodipodi:arg2="0.52359878"
-       sodipodi:arg1="0"
-       sodipodi:r2="17.320507"
-       sodipodi:r1="20"
-       sodipodi:cy="1119.9995"
-       sodipodi:cx="160"
-       sodipodi:sides="6"
-       id="path1190"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="star"
-       transform="rotate(90,416,800)" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect1291"
-       width="63"
-       height="63"
-       x="0.5"
-       y="1088.5"
-       clip-path="url(#clipath_lpe_path-effect915)"
-       inkscape:path-effect="#path-effect915"
-       sodipodi:type="rect"
-       transform="rotate(90,320,832)"
-       d="m 0.5,1088.5 h 63 v 63 h -63 z" />
-    <path
-       sodipodi:type="star"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.657164;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path1214"
-       sodipodi:sides="5"
-       sodipodi:cx="213.56619"
-       sodipodi:cy="1013.0292"
-       sodipodi:r1="21.029243"
-       sodipodi:r2="17.013016"
-       sodipodi:arg1="-1.5707963"
-       sodipodi:arg2="-0.9424778"
-       inkscape:flatsided="true"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 213.56619,991.99993 20,14.53087 -7.63932,23.5114 -24.72136,0 -7.63932,-23.5114 z"
-       inkscape:transform-center-y="2.0081962"
-       transform="matrix(1,0,0,-0.99999319,-53.566194,1554.0352)" />
-    <rect
-       style="fill:#ffffff;stroke-width:1.04418"
-       id="rect937"
-       width="45"
-       height="30"
-       x="201.5"
-       y="593" />
-    <path
-       sodipodi:type="star"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.657164;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path1214-3"
-       sodipodi:sides="5"
-       sodipodi:cx="213.56619"
-       sodipodi:cy="1013.0292"
-       sodipodi:r1="21.029243"
-       sodipodi:r2="17.013016"
-       sodipodi:arg1="-1.5707963"
-       sodipodi:arg2="-0.9424778"
-       inkscape:flatsided="true"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 213.56619,991.99993 20,14.53087 -7.63932,23.5114 -24.72136,0 -7.63932,-23.5114 z"
-       inkscape:transform-center-y="2.0081962"
-       transform="matrix(1,0,0,-0.99999319,-117.56619,1619.0142)" />
-    <path
-       y="1152.5"
-       x="0.5"
-       height="63"
-       width="63"
-       id="rect1293"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       clip-path="url(#clipath_lpe_path-effect968)"
-       inkscape:path-effect="#path-effect968"
-       sodipodi:type="rect"
-       transform="matrix(1,0,0,-1,0,1792)"
-       d="m 0.5,1152.5 h 63 v 63 h -63 z" />
-    <path
-       sodipodi:type="star"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path976"
-       sodipodi:sides="3"
-       sodipodi:cx="96.077164"
-       sodipodi:cy="410.91681"
-       sodipodi:r1="17.330421"
-       sodipodi:r2="8.6652107"
-       sodipodi:arg1="0.51914611"
-       sodipodi:arg2="1.5663437"
-       inkscape:flatsided="false"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 111.12418,419.51511 -15.008433,0.0668 -15.008437,0.0668 7.446344,-13.0311 7.446343,-13.0311 7.562093,12.96427 z"
-       inkscape:transform-center-x="-0.041134303"
-       inkscape:transform-center-y="-5.2786154"
-       transform="matrix(1.0660671,0,0,1.2278318,121.53416,43.741906)"
-       inkscape:export-filename="/Users/Eleanor/monash/spatial-fyp/quilt/app/assets/sprites/questions/level_1/question_7/option_1.png"
-       inkscape:export-xdpi="576"
-       inkscape:export-ydpi="576" />
-    <path
-       transform="scale(-1)"
-       sodipodi:type="star"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path978"
-       sodipodi:sides="6"
-       sodipodi:cx="-160.00051"
-       sodipodi:cy="-608"
-       sodipodi:r1="20"
-       sodipodi:r2="17.320507"
-       sodipodi:arg1="0"
-       sodipodi:arg2="0.52359878"
-       inkscape:flatsided="true"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m -140.0005,-608 -10,17.32051 h -20 l -10,-17.32051 10,-17.32051 h 20 z" />
-    <path
-       d="m -76.000488,-672 -10,17.32051 h -20.000002 l -10,-17.32051 10,-17.32051 h 20.000002 z"
-       inkscape:randomized="0"
-       inkscape:rounded="0"
-       inkscape:flatsided="true"
-       sodipodi:arg2="0.52359878"
-       sodipodi:arg1="0"
-       sodipodi:r2="17.320507"
-       sodipodi:r1="20"
-       sodipodi:cy="-672"
-       sodipodi:cx="-96.000488"
-       sodipodi:sides="6"
-       id="path1190-1"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="star"
-       transform="scale(-1)" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect1291-3"
-       width="63"
-       height="63"
-       x="0.5"
-       y="1088.5"
-       clip-path="url(#clipath_lpe_path-effect1009)"
-       inkscape:path-effect="#path-effect1009"
-       sodipodi:type="rect"
-       transform="translate(0,-448)"
-       d="m 0.5,1088.5 h 63 v 63 h -63 z" />
-    <path
-       transform="matrix(0,0.75,-0.75,0,999.99951,552)"
-       sodipodi:type="star"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path1016"
-       sodipodi:sides="6"
-       sodipodi:cx="160"
-       sodipodi:cy="1119.9995"
-       sodipodi:r1="20"
-       sodipodi:r2="17.320507"
-       sodipodi:arg1="0"
-       sodipodi:arg2="0.52359878"
-       inkscape:flatsided="true"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 180,1119.9995 -10,17.3205 h -20 l -10,-17.3205 10,-17.3205 h 20 z" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 236,684 H 212 V 660 Z"
-       id="path1091-9" />
-    <path
-       transform="matrix(1,0,0,0.99999319,-117.56619,-275.0142)"
-       inkscape:transform-center-y="-2.0081962"
-       d="m 213.56619,991.99993 20,14.53087 -7.63932,23.5114 -24.72136,0 -7.63932,-23.5114 z"
-       inkscape:randomized="0"
-       inkscape:rounded="0"
-       inkscape:flatsided="true"
-       sodipodi:arg2="-0.9424778"
-       sodipodi:arg1="-1.5707963"
-       sodipodi:r2="17.013016"
-       sodipodi:r1="21.029243"
-       sodipodi:cy="1013.0292"
-       sodipodi:cx="213.56619"
-       sodipodi:sides="5"
-       id="path1033"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.657164;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="star" />
-    <path
-       d="m 0.5,1152.5 h 63 v 63 h -63 z"
-       transform="translate(0,-448)"
-       sodipodi:type="rect"
-       inkscape:path-effect="#path-effect1037"
-       clip-path="url(#clipath_lpe_path-effect1037)"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path1035"
-       width="63"
-       height="63"
-       x="0.5"
-       y="1152.5" />
-    <path
-       sodipodi:type="star"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.657164;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path1045"
-       sodipodi:sides="5"
-       sodipodi:cx="213.56619"
-       sodipodi:cy="1013.0292"
-       sodipodi:r1="21.029243"
-       sodipodi:r2="17.013016"
-       sodipodi:arg1="-1.5707963"
-       sodipodi:arg2="-0.9424778"
-       inkscape:flatsided="true"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 213.56619,991.99993 20,14.53087 -7.63932,23.5114 -24.72136,0 -7.63932,-23.5114 z"
-       inkscape:transform-center-y="2.7614244"
-       transform="matrix(1.3750001,0,0,-1.3749906,-133.65354,2126.1443)"
-       inkscape:transform-center-x="-1.8743026e-05" />
-    <path
-       id="path1047"
-       d="M 236,748 H 212 V 724 Z"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       id="path1117"
-       d="m 83.999999,788 v 24 H 108 Z"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       y="896.5"
-       x="0.5"
-       height="63"
-       width="63"
-       id="rect1285"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       clip-path="url(#clipath_lpe_path-effect1078)"
-       inkscape:path-effect="#path-effect1078"
-       sodipodi:type="rect"
-       transform="translate(0,-128)"
-       d="m 0.5,896.5 h 63 v 63 h -63 z" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 176,784 v 32 h -32 z"
-       id="path1085" />
-    <path
-       d="m -208.99937,-800 -7.5,12.99038 -15,0 -7.5,-12.99038 7.5,-12.99038 15,0 z"
-       inkscape:randomized="0"
-       inkscape:rounded="0"
-       inkscape:flatsided="true"
-       sodipodi:arg2="0.52359878"
-       sodipodi:arg1="0"
-       sodipodi:r2="12.99038"
-       sodipodi:r1="15"
-       sodipodi:cy="-800"
-       sodipodi:cx="-223.99937"
-       sodipodi:sides="6"
-       id="path1087"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.46875;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="star"
-       transform="scale(-1)" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 84,852 h 24 v 24 z"
-       id="path1119" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect1287"
-       width="63"
-       height="63"
-       x="0.5"
-       y="960.5"
-       clip-path="url(#clipath_lpe_path-effect1118)"
-       inkscape:path-effect="#path-effect1118"
-       sodipodi:type="rect"
-       transform="translate(0,-128)"
-       d="m 0.5,960.5 h 63 v 63 h -63 z" />
-    <path
-       id="path1125"
-       d="M 166,934 H 154 V 922 Z"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       sodipodi:type="star"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path1127"
-       sodipodi:sides="3"
-       sodipodi:cx="96.077164"
-       sodipodi:cy="410.91681"
-       sodipodi:r1="17.330421"
-       sodipodi:r2="8.6652107"
-       sodipodi:arg1="0.51914611"
-       sodipodi:arg2="1.5663437"
-       inkscape:flatsided="false"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 111.12418,419.51511 -15.008433,0.0668 -15.008437,0.0668 7.446344,-13.0311 7.446343,-13.0311 7.562093,12.96427 z"
-       inkscape:transform-center-x="-0.041134303"
-       inkscape:transform-center-y="-5.2786154"
-       transform="matrix(1.0660671,0,0,1.2278318,57.534165,363.74191)"
-       inkscape:export-filename="/Users/Eleanor/monash/spatial-fyp/quilt/app/assets/sprites/questions/level_1/question_7/option_1.png"
-       inkscape:export-xdpi="576"
-       inkscape:export-ydpi="576" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.856963;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect1129"
-       width="25"
-       height="25"
-       x="851.5"
-       y="-236.5"
-       transform="rotate(90)" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 108,916 v 24 H 84 Z"
-       id="path1091-94" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect1283"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       id="rect1700"
        width="63"
        height="63"
        x="0.5"
        y="832.5"
-       clip-path="url(#clipath_lpe_path-effect1160)"
-       inkscape:path-effect="#path-effect1160"
-       sodipodi:type="rect"
-       transform="translate(0,64)"
-       d="m 0.5,832.5 h 63 v 63 h -63 z" />
+       clip-path="url(#clipPath1702)"
+       inkscape:path-effect="#path-effect1706"
+       d="m 0.5,832.5 h 63 v 63 h -63 z"
+       sodipodi:type="rect" />
     <path
-       id="path1333"
-       d="m 211.5,915.5 h 18 l 7,7 v 18 h -20 l -5,-5 z"
-       style="fill:#ffffff;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 83.999996,1004 V 980 H 108.00001 Z"
-       id="path1052" />
-    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       id="rect1675"
+       width="63"
+       height="63"
+       x="0.5"
+       y="768.5"
+       clip-path="url(#clipPath1678)"
+       inkscape:path-effect="#path-effect1682"
        d="m 0.5,768.5 h 63 v 63 h -63 z"
-       transform="translate(0,192)"
-       sodipodi:type="rect"
-       inkscape:path-effect="#path-effect277"
-       clip-path="url(#clipPath273-0)"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect1281"
+       sodipodi:type="rect" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       id="rect1309"
        width="63"
        height="63"
        x="0.5"
-       y="768.5" />
+       y="512.5"
+       clip-path="url(#clipPath1312)"
+       inkscape:path-effect="#path-effect1316"
+       d="m 0.5,512.5 h 63 v 63 h -63 z"
+       sodipodi:type="rect" />
     <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 154,986 h 12 v 12 z"
-       id="path1364" />
-    <rect
-       transform="rotate(45)"
-       y="534.57269"
-       x="851.35657"
-       height="16.970562"
-       width="16.970562"
-       id="rect849-9"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.581725;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <rect
-       y="-834.58704"
-       x="668.82251"
-       height="40"
-       width="20"
-       id="rect1037-8"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       transform="rotate(135)" />
+       id="rect1294"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       d="m 214,462 v 7 h -6 v 22.5 h 6 v 6.5 h 20 v -6.5 h 7 V 469 h -7 v -7 z" />
     <path
-       d="m 0.5,704.5 h 63 v 63 h -63 z"
-       transform="translate(0,320)"
-       sodipodi:type="rect"
-       inkscape:path-effect="#path-effect267"
-       clip-path="url(#clipPath263-8)"
-       y="704.5"
-       x="0.5"
-       height="63"
-       width="63"
-       id="rect1279-7"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <rect
-       y="1041"
-       x="137.5"
-       height="30"
-       width="45"
-       id="rect1410"
-       style="fill:#ffffff;stroke-width:1.04418" />
-    <path
-       id="path1437"
-       d="m 212,1045.6077 h 24 l 6,10.3923 -6,10.3923 H 212 L 206,1056 Z"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <rect
-       transform="rotate(-135)"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect1439"
-       width="20"
-       height="40"
-       x="-869.84186"
-       y="-744.07733" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path1441"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       id="rect1235"
        width="63"
        height="63"
        x="0.5"
-       y="704.5"
-       clip-path="url(#clipath_lpe_path-effect1443)"
-       inkscape:path-effect="#path-effect1443"
-       sodipodi:type="rect"
-       transform="translate(0,384)"
-       d="m 0.5,704.5 h 63 v 63 h -63 z" />
-    <rect
-       transform="rotate(135)"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect1450"
-       width="20"
-       height="40"
-       x="759.33234"
-       y="-925.09686" />
-    <rect
-       y="-834.58716"
-       x="-960.35168"
-       height="40"
-       width="20"
-       id="rect1452"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       transform="rotate(-135)" />
-    <ellipse
-       ry="12"
-       rx="16"
-       cy="1120"
-       cx="160"
-       id="ellipse1454"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.05828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <circle
-       r="16"
-       cy="1120"
-       cx="224"
-       id="circle1456"
-       style="fill:#ffffff;stroke-width:0.946251" />
+       y="256.5"
+       clip-path="url(#clipPath1238)"
+       inkscape:path-effect="#path-effect1242"
+       d="m 0.5,256.5 h 63 v 63 h -63 z"
+       sodipodi:type="rect" />
     <path
-       d="m 0.5,704.5 h 63 v 63 h -63 z"
-       transform="rotate(-90,256,960)"
-       sodipodi:type="rect"
-       inkscape:path-effect="#path-effect1460"
-       clip-path="url(#clipath_lpe_path-effect1460)"
-       y="704.5"
-       x="0.5"
-       height="63"
-       width="63"
-       id="path1458"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.4087;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path1467"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       id="rect1197"
        width="63"
        height="63"
        x="0.5"
-       y="704.5"
-       clip-path="url(#clipath_lpe_path-effect1469)"
-       inkscape:path-effect="#path-effect1469"
-       sodipodi:type="rect"
-       transform="rotate(-90,288,992)"
-       d="m 0.5,704.5 h 63 v 63 h -63 z" />
-    <rect
-       y="1156.5"
-       x="145"
-       height="55"
-       width="30"
-       id="rect1476"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984968;stroke-opacity:1" />
+       y="128.5"
+       clip-path="url(#clipPath1200)"
+       inkscape:path-effect="#path-effect1204"
+       d="m 0.5,128.5 h 63 v 63 h -63 z"
+       sodipodi:type="rect" />
     <path
-       transform="matrix(-0.625,-0.25888348,0.25888348,-0.625,49.197688,2001.9899)"
-       d="m 256,1216 -9.37258,22.6274 L 224,1248 201.37258,1238.6274 192,1216 201.37258,1193.3726 224,1184 l 22.62742,9.3726 z"
+       transform="rotate(-90,96.250036,32.249964)"
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.351563"
+       id="path321"
+       sodipodi:sides="6"
+       sodipodi:cx="96.5"
+       sodipodi:cy="32"
+       sodipodi:r1="22.5"
+       sodipodi:r2="19.485571"
+       sodipodi:arg1="0"
+       sodipodi:arg2="0.52359878"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 119,32 107.75,51.485572 H 85.25 L 74,32 85.25,12.514428 l 22.5,0 z" />
+    <path
+       transform="matrix(0,-0.66666667,0.66666667,0,138.69,53.666667)"
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.351563"
+       id="path1148"
+       sodipodi:sides="6"
+       sodipodi:cx="32.5"
+       sodipodi:cy="32"
+       sodipodi:r1="22.5"
+       sodipodi:r2="19.485571"
+       sodipodi:arg1="0"
+       sodipodi:arg2="0.52359878"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 55,32 43.75,51.485572 H 21.25 L 10,32 21.25,12.514428 l 22.5,0 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.649518px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 206,20 v 24 h 36 z"
+       id="path1158" />
+    <path
+       d="m 118.5,96 -11.25,19.48557 H 84.75 L 73.5,96 84.75,76.514428 h 22.5 z"
        inkscape:randomized="0"
        inkscape:rounded="0"
        inkscape:flatsided="true"
-       sodipodi:arg2="0.39269908"
+       sodipodi:arg2="0.52359878"
        sodipodi:arg1="0"
-       sodipodi:r2="29.564144"
-       sodipodi:r1="32"
-       sodipodi:cy="1216"
-       sodipodi:cx="224"
-       sodipodi:sides="8"
-       id="path1478"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"
+       sodipodi:r2="19.485571"
+       sodipodi:r1="22.5"
+       sodipodi:cy="96"
+       sodipodi:cx="96"
+       sodipodi:sides="6"
+       id="path1183"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.351563"
        sodipodi:type="star" />
-    <rect
-       transform="rotate(90)"
-       y="-172.5"
-       x="1235.5"
-       height="25"
-       width="25"
-       id="rect1480"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.856963;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
-       d="M 216.5 1228 L 216.5 1233 L 211.5 1233 L 211.5 1263 L 216.5 1263 L 216.5 1268 L 231.5 1268 L 231.5 1263 L 236.5 1263 L 236.5 1233 L 231.5 1233 L 231.5 1228 L 216.5 1228 z "
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.940019;stroke-opacity:1"
-       id="rect1482" />
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.739309"
+       id="path1185"
+       sodipodi:sides="5"
+       sodipodi:cx="-160"
+       sodipodi:cy="-93.639641"
+       sodipodi:r1="23.6579"
+       sodipodi:r2="19.139643"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.9424778"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m -160,-117.29754 22.5,16.34721 -8.59424,26.450333 -27.81153,-1e-6 -8.59423,-26.450332 z"
+       inkscape:transform-center-x="-1.1792821e-06"
+       transform="scale(-1)"
+       inkscape:transform-center-y="2.2591264" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.520833"
+       id="path1187"
+       sodipodi:sides="3"
+       sodipodi:cx="224"
+       sodipodi:cy="100.66667"
+       sodipodi:r1="16.666666"
+       sodipodi:r2="8.333333"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 224,84.000006 238.43376,109.00001 209.56624,109 Z"
+       inkscape:transform-center-y="-4.1666634"
+       inkscape:transform-center-x="-5.2879234e-06" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75"
+       id="rect1189"
+       width="24"
+       height="24"
+       x="84"
+       y="148" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.940604"
+       id="rect1193"
+       width="32"
+       height="32"
+       x="144"
+       y="144" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.00244"
+       id="rect1195"
+       width="42"
+       height="18"
+       x="203"
+       y="151" />
+    <path
+       sodipodi:type="rect"
+       d="m 0.5,128.5 h 63 v 63 h -63 z"
+       inkscape:path-effect="#path-effect1210"
+       clip-path="url(#clipath_lpe_path-effect1210)"
+       y="128.5"
+       x="0.5"
+       height="63"
+       width="63"
+       id="path1208"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       transform="translate(0,64)" />
+    <rect
+       y="211"
+       x="83"
+       height="26"
+       width="26"
+       id="rect1212"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.8125" />
+    <rect
+       y="255.52901"
+       x="-61.254833"
+       height="32"
+       width="32"
+       id="rect1214"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.940604"
+       transform="rotate(-45)" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75"
+       id="path1223"
+       cx="224"
+       cy="224"
+       r="12" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02301"
+       id="rect1225"
+       width="40"
+       height="25"
+       x="76"
+       y="275.5" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02301"
+       id="rect1229"
+       width="40"
+       height="25"
+       x="76.000008"
+       y="339.5" />
+    <rect
+       y="-108.49999"
+       x="396"
+       height="25"
+       width="40"
+       id="rect1231"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02301"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02301"
+       id="rect1233"
+       width="40"
+       height="25"
+       x="-500"
+       y="83.500015"
+       transform="rotate(-90)" />
+    <path
+       sodipodi:type="rect"
+       d="m 0.5,256.5 h 63 v 63 h -63 z"
+       inkscape:path-effect="#path-effect1248"
+       clip-path="url(#clipath_lpe_path-effect1248)"
+       y="256.5"
+       x="0.5"
+       height="63"
+       width="63"
+       id="path1246"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       transform="translate(0,64)" />
+    <path
+       transform="rotate(-90,96,352)"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       id="path1255"
+       width="63"
+       height="63"
+       x="0.5"
+       y="256.5"
+       clip-path="url(#clipath_lpe_path-effect1258)"
+       inkscape:path-effect="#path-effect1258"
+       d="m 0.5,256.5 h 63 v 63 h -63 z"
+       sodipodi:type="rect" />
+    <path
+       sodipodi:type="rect"
+       d="m 0.5,256.5 h 63 v 63 h -63 z"
+       inkscape:path-effect="#path-effect1267"
+       clip-path="url(#clipath_lpe_path-effect1267)"
+       y="256.5"
+       x="0.5"
+       height="63"
+       width="63"
+       id="path1265"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       transform="rotate(-90,128,384)" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.934848"
+       id="rect1274"
+       width="55"
+       height="30"
+       x="133"
+       y="273" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 208,274.14359 200,288 l 8,13.85641 h 32 L 248,288 240,274.14359 Z"
+       id="path1280" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="path1282"
+       cx="160"
+       cy="352.25"
+       rx="18.5"
+       ry="10.25" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="path1284"
+       cx="224"
+       cy="352"
+       r="16" />
+    <rect
+       y="145.5"
+       x="-443.5"
+       height="30"
+       width="55"
+       id="rect1286"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.934848"
+       transform="rotate(-90)" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="path1288"
+       sodipodi:sides="8"
+       sodipodi:cx="256"
+       sodipodi:cy="448"
+       sodipodi:r1="32"
+       sodipodi:r2="29.564144"
+       sodipodi:arg1="0"
+       sodipodi:arg2="0.39269908"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 288,448 278.62742,470.62742 256,480 233.37258,470.62742 224,448 233.37258,425.37258 256,416 l 22.62742,9.37258 z"
+       transform="matrix(0.25888348,-0.625,0.625,0.25888348,-122.27417,461.0202)" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75"
+       id="rect1290"
+       width="24"
+       height="24"
+       x="148"
+       y="468" />
+    <ellipse
+       ry="12.5"
+       rx="19"
+       cy="544.5"
+       cx="95.500008"
+       id="ellipse1301"
+       style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="ellipse1303"
+       cx="95.5"
+       cy="608.5"
+       rx="19"
+       ry="12.5" />
+    <ellipse
+       ry="12.5"
+       rx="19"
+       cy="-96"
+       cx="672"
+       id="ellipse1305"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       transform="rotate(90)" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="ellipse1307"
+       cx="736.5"
+       cy="-95.5"
+       rx="19"
+       ry="12.5"
+       transform="rotate(90)" />
+    <path
+       sodipodi:type="rect"
+       d="m 0.5,512.5 h 63 v 63 h -63 z"
+       inkscape:path-effect="#path-effect1322"
+       clip-path="url(#clipath_lpe_path-effect1322)"
+       y="512.5"
+       x="0.5"
+       height="63"
+       width="63"
+       id="path1320"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       transform="translate(0,64)" />
+    <path
+       transform="rotate(-90,96,608)"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       id="path1329"
+       width="63"
+       height="63"
+       x="0.5"
+       y="512.5"
+       clip-path="url(#clipath_lpe_path-effect1331)"
+       inkscape:path-effect="#path-effect1331"
+       d="m 0.5,512.5 h 63 v 63 h -63 z"
+       sodipodi:type="rect" />
+    <path
+       sodipodi:type="rect"
+       d="m 0.5,512.5 h 63 v 63 h -63 z"
+       inkscape:path-effect="#path-effect1340"
+       clip-path="url(#clipath_lpe_path-effect1340)"
+       y="512.5"
+       x="0.5"
+       height="63"
+       width="63"
+       id="path1338"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       transform="rotate(-90,128,640)" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.01274"
+       id="rect1347"
+       width="45"
+       height="20"
+       x="137.5"
+       y="534" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.0093"
+       id="path1349"
+       cx="160"
+       cy="608"
+       rx="22.5"
+       ry="5" />
+    <circle
+       r="16"
+       cy="544"
+       cx="224"
+       id="circle1351"
+       style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    <path
+       id="path428"
+       d="M 237,620 H 213 V 596 Z"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.05586"
+       id="path1663"
+       cx="160"
+       cy="672"
+       rx="6"
+       ry="18" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75"
+       id="circle1665"
+       cx="224"
+       cy="672"
+       r="12" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.982607"
+       id="path1667"
+       cx="160"
+       cy="736"
+       rx="8"
+       ry="21" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.02677"
+       id="rect1669"
+       width="22"
+       height="34"
+       x="213"
+       y="719" />
+    <path
+       inkscape:transform-center-x="-5.3051809e-06"
+       inkscape:transform-center-y="-4.1666631"
+       d="m 96,788.00002 14.43376,25 -28.867516,0 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="-0.52359878"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:r2="8.333333"
+       sodipodi:r1="16.666666"
+       sodipodi:cy="804.66669"
+       sodipodi:cx="96"
+       sodipodi:sides="3"
+       id="path1671"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.520833"
+       sodipodi:type="star" />
+    <path
+       inkscape:transform-center-y="-5.9999878"
+       d="m 157.56624,788.00004 12,20.78461 -24,0 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="-0.52359878"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:r2="6.9282031"
+       sodipodi:r1="13.856406"
+       sodipodi:cy="801.85645"
+       sodipodi:cx="157.56624"
+       sodipodi:sides="3"
+       id="path1686"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.433012"
+       sodipodi:type="star"
+       transform="matrix(1.5,0,0,1.7320507,-76.349358,-582.85602)"
+       inkscape:transform-center-x="-1.637486e-05" />
+    <rect
+       y="788"
+       x="212"
+       height="24"
+       width="24"
+       id="rect1688"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 109,876 H 85 v -24 z"
+       id="path1690" />
+    <path
+       sodipodi:type="rect"
+       d="m 0.5,832.5 h 63 v 63 h -63 z"
+       inkscape:path-effect="#path-effect1712"
+       clip-path="url(#clipath_lpe_path-effect1712)"
+       y="832.5"
+       x="0.5"
+       height="63"
+       width="63"
+       id="path1710"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       transform="translate(0,64)" />
+    <path
+       transform="translate(0,128)"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       id="path1719"
+       width="63"
+       height="63"
+       x="0.5"
+       y="832.5"
+       clip-path="url(#clipath_lpe_path-effect1721)"
+       inkscape:path-effect="#path-effect1721"
+       d="m 0.5,832.5 h 63 v 63 h -63 z"
+       sodipodi:type="rect" />
+    <path
+       id="path1728"
+       d="M 179,882 H 143 V 846 Z"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.918559px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 179,940 H 143 V 916 Z"
+       id="path1730" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.889499px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 208,849.16484 212,846 h 24 l 3.99999,3.16483 2e-5,32.83517 h -32 z"
+       id="path1735" />
+    <circle
+       r="12"
+       cy="928"
+       cx="224"
+       id="circle1737"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75" />
+    <path
+       id="path1739"
+       d="M 167,998 H 155 V 986 Z"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75"
+       id="rect1741"
+       width="24"
+       height="24"
+       x="212"
+       y="980" />
+    <rect
+       transform="rotate(-45)"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.8125"
+       id="rect1747"
+       width="26"
+       height="26"
+       x="-691.82257"
+       y="801.58698" />
+    <path
+       d="m 0.5,1024.5 h 63 v 63 h -63 z"
+       inkscape:path-effect="#path-effect1779"
+       clip-path="url(#clipath_lpe_path-effect1779)"
+       sodipodi:type="rect"
+       y="1024.5"
+       x="0.5"
+       height="63"
+       width="63"
+       id="path1777"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       transform="translate(0,64)" />
+    <path
+       transform="translate(0,128)"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.984375"
+       id="path1786"
+       width="63"
+       height="63"
+       x="0.5"
+       y="1024.5"
+       sodipodi:type="rect"
+       clip-path="url(#clipath_lpe_path-effect1788)"
+       inkscape:path-effect="#path-effect1788"
+       d="m 0.5,1024.5 h 63 v 63 h -63 z" />
+    <path
+       id="path1797"
+       d="M 144.02944,1064.4851 161,1047.5145 l 16.97056,16.9706 z"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.00275"
+       id="path1799"
+       cx="224"
+       cy="1056"
+       rx="16"
+       ry="10" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 152.5147,1103.0292 16.9706,16.9706 -16.9706,16.9706 z"
+       id="path1801" />
+    <path
+       id="path1803"
+       d="m 173,1196 h -24 v -24 z"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <rect
+       y="1001.264"
+       x="653.1579"
+       height="13.776604"
+       width="13.776604"
+       id="rect1805"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.430519"
+       transform="rotate(22.5)" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="path1807"
+       sodipodi:sides="5"
+       sodipodi:cx="320"
+       sodipodi:cy="1152"
+       sodipodi:r1="32"
+       sodipodi:r2="25.888544"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.9424778"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 320,1120 30.43381,22.1115 -11.62468,35.777 -37.61826,0 -11.62468,-35.777 z"
+       inkscape:transform-center-y="-1.5835908"
+       transform="matrix(0.65716389,0,0,0.51823725,13.707555,524.57428)" />
+    <path
+       id="path378"
+       d="M 109,940 H 85 v -24 z"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 109,1004 H 85 v -24 z"
+       id="path380" />
+    <rect
+       y="846.8418"
+       x="-737.07739"
+       height="26"
+       width="26"
+       id="rect382"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.8125"
+       transform="rotate(-45)" />
+    <rect
+       transform="rotate(-45)"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.8125"
+       id="rect384"
+       width="26"
+       height="26"
+       x="-782.33221"
+       y="892.09662" />
+    <path
+       sodipodi:type="rect"
+       d="m 0.5,64.5 h 63 v 63 h -63 z"
+       inkscape:path-effect="#path-effect397"
+       clip-path="url(#clipPath393)"
+       y="64.5"
+       x="0.5"
+       height="63"
+       width="63"
+       id="rect388"
+       style="fill:#ffffff;stroke-width:0.984375" />
+    <path
+       sodipodi:type="rect"
+       d="m 0.5,0.5 h 63 v 63 h -63 z"
+       inkscape:path-effect="#path-effect412"
+       clip-path="url(#clipPath408)"
+       y="0.5"
+       x="0.5"
+       height="63"
+       width="63"
+       id="rect403"
+       style="fill:#ffffff;stroke-width:0.984375" />
   </g>
 </svg>

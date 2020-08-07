@@ -25,21 +25,15 @@ func shuffle_question_order():
 	var shuffled_normal_questions = shuffle_list(range(1, questions_available_for_level + 1))
 	
 	if (hard_questions_required == 0 || hard_questions_available == 0):
-		sliced_shuffled_questions = shuffled_normal_questions.slice(0, constants.questions_per_level + 1)
+		sliced_shuffled_questions = shuffled_normal_questions.slice(0, constants.questions_per_level - 1)
 	else:
 		var num_normal_questions = constants.questions_per_level - hard_questions_required
 		var sliced_shuffled_normal_questions = shuffled_normal_questions.slice(0, num_normal_questions - 1)
-		print("sliced_shuffled_normal_questions:")
-		print(sliced_shuffled_normal_questions)
 		
 		var shuffled_hard_questions = shuffle_list(range(1, hard_questions_available + 1))
 		var sliced_shuffled_hard_questions = shuffled_hard_questions.slice(0, hard_questions_required - 1)
-		print("sliced_shuffled_hard_questions:")
-		print(sliced_shuffled_hard_questions)
 		
 		sliced_shuffled_questions = sliced_shuffled_normal_questions + sliced_shuffled_hard_questions
-		print("sliced_shuffled_questions")
-		print(sliced_shuffled_questions)
 	
 	return sliced_shuffled_questions
 

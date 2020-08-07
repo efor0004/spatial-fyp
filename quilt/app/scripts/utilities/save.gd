@@ -8,8 +8,6 @@ var general_utils = GeneralUtils.new()
 var file = File.new()
 
 func set_state_for_player():
-	print("Retrieving data for %s" % global.character_name)
-	
 	var saved_data = File.new()
 	saved_data.open(save_file_path, File.READ)
 	
@@ -24,12 +22,9 @@ func set_state_for_player():
 		if (!data):
 			continue
 		
-		print(data)
-		
 		var index = data["index"]
 		
 		if (index == global.character_index):
-			print(data)
 			level = data["level"]
 			question = data["question"]
 			question_order = data["question_order"]

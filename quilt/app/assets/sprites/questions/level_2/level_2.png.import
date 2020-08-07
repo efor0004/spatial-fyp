@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/level_1_hard.png-9d07e83817692f92e8dc5c159541e40b.stex"
+path="res://.import/level_2.png-079e15f494c9ffeb2935ce660833d046.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/questions/level_1_hard.png"
-dest_files=[ "res://.import/level_1_hard.png-9d07e83817692f92e8dc5c159541e40b.stex" ]
+source_file="res://assets/sprites/questions/level_2/level_2.png"
+dest_files=[ "res://.import/level_2.png-079e15f494c9ffeb2935ce660833d046.stex" ]
 
 [params]
 

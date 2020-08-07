@@ -3,6 +3,7 @@ extends Sprite
 onready var current_fabric = get_current_fabric()
 
 var quilt_size = 384
+var texture_width = 4 * quilt_size
 var initial_texture_y = 0
 var initial_quilt_texture_offset = Vector2(0, 0)
 var initial_options_texture_offset = [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
@@ -22,7 +23,6 @@ onready var progress_quilt = get_parent().get_node("Progress Quilt")
 
 signal piece_added
 signal ready_for_options
-signal set_next_question
 
 func _ready():
 	save_utils.set_state_for_player()
@@ -60,10 +60,12 @@ func next_question():
 		set_textures_for_level()
 		global.question_order = general_utils.shuffle_question_order()
 	
+	global.current_shuffled_question = global.question_order[global.current_question - 1]
+	
 	set_shapes()
 	set_question_fabric()
-	emit_signal("set_next_question")
 	save_utils.save_progress()
+	emit_signal("ready_for_options")
 
 func set_textures_for_level():
 	set_texture_offsets()
@@ -79,28 +81,30 @@ func set_textures_for_level():
 		option_shape.set_texture(level_texture)
 
 func set_texture_offsets():
+	var texture_height = get_texture_height()
+	
+	initial_texture_y = (texture_height - quilt_size) / 2
+	initial_quilt_texture_offset = Vector2(576, initial_texture_y)
+	initial_options_texture_offset = [Vector2(192, initial_texture_y), Vector2(-192, initial_texture_y), Vector2(-576, initial_texture_y)]
+
+func get_texture_height():
 	var questions_available_for_level = constants.questions_available_per_level[global.current_level - 1]
 	
 	if (global.current_level_difficulty == "hard"):
 		questions_available_for_level = constants.num_hard_questions_per_level[global.current_level - 1]["available"]
 	
 	var texture_height = questions_available_for_level * quilt_size
-	
-	initial_texture_y = (texture_height - quilt_size) / 2
-	initial_quilt_texture_offset = Vector2(576, initial_texture_y)
-	initial_options_texture_offset = [Vector2(192, initial_texture_y), Vector2(-192, initial_texture_y), Vector2(-576, initial_texture_y)]
+	return texture_height
 
 func set_shapes():
-	global.current_shuffled_question = global.question_order[global.current_question - 1]
-	
 	set_holey_quilt_shape()
 	set_options_shapes()
 
 func get_level_path():
 	if (global.current_level_difficulty == "hard"):
-		return "res://assets/sprites/questions/level_%d_hard.png" % global.current_level
+		return "res://assets/sprites/questions/level_%d/level_%d_hard.png" % [global.current_level, global.current_level]
 	
-	return "res://assets/sprites/questions/level_%d.png" % global.current_level
+	return "res://assets/sprites/questions/level_%d/level_%d.png" % [global.current_level, global.current_level]
 
 func get_holey_quilt():
 	var holey_quilt = get_node("Layer1/HoleyQuilt")

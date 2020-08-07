@@ -20,35 +20,31 @@ func pressed():
 	
 	if is_correct:
 		if (option_rotation != 0):
-			add_option_rotation_animation(option_rotation)
+			add_option_rotation_animation()
 		
 		if (option_flip != constants.FLIP_NONE):
-			add_option_flip_animation(option_flip)
+			add_option_flip_animation()
 		
 		animation_player.play("Correct")
 		yield(animation_player, "animation_finished")
 		question.next_question()
 		yield(question, "piece_added")
-		reset_transformation()
+		reset_animations()
 	else:
 		animation_player.play("Incorrect")
 		yield(animation_player, "animation_finished")
 
-func add_option_flip_animation(option_flip):
+func add_option_flip_animation():
 	var animation_name = "scale"
-	var animation_start_value = Vector2(1, 1)
+	var animation_start_value = self.scale
 	var animation_end_value = Vector2(1, 1)
-	if (option_flip == constants.FLIP_VERTICAL):
-		animation_end_value = Vector2(1, -1)
-	elif (option_flip == constants.FLIP_HORIZONTAL):
-		animation_end_value = Vector2(-1, 1)
 	
 	add_option_animation(animation_name, animation_start_value, animation_end_value)
 
-func add_option_rotation_animation(option_rotation):
+func add_option_rotation_animation():
 	var animation_name = "rotation_degrees"
-	var animation_start_value = 0
-	var animation_end_value = option_rotation
+	var animation_start_value = self.rotation_degrees
+	var animation_end_value = 0
 	
 	add_option_animation(animation_name, animation_start_value, animation_end_value)
 
@@ -68,10 +64,7 @@ func add_option_animation(animation_name, animation_start_value, animation_end_v
 	correct_animation.track_insert_key(new_track_num, 0, animation_start_value)
 	correct_animation.track_insert_key(new_track_num, animation_duration, animation_end_value)
 
-func reset_transformation():
-	self.rotation_degrees = 0
-	self.scale = Vector2(1, 1)
-	
+func reset_animations():
 	var correct_animation = get_correct_animation()
 	var num_tracks = correct_animation.get_track_count()
 	
@@ -118,32 +111,25 @@ func get_option_transformations():
 	
 	return level_transformations
 
-func transform_fabric(fabric_rotation, fabric_flip):
-	var fabric = get_node("Fabric Texture")
-	fabric.rotation_degrees = -fabric_rotation
-	if (fabric_flip == constants.FLIP_VERTICAL):
-		fabric.flip_v = true
-		fabric.flip_h = false
-	elif (fabric_flip == constants.FLIP_HORIZONTAL):
-		fabric.flip_h = true
-		fabric.flip_v = false
+func transform_option(option_rotation, option_flip):
+	print("option rotation: %d, option flip: %s" % [option_rotation, option_flip])
+	self.rotation_degrees = -option_rotation
+	if (option_flip == constants.FLIP_VERTICAL):
+		self.scale = Vector2(1, -1)
+	elif (option_flip == constants.FLIP_HORIZONTAL):
+		self.scale = Vector2(-1, 1)
 	else:
-		fabric.flip_h = false
-		fabric.flip_v = false
+		self.scale = Vector2(1, 1)
 
 func set_initial_transformations():
+	print("setting transformations")
 	if (is_correct_answer()):
 		var option_transformations = get_option_transformations()
 		var option_rotation = option_transformations["rotation"]
 		var option_flip = option_transformations["flip"]
-		print("transforming fabric")
-		print(option_rotation, option_flip)
-		transform_fabric(option_rotation, option_flip)
+		transform_option(option_rotation, option_flip)
 	else:
-		transform_fabric(0, constants.FLIP_NONE)
-
-func _on_Question_set_next_question():
-	set_initial_transformations()
+		transform_option(0, constants.FLIP_NONE)
 
 func _input_event(_viewport, event, _shape_idx):
 	if is_animation_happening():
@@ -172,7 +158,6 @@ func get_all_animation_players():
 			list.append(node)
 	
 	return list
-
 
 func _on_Question_ready_for_options():
 	set_initial_transformations()
