@@ -14,6 +14,9 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by left arrow controlling the displayed shapes in the toolbar in a given puzzle
         //selection of this button shifts all displayed shapes right letting the user "scroll left"
 
+        if(Global.SoundEffects == true)
+           FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         for (int i = 0; i < TouchRotate.toolbarArray.Length; i++)
         {
             TouchRotate.toolbarArray[i]  = TouchRotate.toolbarArray[i] + Global.shapeOffset; 
@@ -28,6 +31,9 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //triggered by right arrow controlling the displayed shapes in the toolbar in a given puzzle
         //selection of this button shifts all displayed shapes left letting the user "scroll right"
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         for (int i = 0; i < TouchRotate.toolbarArray.Length; i++)
         {
@@ -45,6 +51,9 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by start button on home screen
         //loads the World Selection scene
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         SceneManager.LoadScene("Worlds");
     }
 
@@ -52,6 +61,9 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //triggered by the settings button on home screen
         //moves the home screen menu out of view to the right and brings the settings menu into view
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         GameObject.Find("MainMenu").transform.localPosition = Global.rightPosition;
         GameObject.Find("SettingsMenu").transform.localPosition = Global.centrePosition;
@@ -62,6 +74,9 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by the Parental Info button on home screen
         //moves the home screen menu out of view upwards and brings the parental info menu into view
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         GameObject.Find("MainMenu").transform.localPosition = Global.topPosition;
         GameObject.Find("ParentalinfoMenu").transform.localPosition = Global.centrePosition;
     }
@@ -71,7 +86,9 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by the back button on settings menu
         //moves thesettings menu out of view to the right and brings the home menu into view
 
-       
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         Save.SaveSettings();                                                                          //save changes to settings
 
         GameObject.Find("MainMenu").transform.localPosition = Global.centrePosition;
@@ -83,15 +100,20 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by toggling the music button on the settings menu
         //toggles themusic on and off
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         Global.Music = !Global.Music;
 
         if (Global.Music == true)
         {
             GameObject.Find("MusicButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("on");
+            FindObjectOfType<AudioManager>().Play("Music"); //plays music
         }
         else
         {
             GameObject.Find("MusicButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("off");
+            FindObjectOfType<AudioManager>().Stop("Music"); //stops music
         }
     }
 
@@ -104,6 +126,7 @@ public class ButtonBehaviour : MonoBehaviour
 
         if (Global.SoundEffects == true)
         {
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
             GameObject.Find("SoundEffectsButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("on");
         }
         else
@@ -116,6 +139,9 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //sets game to Easy mode (larger tolerances in placement)
         //triggered by tapping Easy button in Settings in main menu
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         Global.Easy = true;
         Global.Medium = false;
@@ -134,6 +160,9 @@ public class ButtonBehaviour : MonoBehaviour
         // sets game to Medium mode(standard tolerances in placement)
         //triggered by tapping Medium button in Settings in main menu
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         Global.Easy = false;
         Global.Medium = true;
         Global.Hard = false;
@@ -150,6 +179,9 @@ public class ButtonBehaviour : MonoBehaviour
     {
         // sets game to Hard mode(smaller tolerances in placement)
         //triggered by tapping Hard button in Settings in main menu
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         Global.Easy = false;
         Global.Medium = false;
@@ -168,6 +200,9 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by the back button on the parental info menu
         //moves the parental info menu out of view above and brings the home menu into view
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         GameObject.Find("MainMenu").transform.localPosition = Global.centrePosition;
         GameObject.Find("ParentalinfoMenu").transform.localPosition = Global.topPosition;
     }
@@ -177,6 +212,9 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the home button on the completed puzzle popup
         //loads the home scene
         //note: do not add destroyshapes and nextpuzzle ready or a puzzle is skipped
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = true; //reactivate buttons globally
         Global.LeftArrowActive = true;
@@ -189,6 +227,9 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the home button on the world selection menu
         //loads the home scene
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         SceneManager.LoadScene("Menu");
     }
 
@@ -196,8 +237,9 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //is triggered when the START button is pressed on the popup after a puzzle is complete
 
-        //GameObject.Find("PopupStart").transform.localPosition = Global.rightPosition;     //moves the pop-up box out of screen
-      
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         GameObject.Find("PopupPuzzle").transform.localPosition = Global.rightPosition;     //moves the pop-up box out of screen
         GameObject.Find("PopupLevel").transform.localPosition = Global.rightPosition;     //moves the pop-up box out of screen
         GameObject.Find("PopupWorld").transform.localPosition = Global.rightPosition;     //moves the pop-up box out of screen
@@ -218,6 +260,9 @@ public class ButtonBehaviour : MonoBehaviour
         //pop-up displays menu options
         //triggered when hamburdher symbol is pressed in puzzle 
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         GameObject.Find("PopupMenu").transform.localPosition = Global.centrePosition;     //moves the pop-up into centre of screen
         
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;         //de-activates buttons
@@ -235,6 +280,9 @@ public class ButtonBehaviour : MonoBehaviour
         //loads home menu
         //also remembers that the current puzzle is incomplete
         //triggered by pressing home button in hamburger popup menu within puzzle
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
 
@@ -324,6 +372,8 @@ public class ButtonBehaviour : MonoBehaviour
         //closes the menu pop up
         //triggered by pressing the X button on the menu pop-up within a puzzle 
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
 
@@ -341,6 +391,9 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //starts the puzzle over from the beginning
         //triggered by pressing the restart button in the hamburdger menu within a puzzle
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
 
@@ -429,6 +482,9 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by pressing the skip button in the hamburdger menu within a puzzle
         //note: do not add destroyshapes and nextpuzzle ready or a puzzle is skipped
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
 
         // re - activate shapes
@@ -445,6 +501,9 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //loads previous puzzle
         //triggered by pressing the previousbutton in the hamburdger menu within a puzzle
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
 
@@ -586,6 +645,9 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the Playground button on the land selection menu
         //loads the Playground scene
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         if (Global.PlaygroundComplete == 1)
         {
             //resets progress if World is completed
@@ -602,6 +664,9 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //is triggered by the Triangle City button on the land selection menu
         //loads the Triangle scene
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         if (Global.TriangleComplete == 1)
         {
@@ -621,6 +686,9 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the Mouse Shapes button on the land selection menu
         //loads the Mouse scene
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         if (Global.MouseComplete == 1)
         {
             //resets progress if World is completed
@@ -637,6 +705,9 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //is triggered by the Wild button on the land selection menu
         //loads the Wild scene
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         if (Global.WildComplete == 1)
         {
@@ -655,6 +726,9 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the Farm button on the land selection menu
         //loads the Farm scene
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         if (Global.FarmComplete == 1)
         {
             //resets progress if World is completed
@@ -672,6 +746,9 @@ public class ButtonBehaviour : MonoBehaviour
         //is triggered by the Free Play button on the land selection menu
         //loads the Free Play scene
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         SceneManager.LoadScene("Moviemaker");
     }
 
@@ -679,6 +756,9 @@ public class ButtonBehaviour : MonoBehaviour
     {
         //resets all saved data and returns settings to default value 
         //triggered by pressing reset data in settings menu
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         Save.ResetData(); 
 

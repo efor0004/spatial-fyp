@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Level
-    clip: {fileID: 8300000, guid: 54e0ba06107fa604aab6b58bf27dcdb9, type: 3}
-    volume: 0.625
+  - name: PuzzleComplete
+    clip: {fileID: 8300000, guid: 307723fab011a9b4f8707f6498843c7a, type: 3}
+    volume: 0.506
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -55,4 +55,28 @@ MonoBehaviour:
     volume: 0.322
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: Correct
+    clip: {fileID: 8300000, guid: bbe046b5c226e35488bf35c4a8b6e03b, type: 3}
+    volume: 0.483
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Button
+    clip: {fileID: 8300000, guid: 247f621eefa5c904a887c4b929b61e8f, type: 3}
+    volume: 0.483
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Shape
+    clip: {fileID: 8300000, guid: ceb99c45f76d1ff43aa4d1054f4e6d1a, type: 3}
+    volume: 0.483
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Return
+    clip: {fileID: 8300000, guid: ccc5e2c973816f64b99f319c770fbd4e, type: 3}
+    volume: 0.483
+    pitch: 1
+    loop: 0
     source: {fileID: 0}

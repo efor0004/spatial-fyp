@@ -98,7 +98,10 @@ public class TouchRotate : MonoBehaviour
                         {
                             if (myCollider == Physics2D.OverlapPoint(touchPos))                                                             //if the touch position overlaps with the 2D collider of the shape
                             {
-                                
+
+                                //if(Global.SoundEffects == true)
+                                //   FindObjectOfType<AudioManager>().Play("Shape"); //plays shape selection sound
+
                                 if (Input.touchCount == 2 && circleArray[System.Array.IndexOf(nameArray, go.name)] == false)
                                 {                                                                                                            //updates rotation                                                                                                     
                                     Quaternion desiredRotation = go.gameObject.transform.rotation;                                           //start desiredRotation as the current orientation of the shape
@@ -172,6 +175,9 @@ public class TouchRotate : MonoBehaviour
 
                             Vector4 OldColour = go.GetComponent<SpriteRenderer>().color;
                             Vector4 NewColour = OldColour + Global.ColourOffset;
+
+                            if (Global.SoundEffects == true)
+                                FindObjectOfType<AudioManager>().Play("Correct"); //plays correct placement sound
                            
                             StartCoroutine(FlashObject(go, OldColour, NewColour, 0.5f, 0.125f));                                                         //make correclty placed piece flash
 
@@ -180,6 +186,9 @@ public class TouchRotate : MonoBehaviour
                         }
                         else if (go.transform.position.y < Camera.main.ScreenToWorldPoint(GameObject.Find("Divider").transform.position).y)              //if piece is released inside toolbar
                         {
+                           // if (Global.SoundEffects == true)
+                           //    FindObjectOfType<AudioManager>().Play("Return"); //plays return to toolbar sound sound
+
                             go.transform.position = toolbarArray[System.Array.IndexOf(nameArray, go.name)];
                             go.transform.rotation = Quaternion.Euler(toolbarRotationArray[System.Array.IndexOf(nameArray, go.name)]);
 

@@ -269,8 +269,9 @@ public class Global : MonoBehaviour
         piecesPlaced = 0;                                                                //reset to avoid looping
 
         GameObject.Find("PopupPuzzle").transform.localPosition = popupPosition;          //creates a popup
-                                                                                         //  GameObject.Find("PopupPuzzle").GetComponent<AudioSource>().Play(); //
-        FindObjectOfType<AudioManager>().Play("Level"); //plays end of level sound
+        
+        if (SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("PuzzleComplete"); //plays end of level sound
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
         LeftArrowActive = false;
@@ -286,9 +287,11 @@ public class Global : MonoBehaviour
         Debug.Log("Level Complete!");
         piecesPlaced = 0;                                                                //reset to avoid looping
 
+        
         GameObject.Find("PopupLevel").transform.localPosition = popupPosition;          //creates a popup
-                                                                                        //  GameObject.Find("PopupLevel").GetComponent<AudioSource>().Play(); //
-        FindObjectOfType<AudioManager>().Play("Level"); //plays end of level sound
+        
+        if (SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("PuzzleComplete"); //plays end of level sound
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
         LeftArrowActive = false;
@@ -307,7 +310,8 @@ public class Global : MonoBehaviour
 
         GameObject.Find("PopupWorld").transform.localPosition = popupPosition;          //creates a popup
         
-        FindObjectOfType<AudioManager>().Play("Level"); //plays end of level sound
+        if (SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("PuzzleComplete"); //plays end of level sound
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;    //disables background buttons
         LeftArrowActive = false;
