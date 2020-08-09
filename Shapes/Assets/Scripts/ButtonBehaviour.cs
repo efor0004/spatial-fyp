@@ -108,12 +108,12 @@ public class ButtonBehaviour : MonoBehaviour
         if (Global.Music == true)
         {
             GameObject.Find("MusicButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("on");
-            FindObjectOfType<AudioManager>().Play("Music"); //plays music
+            FindObjectOfType<AudioManager>().Play("BackgroundMusic"); //plays music
         }
         else
         {
             GameObject.Find("MusicButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("off");
-            FindObjectOfType<AudioManager>().Stop("Music"); //stops music
+            FindObjectOfType<AudioManager>().Stop("BackgroundMusic"); //stops music
         }
     }
 

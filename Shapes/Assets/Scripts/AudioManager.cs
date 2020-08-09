@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
-using System; 
+using System;
+
+//Music and Sound Effects Credit 
+// background music: https://freesound.org/people/FoolBoyMedia/sounds/264295/
+// tap: https://freesound.org/people/kwahmah_02/sounds/256116/
+// successul placement: https://freesound.org/people/shinephoenixstormcrow/sounds/337049/
+// end of puzzle: https://freesound.org/people/LittleRobotSoundFactory/sounds/270404/
 
 public class AudioManager : MonoBehaviour
 {
@@ -43,7 +49,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         if (Global.Music == true)
-            Play("Music"); 
+            Play("BackgroundMusic"); 
     }
 
 

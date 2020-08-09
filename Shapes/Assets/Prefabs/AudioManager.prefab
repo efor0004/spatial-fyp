@@ -50,9 +50,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Music
-    clip: {fileID: 8300000, guid: 2fe38d5114d96d74d801b9f380497fc6, type: 3}
-    volume: 0.322
+  - name: BackgroundMusic
+    clip: {fileID: 8300000, guid: a73c869faf84dcb4680ece4689d6538f, type: 3}
+    volume: 0.538
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -64,18 +64,6 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Button
     clip: {fileID: 8300000, guid: 247f621eefa5c904a887c4b929b61e8f, type: 3}
-    volume: 0.483
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Shape
-    clip: {fileID: 8300000, guid: ceb99c45f76d1ff43aa4d1054f4e6d1a, type: 3}
-    volume: 0.483
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Return
-    clip: {fileID: 8300000, guid: ccc5e2c973816f64b99f319c770fbd4e, type: 3}
     volume: 0.483
     pitch: 1
     loop: 0

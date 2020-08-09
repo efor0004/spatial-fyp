@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// UI Credit
+// Puzzle Stage & Settings GUI pack by CHOCOBALL (free on Unity Asset Store)
+
 public class Menu : MonoBehaviour
 {
     // Controls the Menu scene
     // In particular loading Settings
-                                               //true if the game is opened
+                        
+
+
     void Start()
     {
 
