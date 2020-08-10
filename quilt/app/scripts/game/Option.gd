@@ -112,7 +112,6 @@ func get_option_transformations():
 	return level_transformations
 
 func transform_option(option_rotation, option_flip):
-	print("option rotation: %d, option flip: %s" % [option_rotation, option_flip])
 	self.rotation_degrees = -option_rotation
 	if (option_flip == constants.FLIP_VERTICAL):
 		self.scale = Vector2(1, -1)
@@ -122,7 +121,6 @@ func transform_option(option_rotation, option_flip):
 		self.scale = Vector2(1, 1)
 
 func set_initial_transformations():
-	print("setting transformations")
 	if (is_correct_answer()):
 		var option_transformations = get_option_transformations()
 		var option_rotation = option_transformations["rotation"]
