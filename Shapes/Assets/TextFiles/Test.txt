@@ -9,3 +9,8 @@ Global.RenderShapeVariable("Shape4", "Semicircle", new Vector3(-1.778f, 0.696f, 
 Global.RenderShapeVariable("Shape5", "Circle", new Vector3(-0.38f, -0.52f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.419279f, 0.249184f, 1f), "Shape2", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), false, 5,false);
 Global.RenderShapeVariable("Shape6", "Trapezoid", new Vector3(-0.12f, -2.18f, 0f), new Vector3(0f, 0f, 27.69507f), new Vector3(0.05897153f, 0.2077645f, 1f), "Shape2", new Vector4(0.7830189f, 0.4764596f, 0.4899844f, 1f), false, 6,false);
 Global.RenderShapeVariable("Shape7", "TriangleR", new Vector3(0.3986f, -2.4086f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2360714f, 0.1193104f, 1f), "Shape3", new Vector4(0.7830189f, 0.4764596f, 0.4899844f, 1f), false, 7,false);
+
+ *********************** NEW TEST ************************ 
+
+Global.RenderShapeFixed("Shape0", "TriangleI", new Vector3(0.1424218f, 0.4473302f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Shape1", new Vector4(1f, 0f, 0.05237484f, 1f), false, 0, false);
+Global.RenderShapeVariable("Shape1", "Pentagon", new Vector3(0.04f, 3.84f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.531f, 0.531f, 0.531f), "Shape2", new Vector4(1f, 0.7064719f, 0f, 1f), false, 1,false);
