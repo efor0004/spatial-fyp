@@ -764,31 +764,4 @@ public class ButtonBehaviour : MonoBehaviour
 
     }
 
-    public void RecordButton()
-    {
-        //starts recording audio and screencapturing
-        // triggered by pressing green button in movie-maker
-
-        if (Global.SoundEffects == true)
-            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
-
-        Global.Recording = !Global.Recording; //toggle value
-
-        if (Global.Recording == false) //not recording
-        {
-            GameObject.Find("RecordButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("start"); //green - not recording
-            GameObject.Find("RecordText").GetComponent<Text>().text = "START";  
-
-
-        }
-        else   //recording
-        {
-            GameObject.Find("RecordButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("stop"); //red - currently recording
-            GameObject.Find("RecordText").GetComponent<Text>().text = "STOP";
-
-
-        }
-
-    }
-
 }

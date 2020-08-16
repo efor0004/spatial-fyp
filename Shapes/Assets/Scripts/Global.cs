@@ -25,8 +25,6 @@ public class Global : MonoBehaviour
     public static bool Medium = true;
     public static bool Hard = false;
 
-    public static bool Recording = false; 
-
     public static float EasyPositionTolerance = 1.2f;
     public static float EasyRotationTolerance = 30.0f;
 

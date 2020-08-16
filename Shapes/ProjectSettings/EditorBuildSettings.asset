@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Wild.unity
     guid: c47c33c0d47d6d848a657e3c1d913614
+  - enabled: 1
+    path: Assets/Scenes/Gallery.unity
+    guid: 61bf85da915ca204c885cc3a01c4e31e
   m_configObjects: {}

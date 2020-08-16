@@ -8,10 +8,6 @@ public class MovieMaker : MonoBehaviour
 {
     //the script that controls all of the puzzles in the Mouse Shapes scene
 
-  
-    int TotalPuzzles = 1;
-    int n = 0;
-
     void Start()
     {
         Puzzle1();
@@ -27,10 +23,6 @@ public class MovieMaker : MonoBehaviour
     {
         //puzzle 1 in the Movie Maker
         //a test
-
-        Debug.Log("Puzzle 1 run"); //////
-
-       // GameObject.Find("PreviousButton").GetComponent<Button>().interactable = false; //make previous button false on first puzzle
 
         Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
 
