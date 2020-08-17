@@ -108,12 +108,15 @@ export(Array) var level_option_transformations = [
 	{ "normal": level_2_option_transformations, "hard": level_2_hard_option_transformations } # level 2
 ]
 
+# var hard_questions_per_level = 4
+var hard_questions_per_level = 0
+
 export(Array) var num_hard_questions_per_level = [
-	{ "required": 4, "available": 13 }, # level 1
-	{ "required": 4, "available": 30 } # level 2
+	{ "required": hard_questions_per_level, "available": 13 }, # level 1
+	{ "required": hard_questions_per_level, "available": 30 } # level 2
 ]
 
-export var questions_per_level = 10
+export var questions_per_level = 2
 
 export(Array) var questions_available_per_level = [
 	30, # level 1

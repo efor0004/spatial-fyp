@@ -54,12 +54,14 @@ func next_question():
 		global.current_level += 1
 		global.current_level_difficulty = "normal"
 		
-		if (global.current_level > constants.max_levels):
-			global.current_level = 1
-			global.current_question = 1
+		# if (global.current_level > constants.max_levels):
+			# global.current_level = 1
+			# global.current_question = 1
 		
 		set_textures_for_level()
 		global.question_order = general_utils.shuffle_question_order()
+		
+		get_tree().change_scene("res://Progress Screen.tscn")
 	
 	global.current_shuffled_question = global.question_order[global.current_question - 1]
 	
