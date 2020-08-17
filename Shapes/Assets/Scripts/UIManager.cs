@@ -37,8 +37,13 @@ public class UIManager : MonoBehaviour
         if (Global.SoundEffects == true)
             FindObjectOfType<AudioManager>().Play("Button"); //plays button sound      //not working
 
+        GameObject.Find("Canvas").GetComponent<Canvas>().enabled = false; //disable UI during record
+
         GameObject.Find("StartButton").GetComponent<Button>().interactable = false;
         GameObject.Find("StopButton").GetComponent<Button>().interactable = true;
+
+        if (Global.Music == true)
+            FindObjectOfType<AudioManager>().Stop("BackgroundMusic"); //stops background music
 
         recordManager.StartRecord();
     }
@@ -52,6 +57,11 @@ public class UIManager : MonoBehaviour
 
         GameObject.Find("StartButton").GetComponent<Button>().interactable = true;
         GameObject.Find("StopButton").GetComponent<Button>().interactable = false;
+
+        GameObject.Find("Canvas").GetComponent<Canvas>().enabled = true; //re-enable UI after record
+
+        if (Global.Music == true)
+            FindObjectOfType<AudioManager>().Play("BackgroundMusic"); //restarts background music
     }
 
     //public void RecordButton()                
