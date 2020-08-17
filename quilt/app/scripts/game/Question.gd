@@ -7,6 +7,7 @@ var texture_width = 4 * quilt_size
 var initial_texture_y = 0
 var initial_quilt_texture_offset = Vector2(0, 0)
 var initial_options_texture_offset = [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
+var x_regions = [quilt_size, quilt_size * 2, quilt_size * 3]
 
 var option_positions = [Vector2(821, 768), Vector2(1256, 768), Vector2(1721, 768)]
 
@@ -122,6 +123,10 @@ func get_new_y_offset(y_offset):
 	var new_y_offset = y_offset - (quilt_size * (global.current_shuffled_question - 1))
 	return new_y_offset
 
+func get_new_y_region():
+	var new_y_region = quilt_size * (global.current_shuffled_question - 1)
+	return new_y_region
+
 func set_holey_quilt_shape():
 	var holey_quilt_shape = get_holey_quilt_shape()
 	
@@ -145,11 +150,23 @@ func set_options_shapes():
 		
 		var new_y_offset = get_new_y_offset(y_offset)
 		option_mask.offset = Vector2(x_offset, new_y_offset)
+		
+		var option_border = get_option_border(i)
+		
+		var x_region = x_regions[shape_no - 1]
+		var new_y_region = get_new_y_region()
+		
+		option_border.region_rect = Rect2(x_region, new_y_region, quilt_size, quilt_size)
 
 func get_option_shape(i):
 	var node_path = "AnimationPlayer%d/Layer%d/Option %d/Light2D" % [i, i+1, i]
 	var option_mask = get_node(node_path)
 	return option_mask
+
+func get_option_border(i):
+	var node_path = "AnimationPlayer%d/Layer%d/Option %d/Border" % [i, i+1, i]
+	var option_border = get_node(node_path)
+	return option_border
 
 func set_question_fabric():
 	current_fabric = get_current_fabric()

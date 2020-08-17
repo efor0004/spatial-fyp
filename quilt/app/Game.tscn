@@ -415,6 +415,13 @@ range_height = 1.0
 range_layer_min = 2
 range_layer_max = 2
 
+[node name="Border" type="Sprite" parent="Question/AnimationPlayer1/Layer2/Option 1"]
+scale = Vector2( 1.1, 1.1 )
+z_index = -1
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 384, 1920, 384, 384 )
+
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Question"]
 anims/Correct = SubResource( 8 )
 anims/Incorrect = SubResource( 9 )
@@ -450,12 +457,20 @@ region_enabled = true
 region_rect = Rect2( 80, 80, 384, 384 )
 
 [node name="Light2D" type="Light2D" parent="Question/AnimationPlayer2/Layer3/Option 2"]
+position = Vector2( 0, -2.5545 )
 texture = ExtResource( 4 )
 offset = Vector2( -192, 3650 )
 mode = 2
 range_height = 1.0
 range_layer_min = 3
 range_layer_max = 3
+
+[node name="Border" type="Sprite" parent="Question/AnimationPlayer2/Layer3/Option 2"]
+scale = Vector2( 1.1, 1.1 )
+z_index = -1
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 768, 1920, 384, 384 )
 
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Question"]
 anims/Correct = SubResource( 13 )
@@ -501,6 +516,13 @@ mode = 2
 range_height = 1.0
 range_layer_min = 4
 range_layer_max = 4
+
+[node name="Border" type="Sprite" parent="Question/AnimationPlayer3/Layer4/Option 3"]
+scale = Vector2( 1.1, 1.1 )
+z_index = -1
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 1152, 1920, 384, 384 )
 
 [node name="Progress Quilt" type="Sprite" parent="."]
 script = ExtResource( 7 )
