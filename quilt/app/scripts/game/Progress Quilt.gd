@@ -11,6 +11,9 @@ var initial_quilt_piece_y = quilt_size_scaled / 2
 
 var animation_duration = 4
 
+const Constants = preload("../utilities/constants.gd")
+var constants = Constants.new()
+
 const GeneralUtils = preload("../utilities/general.gd")
 var general_utils = GeneralUtils.new()
 
@@ -21,7 +24,7 @@ func add_pre_animation_piece(fabric_path):
 
 func add_all_pieces_for_state():
 	for level in range(1, global.current_level + 1):
-		var max_questions = global.questions_per_level
+		var max_questions = constants.questions_per_level
 		
 		if (level == global.current_level):
 			max_questions = global.current_question - 1
@@ -86,7 +89,7 @@ func animate_quilt_piece():
 	emit_signal("done_animating")
 
 func get_current_piece_index():
-	var current_piece_index = (global.current_level - 1) * global.questions_per_level + global.current_question - 1
+	var current_piece_index = (global.current_level - 1) * constants.questions_per_level + global.current_question - 1
 	return current_piece_index
 
 func get_piece_end_position(level, question):

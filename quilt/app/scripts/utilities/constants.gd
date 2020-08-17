@@ -1,31 +1,123 @@
 extends Node
 
+export var FLIP_HORIZONTAL = "flip-horizontal"
+export var FLIP_VERTICAL = "flip-vertical"
+export var FLIP_NONE = "flip-none"
+
 # All rotations are clockwise
 
-var level_2_option_rotations = [
-	90,
-	90,
-	45,
-	45,
-	90,
-	90,
-	180,
-	180,
-	90,
-	180,
-	90,
-	180,
-	270,
-	270,
-	90,
-	90,
-	135,
-	45,
-	45,
-	135
+var level_1_option_transformations = { "rotation": 0, "flip": FLIP_NONE }
+
+var level_1_hard_option_transformations = [
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": 0, "flip": FLIP_HORIZONTAL },
+	{ "rotation": 0, "flip": FLIP_HORIZONTAL },
+	{ "rotation": 0, "flip": FLIP_VERTICAL },
+	{ "rotation": 0, "flip": FLIP_VERTICAL },
+	{ "rotation": 0, "flip": FLIP_HORIZONTAL },
+	{ "rotation": 0, "flip": FLIP_HORIZONTAL },
+	{ "rotation": 0, "flip": FLIP_HORIZONTAL },
+	{ "rotation": 0, "flip": FLIP_HORIZONTAL },
+	{ "rotation": 0, "flip": FLIP_HORIZONTAL }
 ]
 
-export(Array) var level_option_rotations = [
-	0, # level 1
-	level_2_option_rotations # level 2
+var level_2_option_transformations = [
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": -22.5, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": -22.5, "flip": FLIP_NONE },
+	{ "rotation": 22.5, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": -15, "flip": FLIP_NONE },
+	{ "rotation": 180, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": 22.5, "flip": FLIP_NONE },
+	{ "rotation": 22.5, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": -90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": 0, "flip": FLIP_VERTICAL },
+	{ "rotation": 0, "flip": FLIP_VERTICAL },
+	{ "rotation": 0, "flip": FLIP_VERTICAL },
+	{ "rotation": 0, "flip": FLIP_VERTICAL },
+	{ "rotation": 0, "flip": FLIP_VERTICAL },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": 0, "flip": FLIP_HORIZONTAL },
+	{ "rotation": 0, "flip": FLIP_NONE },
+	{ "rotation": -90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": 180, "flip": FLIP_NONE },
+	{ "rotation": 180, "flip": FLIP_NONE },
+	{ "rotation": 180, "flip": FLIP_NONE },
+	{ "rotation": -90, "flip": FLIP_NONE },
+	{ "rotation": -22.5, "flip": FLIP_NONE },
 ]
+
+var level_2_hard_option_transformations = [
+	{ "rotation": -22.5, "flip": FLIP_NONE },
+	{ "rotation": 22.5, "flip": FLIP_NONE },
+	{ "rotation": 0, "flip": FLIP_NONE },
+	{ "rotation": 22.5, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": -90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": -90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": -90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": -90, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": 0, "flip": FLIP_HORIZONTAL },
+	{ "rotation": -90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": -90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": -90, "flip": FLIP_NONE },
+	{ "rotation": 90, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE },
+	{ "rotation": -45, "flip": FLIP_NONE },
+	{ "rotation": 45, "flip": FLIP_NONE }
+]
+
+export(Array) var level_option_transformations = [
+	{ "normal": level_1_option_transformations, "hard": level_1_hard_option_transformations }, # level 1
+	{ "normal": level_2_option_transformations, "hard": level_2_hard_option_transformations } # level 2
+]
+
+export(Array) var num_hard_questions_per_level = [
+	{ "required": 4, "available": 13 }, # level 1
+	{ "required": 4, "available": 30 } # level 2
+]
+
+export var questions_per_level = 10
+
+export(Array) var questions_available_per_level = [
+	30, # level 1
+	42 # level 2 - NOTE: max 42 questions per png
+]
+
+export var max_levels = 2
