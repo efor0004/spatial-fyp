@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+
 
 public class ButtonBehaviour : MonoBehaviour
 {
@@ -764,31 +765,32 @@ public class ButtonBehaviour : MonoBehaviour
 
     }
 
-    public void RecordButton()
-    {
-        //starts recording audio and screencapturing
-        // triggered by pressing green button in movie-maker
+    //public void RecordButton()
+    //{
+    //    //starts recording audio and screencapturing
+    //    // triggered by pressing green button in movie-maker
 
-        if (Global.SoundEffects == true)
-            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+    //    if (Global.SoundEffects == true)
+    //        FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
-        Global.Recording = !Global.Recording; //toggle value
+    //    Global.Recording = !Global.Recording; //toggle value
 
-        if (Global.Recording == false) //not recording
-        {
-            GameObject.Find("RecordButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("start"); //green - not recording
-            GameObject.Find("RecordText").GetComponent<Text>().text = "START";  
+    //    if (Global.Recording == false) //not recording -> start recording
+    //    {
+    //        GameObject.Find("RecordButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("start"); //green - not recording
+    //        GameObject.Find("RecordText").GetComponent<Text>().text = "START";
 
+    //      // recordManager.StartRecord(); 
 
-        }
-        else   //recording
-        {
-            GameObject.Find("RecordButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("stop"); //red - currently recording
-            GameObject.Find("RecordText").GetComponent<Text>().text = "STOP";
+    //    }
+    //    else   //recording -> stop recording
+    //    {
+    //        GameObject.Find("RecordButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("stop"); //red - currently recording
+    //        GameObject.Find("RecordText").GetComponent<Text>().text = "STOP";
 
+    //      // recordManager.StopRecord();
+    //    }
 
-        }
-
-    }
+    //}
 
 }
