@@ -21,7 +21,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 821, 768 ), Vector2( 356, 768 ) ]
@@ -45,7 +45,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 821, 768 ), Vector2( 356, 768 ) ]
@@ -139,7 +139,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
+"times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1256, 768 ), Vector2( 356, 768 ) ]
@@ -163,7 +163,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 3 ),
+"times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1256, 768 ), Vector2( 356, 768 ) ]
@@ -253,7 +253,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 4 ),
+"times": PoolRealArray( 0, 3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1721, 768 ), Vector2( 356, 768 ) ]
@@ -289,7 +289,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 4 ),
+"times": PoolRealArray( 0, 3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1721, 768 ), Vector2( 356, 768 ) ]
@@ -512,8 +512,8 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer2/Layer3/Option 2" method="_on_Question_ready_for_options"]
 [connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer1/Layer2/Option 1" method="_on_Question_ready_for_options"]
+[connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer2/Layer3/Option 2" method="_on_Question_ready_for_options"]
 [connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer3/Layer4/Option 3" method="_on_Question_ready_for_options"]
 [connection signal="button_down" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_down"]
 [connection signal="button_up" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_up"]

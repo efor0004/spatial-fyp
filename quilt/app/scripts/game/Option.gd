@@ -58,11 +58,24 @@ func add_option_animation(animation_name, animation_start_value, animation_end_v
 	
 	var rotation_path = "%s:%s" % [path, animation_name]
 	
-	var animation_duration = get_translation_duration(correct_animation)
+	var animation_start_time = get_transformation_animation_start_time()
+	var animation_end_time = animation_start_time + 1
 	
 	correct_animation.track_set_path(new_track_num, rotation_path)
-	correct_animation.track_insert_key(new_track_num, 0, animation_start_value)
-	correct_animation.track_insert_key(new_track_num, animation_duration, animation_end_value)
+	correct_animation.track_insert_key(new_track_num, animation_start_time, animation_start_value)
+	correct_animation.track_insert_key(new_track_num, animation_end_time, animation_end_value)
+
+func get_transformation_animation_start_time():
+	var child_no = animation_player.get_index()
+	
+	if (child_no == 1):
+		return 1
+	elif (child_no == 2):
+		return 2
+	elif (child_no == 3):
+		return 3
+	else:
+		return 0
 
 func reset_animations():
 	var correct_animation = get_correct_animation()
@@ -76,10 +89,6 @@ func reset_animations():
 func get_correct_animation():
 	var correct_animation = animation_player.get_animation("Correct")
 	return correct_animation
-
-func get_translation_duration(animation):
-	var duration = animation.track_get_key_time(0, 1)
-	return duration
 
 func is_correct_answer():
 	var option_index = get_option_index()
