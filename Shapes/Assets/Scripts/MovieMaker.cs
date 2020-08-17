@@ -8,6 +8,10 @@ public class MovieMaker : MonoBehaviour
 {
     //the script that controls all of the puzzles in the Mouse Shapes scene
 
+  
+    int TotalPuzzles = 1;
+    int n = 0;
+
     void Start()
     {
         Puzzle1();
