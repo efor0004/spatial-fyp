@@ -27,7 +27,7 @@ signal ready_for_options
 
 func _ready():
 	save_utils.set_state_for_player()
-	set_textures_for_level()
+	set_textures_for_question()
 	set_shapes()
 	set_question_fabric()
 	save_utils.save_progress()
@@ -47,33 +47,32 @@ func next_question():
 	
 	if (global.current_level_difficulty == "normal" && global.current_question > num_normal_questions_for_level):
 		global.current_level_difficulty = "hard"
-		set_textures_for_level()
 	
 	if (global.current_question > constants.questions_per_level):
 		global.current_question = 1
 		global.current_level += 1
 		global.current_level_difficulty = "normal"
 		
-		# if (global.current_level > constants.max_levels):
-			# global.current_level = 1
-			# global.current_question = 1
+		if (global.current_level > constants.max_levels):
+			global.current_level = 1
+			global.current_question = 1
 		
-		set_textures_for_level()
 		global.question_order = general_utils.shuffle_question_order()
 		
 		get_tree().change_scene("res://Progress Screen.tscn")
 	
 	global.current_shuffled_question = global.question_order[global.current_question - 1]
 	
+	set_textures_for_question()
 	set_shapes()
 	set_question_fabric()
 	save_utils.save_progress()
 	emit_signal("ready_for_options")
 
-func set_textures_for_level():
+func set_textures_for_question():
 	set_texture_offsets()
 	
-	var path = get_level_path()
+	var path = get_question_path()
 	var level_texture = load(path)
 	
 	var holey_quilt = get_holey_quilt_shape()
@@ -96,18 +95,39 @@ func get_texture_height():
 	if (global.current_level_difficulty == "hard"):
 		questions_available_for_level = constants.num_hard_questions_per_level[global.current_level - 1]["available"]
 	
-	var texture_height = questions_available_for_level * quilt_size
+	var file_index = get_file_index_for_question()
+	var max_file_index = ceil(questions_available_for_level / constants.max_questions_per_file) - 1
+	
+	var texture_height = 0
+	
+	if (file_index >= max_file_index):
+		var no_questions_in_last_file = questions_available_for_level % constants.max_questions_per_file
+		
+		if (no_questions_in_last_file <= 0):
+			no_questions_in_last_file = constants.max_questions_per_file
+		
+		texture_height = no_questions_in_last_file * quilt_size
+	else:
+		texture_height = constants.max_questions_per_file * quilt_size
+	
 	return texture_height
 
 func set_shapes():
 	set_holey_quilt_shape()
 	set_options_shapes()
 
-func get_level_path():
-	if (global.current_level_difficulty == "hard"):
-		return "res://assets/sprites/questions/level_%d/level_%d_hard.png" % [global.current_level, global.current_level]
+func get_question_path():
+	var file_index = get_file_index_for_question()
 	
-	return "res://assets/sprites/questions/level_%d/level_%d.png" % [global.current_level, global.current_level]
+	return "res://assets/sprites/questions/level_%d/%s/pngs/%d.png" % [global.current_level, global.current_level_difficulty, file_index]
+
+func get_file_index_for_question():
+	var file_index = ceil(global.current_shuffled_question / constants.max_questions_per_file) - 1
+	
+	if (file_index < 0):
+		file_index = 0
+	
+	return file_index
 
 func get_holey_quilt():
 	var holey_quilt = get_node("Layer1/HoleyQuilt")
@@ -122,7 +142,14 @@ func get_holey_quilt_shape():
 	return holey_quilt_shape
 
 func get_new_y_offset(y_offset):
-	var new_y_offset = y_offset - (quilt_size * (global.current_shuffled_question - 1))
+	var question_index = fmod(global.current_shuffled_question, constants.max_questions_per_file)
+	
+	if (question_index == 0):
+		question_index = constants.max_questions_per_file - 1
+	else:
+		question_index = question_index - 1
+	
+	var new_y_offset = y_offset - (question_index * quilt_size)
 	return new_y_offset
 
 func get_new_y_region():

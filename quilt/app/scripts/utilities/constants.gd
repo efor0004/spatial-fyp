@@ -108,19 +108,20 @@ export(Array) var level_option_transformations = [
 	{ "normal": level_2_option_transformations, "hard": level_2_hard_option_transformations } # level 2
 ]
 
-# var hard_questions_per_level = 4
-var hard_questions_per_level = 0
+var hard_questions_per_level = 4
 
 export(Array) var num_hard_questions_per_level = [
 	{ "required": hard_questions_per_level, "available": 13 }, # level 1
 	{ "required": hard_questions_per_level, "available": 30 } # level 2
 ]
 
-export var questions_per_level = 2
+export var questions_per_level = 10
 
 export(Array) var questions_available_per_level = [
 	30, # level 1
-	42 # level 2 - NOTE: max 42 questions per png
+	42 # level 2
 ]
 
 export var max_levels = 2
+
+export var max_questions_per_file = 10
