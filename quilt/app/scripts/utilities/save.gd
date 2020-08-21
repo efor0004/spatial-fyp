@@ -13,8 +13,9 @@ func set_state_for_player():
 	
 	var level = 1
 	var question = 1
-	var question_order = general_utils.shuffle_question_order()
 	var difficulty = "normal"
+	
+	var question_order = []
 	
 	while(saved_data.get_position() < saved_data.get_len()):
 		var data = parse_json(saved_data.get_line())
@@ -32,10 +33,14 @@ func set_state_for_player():
 	
 	saved_data.close()
 	
-	var shuffled_question = question_order[question - 1]
-	
 	global.current_level = level
 	global.current_question = question
+	
+	if (question_order.size() <= 0):
+		question_order = general_utils.shuffle_question_order()
+	
+	var shuffled_question = question_order[question - 1]
+	
 	global.question_order = question_order
 	global.current_level_difficulty = difficulty
 	global.current_shuffled_question = shuffled_question
