@@ -1,5 +1,7 @@
 extends Button
 
+class_name ExitButton
+
 var position = Vector2(20, 20)
 var size = Vector2(732, 246)
 var scale = 0.5
@@ -30,3 +32,5 @@ func _on_Exit_Button_button_up():
 		get_tree().change_scene("res://Character Menu.tscn")
 	elif (current_scene == "Character Menu"):
 		get_tree().change_scene("res://Main Menu.tscn")
+	elif (current_scene == "Progress Screen"):
+		get_tree().change_scene("res://Character Menu.tscn")
