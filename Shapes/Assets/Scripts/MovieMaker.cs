@@ -34,7 +34,8 @@ public class MovieMaker : MonoBehaviour
 
 
 
-        Global.RenderMovieFixed("background", "background", new Vector3(0.0f, 0.0f, 0.0f), new Vector3(1.047873f, 1.047873f, 1.0f), "Shape1"); //scales a 3:4 powerpoint slide saved as .png to fit the screen
+       // Global.RenderMovieFixed("background", "sceneBlank", new Vector3(0.0f, 0.0f, 0.0f), new Vector3(1.047873f, 1.047873f, 1.0f), "Shape1"); //scales a 3:4 powerpoint slide saved as .png to fit the screen
+       //delete this function too?
 
         Global.RenderMovieVariable("F1", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 0);
         Global.RenderMovieVariable("F2", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 1);

@@ -303,6 +303,17 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("PopupMenu").transform.localPosition = Global.centrePosition;     //moves the pop-up into centre of screen
         
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;         //de-activates buttons
+
+        string name = GameObject.Find("PopupMenu").scene.name;
+        if (name == "MovieMaker")
+        {
+            GameObject.Find("SceneButton").GetComponent<Button>().interactable = false;         //de-activates buttons
+            GameObject.Find("StartButton").GetComponent<Button>().interactable = false;         //activates buttons
+            Global.LeftArrowActiveMovie = false;
+            Global.RightArrowActiveMovie = false;
+        }
+
+
         Global.LeftArrowActive = false;
         Global.RightArrowActive = false;
 
@@ -390,7 +401,7 @@ public class ButtonBehaviour : MonoBehaviour
 
 
             default:
-                Debug.Log("Error in Switch Statement/ RestartButton()");
+                Debug.Log("Default MovieMaker");
                 break;
         }
 
@@ -415,6 +426,17 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("PopupMenu").transform.localPosition = Global.leftPosition;     //moves the pop-up off screen
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //activates buttons
+
+        string name = GameObject.Find("PopupMenu").scene.name;
+        if (name == "MovieMaker")
+        {
+            GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //activates buttons
+            GameObject.Find("StartButton").GetComponent<Button>().interactable = true;         //activates buttons
+
+            Global.LeftArrowActiveMovie = true;
+            Global.RightArrowActiveMovie = true;
+        }
+
         Global.LeftArrowActive = true;
         Global.RightArrowActive = true;
 
@@ -801,32 +823,127 @@ public class ButtonBehaviour : MonoBehaviour
 
     }
 
-    //public void RecordButton()
-    //{
-    //    //starts recording audio and screencapturing
-    //    // triggered by pressing green button in movie-maker
+    public void RestartMovieButton()
+    {
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
-    //    if (Global.SoundEffects == true)
-    //        FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+        GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //activates buttons
+        GameObject.Find("StartButton").GetComponent<Button>().interactable = true;         //activates buttons
+        Global.LeftArrowActiveMovie = true;
+        Global.RightArrowActiveMovie = true;
+        Global.DestroyShapesMovie();   //destroy existing shapes and background
+        SceneManager.LoadScene("MovieMaker"); //reload
 
-    //    Global.Recording = !Global.Recording; //toggle value
+    }
 
-    //    if (Global.Recording == false) //not recording -> start recording
-    //    {
-    //        GameObject.Find("RecordButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("start"); //green - not recording
-    //        GameObject.Find("RecordText").GetComponent<Text>().text = "START";
+    public void SceneButton()
+    {
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
-    //      // recordManager.StartRecord(); 
+        GameObject.Find("PopupScene").transform.localPosition = Global.centrePosition;     //moves the pop-up into centre of screen
 
-    //    }
-    //    else   //recording -> stop recording
-    //    {
-    //        GameObject.Find("RecordButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("stop"); //red - currently recording
-    //        GameObject.Find("RecordText").GetComponent<Text>().text = "STOP";
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;         //de-activates buttons
+        GameObject.Find("SceneButton").GetComponent<Button>().interactable = false;         //de-activates buttons
+        GameObject.Find("StartButton").GetComponent<Button>().interactable = false;         //activates buttons
+        Global.LeftArrowActiveMovie = false;
+        Global.RightArrowActiveMovie = false;
+        
+    }
 
-    //      // recordManager.StopRecord();
-    //    }
+    public void CloseSceneButton()
+    {
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
-    //}
+        GameObject.Find("PopupScene").transform.localPosition = Global.rightPosition;     //moves the pop-up into centre of screen
+
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //de-activates buttons
+        GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //de-activates buttons
+        GameObject.Find("StartButton").GetComponent<Button>().interactable = true;         //activates buttons
+        Global.LeftArrowActiveMovie = true;
+        Global.RightArrowActiveMovie = true;
+    }
+
+    public void PondButton()
+    {
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        GameObject.Find("BackgroundImage").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("scenePond");
+
+        GameObject.Find("PopupScene").transform.localPosition = Global.rightPosition;     //moves the pop-up into centre of screen
+
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //de-activates buttons
+        GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //de-activates buttons
+        GameObject.Find("StartButton").GetComponent<Button>().interactable = true;         //activates buttons
+        Global.LeftArrowActiveMovie = true;
+        Global.RightArrowActiveMovie = true;
+    }
+
+    public void CropsButton()
+    {
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        GameObject.Find("BackgroundImage").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("sceneCrops");
+
+        GameObject.Find("PopupScene").transform.localPosition = Global.rightPosition;     //moves the pop-up into centre of screen
+
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //de-activates buttons
+        GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //de-activates buttons
+        GameObject.Find("StartButton").GetComponent<Button>().interactable = true;         //activates buttons
+        Global.LeftArrowActiveMovie = true;
+        Global.RightArrowActiveMovie = true;
+    }
+
+    public void HillButton()
+    {
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        GameObject.Find("BackgroundImage").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("sceneHill");
+
+        GameObject.Find("PopupScene").transform.localPosition = Global.rightPosition;     //moves the pop-up into centre of screen
+
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //de-activates buttons
+        GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //de-activates buttons
+        GameObject.Find("StartButton").GetComponent<Button>().interactable = true;         //activates buttons
+        Global.LeftArrowActiveMovie = true;
+        Global.RightArrowActiveMovie = true;
+    }
+
+    public void BarnButton()
+    {
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        GameObject.Find("BackgroundImage").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("sceneBarn");
+
+        GameObject.Find("PopupScene").transform.localPosition = Global.rightPosition;     //moves the pop-up into centre of screen
+
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //de-activates buttons
+        GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //de-activates buttons
+        GameObject.Find("StartButton").GetComponent<Button>().interactable = true;         //activates buttons
+        Global.LeftArrowActiveMovie = true;
+        Global.RightArrowActiveMovie = true;
+    }
+
+    public void BlankButton()
+    {
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        GameObject.Find("BackgroundImage").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("sceneBlank");
+
+        GameObject.Find("PopupScene").transform.localPosition = Global.rightPosition;     //moves the pop-up into centre of screen
+
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //de-activates buttons
+        GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //de-activates buttons
+        GameObject.Find("StartButton").GetComponent<Button>().interactable = true;         //activates buttons
+        Global.LeftArrowActiveMovie = true;
+        Global.RightArrowActiveMovie = true;
+    }
 
 }

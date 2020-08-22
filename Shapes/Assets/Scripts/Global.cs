@@ -111,7 +111,7 @@ public class Global : MonoBehaviour
 
     public static void DestroyShapesMovie()
     {
-        //destroy all current shapes by name in MovieMaker 
+        //destroy all current shapes by name in MovieMaker      //not necessary?
         //adapted from https://answers.unity.com/questions/1414048/destroy-specific-gameobject-with-name.html
 
         foreach (string name in MovieRotate.movieArray)
@@ -398,21 +398,21 @@ public class Global : MonoBehaviour
         Save.SaveProgress();
     }
 
-   public static void RenderMovieFixed(string Name, string Sprite, Vector3 Position, Vector3 Scale, string SortingLayer)
-    {
-        //renders the background in MovieMaker
+   //public static void RenderMovieFixed(string Name, string Sprite, Vector3 Position, Vector3 Scale, string SortingLayer)
+   // {
+   //     //renders the background in MovieMaker
 
-        GameObject objToSpawn = new GameObject(Name);                                            //assign name
-        objToSpawn.AddComponent<SpriteRenderer>();                                               //add a sprite renderer
-        objToSpawn.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Sprite);       //assign sprite from resources folder
-        objToSpawn.transform.position = Position;                                                //set position vector  
-        objToSpawn.transform.localScale = (Scale);                                               //set scale vector
+   //     GameObject objToSpawn = new GameObject(Name);                                            //assign name
+   //     objToSpawn.AddComponent<SpriteRenderer>();                                               //add a sprite renderer
+   //     objToSpawn.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Sprite);       //assign sprite from resources folder
+   //     objToSpawn.transform.position = Position;                                                //set position vector  
+   //     objToSpawn.transform.localScale = (Scale);                                               //set scale vector
 
-        objToSpawn.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+   //     objToSpawn.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 
-        objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer;               //set sorting layer by name
+   //     objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer;               //set sorting layer by name
 
-    }
+   // }
 
     public static void RenderMovieVariable(string Name, Vector3 Scale, string SortingLayer,int n)
     {
@@ -424,10 +424,10 @@ public class Global : MonoBehaviour
 
         objToSpawn.transform.localScale = (Scale);                                               //set scale vector
         objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer;               //set sorting layer by name
-        objToSpawn.AddComponent<CircleCollider2D>();                                             //assign circle collider    //sized correctly
+        objToSpawn.AddComponent<BoxCollider2D>();                                              //assign box collider  
 
         objToSpawn.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-        objToSpawn.GetComponent<CircleCollider2D>().radius = Global.regularCollider;
+       // objToSpawn.GetComponent<CircleCollider2D>().radius = Global.regularCollider;
 
 
         objToSpawn.transform.position = new Vector3(Global.toolbarXstart + (n+1) * Global.toolbarXoffset, Global.toolbarY, 0f);  //place in the toolbar

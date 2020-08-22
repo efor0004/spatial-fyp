@@ -74,7 +74,7 @@ public class MovieRotate : MonoBehaviour
 
                 if (go)
                 {
-                    myCollider = go.gameObject.GetComponent<CircleCollider2D>();
+                    myCollider = go.gameObject.GetComponent<BoxCollider2D>();
 
                     if (myCollider)                                                                                                     //collider will not exist for the anchor shape0
                     {
