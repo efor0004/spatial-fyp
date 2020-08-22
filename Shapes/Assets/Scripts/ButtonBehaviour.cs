@@ -47,6 +47,42 @@ public class ButtonBehaviour : MonoBehaviour
 
     }
 
+    public void LeftArrowMovie()
+    {
+        //triggered by left arrow controlling the displayed puzzles in MovieMaker
+        //selection of this button shifts all displayed shapes right letting the user "scroll left"
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        for (int i = 0; i < MovieRotate.selectionArray.Length; i++)
+        {
+            MovieRotate.selectionArray[i] = MovieRotate.selectionArray[i] + Global.shapeOffset;
+        }
+
+        Global.RightArrowActiveMovie = true;                      //if the left arrow is pushed, the right arrow must become active
+
+        Global.CheckArrowsMovie();                                //checks whether arrows need to be disabled in one direction (movieMaker)
+    }
+
+    public void RightArrowMovie()
+    {
+        //triggered by right arrow controlling the displayed puzzles in MovieMaker
+        //selection of this button shifts all displayed shapes left letting the user "scroll right"
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        for (int i = 0; i < MovieRotate.selectionArray.Length; i++)
+        {
+            MovieRotate.selectionArray[i] = MovieRotate.selectionArray[i] - Global.shapeOffset;
+        }
+
+        Global.LeftArrowActiveMovie = true;                     //if the right arrow is pushed, the left arrow must become active
+
+        Global.CheckArrowsMovie();                              //checks whether arrows need to be disabled in one direction  (movieMaker)
+    }
+
     public void StartButton()
     {
         //triggered by start button on home screen

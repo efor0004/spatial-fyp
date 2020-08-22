@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 748521862}
   - component: {fileID: 748521861}
   m_Layer: 5
-  m_Name: RightArrow
+  m_Name: RightArrowMovie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -651,7 +651,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1021997910}
-        m_MethodName: RightArrow
+        m_MethodName: RightArrowMovie
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1692,7 +1692,7 @@ GameObject:
   - component: {fileID: 1850698627}
   - component: {fileID: 1850698626}
   m_Layer: 5
-  m_Name: LeftArrow
+  m_Name: LeftArrowMovie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1758,7 +1758,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1021997910}
-        m_MethodName: LeftArrow
+        m_MethodName: LeftArrowMovie
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -18,6 +18,10 @@ public class Global : MonoBehaviour
     public static bool LeftArrowActive = true;
     public static bool RightArrowActive = true;
 
+
+    public static bool LeftArrowActiveMovie = true;
+    public static bool RightArrowActiveMovie = true;
+
     public static bool Music = true;
     public static bool SoundEffects = true;
 
@@ -71,7 +75,8 @@ public class Global : MonoBehaviour
 
     public static float toolbarY = -4f;
     public static float toolbarXoffset = 2.5f;                  // -3.75f; //(-2.5/2) 
-    public static float toolbarXstart = -4.8f;
+   // public static float toolbarXstart = -4.8f;
+    public static float toolbarXstart = -2.3f;
 
     public static float smallCollider = 4.5f;                   //a larger collider for small shapes
     public static float regularCollider = 2.5f;                 //a regular sized collider for regular shapes
@@ -102,6 +107,22 @@ public class Global : MonoBehaviour
         }
 
         Destroy(GameObject.Find("Puzzle"));  //////to destroy the objective puzzle object
+    }
+
+    public static void DestroyShapesMovie()
+    {
+        //destroy all current shapes by name in MovieMaker 
+        //adapted from https://answers.unity.com/questions/1414048/destroy-specific-gameobject-with-name.html
+
+        foreach (string name in MovieRotate.movieArray)
+        {
+            GameObject go = GameObject.Find(name);                                                //checks if the shape exists
+                                                                                                  //if the tree exist then destroy it
+            if (go)
+                Destroy(go.gameObject);
+        }
+
+        Destroy(GameObject.Find("background"));  //////to destroy the objective puzzle object
     }
 
     public static void CheckArrows()
@@ -147,6 +168,61 @@ public class Global : MonoBehaviour
             Global.RightArrowActive = true;
         }
 
+
+    }
+
+    public static void CheckArrowsMovie()
+    {
+        //checks whether the toolbar arrows should be disabled to signal there are no more shapes in that direction for MovieMaker
+
+        int Index = 0;
+        int j;
+        int i;
+        
+        
+        //check Left Arrow
+        for (j = 0; j < 50; j++)
+        {
+            if (MovieRotate.playArray[j] == false)  //find the left-most shape not in play (in the foolbar)
+            {
+                Index = j;                                        //returns the index of the first active shape i.e. shape in left most position in toolbar
+                break;
+            }
+        }
+
+
+        if (MovieRotate.selectionArray[Index].x >= 0.15f)
+        {
+            Global.LeftArrowActiveMovie = false;
+        }
+        else
+        {
+            Global.LeftArrowActiveMovie = true;
+        }
+
+
+        Index = 0;                                              //Check Right Arrow
+        for (i = 49; i > -1 ; i--)
+        {
+            if (MovieRotate.playArray[i] == false)                //find the right-most shape not in play (in the toolbar)
+            {
+                Index = i;                                     //returns the index of the last active shape i.e. shape in right most position in toolbar
+                break;
+            }
+        }
+
+        Debug.Log("right arrow index i: " + i);  /////////////////////
+
+
+        if (MovieRotate.selectionArray[Index].x <= 2f)  
+        {
+            Global.RightArrowActiveMovie = false;
+        }
+        else
+        {
+            Global.RightArrowActiveMovie = true;
+        }
+     
 
     }
 
@@ -320,6 +396,44 @@ public class Global : MonoBehaviour
         RightArrowActive = false;
 
         Save.SaveProgress();
+    }
+
+   public static void RenderMovieFixed(string Name, string Sprite, Vector3 Position, Vector3 Scale, string SortingLayer)
+    {
+        //renders the background in MovieMaker
+
+        GameObject objToSpawn = new GameObject(Name);                                            //assign name
+        objToSpawn.AddComponent<SpriteRenderer>();                                               //add a sprite renderer
+        objToSpawn.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Sprite);       //assign sprite from resources folder
+        objToSpawn.transform.position = Position;                                                //set position vector  
+        objToSpawn.transform.localScale = (Scale);                                               //set scale vector
+
+        objToSpawn.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+
+        objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer;               //set sorting layer by name
+
+    }
+
+    public static void RenderMovieVariable(string Name, Vector3 Scale, string SortingLayer,int n)
+    {
+        //renders the puzzles in MovieMaker
+
+        GameObject objToSpawn = new GameObject(Name);                                            //assign name
+        objToSpawn.AddComponent<SpriteRenderer>();                                               //add a sprite renderer
+        objToSpawn.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Name);       //assign sprite from resources folder
+
+        objToSpawn.transform.localScale = (Scale);                                               //set scale vector
+        objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer;               //set sorting layer by name
+        objToSpawn.AddComponent<CircleCollider2D>();                                             //assign circle collider    //sized correctly
+
+        objToSpawn.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        objToSpawn.GetComponent<CircleCollider2D>().radius = Global.regularCollider;
+
+
+        objToSpawn.transform.position = new Vector3(Global.toolbarXstart + (n+1) * Global.toolbarXoffset, Global.toolbarY, 0f);  //place in the toolbar
+
+        MovieRotate.selectionArray[n] = objToSpawn.transform.position;                            //save "rest" position
+        MovieRotate.playArray[n] = false;                            //set to not in play
     }
 
 }

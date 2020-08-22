@@ -64,19 +64,6 @@ public class TouchRotate : MonoBehaviour
         }
 
 
-        //WORKING CODE FOR NO ARROW DIRECTIONAL LIMIT
-
-        //if (Global.PieceActive == true)
-        //{
-        //    GameObject.Find("LeftArrow").GetComponent<Button>().interactable = false;
-        //    GameObject.Find("RightArrow").GetComponent<Button>().interactable = false;
-        //}
-        //else if (Global.PieceActive == false)
-        //{
-        //    GameObject.Find("LeftArrow").GetComponent<Button>().interactable = true;
-        //    GameObject.Find("RightArrow").GetComponent<Button>().interactable = true;
-        //}
-
 
         //adapted code from http://wiki.unity3d.com/index.php/DetectTouchMovement
         if (Input.touchCount > 0)                                                                                                         //at least one touch detected                                                                    
@@ -102,7 +89,7 @@ public class TouchRotate : MonoBehaviour
                                 //if(Global.SoundEffects == true)
                                 //   FindObjectOfType<AudioManager>().Play("Shape"); //plays shape selection sound
 
-                                if (Input.touchCount == 2 && circleArray[System.Array.IndexOf(nameArray, go.name)] == false)
+                                if (Input.touchCount == 2 && circleArray[System.Array.IndexOf(nameArray, go.name)] == false && smallArray[System.Array.IndexOf(nameArray, go.name)] == false)
                                 {                                                                                                            //updates rotation                                                                                                     
                                     Quaternion desiredRotation = go.gameObject.transform.rotation;                                           //start desiredRotation as the current orientation of the shape
                                     DetectTouchMovement.Calculate();                                                                         //determines turnAngle and turnAngleDelta from 2 finger rotation on screen
