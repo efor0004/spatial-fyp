@@ -11,7 +11,7 @@ public class MovieRotate : MonoBehaviour
     public static string[] movieArray = new string[] { "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10",
                                                        "F11", "F12", "F13", "F14", "F15", "F16", "F17", "F18", "F19", "F20",
                                                        "F21", "F22", "F23", "F24", "F25", "F26", "F27", "F28", "F29", "F30",
-                                                       "31", "F32", "F33", "F34", "F35", "F36", "F37", "F38", "F39", "F40",
+                                                       "F31", "F32", "F33", "F34", "F35", "F36", "F37", "F38", "F39", "F40",
                                                        "F41", "F42", "F43", "F44", "F45", "F46", "F47", "F48", "F49", "F50" };  //the array of shape names
     public static Vector3[] selectionArray = new[] { new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), 
                                                   new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f),
@@ -97,11 +97,20 @@ public class MovieRotate : MonoBehaviour
                                     go.gameObject.transform.rotation = desiredRotation;                                                  //upate the shape rotated orientation
                                 }
                             }
-                            if (Input.touchCount == 1)
-                            {                                                                                                             //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
-                                go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
-                                                                           Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
-                                                                            0.0f);
+                            foreach (UnityEngine.Touch touch in Input.touches)
+                            {                                                                                                                     //https://answers.unity.com/questions/369230/how-to-detect-double-tap-in-android.html?childToView=1695525#answer-1695525
+                                if (touch.tapCount >= 2) //flips on vertical axis if double tapped (finnicky)
+                                {
+                                    Vector3 temp = go.gameObject.transform.localScale;
+                                    temp.x *= -1;
+                                    go.gameObject.transform.localScale = temp;
+                                }
+                                else if (Input.touchCount == 1)
+                                {                                                                                                             //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
+                                    go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
+                                                                               Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
+                                                                                0.0f);
+                                }
                             }
                         }
                     }

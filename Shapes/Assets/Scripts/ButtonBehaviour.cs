@@ -308,9 +308,9 @@ public class ButtonBehaviour : MonoBehaviour
         if (name == "MovieMaker")
         {
             GameObject.Find("SceneButton").GetComponent<Button>().interactable = false;         //de-activates buttons
-            GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = false;         //activates buttons
-            Global.LeftArrowActiveMovie = false;
-            Global.RightArrowActiveMovie = false;
+            GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = false;        
+            GameObject.Find("LeftArrowMovie").GetComponent<Button>().interactable = false;         
+            GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = false;         
         }
 
 
@@ -435,8 +435,8 @@ public class ButtonBehaviour : MonoBehaviour
             GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //activates buttons
             GameObject.Find("StartButton").GetComponent<Button>().interactable = true;         //activates buttons
 
-            Global.LeftArrowActiveMovie = true;
-            Global.RightArrowActiveMovie = true;
+            GameObject.Find("LeftArrowMovie").GetComponent<Button>().interactable = true;
+            GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = true;
         }
 
         Global.LeftArrowActive = true;
@@ -835,8 +835,8 @@ public class ButtonBehaviour : MonoBehaviour
 
         GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //activates buttons
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;         //activates buttons
-        Global.LeftArrowActiveMovie = true;
-        Global.RightArrowActiveMovie = true;
+        GameObject.Find("LeftArrowMovie").GetComponent<Button>().interactable = true;
+        GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = true;
         Global.DestroyShapesMovie();   //destroy existing shapes and background
         SceneManager.LoadScene("MovieMaker"); //reload
 
@@ -852,9 +852,9 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;         //de-activates buttons
         GameObject.Find("SceneButton").GetComponent<Button>().interactable = false;         //de-activates buttons
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = false;         //activates buttons
-        Global.LeftArrowActiveMovie = false;
-        Global.RightArrowActiveMovie = false;
-        
+        GameObject.Find("LeftArrowMovie").GetComponent<Button>().interactable = false;
+        GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = false;
+
     }
 
     public void CloseSceneButton()
@@ -867,8 +867,8 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //de-activates buttons
         GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //de-activates buttons
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;         //activates buttons
-        Global.LeftArrowActiveMovie = true;
-        Global.RightArrowActiveMovie = true;
+        GameObject.Find("LeftArrowMovie").GetComponent<Button>().interactable = true;
+        GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = true;
     }
 
     public void PondButton()
@@ -883,8 +883,8 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //de-activates buttons
         GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //de-activates buttons
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;         //activates buttons
-        Global.LeftArrowActiveMovie = true;
-        Global.RightArrowActiveMovie = true;
+        GameObject.Find("LeftArrowMovie").GetComponent<Button>().interactable = true;
+        GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = true;
     }
 
     public void CropsButton()
@@ -899,8 +899,8 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //de-activates buttons
         GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //de-activates buttons
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;         //activates buttons
-        Global.LeftArrowActiveMovie = true;
-        Global.RightArrowActiveMovie = true;
+        GameObject.Find("LeftArrowMovie").GetComponent<Button>().interactable = true;
+        GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = true;
     }
 
     public void HillButton()
@@ -915,8 +915,8 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //de-activates buttons
         GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //de-activates buttons
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;         //activates buttons
-        Global.LeftArrowActiveMovie = true;
-        Global.RightArrowActiveMovie = true;
+        GameObject.Find("LeftArrowMovie").GetComponent<Button>().interactable = true;
+        GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = true;
     }
 
     public void BarnButton()
@@ -931,8 +931,8 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //de-activates buttons
         GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //de-activates buttons
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;         //activates buttons
-        Global.LeftArrowActiveMovie = true;
-        Global.RightArrowActiveMovie = true;
+        GameObject.Find("LeftArrowMovie").GetComponent<Button>().interactable = true;
+        GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = true;
     }
 
     public void BlankButton()
@@ -947,8 +947,8 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //de-activates buttons
         GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //de-activates buttons
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;         //activates buttons
-        Global.LeftArrowActiveMovie = true;
-        Global.RightArrowActiveMovie = true;
+        GameObject.Find("LeftArrowMovie").GetComponent<Button>().interactable = true;
+        GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = true;
     }
 
 }

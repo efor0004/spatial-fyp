@@ -10,6 +10,9 @@ public class MovieMaker : MonoBehaviour
 
     void Start()
     {
+
+        Global.LeftArrowActiveMovie = true;
+        Global.RightArrowActiveMovie = true;
         FarmAnimals();
     }
     void Update()
@@ -22,17 +25,6 @@ public class MovieMaker : MonoBehaviour
     void FarmAnimals()
     {
         //loads farm puzzles the Movie Maker
-
-
-      //  Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
-
-        //set number of pieces in the puzzle (those to be placed)
-      //  Global.puzzlePieces = 1;
-
-
-
-       // Global.RenderMovieFixed("background", "sceneBlank", new Vector3(0.0f, 0.0f, 0.0f), new Vector3(1.047873f, 1.047873f, 1.0f), "Shape1"); //scales a 3:4 powerpoint slide saved as .png to fit the screen
-       //delete this function too?
 
         Global.RenderMovieVariable("F1", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 0);
         Global.RenderMovieVariable("F2", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 1);
@@ -88,8 +80,6 @@ public class MovieMaker : MonoBehaviour
         Global.RenderMovieVariable("F48", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 47);
         Global.RenderMovieVariable("F49", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 48);
         Global.RenderMovieVariable("F50", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 49);
-
-
 
     }
 

@@ -86,9 +86,6 @@ public class TouchRotate : MonoBehaviour
                             if (myCollider == Physics2D.OverlapPoint(touchPos))                                                             //if the touch position overlaps with the 2D collider of the shape
                             {
 
-                                //if(Global.SoundEffects == true)
-                                //   FindObjectOfType<AudioManager>().Play("Shape"); //plays shape selection sound
-
                                 if (Input.touchCount == 2 && circleArray[System.Array.IndexOf(nameArray, go.name)] == false && smallArray[System.Array.IndexOf(nameArray, go.name)] == false)
                                 {                                                                                                            //updates rotation                                                                                                     
                                     Quaternion desiredRotation = go.gameObject.transform.rotation;                                           //start desiredRotation as the current orientation of the shape
