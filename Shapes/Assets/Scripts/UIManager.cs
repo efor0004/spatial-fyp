@@ -16,52 +16,80 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        GameObject.Find("StartButton").GetComponent<Button>().interactable = true;
-        GameObject.Find("StopButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("StopRecordButton").GetComponent<Button>().interactable = false;
     }
 
     public void StartVid()
     {
-        //if (Global.SoundEffects == true)
-        //{
-        //    FindObjectOfType<AudioManager>().Play("Button"); //plays button sound    //not working
-        //    Debug.Log("true: SoundEffects: " + Global.SoundEffects);
-        //    GameObject.Find("TimerText").GetComponent<Text>().text = "true";
-        //}
-        //else 
-        //{
-        //    Debug.Log("false: SoundEffects: " + Global.SoundEffects);
-        //    GameObject.Find("TimerText").GetComponent<Text>().text = "false";
-        //}
 
         if (Global.SoundEffects == true)
-            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound      //not working
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound              //not working?
+
+        //if (Global.Music == true)
+        //    FindObjectOfType<AudioManager>().Stop("BackgroundMusic"); //stops background music
+
+
 
         GameObject.Find("Canvas").GetComponent<Canvas>().enabled = false; //disable UI during record
 
-        GameObject.Find("StartButton").GetComponent<Button>().interactable = false;
-        GameObject.Find("StopButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("StopRecordButton").GetComponent<Button>().interactable = true;
 
-        if (Global.Music == true)
-            FindObjectOfType<AudioManager>().Stop("BackgroundMusic"); //stops background music
+        foreach (string name in MovieRotate.movieArray)  //disable toolbar shapes
+        {
+            GameObject go = GameObject.Find(name);
+
+            if (go)
+            {
+                if (MovieRotate.playArray[System.Array.IndexOf(MovieRotate.movieArray, go.name)] == false) //if "not in play"
+                {
+                    //go.SetActive(false);
+                    go.GetComponent<BoxCollider2D>().enabled = false;
+                    go.GetComponent<SpriteRenderer>().enabled = false;
+                }
+
+            }
+        }
+
+        Global.Recording = true; //flag to stop shapes returning to invisiable toolbar during recording
 
         recordManager.StartRecord();
     }
 
     public void StopVid()
     {
-        recordManager.StopRecord();
+          recordManager.StopRecord();
+
+        Global.Recording = false; 
 
         if (Global.SoundEffects == true)
-            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound      //not working
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound        //not working?
 
-        GameObject.Find("StartButton").GetComponent<Button>().interactable = true;
-        GameObject.Find("StopButton").GetComponent<Button>().interactable = false;
+        //if (Global.Music == true)
+        //    FindObjectOfType<AudioManager>().Play("BackgroundMusic"); //restarts background music
+
+
+
+        GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("StopRecordButton").GetComponent<Button>().interactable = false;
+
+        foreach (string name in MovieRotate.movieArray)  //enable toolbar shapes again
+        {
+            GameObject go = GameObject.Find(name);
+
+            if (go)
+            {
+                // go.SetActive(true); //make all active
+                go.GetComponent<BoxCollider2D>().enabled = true;
+                go.GetComponent<SpriteRenderer>().enabled = true;
+            }
+        }
 
         GameObject.Find("Canvas").GetComponent<Canvas>().enabled = true; //re-enable UI after record
 
-        if (Global.Music == true)
-            FindObjectOfType<AudioManager>().Play("BackgroundMusic"); //restarts background music
+        
+       
     }
 
     //public void RecordButton()                

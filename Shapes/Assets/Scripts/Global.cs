@@ -211,8 +211,6 @@ public class Global : MonoBehaviour
             }
         }
 
-        Debug.Log("right arrow index i: " + i);  /////////////////////
-
 
         if (MovieRotate.selectionArray[Index].x <= 2f)  
         {

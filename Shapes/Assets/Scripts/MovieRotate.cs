@@ -116,7 +116,7 @@ public class MovieRotate : MonoBehaviour
 
                 if (go)
                 {
-                    if (go.transform.position.y < Camera.main.ScreenToWorldPoint(GameObject.Find("Divider").transform.position).y)
+                    if ((go.transform.position.y < Camera.main.ScreenToWorldPoint(GameObject.Find("Divider").transform.position).y) && (Global.Recording == false) )
                     {
                         //if released in the toolbar return to correct place and orientation
                         playArray[System.Array.IndexOf(movieArray, go.name)] = false;  //not in play

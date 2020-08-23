@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 251241071}
   - component: {fileID: 251241070}
   m_Layer: 5
-  m_Name: StopButton
+  m_Name: StopRecordButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1947,7 +1947,7 @@ GameObject:
   - component: {fileID: 1245900884}
   - component: {fileID: 1245900883}
   m_Layer: 5
-  m_Name: StartButton
+  m_Name: StartRecordButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

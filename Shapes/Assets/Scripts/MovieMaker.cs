@@ -10,9 +10,6 @@ public class MovieMaker : MonoBehaviour
 
     void Start()
     {
-        GameObject.Find("StartButton").GetComponent<Button>().interactable = false;  //disable recording during prototyping 
-        GameObject.Find("StopButton").GetComponent<Button>().interactable = false;
-
         FarmAnimals();
     }
     void Update()
@@ -27,10 +24,10 @@ public class MovieMaker : MonoBehaviour
         //loads farm puzzles the Movie Maker
 
 
-        Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
+      //  Global.NextPuzzleReady = false; //check this is the case of not completing a puzzle or returning to progress!!!!!!!
 
         //set number of pieces in the puzzle (those to be placed)
-        Global.puzzlePieces = 1;
+      //  Global.puzzlePieces = 1;
 
 
 
