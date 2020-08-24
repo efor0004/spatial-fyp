@@ -276,7 +276,11 @@ public class Global : MonoBehaviour
         objToSpawn.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Sprite);       //assign sprite from resources folder
 
         objToSpawn.transform.localScale = (Scale);                                               //set scale vector
-        objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer;               //set sorting layer by name
+
+        // objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer;               //set sorting layer by name
+        objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = "Shape6";
+        TouchRotate.layerArray[n] = SortingLayer; 
+            
         objToSpawn.GetComponent<SpriteRenderer>().color = Color;                                 //set colour vector (RGBA) 
         objToSpawn.AddComponent<CircleCollider2D>();                                             //assign circle collider    //sized correctly
 

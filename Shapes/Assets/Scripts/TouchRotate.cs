@@ -18,7 +18,7 @@ public class TouchRotate : MonoBehaviour
     public static bool[] circleArray = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
     public static Vector3[] toolbarArray = new[] { new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f)}; //saves "rest" position
     public static Vector3[] toolbarRotationArray = new[] { new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f)}; //saves rest orientation
-
+    public static string[] layerArray = new string[] { "Shape6", "Shape6", "Shape6", "Shape6", "Shape6", "Shape6", "Shape6", "Shape6", "Shape6", "Shape6", "Shape6", "Shape6", "Shape6", "Shape6", "Shape6" };  //the array of shape names
     private Collider2D myCollider;
 
 
@@ -153,6 +153,8 @@ public class TouchRotate : MonoBehaviour
                                 toolbarArray[i] = toolbarArray[i] - Global.shapeOffset;
                                 }
                             }
+
+                            go.GetComponent<SpriteRenderer>().sortingLayerName = layerArray[System.Array.IndexOf(nameArray, go.name)]; //move to correct layer
 
                             go.transform.position = TargetPosition;                            //snap to position
                             go.transform.rotation = Quaternion.Euler(TargetRotation);          //snap to orientation

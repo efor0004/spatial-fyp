@@ -1669,7 +1669,7 @@ public class FarmHandler : MonoBehaviour
         Global.RenderShapeVariable("Shape6", "Square", new Vector3(0.501f, -2.1625f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.04787672f, 0.1879005f, 1f), "Shape4", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), true, 6, false);
         Global.RenderShapeVariable("Shape7", "Square", new Vector3(1.472f, -1.957f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.04787672f, 0.1879005f, 1f), "Shape4", new Vector4(0f, 0f, 0f, 1f), true, 7, false);
         Global.RenderShapeVariable("Shape8", "Semicircle", new Vector3(-0.784f, -1.248f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1716156f, 0.4920554f, 1f), "Shape5", new Vector4(0.7075472f, 0.7075472f, 0.7075472f, 1f), false, 8, false);
-        Global.RenderShapeVariable("Shape9", "Parallelogram", new Vector3(-0.8596f, -2.1792f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1437185f, 0.1879517f, 1f), "Shape6", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), true, 9, false);
+        Global.RenderShapeVariable("Shape9", "Parallelogram", new Vector3(-0.8596f, -2.1792f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1437185f, 0.1879517f, 1f), "Shape5", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), true, 9, false);
 
         //spawn target image
         Global.RenderPuzzleImage("F50");

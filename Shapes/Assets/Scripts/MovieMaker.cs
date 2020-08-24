@@ -10,9 +10,11 @@ public class MovieMaker : MonoBehaviour
 
     void Start()
     {
-
-        Global.LeftArrowActiveMovie = true;
+        Global.LeftArrowActiveMovie = true;                                              //instantiate buttons
         Global.RightArrowActiveMovie = true;
+        GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("StopRecordButton").GetComponent<Button>().interactable = false;
+        
         FarmAnimals();
     }
     void Update()
