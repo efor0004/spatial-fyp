@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/format_menu/PuzzlesButton.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/buttons/puzzles_button/normal/puzzles_button.png" type="Texture" id=2]
+[ext_resource path="res://scripts/format_menu/FreePlayButton.gd" type="Script" id=3]
+[ext_resource path="res://assets/sprites/buttons/free_play_button/normal/free_play_button.png" type="Texture" id=4]
+[ext_resource path="res://scripts/Exit Button.gd" type="Script" id=5]
+
+[node name="Format Menu" type="Node2D"]
+
+[node name="Puzzles Button" type="Button" parent="."]
+margin_left = 193.0
+margin_top = 675.0
+margin_right = 1165.0
+margin_bottom = 921.0
+rect_scale = Vector2( 0.75, 0.75 )
+icon = ExtResource( 2 )
+flat = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Free Play Button" type="Button" parent="."]
+margin_left = 972.0
+margin_top = 675.0
+margin_right = 2148.0
+margin_bottom = 921.0
+rect_scale = Vector2( 0.75, 0.75 )
+icon = ExtResource( 4 )
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit Button" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="Puzzles Button" to="Puzzles Button" method="_on_Puzzles_Button_button_down"]
+[connection signal="button_up" from="Puzzles Button" to="Puzzles Button" method="_on_Puzzles_Button_button_up"]
+[connection signal="button_down" from="Free Play Button" to="Free Play Button" method="_on_Free_Play_Button_button_down"]
+[connection signal="button_up" from="Free Play Button" to="Free Play Button" method="_on_Free_Play_Button_button_up"]
+[connection signal="button_down" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_down"]
+[connection signal="button_up" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_up"]
