@@ -8,13 +8,20 @@ var total_levels = 10
 
 onready var back_button = get_node("Back Button")
 
+const DraggableSquare = preload("./DraggableSquare.gd")
+
 const Constants = preload("../utilities/constants.gd")
 onready var constants = Constants.new()
 
 func _ready():
 	render()
 
-func on_option_pressed(index):
+func on_option_down(index, event_position):
+	if (display_state == "single_level"):
+		var new_square = DraggableSquare.new(level_to_display, index, event_position)
+		get_parent().add_child(new_square)
+
+func on_option_up(index):
 	if (display_state == "all_levels"):
 		level_to_display = index
 		display_state = "single_level"

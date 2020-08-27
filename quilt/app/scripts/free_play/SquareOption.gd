@@ -6,9 +6,12 @@ onready var palette = get_parent()
 
 func on_input_event(event):
 	var is_disabled = get_is_disabled()
-	if !is_disabled and event is InputEventMouseButton and !event.pressed:
+	if !is_disabled and event is InputEventMouseButton:
 		var index = int(self.name)
-		palette.on_option_pressed(index)
+		if event.pressed:
+			palette.on_option_down(index, event.position)
+		else:
+			palette.on_option_up(index)
 
 func get_is_disabled():
 	var fabric = get_node("Fabric")
