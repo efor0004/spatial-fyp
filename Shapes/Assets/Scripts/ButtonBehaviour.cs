@@ -951,4 +951,35 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = true;
     }
 
+    public void TutePuzzleButton()
+    {   //triggered by selecting the tick in the tutorial for puzzles
+        //makes the next instruction appear
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        TutePuzzleHandler.popUpIndex++;          //increments index counter in TutePuzzleHandler
+        TutePuzzleHandler.TuteLoadManager();    //calls funtion to update loaded objects in tute
+    }
+
+    public void TutorialPuzzleButton()
+    { //loads the puzzle tutorial scene
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+       
+        SceneManager.LoadScene("TutorialPuzzle");
+    }
+
+    public void TutorialMovieButton()
+    { //loads the MovieMaker tutorial scene
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+       // SceneManager.LoadScene("TutorialMovie");
+    }
+
+
+
 }
