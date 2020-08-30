@@ -116,6 +116,8 @@ public class ButtonBehaviour : MonoBehaviour
 
         GameObject.Find("MainMenu").transform.localPosition = Global.topPosition;
         GameObject.Find("ParentalinfoMenu").transform.localPosition = Global.centrePosition;
+       // GameObject.Find("ScrollArea").transform.localPosition = Global.centrePosition; ///////////////////////
+
     }
 
     public void SettingsBackButton()
@@ -241,7 +243,8 @@ public class ButtonBehaviour : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         GameObject.Find("MainMenu").transform.localPosition = Global.centrePosition;
-        GameObject.Find("ParentalinfoMenu").transform.localPosition = Global.topPosition;
+         GameObject.Find("ParentalinfoMenu").transform.localPosition = Global.topPosition;
+       // GameObject.Find("ScrollArea").transform.localPosition = Global.topPosition; ///////////////////////////////////
     }
 
     public void CompleteHomeButton()

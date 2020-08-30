@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialPuzzle.unity
     guid: e1398bc796c5777409aa454efd43efec
+  - enabled: 1
+    path: Assets/Scenes/TutorialMovie.unity
+    guid: 7df1d8b816b69cb4db69bd96dfa6424b
   - enabled: 0
     path: Assets/Scenes/Playground.unity
     guid: b9c62bc8fda088a40b192d1385098614
