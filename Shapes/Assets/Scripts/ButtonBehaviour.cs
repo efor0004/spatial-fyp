@@ -951,17 +951,6 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = true;
     }
 
-    public void TutePuzzleButton()
-    {   //triggered by selecting the tick in the tutorial for puzzles
-        //makes the next instruction appear
-
-        if (Global.SoundEffects == true)
-            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
-
-        TutePuzzleHandler.popUpIndex++;          //increments index counter in TutePuzzleHandler
-        TutePuzzleHandler.TuteLoadManager();    //calls funtion to update loaded objects in tute
-    }
-
     public void TutorialPuzzleButton()
     { //loads the puzzle tutorial scene
 
@@ -977,7 +966,53 @@ public class ButtonBehaviour : MonoBehaviour
         if (Global.SoundEffects == true)
             FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
-       // SceneManager.LoadScene("TutorialMovie");
+        SceneManager.LoadScene("TutorialMovie");
+    }
+
+
+
+    public void TutePuzzleButton()
+    {   //triggered by selecting the tick in the tutorial for puzzles
+        //makes the next instruction appear
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        TutePuzzleHandler.popUpIndex++;          //increments index counter in TutePuzzleHandler
+        TutePuzzleHandler.TuteLoadManager();    //calls funtion to update loaded objects in tute
+    }
+
+    public void TuteMovieButton()
+    {   //triggered by selecting the tick in the tutorial for movie maker
+        //makes the next instruction appear
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        TuteMovieHandler.popUpIndex++;          //increments index counter in TuteMovieHandler
+        TuteMovieHandler.TuteLoadManager();    //calls funtion to update loaded objects in tute
+    }
+
+    public void EndTutorialButton()
+    {
+        //triggered by the button at the end of the movie maker or puzzle tutoris
+        //resets variables and loads Worlds scene
+
+        TutePuzzleHandler.popUpIndex = 0;
+        TuteMovieHandler.popUpIndex = 0;
+
+        TutePuzzleHandler.translateFlag = false;
+        TutePuzzleHandler.rotateFlag = false;
+        TutePuzzleHandler.toolbarFlag = false;
+        TutePuzzleHandler.completeFlag = false;
+
+        TuteMovieHandler.translateFlag = false;
+        TuteMovieHandler.rotateFlag = false;
+        TuteMovieHandler.tapFlag = false;
+        TuteMovieHandler.toolbarFlag = false;
+        TuteMovieHandler.disableFlag = false;
+
+        SceneManager.LoadScene("Worlds");
     }
 
 
