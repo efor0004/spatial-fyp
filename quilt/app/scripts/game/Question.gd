@@ -26,8 +26,6 @@ signal piece_added
 signal ready_for_options
 
 func _ready():
-	save_utils.set_state_for_player()
-	
 	if (global.current_level >= constants.max_levels && global.current_question >= constants.questions_per_level):
 		get_tree().change_scene("res://Progress Screen.tscn")
 	

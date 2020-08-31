@@ -1,0 +1,220 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://assets/sprites/fabrics/level_2/fabric_1.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/fabrics/level_1/fabric_1.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/fabrics/level_3/fabric_1.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/fabrics/level_4/fabric_1.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/fabrics/level_5/fabric_1.jpg" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/fabrics/level_6/fabric_1.jpg" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/fabrics/level_7/fabric_1.jpg" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/fabrics/level_8/fabric_1.jpg" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/fabrics/level_9/fabric_1.jpg" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/fabrics/level_10/fabric_1.jpg" type="Texture" id=10]
+[ext_resource path="res://scripts/Exit Button.gd" type="Script" id=11]
+[ext_resource path="res://scripts/free_play/SquareOption.gd" type="Script" id=12]
+[ext_resource path="res://scripts/free_play/Palette.gd" type="Script" id=13]
+[ext_resource path="res://assets/sprites/buttons/back_button/normal/back_button.png" type="Texture" id=14]
+[ext_resource path="res://scripts/free_play/BackButton.gd" type="Script" id=15]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 102, 768 )
+
+[sub_resource type="Gradient" id=2]
+colors = PoolColorArray( 0.356863, 0.356863, 0.356863, 1, 0.356863, 0.356863, 0.356863, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+width = 204
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 64, 64 )
+
+[node name="Free Play" type="Node2D"]
+
+[node name="Palette" type="Area2D" parent="."]
+script = ExtResource( 13 )
+
+[node name="Background" type="CollisionShape2D" parent="Palette"]
+position = Vector2( 1946, 768 )
+shape = SubResource( 1 )
+
+[node name="Colour" type="Sprite" parent="Palette/Background"]
+texture = SubResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 204, 1536 )
+
+[node name="1" type="Area2D" parent="Palette"]
+position = Vector2( 1946, 102 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palette/1"]
+shape = SubResource( 4 )
+
+[node name="Fabric" type="Sprite" parent="Palette/1"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 512, 512 )
+
+[node name="2" type="Area2D" parent="Palette"]
+position = Vector2( 1946, 250 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palette/2"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="Fabric" type="Sprite" parent="Palette/2"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 512, 512 )
+
+[node name="3" type="Area2D" parent="Palette"]
+position = Vector2( 1946, 398 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palette/3"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="Fabric" type="Sprite" parent="Palette/3"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 512, 512 )
+
+[node name="4" type="Area2D" parent="Palette"]
+position = Vector2( 1946, 546 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palette/4"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="Fabric" type="Sprite" parent="Palette/4"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 512, 512 )
+
+[node name="5" type="Area2D" parent="Palette"]
+position = Vector2( 1946, 694 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palette/5"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="Fabric" type="Sprite" parent="Palette/5"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 512, 512 )
+
+[node name="6" type="Area2D" parent="Palette"]
+position = Vector2( 1946, 842 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palette/6"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="Fabric" type="Sprite" parent="Palette/6"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 512, 512 )
+
+[node name="7" type="Area2D" parent="Palette"]
+position = Vector2( 1946, 990 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palette/7"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="Fabric" type="Sprite" parent="Palette/7"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 512, 512 )
+
+[node name="8" type="Area2D" parent="Palette"]
+position = Vector2( 1946, 1138 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palette/8"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="Fabric" type="Sprite" parent="Palette/8"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 512, 512 )
+
+[node name="9" type="Area2D" parent="Palette"]
+position = Vector2( 1946, 1286 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palette/9"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="Fabric" type="Sprite" parent="Palette/9"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 9 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 512, 512 )
+
+[node name="10" type="Area2D" parent="Palette"]
+position = Vector2( 1946, 1434 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palette/10"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="Fabric" type="Sprite" parent="Palette/10"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 10 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 512, 512 )
+
+[node name="Back Button" type="Button" parent="Palette"]
+margin_left = 1720.0
+margin_top = 10.0
+margin_right = 2002.0
+margin_bottom = 226.0
+rect_scale = Vector2( 0.4, 0.4 )
+icon = ExtResource( 14 )
+flat = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit Button" type="Button" parent="."]
+margin_left = 1946.0
+margin_top = 102.0
+margin_right = 1958.0
+margin_bottom = 122.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="input_event" from="Palette/1" to="Palette/1" method="_on_1_input_event"]
+[connection signal="input_event" from="Palette/2" to="Palette/2" method="_on_2_input_event"]
+[connection signal="input_event" from="Palette/3" to="Palette/3" method="_on_3_input_event"]
+[connection signal="input_event" from="Palette/4" to="Palette/4" method="_on_4_input_event"]
+[connection signal="input_event" from="Palette/5" to="Palette/5" method="_on_5_input_event"]
+[connection signal="input_event" from="Palette/6" to="Palette/6" method="_on_6_input_event"]
+[connection signal="input_event" from="Palette/7" to="Palette/7" method="_on_7_input_event"]
+[connection signal="input_event" from="Palette/8" to="Palette/8" method="_on_8_input_event"]
+[connection signal="input_event" from="Palette/9" to="Palette/9" method="_on_9_input_event"]
+[connection signal="input_event" from="Palette/10" to="Palette/10" method="_on_10_input_event"]
+[connection signal="button_down" from="Palette/Back Button" to="Palette/Back Button" method="_on_Back_Button_button_down"]
+[connection signal="button_up" from="Palette/Back Button" to="Palette/Back Button" method="_on_Back_Button_button_up"]
+[connection signal="button_down" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_down"]
+[connection signal="button_up" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_up"]

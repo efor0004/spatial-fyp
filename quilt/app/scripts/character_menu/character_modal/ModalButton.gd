@@ -11,4 +11,4 @@ func _init(parent_width, parent_height, scale):
 	self.rect_position = Vector2(parent_width / 2 - button_size.x / 2, parent_height / 2 - button_size.y / 2)
 
 func _pressed():
-	get_tree().change_scene("res://Game.tscn")
+	get_tree().change_scene("res://Format Menu.tscn")

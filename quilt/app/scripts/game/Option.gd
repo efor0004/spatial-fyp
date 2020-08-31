@@ -12,18 +12,13 @@ const Constants = preload("../utilities/constants.gd")
 onready var constants = Constants.new()
 
 func pressed():
-	var option_transformations = get_option_transformations()
-	var option_rotation = option_transformations["rotation"]
-	var option_flip = option_transformations["flip"]
+	var option_rotation = get_option_rotation()
 	
 	var is_correct = is_correct_answer()
 	
 	if is_correct:
 		if (option_rotation != 0):
 			add_option_rotation_animation()
-		
-		if (option_flip != constants.FLIP_NONE):
-			add_option_flip_animation()
 		
 		animation_player.play("Correct")
 		yield(animation_player, "animation_finished")
@@ -33,13 +28,6 @@ func pressed():
 	else:
 		animation_player.play("Incorrect")
 		yield(animation_player, "animation_finished")
-
-func add_option_flip_animation():
-	var animation_name = "scale"
-	var animation_start_value = self.scale
-	var animation_end_value = Vector2(1, 1)
-	
-	add_option_animation(animation_name, animation_start_value, animation_end_value)
 
 func add_option_rotation_animation():
 	var animation_name = "rotation_degrees"
@@ -108,35 +96,31 @@ func get_option_index():
 	else:
 		return 0
 
-func get_option_transformations():
+func get_option_rotation():
 	var current_level_index = global.current_level - 1
 	var current_question_index = global.current_shuffled_question - 1
 	var current_level_difficulty = global.current_level_difficulty
 	
-	var level_transformations = constants.level_option_transformations[current_level_index][current_level_difficulty]
+	var level_rotations = constants.level_option_rotations[current_level_index][current_level_difficulty]
 	
-	if (typeof(level_transformations) == TYPE_ARRAY):
-		level_transformations = level_transformations[current_question_index]
+	var option_rotation = 0
 	
-	return level_transformations
-
-func transform_option(option_rotation, option_flip):
-	self.rotation_degrees = -option_rotation
-	if (option_flip == constants.FLIP_VERTICAL):
-		self.scale = Vector2(1, -1)
-	elif (option_flip == constants.FLIP_HORIZONTAL):
-		self.scale = Vector2(-1, 1)
+	if (typeof(level_rotations) == TYPE_ARRAY):
+		option_rotation = level_rotations[current_question_index]
 	else:
-		self.scale = Vector2(1, 1)
+		option_rotation = level_rotations
+	
+	return option_rotation
+
+func transform_option(option_rotation):
+	self.rotation_degrees = -option_rotation
 
 func set_initial_transformations():
 	if (is_correct_answer()):
-		var option_transformations = get_option_transformations()
-		var option_rotation = option_transformations["rotation"]
-		var option_flip = option_transformations["flip"]
-		transform_option(option_rotation, option_flip)
+		var option_rotation = get_option_rotation()
+		transform_option(option_rotation)
 	else:
-		transform_option(0, constants.FLIP_NONE)
+		transform_option(0)
 
 func _input_event(_viewport, event, _shape_idx):
 	if is_animation_happening():

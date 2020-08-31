@@ -38,6 +38,11 @@ _global_script_classes=[ {
 "class": "Option",
 "language": "GDScript",
 "path": "res://scripts/game/Option.gd"
+}, {
+"base": "Area2D",
+"class": "SquareOption",
+"language": "GDScript",
+"path": "res://scripts/free_play/SquareOption.gd"
 } ]
 _global_script_class_icons={
 "CharacterModal": "",
@@ -45,7 +50,8 @@ _global_script_class_icons={
 "ExitButton": "",
 "Modal": "",
 "ModalButton": "",
-"Option": ""
+"Option": "",
+"SquareOption": ""
 }
 
 [application]

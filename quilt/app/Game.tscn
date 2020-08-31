@@ -12,8 +12,8 @@ light_mode = 2
 
 [sub_resource type="Animation" id=2]
 resource_name = "Correct"
-length = 6.5
-step = 0.5
+length = 7.5
+step = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer1/Layer2/Option 1:position")
 tracks/0/interp = 1
@@ -21,10 +21,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 1, 2.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 821, 768 ), Vector2( 356, 768 ) ]
+"values": [ Vector2( 821, 768 ), Vector2( 356, 384 ), Vector2( 356, 356 ), Vector2( 356, 768 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AnimationPlayer1/Layer2/Option 1/Sub Layer/Colour Overlay:self_modulate")
@@ -33,7 +33,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 4.5, 5, 5.5, 6, 6.5 ),
+"times": PoolRealArray( 0, 5.5, 6, 6.5, 7, 7.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ) ]
@@ -45,10 +45,74 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 1, 2.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 821, 768 ), Vector2( 356, 768 ) ]
+"values": [ Vector2( 821, 768 ), Vector2( 356, 768 ), Vector2( 356, 356 ), Vector2( 356, 768 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer1/Layer2/Option 1:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 3.5, 4, 5, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer1/Layer2/Option 1/Border:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4, 5, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false, false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Incorrect"
+length = 9.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer1/Layer2/Option 1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2.3, 7, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 821, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer1/Layer2/Option 1/Sub Layer/Colour Overlay:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4.5, 5, 5.5, 6, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer1/Layer2/Option 1/Sub Layer/Colour Overlay:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2.3, 7, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 821, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("AnimationPlayer1/Layer2/Option 1:modulate")
@@ -69,71 +133,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 3, 4, 6.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ true, true, false, false ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "Incorrect"
-length = 8.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationPlayer1/Layer2/Option 1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 6, 8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 821, 768 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationPlayer1/Layer2/Option 1/Sub Layer/Colour Overlay:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 3.5, 4, 4.5, 5, 5.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer1/Layer2/Option 1/Sub Layer/Colour Overlay:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1, 6, 8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 821, 768 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("AnimationPlayer1/Layer2/Option 1:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 1.5, 2, 3, 3.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("AnimationPlayer1/Layer2/Option 1/Border:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1, 2, 3, 8 ),
+"times": PoolRealArray( 0, 0.1, 3, 4, 9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, true, false, false ]
@@ -153,7 +153,7 @@ width = 368
 extents = Vector2( 192, 192 )
 
 [sub_resource type="Animation" id=8]
-length = 7.5
+length = 8.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer2/Layer3/Option 2:position")
 tracks/0/interp = 1
@@ -161,10 +161,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 2, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1256, 768 ), Vector2( 356, 768 ) ]
+"values": [ Vector2( 1256, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AnimationPlayer2/Layer3/Option 2/SubLayer/Colour Overlay:self_modulate")
@@ -173,7 +173,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 5.5, 6, 6.5, 7, 7.5 ),
+"times": PoolRealArray( 0, 6.5, 7, 7.5, 8, 8.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ) ]
@@ -185,10 +185,74 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 2, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1256, 768 ), Vector2( 356, 768 ) ]
+"values": [ Vector2( 1256, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer2/Layer3/Option 2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 4.5, 5, 6, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer2/Layer3/Option 2/Border:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 5, 6, 8.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true, false, false ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 10.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer2/Layer3/Option 2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 2.5, 3.25, 8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1256, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer2/Layer3/Option 2/SubLayer/Colour Overlay:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5.5, 6, 6.5, 7, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer2/Layer3/Option 2/SubLayer/Colour Overlay:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 2.5, 3.25, 8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1256, 768 ), Vector2( 358, 356 ), Vector2( 358, 356 ), Vector2( 358, 768 ), Vector2( 358, 768 ), Vector2( 358, 1750 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("AnimationPlayer2/Layer3/Option 2:modulate")
@@ -209,71 +273,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1, 4, 5, 7.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, true, false, false ]
-}
-
-[sub_resource type="Animation" id=9]
-length = 9.0
-step = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationPlayer2/Layer3/Option 2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2, 7, 9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1256, 768 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationPlayer2/Layer3/Option 2/SubLayer/Colour Overlay:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 4.5, 5, 5.5, 6, 6.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer2/Layer3/Option 2/SubLayer/Colour Overlay:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 2, 7, 9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1256, 768 ), Vector2( 358, 768 ), Vector2( 358, 768 ), Vector2( 358, 1750 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("AnimationPlayer2/Layer3/Option 2:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 2.5, 3, 4, 4.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("AnimationPlayer2/Layer3/Option 2/Border:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 3, 4, 9 ),
+"times": PoolRealArray( 0, 4, 5, 10 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ true, true, false, false ]
@@ -290,7 +290,7 @@ gradient = SubResource( 11 )
 width = 384
 
 [sub_resource type="Animation" id=13]
-length = 8.5
+length = 9.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer3/Layer4/Option 3:position")
 tracks/0/interp = 1
@@ -298,10 +298,74 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 3, 4.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1721, 768 ), Vector2( 356, 768 ) ]
+"values": [ Vector2( 1721, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer3/Layer4/Option 3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 5.5, 6, 7, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer3/Layer4/Option 3/SubLayer/Colour Overlay:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 7.5, 8, 8.5, 9, 9.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer3/Layer4/Option 3/SubLayer/Colour Overlay:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3, 4.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1721, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer3/Layer4/Option 3/Border:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 6, 7, 9.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true, false, false ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 11.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer3/Layer4/Option 3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 3.5, 4.25, 9, 11 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1721, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AnimationPlayer3/Layer4/Option 3:modulate")
@@ -325,70 +389,6 @@ tracks/2/keys = {
 "times": PoolRealArray( 6.5, 7, 7.5, 8, 8.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("AnimationPlayer3/Layer4/Option 3/SubLayer/Colour Overlay:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1721, 768 ), Vector2( 356, 768 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("AnimationPlayer3/Layer4/Option 3/Border:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1, 5, 6, 8.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, true, false, false ]
-}
-
-[sub_resource type="Animation" id=14]
-length = 10.0
-step = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationPlayer3/Layer4/Option 3:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 8, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1721, 768 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationPlayer3/Layer4/Option 3:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 3.5, 4, 5, 5.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer3/Layer4/Option 3/SubLayer/Colour Overlay:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 5.5, 6, 6.5, 7, 7.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/3/type = "value"
@@ -398,10 +398,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 3, 8, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 3, 3.5, 4.25, 9, 11 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1721, 768 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
+"values": [ Vector2( 1721, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("AnimationPlayer3/Layer4/Option 3/Border:visible")
@@ -410,7 +410,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 4, 5, 10 ),
+"times": PoolRealArray( 0, 5, 6, 11 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ true, true, false, false ]
@@ -438,7 +438,7 @@ material = SubResource( 1 )
 z_index = 5
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 80, 80, 384, 384 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="AnimationPlayer1" type="AnimationPlayer" parent="Question"]
 anims/Correct = SubResource( 2 )
@@ -474,7 +474,7 @@ material = SubResource( 1 )
 z_index = 4
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 80, 80, 384, 384 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="Light2D" type="Light2D" parent="Question/AnimationPlayer1/Layer2/Option 1"]
 texture = ExtResource( 2 )
@@ -524,7 +524,7 @@ shape = SubResource( 7 )
 material = SubResource( 1 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 80, 80, 384, 384 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="Light2D" type="Light2D" parent="Question/AnimationPlayer2/Layer3/Option 2"]
 position = Vector2( 0, -2.5545 )
@@ -575,7 +575,7 @@ shape = SubResource( 7 )
 material = SubResource( 1 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 80, 80, 384, 384 )
+region_rect = Rect2( 0, 0, 384, 384 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -589,7 +589,6 @@ range_layer_min = 4
 range_layer_max = 4
 
 [node name="Border" type="Sprite" parent="Question/AnimationPlayer3/Layer4/Option 3"]
-visible = false
 scale = Vector2( 1.1, 1.1 )
 z_index = -1
 texture = ExtResource( 2 )
@@ -606,8 +605,8 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer2/Layer3/Option 2" method="_on_Question_ready_for_options"]
 [connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer1/Layer2/Option 1" method="_on_Question_ready_for_options"]
 [connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer3/Layer4/Option 3" method="_on_Question_ready_for_options"]
-[connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer2/Layer3/Option 2" method="_on_Question_ready_for_options"]
 [connection signal="button_down" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_down"]
 [connection signal="button_up" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_up"]
