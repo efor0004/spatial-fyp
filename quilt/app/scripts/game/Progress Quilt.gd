@@ -65,7 +65,7 @@ func add_quilt_piece(fabric_path, piece_pos, scale):
 	var piece_fabric = get_fabric(fabric_path)
 	fabric.set_texture(piece_fabric)
 	fabric.region_enabled = true
-	fabric.region_rect = Rect2(80, 80, quilt_size, quilt_size)
+	fabric.region_rect = Rect2(0, 0, quilt_size, quilt_size)
 	
 	piece_sprite.add_child(mask)
 	piece.add_child(piece_sprite)

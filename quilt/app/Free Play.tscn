@@ -51,10 +51,10 @@ script = ExtResource( 12 )
 shape = SubResource( 4 )
 
 [node name="Fabric" type="Sprite" parent="Palette/1"]
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.33, 0.33 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 512, 512 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="2" type="Area2D" parent="Palette"]
 position = Vector2( 1946, 250 )
@@ -65,10 +65,10 @@ visible = false
 shape = SubResource( 4 )
 
 [node name="Fabric" type="Sprite" parent="Palette/2"]
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.33, 0.33 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 512, 512 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="3" type="Area2D" parent="Palette"]
 position = Vector2( 1946, 398 )
@@ -79,10 +79,10 @@ visible = false
 shape = SubResource( 4 )
 
 [node name="Fabric" type="Sprite" parent="Palette/3"]
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.33, 0.33 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 512, 512 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="4" type="Area2D" parent="Palette"]
 position = Vector2( 1946, 546 )
@@ -93,10 +93,10 @@ visible = false
 shape = SubResource( 4 )
 
 [node name="Fabric" type="Sprite" parent="Palette/4"]
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.33, 0.33 )
 texture = ExtResource( 4 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 512, 512 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="5" type="Area2D" parent="Palette"]
 position = Vector2( 1946, 694 )
@@ -107,10 +107,10 @@ visible = false
 shape = SubResource( 4 )
 
 [node name="Fabric" type="Sprite" parent="Palette/5"]
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.33, 0.33 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 512, 512 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="6" type="Area2D" parent="Palette"]
 position = Vector2( 1946, 842 )
@@ -121,10 +121,10 @@ visible = false
 shape = SubResource( 4 )
 
 [node name="Fabric" type="Sprite" parent="Palette/6"]
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.33, 0.33 )
 texture = ExtResource( 6 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 512, 512 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="7" type="Area2D" parent="Palette"]
 position = Vector2( 1946, 990 )
@@ -135,10 +135,10 @@ visible = false
 shape = SubResource( 4 )
 
 [node name="Fabric" type="Sprite" parent="Palette/7"]
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.33, 0.33 )
 texture = ExtResource( 7 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 512, 512 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="8" type="Area2D" parent="Palette"]
 position = Vector2( 1946, 1138 )
@@ -149,10 +149,10 @@ visible = false
 shape = SubResource( 4 )
 
 [node name="Fabric" type="Sprite" parent="Palette/8"]
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.33, 0.33 )
 texture = ExtResource( 8 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 512, 512 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="9" type="Area2D" parent="Palette"]
 position = Vector2( 1946, 1286 )
@@ -163,10 +163,10 @@ visible = false
 shape = SubResource( 4 )
 
 [node name="Fabric" type="Sprite" parent="Palette/9"]
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.33, 0.33 )
 texture = ExtResource( 9 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 512, 512 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="10" type="Area2D" parent="Palette"]
 position = Vector2( 1946, 1434 )
@@ -177,10 +177,10 @@ visible = false
 shape = SubResource( 4 )
 
 [node name="Fabric" type="Sprite" parent="Palette/10"]
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.33, 0.33 )
 texture = ExtResource( 10 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 512, 512 )
+region_rect = Rect2( 0, 0, 384, 384 )
 
 [node name="Back Button" type="Button" parent="Palette"]
 margin_left = 1720.0
