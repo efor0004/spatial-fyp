@@ -15,13 +15,13 @@ func shuffle_list(list):
 		list_copy.remove(x)
 	return shuffled_list
 
-func shuffle_question_order():
-	var level_hard_questions_info = constants.num_hard_questions_per_level[global.current_level - 1]
+func shuffle_question_order(current_level):
+	var level_hard_questions_info = constants.num_hard_questions_per_level[current_level - 1]
 	var hard_questions_required = level_hard_questions_info["required"]
 	var hard_questions_available = level_hard_questions_info["available"]
 	
 	var sliced_shuffled_questions = []
-	var questions_available_for_level = constants.questions_available_per_level[global.current_level - 1]
+	var questions_available_for_level = constants.questions_available_per_level[current_level - 1]
 	var shuffled_normal_questions = shuffle_list(range(1, questions_available_for_level + 1))
 	
 	if (hard_questions_required == 0 || hard_questions_available == 0):

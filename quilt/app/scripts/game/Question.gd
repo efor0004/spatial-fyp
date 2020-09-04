@@ -58,7 +58,7 @@ func next_question():
 		else:
 			global.current_question = constants.questions_per_level
 			
-		global.question_order = general_utils.shuffle_question_order()
+		global.question_order = general_utils.shuffle_question_order(global.current_level)
 		global.current_shuffled_question = global.question_order[global.current_question - 1]
 		save_utils.save_progress()
 		
