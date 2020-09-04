@@ -23,6 +23,7 @@ public class TuteMovieHandler : MonoBehaviour
     Vector2 touchPos;
     void Start()
     {
+
         for (int i = 0; i < popUps.Length; i++) //only display first popup
         {
             if (i == 0)

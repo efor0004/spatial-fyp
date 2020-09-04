@@ -92,6 +92,9 @@ public class FarmHandler : MonoBehaviour
         Mask = GameObject.Find("Mask").GetComponent<Image>();
         LevelText = GameObject.Find("LevelText").GetComponent<Text>();
 
+        Global.LeftArrowActive = true; //reset arrow flags to true
+        Global.RightArrowActive = true;
+
         CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
         //Puzzle27();
 

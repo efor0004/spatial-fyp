@@ -436,7 +436,7 @@ public class ButtonBehaviour : MonoBehaviour
         if (name == "MovieMaker")
         {
             GameObject.Find("SceneButton").GetComponent<Button>().interactable = true;         //activates buttons
-            GameObject.Find("StartButton").GetComponent<Button>().interactable = true;         //activates buttons
+            GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;         //activates buttons
 
             GameObject.Find("LeftArrowMovie").GetComponent<Button>().interactable = true;
             GameObject.Find("RightArrowMovie").GetComponent<Button>().interactable = true;
