@@ -24,6 +24,8 @@ public class TutePuzzleHandler : MonoBehaviour
     Vector3 wp;
     Vector2 touchPos;
 
+    Vector3 MaxHeight = new Vector3(0, 300f, 0); 
+
     void Start()
     {
         for (int i = 0; i < popUps.Length; i++) //only display first popup
@@ -40,6 +42,10 @@ public class TutePuzzleHandler : MonoBehaviour
             }
 
         }
+
+        TuteLoadManager();
+
+        //Debug.Log("Divider y position; " + Camera.main.ScreenToWorldPoint(GameObject.Find("Divider").transform.position).y); 
 
     }
 
@@ -80,16 +86,20 @@ public class TutePuzzleHandler : MonoBehaviour
                         {
 
                         if (Input.touchCount == 1)
-                        {                                                                                                             //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
-                            go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
-                                                                       Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
-                                                                        0.0f);
-                            if (popUpIndex == 6)
+                        {      //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
+
+                            if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < Camera.main.ScreenToWorldPoint(MaxHeight).y) // stops shape going behind instructions
                             {
-                                popUpIndex = 7; //////////////
-                                TuteLoadManager();
+                                go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
+                                                                           Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
+                                                                            0.0f);
+                                if (popUpIndex == 6)
+                                {
+                                    popUpIndex = 7; //////////////
+                                    TuteLoadManager();
+                                }
                             }
-                           
+                                        
                         }
 
                         if ((Input.touchCount == 2) && (rotateFlag == true))
@@ -207,30 +217,116 @@ public class TutePuzzleHandler : MonoBehaviour
     }
 
     public static void TuteLoadManager()
+
+    // FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
     {
-        if (popUpIndex == 5)
-        {
-            TuteLoadHouse();
-        }
-        else if (popUpIndex == 6)
-        {
-            TuteLoadTriangle();
-            TutePuzzleHandler.translateFlag = true; //enable translation
 
-        }
-        else if (popUpIndex == 7)
+        switch (popUpIndex)
         {
-            TutePuzzleHandler.rotateFlag = true; //enable rotation
+            case 0:
+                {
+                    FindObjectOfType<AudioManager>().Play("p0");
+                }
+                break;
+            case 1:
+                {
+                    FindObjectOfType<AudioManager>().Stop("p0");
+                    FindObjectOfType<AudioManager>().Play("p1");
+                }
+                break;
+            case 2:
+                {
+                    FindObjectOfType<AudioManager>().Stop("p1");
+                    FindObjectOfType<AudioManager>().Play("p2");
+                }
+                break;
+            case 3:
+                {
+                    FindObjectOfType<AudioManager>().Stop("p2");
+                    FindObjectOfType<AudioManager>().Play("p3");
+                }
+                break;
+            case 4:
+                {
+                    FindObjectOfType<AudioManager>().Stop("p3");
+                    FindObjectOfType<AudioManager>().Play("p4");
+                }
+                break;
+            case 5:
+                {
+                    FindObjectOfType<AudioManager>().Stop("p4");
+                    FindObjectOfType<AudioManager>().Play("p5");
+
+                    TuteLoadHouse();
+                }
+                break;
+            case 6:
+                {
+                    FindObjectOfType<AudioManager>().Stop("p5");
+                    FindObjectOfType<AudioManager>().Play("p6");
+                    TuteLoadTriangle();
+                    TutePuzzleHandler.translateFlag = true;
+                }
+                break;
+            case 7:
+                {
+                    FindObjectOfType<AudioManager>().Stop("p6");
+                    FindObjectOfType<AudioManager>().Play("p7");
+                    TutePuzzleHandler.rotateFlag = true; //enable rotation
+                }
+                break;
+            case 8:
+                {
+                    FindObjectOfType<AudioManager>().Stop("p7");
+                    FindObjectOfType<AudioManager>().Play("p8");
+                    TutePuzzleHandler.toolbarFlag = true; //enable toolbar return
+                }
+                break;
+            case 9:
+                {
+                    FindObjectOfType<AudioManager>().Stop("p8");
+                    FindObjectOfType<AudioManager>().Play("p9");
+                    TuteLoadSquare();
+                    TutePuzzleHandler.completeFlag = true; //enable correct placement
+                }
+                break;
+            case 10:
+                {
+                    FindObjectOfType<AudioManager>().Stop("p9");
+                    FindObjectOfType<AudioManager>().Play("p10");
+                }
+                break;
+            default:
+                {
+                    Debug.Log("error in TutePuzzleHandler case statement");
+                }
+                break;
         }
-        else if (popUpIndex == 8)
-        {
-            TutePuzzleHandler.toolbarFlag = true; //enable toolbar return
-        }
-        else if (popUpIndex == 9)
-        {
-            TuteLoadSquare();
-            TutePuzzleHandler.completeFlag = true; //enable correct placement
-        }
+
+
+        //if (popUpIndex == 5)
+        //{
+        //    TuteLoadHouse();
+        //}
+        //else if (popUpIndex == 6)
+        //{
+        //    TuteLoadTriangle();
+        //    TutePuzzleHandler.translateFlag = true; //enable translation
+
+        //}
+        //else if (popUpIndex == 7)
+        //{
+        //    TutePuzzleHandler.rotateFlag = true; //enable rotation
+        //}
+        //else if (popUpIndex == 8)
+        //{
+        //    TutePuzzleHandler.toolbarFlag = true; //enable toolbar return
+        //}
+        //else if (popUpIndex == 9)
+        //{
+        //    TuteLoadSquare();
+        //    TutePuzzleHandler.completeFlag = true; //enable correct placement
+        //}
+
     }
-
 }

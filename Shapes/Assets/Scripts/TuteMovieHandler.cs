@@ -21,6 +21,8 @@ public class TuteMovieHandler : MonoBehaviour
     private Collider2D myCollider;
     Vector3 wp;
     Vector2 touchPos;
+
+    Vector3 MaxHeight = new Vector3(0, 300f, 0);
     void Start()
     {
 
@@ -38,6 +40,8 @@ public class TuteMovieHandler : MonoBehaviour
             }
 
         }
+
+        TuteLoadManager(); 
     }
 
 
@@ -127,14 +131,17 @@ public class TuteMovieHandler : MonoBehaviour
                             }
                             else if (Input.touchCount == 1)
                             {                                                                                                             //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
+                                if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < Camera.main.ScreenToWorldPoint(MaxHeight).y) // stops shape going behind instructions
+                                {
                                     go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
                                                                                Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
                                                                                 0.0f);
 
-                                if (popUpIndex == 5)
-                                {
+                                    if (popUpIndex == 5)
+                                    {
                                         popUpIndex = 6; //////////////
                                         TuteLoadManager();
+                                    }
                                 }
                             }
 
@@ -188,28 +195,116 @@ public class TuteMovieHandler : MonoBehaviour
 
     public static void TuteLoadManager()
     {
-        if (popUpIndex == 5)
-        {
-            TuteLoadRooster();
-            TuteMovieHandler.translateFlag = true; //enable translation
-        }
-        else if (popUpIndex == 6)
-        {
-            TuteMovieHandler.rotateFlag = true; //enable rotation
 
-        }
-        else if (popUpIndex == 7)
+        switch (popUpIndex)
         {
-            TuteMovieHandler.tapFlag = true; //enable translation
+            case 0:
+                {
+                    FindObjectOfType<AudioManager>().Play("m0");
+                }
+                break;
+            case 1:
+                {
+                    FindObjectOfType<AudioManager>().Stop("m0");
+                    FindObjectOfType<AudioManager>().Play("m1");
+                }
+                break;
+            case 2:
+                {
+                    FindObjectOfType<AudioManager>().Stop("m1");
+                    FindObjectOfType<AudioManager>().Play("m2");
+                }
+                break;
+            case 3:
+                {
+                    FindObjectOfType<AudioManager>().Stop("m2");
+                    FindObjectOfType<AudioManager>().Play("m3");
+                }
+                break;
+            case 4:
+                {
+                    FindObjectOfType<AudioManager>().Stop("m3");
+                    FindObjectOfType<AudioManager>().Play("m4");
+                }
+                break;
+            case 5:
+                {
+                    FindObjectOfType<AudioManager>().Stop("m4");
+                    FindObjectOfType<AudioManager>().Play("m5");
+                    TuteLoadRooster();
+                    TuteMovieHandler.translateFlag = true; //enable translation
+                }
+                break;
+            case 6:
+                {
+                    FindObjectOfType<AudioManager>().Stop("m5");
+                    FindObjectOfType<AudioManager>().Play("m6");
+                    TuteMovieHandler.rotateFlag = true; //enable rotation
+                }
+                break;
+            case 7:
+                {
+                    FindObjectOfType<AudioManager>().Stop("m6");
+                    FindObjectOfType<AudioManager>().Play("m7");
+                    TuteMovieHandler.tapFlag = true; //enable translation
+                }
+                break;
+            case 8:
+                {
+                    FindObjectOfType<AudioManager>().Stop("m7");
+                    FindObjectOfType<AudioManager>().Play("m8");
+                    TuteMovieHandler.toolbarFlag = true; //enable toolbar return
+                }
+                break;
+            case 9:
+                {
+                    FindObjectOfType<AudioManager>().Stop("m8");
+                    FindObjectOfType<AudioManager>().Play("m9");
+                    TuteMovieHandler.disableFlag = true; //disable interaction with rooster
+                }
+                break;
+            case 10:
+                {
+                    FindObjectOfType<AudioManager>().Stop("m9");
+                    FindObjectOfType<AudioManager>().Play("m10");
+                }
+                break;
+            case 11:
+                {
+                    FindObjectOfType<AudioManager>().Stop("m10");
+                    FindObjectOfType<AudioManager>().Play("m11");
+                }
+                break;
+            default:
+                {
+                    Debug.Log("error in TutePuzzleHandler case statement");
+                }
+                break;
         }
-        else if (popUpIndex == 8)
-        {
-            TuteMovieHandler.toolbarFlag = true; //enable toolbar return
-        }
-        else if (popUpIndex == 9)
-        {
-            TuteMovieHandler.disableFlag = true; //disable interaction with rooster
-        }
+
+        //if (popUpIndex == 5)
+        //{
+        //    TuteLoadRooster();
+        //    TuteMovieHandler.translateFlag = true; //enable translation
+        //}
+        //else if (popUpIndex == 6)
+        //{
+        //    TuteMovieHandler.rotateFlag = true; //enable rotation
+
+        //}
+        //else if (popUpIndex == 7)
+        //{
+        //    TuteMovieHandler.tapFlag = true; //enable translation
+        //}
+        //else if (popUpIndex == 8)
+        //{
+        //    TuteMovieHandler.toolbarFlag = true; //enable toolbar return
+        //}
+        //else if (popUpIndex == 9)
+        //{
+        //    TuteMovieHandler.disableFlag = true; //disable interaction with rooster
+        //}
+
     }
 }
 

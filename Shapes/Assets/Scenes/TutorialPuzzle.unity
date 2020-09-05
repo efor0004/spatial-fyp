@@ -260,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1025.8, y: -476.1}
-  m_SizeDelta: {x: 249.5, y: 242.5}
+  m_AnchoredPosition: {x: 886, y: -409.08}
+  m_SizeDelta: {x: 474.6, y: 203.6}
   m_Pivot: {x: 2.3201065, y: -0.5369855}
 --- !u!114 &11499072
 MonoBehaviour:
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 78f867360b8a59048a4340aceaa5b868, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 295c7111297118d418ae4e0e831dc078, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -386,7 +386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2517, y: 1707.7}
+  m_AnchoredPosition: {x: -55, y: 189}
   m_SizeDelta: {x: 1124.2, y: 691.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &76946038
@@ -566,10 +566,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'THIS IS THE PROGRESS BAR.
 
-    IT SHOWS HOW FAR THROUGH THE CURRENT LEVEL YOU ARE.
-
-
-    CLICK TO CONTINUE'
+    IT SHOWS HOW CLOSE YOU ARE TO THE NEXT LEVEL'
 --- !u!222 &147074246
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -687,7 +684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2569, y: -943.17}
+  m_AnchoredPosition: {x: 63, y: 281.14996}
   m_SizeDelta: {x: 1124.2, y: 691.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &158027997
@@ -760,7 +757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.799927, y: -141}
+  m_AnchoredPosition: {x: -9.800049, y: -141}
   m_SizeDelta: {x: -111.30005, y: 191.90002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &360585632
@@ -799,7 +796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1061.2, y: -1775}
+  m_AnchoredPosition: {x: -0.000015259, y: 63}
   m_SizeDelta: {x: 1124.2, y: 691.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360585634
@@ -849,7 +846,7 @@ GameObject:
   - component: {fileID: 395595963}
   - component: {fileID: 395595962}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -871,8 +868,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -32.4, y: -54.2}
-  m_SizeDelta: {x: 1275.9, y: 490.9}
+  m_AnchoredPosition: {x: 0.0000019073, y: -40}
+  m_SizeDelta: {x: 1275.9, y: 411.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &395595962
 MonoBehaviour:
@@ -905,8 +902,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "YOU CAN ROTATE A SHAPE WITH 2 FINGERS WITH A TWISTING MOTION. \nAT LEAST
-    ONE FINGER NEEDS TO BE ON THE SHAPE.\n\nROTATE THIS TRIANGLE."
+  m_Text: YOU CAN ROTATE A SHAPE BY TWISTING TWO FINGERS. YOU ONLY NEED ONE FINGER
+    ON THE SHAPE.
 --- !u!222 &395595963
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -949,8 +946,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -37.6, y: -78.4}
-  m_SizeDelta: {x: 1197.2, y: 473.9}
+  m_AnchoredPosition: {x: 12.8, y: 2.8}
+  m_SizeDelta: {x: 1309.5, y: 371.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &426686848
 MonoBehaviour:
@@ -985,11 +982,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'THIS IS THE TOOLBAR.
 
-    SHAPES APPEAR HERE AND CAN BE DRAGGED INTO THE ASSEMBLY AREA. USE THE ARROWS TO
-    NAVIGATE.
-
-
-    CLICK TO CONTINUE'
+    ALL OF THE SHAPES YOU NEED WILL APPEAR HERE. USE THE ARROWS TO SEE MORE SHAPES.'
 --- !u!222 &426686849
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1033,8 +1026,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1025.8, y: -476.1}
-  m_SizeDelta: {x: 249.5, y: 242.5}
+  m_AnchoredPosition: {x: 1075.3, y: -402}
+  m_SizeDelta: {x: 590.8, y: 191.2}
   m_Pivot: {x: 2.3201065, y: -0.5369855}
 --- !u!114 &475295011
 MonoBehaviour:
@@ -1105,7 +1098,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 78f867360b8a59048a4340aceaa5b868, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 295c7111297118d418ae4e0e831dc078, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1156,8 +1149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.5, y: -68}
-  m_SizeDelta: {x: 906.9, y: 463.5}
+  m_AnchoredPosition: {x: -28, y: -69.2}
+  m_SizeDelta: {x: 797.2, y: 415.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &558679170
 MonoBehaviour:
@@ -1190,11 +1183,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'THIS TUTORIAL WILL TEACH YOU HOW TO PLAY THE PUZZLE GAMES IN MOUSESHAPES
-    AND FARMWORLD
-
-
-    CLICK TO CONTINUE'
+  m_Text: THIS TUTORIAL WILL TEACH YOU HOW TO PLAY THE GAME
 --- !u!222 &558679171
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1240,8 +1229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2458, y: 441.48}
-  m_SizeDelta: {x: 1520.1, y: 691.7}
+  m_AnchoredPosition: {x: 0, y: -227.6001}
+  m_SizeDelta: {x: 1520.1, y: 739.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &582013105
 MonoBehaviour:
@@ -1308,12 +1297,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 798326492}
+  - {fileID: 1433374197}
   m_Father: {fileID: 2112477297}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2279.5, y: 63}
+  m_AnchoredPosition: {x: 494.15, y: 129.15}
   m_SizeDelta: {x: 555.21, y: 1128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &596644621
@@ -1424,12 +1414,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1901511250}
+  - {fileID: 2084603067}
   m_Father: {fileID: 2112477297}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1791.3, y: 972.53}
+  m_AnchoredPosition: {x: 5.8500977, y: 377.20007}
   m_SizeDelta: {x: 1531.8, y: 595.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &756540754
@@ -1504,7 +1495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1061.2, y: 1662}
+  m_AnchoredPosition: {x: -55, y: 33}
   m_SizeDelta: {x: 1124.2, y: 691.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759015425
@@ -1542,80 +1533,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759015423}
   m_CullTransparentMesh: 0
---- !u!1001 &784393660
-PrefabInstance:
+--- !u!1 &774920136
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6501276235152006790, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: sounds.Array.data[1].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: a73c869faf84dcb4680ece4689d6538f, type: 3}
-    - target: {fileID: 6501276235152006791, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501276235152006905, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501276235152006905, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501276235152006905, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501276235152006905, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501276235152006905, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501276235152006905, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501276235152006905, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501276235152006905, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501276235152006905, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501276235152006905, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6501276235152006905, guid: 589322399df673d42955eb8a433045ee,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 589322399df673d42955eb8a433045ee, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 774920137}
+  - component: {fileID: 774920139}
+  - component: {fileID: 774920138}
+  m_Layer: 5
+  m_Name: Text1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &774920137
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774920136}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1498709466}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000032425, y: 42}
+  m_SizeDelta: {x: 939.5, y: 173.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &774920138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774920136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'YOU CAN DRAG A SHAPE WITH ONE FINGER.
+
+'
+--- !u!222 &774920139
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774920136}
+  m_CullTransparentMesh: 0
 --- !u!1 &794916533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,7 +1706,7 @@ GameObject:
   - component: {fileID: 798326494}
   - component: {fileID: 798326493}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1732,8 +1728,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17, y: -167}
-  m_SizeDelta: {x: 463.5, y: 956.6}
+  m_AnchoredPosition: {x: -0.000013351, y: -160}
+  m_SizeDelta: {x: 427.1, y: 878.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &798326493
 MonoBehaviour:
@@ -1756,7 +1752,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 60
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
@@ -1766,10 +1762,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'NOW DRAG THE TRIANGLE INTO THE ASSEMBLY AREA TO COMPLETE THE PUZZLE.
-
-
-    ONE SHAPE IS ALREADY PLACED TO HELP YOU.'
+  m_Text: DRAG THE TRIANGLE INTO THE PLAY AREA TO MAKE A HOUSE.
 --- !u!222 &798326494
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1790,7 +1783,7 @@ GameObject:
   - component: {fileID: 825162297}
   - component: {fileID: 825162296}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1808,12 +1801,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1498709466}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.5, y: -68}
-  m_SizeDelta: {x: 906.9, y: 463.5}
+  m_AnchoredPosition: {x: 11.65, y: -205}
+  m_SizeDelta: {x: 988.8, y: 162.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &825162296
 MonoBehaviour:
@@ -1836,7 +1829,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 60
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
@@ -1846,10 +1839,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'YOU CAN DRAG A SHAPE WITH ONE FINGER.
-
-
-    DRAG THIS TRIANGLE.'
+  m_Text: TRY TO DRAG THIS TRIANGLE.
 --- !u!222 &825162297
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2009,8 +1999,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15, y: -140}
-  m_SizeDelta: {x: 1275.9, y: 490.9}
+  m_AnchoredPosition: {x: 23, y: -58.735}
+  m_SizeDelta: {x: 1308.7, y: 353.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1134494772
 MonoBehaviour:
@@ -2043,10 +2033,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'CONGRATULATIONS! TUTORIAL COMPLETE!
-
-
-    CLICK TO RETURN TO GAME.'
+  m_Text: "CONGRATULATIONS! \nTUTORIAL COMPLETE!"
 --- !u!222 &1134494773
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2290,6 +2277,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368465568}
   m_CullTransparentMesh: 0
+--- !u!1 &1433374196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1433374197}
+  - component: {fileID: 1433374199}
+  - component: {fileID: 1433374198}
+  m_Layer: 5
+  m_Name: Text2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1433374197
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433374196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 596644620}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 15.3, y: -376.15}
+  m_SizeDelta: {x: 433.4, y: 375.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1433374198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433374196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: ONE SHAPE IS ALREADY THERE TO HELP YOU.
+--- !u!222 &1433374199
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433374196}
+  m_CullTransparentMesh: 0
 --- !u!1 &1445678543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,12 +2422,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'THIS IS THE ASSEMBLY AREA.
+  m_Text: 'THIS IS THE PLAY AREA.
 
-    ARRANGE SHAPES TO MATCH THE TARGET IMAGE.
-
-
-    CLICK TO CONTINUE'
+    MOVE YOUR SHAPES HERE TO MAKE A PICTURE.'
 --- !u!222 &1445678546
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2406,8 +2467,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.5165, y: -114.1}
-  m_SizeDelta: {x: 906.9, y: 463.5}
+  m_AnchoredPosition: {x: -0.00001049, y: -68.6}
+  m_SizeDelta: {x: 933.7, y: 492.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1473925296
 MonoBehaviour:
@@ -2440,12 +2501,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'THIS IS THE TARGET IMAGE.
+  m_Text: 'THIS IS THE PICTURE.
 
-    THE AIM IS TO ARRANGE YOUR SHAPES TO MATCH THIS IMAGE.
-
-
-    CLICK TO CONTINUE'
+    YOU WIN THE GAME WHEN THE SHAPES IN THE PLAY AREA MATCH THIS PICTURE'
 --- !u!222 &1473925297
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2483,14 +2541,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 774920137}
   - {fileID: 825162295}
   m_Father: {fileID: 2112477297}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 278, y: 1744.3}
-  m_SizeDelta: {x: 1124.2, y: 691.7}
+  m_AnchoredPosition: {x: -55.00003, y: 329.00012}
+  m_SizeDelta: {x: 1176.2, y: 691.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498709467
 MonoBehaviour:
@@ -2527,6 +2586,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498709465}
   m_CullTransparentMesh: 0
+--- !u!1 &1540059989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1540059990}
+  - component: {fileID: 1540059992}
+  - component: {fileID: 1540059991}
+  m_Layer: 5
+  m_Name: Text2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1540059990
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540059989}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1850902697}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 32, y: -217}
+  m_SizeDelta: {x: 1275.9, y: 115.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1540059991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540059989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 60
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: TRY TO ROTATE THIS TRIANGLE.
+--- !u!222 &1540059992
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540059989}
+  m_CullTransparentMesh: 0
 --- !u!1 &1556995313
 GameObject:
   m_ObjectHideFlags: 0
@@ -2562,8 +2698,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1025.8, y: -476.09985}
-  m_SizeDelta: {x: 249.5, y: 242.5}
+  m_AnchoredPosition: {x: 964.2, y: -389}
+  m_SizeDelta: {x: 521.8, y: 176.5}
   m_Pivot: {x: 2.3201065, y: -0.5369855}
 --- !u!114 &1556995315
 MonoBehaviour:
@@ -2634,7 +2770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 78f867360b8a59048a4340aceaa5b868, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 295c7111297118d418ae4e0e831dc078, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2686,8 +2822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1025.8, y: -476.1}
-  m_SizeDelta: {x: 249.5, y: 242.5}
+  m_AnchoredPosition: {x: 982, y: -430}
+  m_SizeDelta: {x: 525.9, y: 202.1}
   m_Pivot: {x: 2.3201065, y: -0.5369855}
 --- !u!114 &1591931364
 MonoBehaviour:
@@ -2758,7 +2894,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 78f867360b8a59048a4340aceaa5b868, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 295c7111297118d418ae4e0e831dc078, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2812,7 +2948,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2517, y: -1819}
+  m_AnchoredPosition: {x: -205.69, y: 329}
   m_SizeDelta: {x: 1124.2, y: 691.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1593239073
@@ -2884,7 +3020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.5, y: -68}
+  m_AnchoredPosition: {x: -6.5166, y: -95}
   m_SizeDelta: {x: 906.9, y: 463.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1630673568
@@ -2918,8 +3054,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "THIS IS THE MENU BUTTON.\nIT WILL LET YOU NAVIGATE THROUGH THE PUZZLES
-    AND RETURN TO THE HOME MENU. \n\nCLICK TO CONTINUE"
+  m_Text: 'THIS IS THE MENU BUTTON.
+
+    IT HELPS YOU TO CHANGE ACTIVITIES'
 --- !u!222 &1630673569
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2963,8 +3100,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 575, y: -129}
-  m_SizeDelta: {x: 255.9, y: 224.4}
+  m_AnchoredPosition: {x: 38, y: -129}
+  m_SizeDelta: {x: 491.1, y: 186.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667499662
 MonoBehaviour:
@@ -3035,7 +3172,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 78f867360b8a59048a4340aceaa5b868, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a524c88db16aff4d9ad8103e6bce542, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3082,12 +3219,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 395595961}
+  - {fileID: 1540059990}
   m_Father: {fileID: 2112477297}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1778.6, y: 1726}
+  m_AnchoredPosition: {x: -10.857, y: 329}
   m_SizeDelta: {x: 1557.3, y: 728.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1850902698
@@ -3209,7 +3347,7 @@ GameObject:
   - component: {fileID: 1901511252}
   - component: {fileID: 1901511251}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3231,8 +3369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15, y: -99}
-  m_SizeDelta: {x: 1275.9, y: 490.9}
+  m_AnchoredPosition: {x: -0.000081062, y: -105}
+  m_SizeDelta: {x: 1262.2, y: 429}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901511251
 MonoBehaviour:
@@ -3265,10 +3403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'SHAPES RETURN TO THE TOOLBAR IF YOU RELEASE THEM BELOW THE LINE.
-
-
-    RETURN THIS TRIANGLE TO THE TOOLBAR.'
+  m_Text: SHAPES GO BACK TO THE TOOLBAR IF YOU DRAG THEM BELOW THE LINE.
 --- !u!222 &1901511252
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3385,8 +3520,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1797, y: -833}
-  m_SizeDelta: {x: 1520.3, y: 471.37}
+  m_AnchoredPosition: {x: 0.25001, y: 33}
+  m_SizeDelta: {x: 1124.7, y: 498.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1972773221
 MonoBehaviour:
@@ -3643,8 +3778,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1025.8, y: -476.1}
-  m_SizeDelta: {x: 249.5, y: 242.5}
+  m_AnchoredPosition: {x: 1076.3, y: -419.6}
+  m_SizeDelta: {x: 588.2, y: 211.5}
   m_Pivot: {x: 2.3201065, y: -0.5369855}
 --- !u!114 &2081888195
 MonoBehaviour:
@@ -3715,7 +3850,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 78f867360b8a59048a4340aceaa5b868, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 295c7111297118d418ae4e0e831dc078, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3731,6 +3866,83 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081888193}
+  m_CullTransparentMesh: 0
+--- !u!1 &2084603066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2084603067}
+  - component: {fileID: 2084603069}
+  - component: {fileID: 2084603068}
+  m_Layer: 5
+  m_Name: Text2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2084603067
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084603066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 756540753}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000015259, y: -160}
+  m_SizeDelta: {x: 1111.4, y: 139.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2084603068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084603066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 60
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: TRY TO RETURN THIS TRIANGLE TO THE TOOLBAR.
+--- !u!222 &2084603069
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084603066}
   m_CullTransparentMesh: 0
 --- !u!1001 &2112477296
 PrefabInstance:
@@ -3897,8 +4109,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1025.8, y: -476.1}
-  m_SizeDelta: {x: 249.5, y: 242.5}
+  m_AnchoredPosition: {x: 878.2, y: -391}
+  m_SizeDelta: {x: 486.7, y: 196}
   m_Pivot: {x: 2.3201065, y: -0.5369855}
 --- !u!114 &2144867235
 MonoBehaviour:
@@ -3969,7 +4181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 78f867360b8a59048a4340aceaa5b868, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 295c7111297118d418ae4e0e831dc078, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4322,3 +4534,137 @@ RectTransform:
   m_AnchoredPosition: {x: 124.9, y: -99.8}
   m_SizeDelta: {x: 249.8, y: 222.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6501276234636098362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501276234636098363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5c4745206336140812ab7cd9567fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: PuzzleComplete
+    clip: {fileID: 8300000, guid: 307723fab011a9b4f8707f6498843c7a, type: 3}
+    volume: 0.506
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BackgroundMusic
+    clip: {fileID: 8300000, guid: a73c869faf84dcb4680ece4689d6538f, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Correct
+    clip: {fileID: 8300000, guid: bbe046b5c226e35488bf35c4a8b6e03b, type: 3}
+    volume: 0.483
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Button
+    clip: {fileID: 8300000, guid: 247f621eefa5c904a887c4b929b61e8f, type: 3}
+    volume: 0.483
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: p0
+    clip: {fileID: 8300000, guid: d8be68de7a28c884c9e7638319220c94, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: p1
+    clip: {fileID: 8300000, guid: da5f10fa830e52345ad2491d578e42a6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: p2
+    clip: {fileID: 8300000, guid: 5be0cc562dfbb844d8d5c0056eca54fe, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: p3
+    clip: {fileID: 8300000, guid: f6bec2f09f970a241a346210017de905, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: p4
+    clip: {fileID: 8300000, guid: 06c556a61203afc43883522fcf5c4053, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: p5
+    clip: {fileID: 8300000, guid: 20d1da33c9b59cd469fbacbd4e2065f8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: p6
+    clip: {fileID: 8300000, guid: 7776cc9cbd7445643b0b22c18a1f6193, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: p7
+    clip: {fileID: 8300000, guid: ae72a29fea636414482c757dfe8ea19a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: p8
+    clip: {fileID: 8300000, guid: 333f5c30f0fe6a24d889e4bca2ed6dfe, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: p9
+    clip: {fileID: 8300000, guid: 7f8c4873154c1764699fbfd64f1382b5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: p10
+    clip: {fileID: 8300000, guid: 2100101f5d74f9341a45cf278632414b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!1 &6501276234636098363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6501276234636098373}
+  - component: {fileID: 6501276234636098362}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6501276234636098373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501276234636098363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

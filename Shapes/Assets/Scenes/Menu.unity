@@ -2727,7 +2727,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2050153988}
   m_HandleRect: {fileID: 2050153987}
   m_Direction: 2
-  m_Value: 0.99997574
+  m_Value: 0.9999757
   m_Size: 0.11692329
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3043,6 +3043,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6501276235152006790, guid: 589322399df673d42955eb8a433045ee,
+        type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6501276235152006791, guid: 589322399df673d42955eb8a433045ee,
         type: 3}
       propertyPath: m_Name
