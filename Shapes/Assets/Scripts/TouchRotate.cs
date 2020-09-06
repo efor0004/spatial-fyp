@@ -155,6 +155,8 @@ public class TouchRotate : MonoBehaviour
 
                             go.GetComponent<SpriteRenderer>().sortingLayerName = layerArray[System.Array.IndexOf(nameArray, go.name)]; //move to correct layer
 
+                            go.GetComponent<CircleCollider2D>().enabled = false;               //disable collider of placed shape
+
                             go.transform.position = TargetPosition;                            //snap to position
                             go.transform.rotation = Quaternion.Euler(TargetRotation);          //snap to orientation
 

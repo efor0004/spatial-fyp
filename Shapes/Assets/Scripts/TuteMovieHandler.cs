@@ -22,7 +22,7 @@ public class TuteMovieHandler : MonoBehaviour
     Vector3 wp;
     Vector2 touchPos;
 
-    Vector3 MaxHeight = new Vector3(0, 300f, 0);
+    //Vector3 MaxHeight = new Vector3(0, 300f, 0);
     void Start()
     {
 
@@ -41,7 +41,8 @@ public class TuteMovieHandler : MonoBehaviour
 
         }
 
-        TuteLoadManager(); 
+
+      // TuteLoadManager(); 
     }
 
 
@@ -131,7 +132,7 @@ public class TuteMovieHandler : MonoBehaviour
                             }
                             else if (Input.touchCount == 1)
                             {                                                                                                             //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
-                                if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < Camera.main.ScreenToWorldPoint(MaxHeight).y) // stops shape going behind instructions
+                                if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < Camera.main.ScreenToWorldPoint(GameObject.Find("MaxHeight").transform.position).y) // stops shape going behind instructions
                                 {
                                     go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
                                                                                Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
@@ -200,13 +201,13 @@ public class TuteMovieHandler : MonoBehaviour
         {
             case 0:
                 {
-                    FindObjectOfType<AudioManager>().Play("m0");
+                   // FindObjectOfType<AudioManager>().Play("m0");
                 }
                 break;
             case 1:
                 {
                     FindObjectOfType<AudioManager>().Stop("m0");
-                    FindObjectOfType<AudioManager>().Play("m1");
+                    FindObjectOfType<AudioManager>().Play("m1");               
                 }
                 break;
             case 2:

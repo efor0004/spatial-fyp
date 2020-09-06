@@ -96,7 +96,7 @@ public class FarmHandler : MonoBehaviour
         Global.RightArrowActive = true;
 
         CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
-        //Puzzle27();
+        //Puzzle18();
 
     }
     void Update()

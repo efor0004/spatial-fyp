@@ -1004,6 +1004,9 @@ public class ButtonBehaviour : MonoBehaviour
         TutePuzzleHandler.popUpIndex = 0;
         TuteMovieHandler.popUpIndex = 0;
 
+        FindObjectOfType<AudioManager>().Stop("p10"); //cuts off audio
+        FindObjectOfType<AudioManager>().Stop("m11");
+
         TutePuzzleHandler.translateFlag = false;
         TutePuzzleHandler.rotateFlag = false;
         TutePuzzleHandler.toolbarFlag = false;

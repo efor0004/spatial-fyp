@@ -43,7 +43,7 @@ public class TutePuzzleHandler : MonoBehaviour
 
         }
 
-        TuteLoadManager();
+        //TuteLoadManager();
 
         //Debug.Log("Divider y position; " + Camera.main.ScreenToWorldPoint(GameObject.Find("Divider").transform.position).y); 
 
@@ -88,7 +88,7 @@ public class TutePuzzleHandler : MonoBehaviour
                         if (Input.touchCount == 1)
                         {      //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
 
-                            if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < Camera.main.ScreenToWorldPoint(MaxHeight).y) // stops shape going behind instructions
+                            if ((Camera.main.ScreenToWorldPoint(Input.mousePosition).y < Camera.main.ScreenToWorldPoint(GameObject.Find("MaxHeight").transform.position).y) || (popUpIndex >= 9)) // stops shape going behind instructions
                             {
                                 go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
                                                                            Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
@@ -161,10 +161,6 @@ public class TutePuzzleHandler : MonoBehaviour
                     go.transform.rotation = Quaternion.Euler(TargetRotation);          //snap to orientation
 
 
-                    if (Global.SoundEffects == true)
-                        FindObjectOfType<AudioManager>().Play("Correct"); //plays correct placement sound
-
-
                     if (popUpIndex == 9)
                     {
                         popUpIndex = 10; //////////////
@@ -225,7 +221,7 @@ public class TutePuzzleHandler : MonoBehaviour
         {
             case 0:
                 {
-                    FindObjectOfType<AudioManager>().Play("p0");
+                   // FindObjectOfType<AudioManager>().Play("p0");
                 }
                 break;
             case 1:
