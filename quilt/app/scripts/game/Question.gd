@@ -47,9 +47,6 @@ func next_question():
 	var level_hard_questions_info = constants.num_hard_questions_per_level[global.current_level - 1]
 	var num_normal_questions_for_level = constants.questions_per_level - level_hard_questions_info["required"]
 	
-	if (global.current_level_difficulty == "normal" && global.current_question > num_normal_questions_for_level):
-		global.current_level_difficulty = "hard"
-	
 	if (global.current_question > constants.questions_per_level):
 		if (global.current_level < constants.max_levels):
 			global.current_level += 1
@@ -64,6 +61,9 @@ func next_question():
 		
 		get_tree().change_scene("res://Progress Screen.tscn")
 		return
+	
+	if (global.current_level_difficulty == "normal" && global.current_question > num_normal_questions_for_level):
+		global.current_level_difficulty = "hard"
 	
 	global.current_shuffled_question = global.question_order[global.current_question - 1]
 	

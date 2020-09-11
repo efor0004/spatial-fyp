@@ -253,13 +253,48 @@ var level_6_option_rotations = [
 	90
 ]
 
+var level_7_option_rotations = [
+	-45,
+	45,
+	-45,
+	45,
+	-45,
+	45,
+	-45,
+	45,
+	45,
+	-45,
+	45,
+	-45,
+	45,
+	-45,
+	45,
+	-45,
+	-45,
+	45,
+	45,
+	-45,
+	45,
+	-25,
+	-30,
+	-20,
+	-25,
+	160,
+	-30,
+	75,
+	-20,
+	65,
+	25,
+]
+
 export(Array) var level_option_rotations = [
 	{ "normal": level_1_option_rotations, "hard": level_1_hard_option_rotations }, # level 1
 	{ "normal": level_2_option_rotations, "hard": level_2_hard_option_rotations }, # level 2
 	{ "normal": level_3_option_rotations }, # level 3
 	{ "normal": level_4_option_rotations }, # level 4
 	{ "normal": level_5_option_rotations }, # level 5
-	{ "normal": level_6_option_rotations } # level 6
+	{ "normal": level_6_option_rotations }, # level 6
+	{ "normal": level_7_option_rotations } # level 7
 ]
 
 var hard_questions_per_level = 4
@@ -270,7 +305,8 @@ export(Array) var num_hard_questions_per_level = [
 	{ "required": 0, "available": 0 }, # level 3
 	{ "required": 0, "available": 0 }, # level 4
 	{ "required": 0, "available": 0 }, # level 5
-	{ "required": 0, "available": 0 } # level 6
+	{ "required": 0, "available": 0 }, # level 6
+	{ "required": 0, "available": 0 } # level 7
 ]
 
 export var questions_per_level = 10
@@ -281,10 +317,11 @@ export(Array) var questions_available_per_level = [
 	39, # level 3
 	39, # level 4
 	46, # level 5
-	56 # level 6
+	56, # level 6
+	31 # level 7
 ]
 
-export var max_levels = 6
+export var max_levels = 7
 
 export var max_questions_per_file = 10
 
