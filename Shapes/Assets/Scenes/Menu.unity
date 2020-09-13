@@ -1949,7 +1949,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.8, y: -1909.4}
+  m_AnchoredPosition: {x: 0.75, y: -2284}
   m_SizeDelta: {x: 1037, y: 976.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1307959752
@@ -3226,6 +3226,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_MatchWidthOrHeight
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865349593717884558, guid: 526be30959ce6824c935f4b548d5bc24,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526be30959ce6824c935f4b548d5bc24, type: 3}

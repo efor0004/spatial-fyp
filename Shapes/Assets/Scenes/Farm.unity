@@ -844,6 +844,11 @@ PrefabInstance:
       propertyPath: m_MatchWidthOrHeight
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6865349593717884558, guid: 526be30959ce6824c935f4b548d5bc24,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526be30959ce6824c935f4b548d5bc24, type: 3}
 --- !u!224 &1938414869 stripped
