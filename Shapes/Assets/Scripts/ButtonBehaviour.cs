@@ -1001,8 +1001,6 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by the button at the end of the movie maker or puzzle tutoris
         //resets variables and loads Worlds scene
 
-        TutePuzzleHandler.popUpIndex = 0;
-        TuteMovieHandler.popUpIndex = 0;
 
         FindObjectOfType<AudioManager>().Stop("p10"); //cuts off audio
         FindObjectOfType<AudioManager>().Stop("m11");
@@ -1017,6 +1015,9 @@ public class ButtonBehaviour : MonoBehaviour
         TuteMovieHandler.tapFlag = false;
         TuteMovieHandler.toolbarFlag = false;
         TuteMovieHandler.disableFlag = false;
+
+        TutePuzzleHandler.popUpIndex = 0;
+        TuteMovieHandler.popUpIndex = 0;
 
         SceneManager.LoadScene("Worlds");
     }

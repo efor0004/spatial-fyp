@@ -88,7 +88,8 @@ public class TutePuzzleHandler : MonoBehaviour
                         if (Input.touchCount == 1)
                         {      //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
 
-                            if ((Camera.main.ScreenToWorldPoint(Input.mousePosition).y < Camera.main.ScreenToWorldPoint(GameObject.Find("MaxHeight").transform.position).y) || (popUpIndex >= 9)) // stops shape going behind instructions
+                            if (((Camera.main.ScreenToWorldPoint(Input.mousePosition).y < Camera.main.ScreenToWorldPoint(GameObject.Find("MaxHeight").transform.position).y)&&(popUpIndex < 9)) 
+                                || ((popUpIndex == 9)&&(Camera.main.ScreenToWorldPoint(Input.mousePosition).x < Camera.main.ScreenToWorldPoint(GameObject.Find("MaxWidth").transform.position).x))) // stops shape going behind instructions
                             {
                                 go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
                                                                            Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
