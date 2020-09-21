@@ -1,21 +1,19 @@
 extends Sprite
 
 var quilt_size = 384
-var piece_scale = 0.25
+var piece_scale = 0.125
 var quilt_size_scaled = quilt_size * piece_scale
 
 var holey_quilt_position = Vector2(358, 768)
-
-var initial_quilt_piece_x = 1136
-var initial_quilt_piece_y = quilt_size_scaled / 2
-
-var animation_duration = 4
 
 const Constants = preload("../utilities/constants.gd")
 var constants = Constants.new()
 
 const GeneralUtils = preload("../utilities/general.gd")
 var general_utils = GeneralUtils.new()
+
+var initial_quilt_piece_x = global.window_size.x - (constants.questions_per_level - 0.5) * quilt_size_scaled 
+var initial_quilt_piece_y = quilt_size_scaled / 2
 
 signal done_animating
 
@@ -65,7 +63,7 @@ func add_quilt_piece(fabric_path, piece_pos, scale):
 	var piece_fabric = get_fabric(fabric_path)
 	fabric.set_texture(piece_fabric)
 	fabric.region_enabled = true
-	fabric.region_rect = Rect2(80, 80, quilt_size, quilt_size)
+	fabric.region_rect = Rect2(0, 0, quilt_size, quilt_size)
 	
 	piece_sprite.add_child(mask)
 	piece.add_child(piece_sprite)
@@ -100,6 +98,7 @@ func get_piece_end_position(level, question):
 	return piece_position
 
 func get_piece_animation(end_pos, piece_sprite, mask_node, fabric_node):
+	var animation_duration = get_animation_duration()
 	var start_pos = holey_quilt_position
 	
 	var piece_animation = Animation.new()
@@ -134,6 +133,15 @@ func get_piece_animation(end_pos, piece_sprite, mask_node, fabric_node):
 	piece_animation.track_insert_key(2, animation_duration, end_scale)
 	
 	return piece_animation
+
+func get_animation_duration():
+	if (global.current_level == 1):
+		if (global.current_question <= 3):
+			return 4
+		elif (global.current_question <= 6):
+			return 3
+	
+	return 2
 
 func get_sprite_name():
 	var current_piece_index = get_current_piece_index()
