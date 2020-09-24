@@ -12,7 +12,9 @@ public class MovieRotate : MonoBehaviour
                                                        "F11", "F12", "F13", "F14", "F15", "F16", "F17", "F18", "F19", "F20",
                                                        "F21", "F22", "F23", "F24", "F25", "F26", "F27", "F28", "F29", "F30",
                                                        "F31", "F32", "F33", "F34", "F35", "F36", "F37", "F38", "F39", "F40",
-                                                       "F41", "F42", "F43", "F44", "F45", "F46", "F47", "F48", "F49", "F50" };  //the array of shape names
+                                                       "F41", "F42", "F43", "F44", "F45", "F46", "F47", "F48", "F49", "F50",
+                                                       "MS1", "MS2", "MS3", "MS4", "MS5", "MS6", "MS7", "MS8", "MS9", "MS10",
+                                                       "MS11", "MS12", "MS13", "MS14", "MS15",};  //the array of shape names
     public static Vector3[] selectionArray = new[] { new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), 
                                                   new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f),
                                                   new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f),
@@ -22,12 +24,17 @@ public class MovieRotate : MonoBehaviour
                                                   new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f),
                                                   new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f),
                                                   new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f),
-                                                  new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f) }; //the arrow of toolbar positions
+                                                  new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f),
+                                                  new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f),
+                                                  new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f),
+                                                  new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 0f)}; //the arrow of toolbar positions
     public static bool[] playArray = new bool[] { false, false, false, false, false, false, false, false, false, false, 
                                                   false, false, false, false, false, false, false, false, false, false,
                                                   false, false, false, false, false, false, false, false, false, false,
                                                   false, false, false, false, false, false, false, false, false, false,
-                                                  false, false, false, false, false, false, false, false, false, false};
+                                                  false, false, false, false, false, false, false, false, false, false,
+                                                  false, false, false, false, false, false, false, false, false, false,
+                                                  false, false, false, false, false};
 
     private Collider2D myCollider;
 

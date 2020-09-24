@@ -83,6 +83,23 @@ public class MovieMaker : MonoBehaviour
         Global.RenderMovieVariable("F49", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 48);
         Global.RenderMovieVariable("F50", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 49);
 
+        Global.RenderMovieVariable("MS1", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 50);
+        Global.RenderMovieVariable("MS2", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 51);
+        Global.RenderMovieVariable("MS3", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 52);
+        Global.RenderMovieVariable("MS4", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 53);
+        Global.RenderMovieVariable("MS5", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 54);
+        Global.RenderMovieVariable("MS6", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 55);
+        Global.RenderMovieVariable("MS7", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 56);
+        Global.RenderMovieVariable("MS8", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 57);
+        Global.RenderMovieVariable("MS9", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 58);
+        Global.RenderMovieVariable("MS10", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 59);
+
+        Global.RenderMovieVariable("MS11", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 60);
+        Global.RenderMovieVariable("MS12", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 61);
+        Global.RenderMovieVariable("MS13", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 62);
+        Global.RenderMovieVariable("MS14", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 63);
+        Global.RenderMovieVariable("MS15", new Vector3(1.0f, 1.0f, 1.0f), "Shape2", 64);
+
     }
 
 

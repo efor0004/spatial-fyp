@@ -181,7 +181,7 @@ public class Global : MonoBehaviour
         
         
         //check Left Arrow
-        for (j = 0; j < 50; j++)
+        for (j = 0; j < MovieRotate.movieArray.Length; j++)
         {
             if (MovieRotate.playArray[j] == false)  //find the left-most shape not in play (in the foolbar)
             {
@@ -202,7 +202,7 @@ public class Global : MonoBehaviour
 
 
         Index = 0;                                              //Check Right Arrow
-        for (i = 49; i > -1 ; i--)
+        for (i = MovieRotate.movieArray.Length - 1; i > -1 ; i--)
         {
             if (MovieRotate.playArray[i] == false)                //find the right-most shape not in play (in the toolbar)
             {
