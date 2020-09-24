@@ -234,6 +234,23 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("HardButton").GetComponent<Image>().color = Color.white;
     }
 
+
+    public void SettingsHelpButton()
+    {
+        // presents a popup that explains the settings buttons
+        // triggered by pressing the "i" button from the settings menu
+
+        GameObject.Find("HelpPopup").transform.localPosition = Global.centrePosition;
+    }
+
+    public void ClosSettingsHelpButton()
+    {
+        // closes popup that explains the settings buttons
+        // triggered by pressing the "X" button from the settings help popup
+
+        GameObject.Find("HelpPopup").transform.localPosition = Global.rightPosition;
+    }
+
     public void ParentalinfoBackButton()
     {
         //triggered by the back button on the parental info menu
