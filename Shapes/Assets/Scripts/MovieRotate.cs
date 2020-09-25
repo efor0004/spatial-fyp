@@ -93,12 +93,37 @@ public class MovieRotate : MonoBehaviour
                             if (Input.touchCount == 2)
                             {                                                                                                            //updates rotation                                                                                                     
                                 Quaternion desiredRotation = go.gameObject.transform.rotation;                                           //start desiredRotation as the current orientation of the shape
-                                DetectTouchMovement.Calculate();                                                                         //determines turnAngle and turnAngleDelta from 2 finger rotation on screen
+                                float pinchAmount = 0;
+                                
+                                DetectTouchPinch.Calculate();
 
-                                if (Mathf.Abs(DetectTouchMovement.turnAngleDelta) > 0)                                                  //if the detected turn angle is large enough and the shape is not small/circular
-                                {
+                                if (Mathf.Abs(DetectTouchPinch.pinchDistanceDelta) > 0)
+                                { //PINCH
+                                    pinchAmount = DetectTouchPinch.pinchDistanceDelta;                              
+                                    Debug.Log("pinchAmount: " + pinchAmount);
+
+                                    if (pinchAmount > 0)
+                                    {
+                                        //positive pinch scale up
+                                        if (go.gameObject.transform.localScale.x < 3)
+                                        {                                         
+                                            go.gameObject.transform.localScale += new Vector3(0.05f, 0.05f, 0f); 
+                                        }                                 
+                                    }
+                                    if (pinchAmount < 0)
+                                    {
+                                        //negative pinch scale down
+                                        if (go.gameObject.transform.localScale.x > 0.5)
+                                        {
+                                            go.gameObject.transform.localScale -= new Vector3(0.05f, 0.05f, 0f);
+                                        }
+                                    }
+                                }
+                                                              
+                                if (Mathf.Abs(DetectTouchPinch.turnAngleDelta) > 0)                                                 //if the detected turn angle is large enough and the shape is not small/circular
+                                { //ROTATE 
                                     Vector3 rotationDeg = Vector3.zero;
-                                    rotationDeg.z = DetectTouchMovement.turnAngleDelta;
+                                    rotationDeg.z = DetectTouchPinch.turnAngleDelta;
                                     desiredRotation *= Quaternion.Euler(rotationDeg);                                                    //update the desiredRotation to include this change in angle
 
                                     go.gameObject.transform.rotation = desiredRotation;                                                  //upate the shape rotated orientation
@@ -134,11 +159,12 @@ public class MovieRotate : MonoBehaviour
                 {
                     if ((go.transform.position.y < Camera.main.ScreenToWorldPoint(GameObject.Find("Divider").transform.position).y) && (Global.Recording == false) )
                     {
-                        //if released in the toolbar return to correct place and orientation
+                        //if released in the toolbar return to correct place, orientation and scale
                         playArray[System.Array.IndexOf(movieArray, go.name)] = false;  //not in play
 
                         go.transform.position = selectionArray[System.Array.IndexOf(movieArray, go.name)];
                         go.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                        go.gameObject.transform.localScale = new Vector3(1f, 1f, 1f); 
                     }
                     
                 }
