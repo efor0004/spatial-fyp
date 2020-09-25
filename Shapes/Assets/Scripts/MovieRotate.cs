@@ -41,6 +41,11 @@ public class MovieRotate : MonoBehaviour
     Vector3 wp;
     Vector2 touchPos;
 
+    float maxScale = 3;                           //maximum x/y scale up
+    float minScale = 0.5f;                        //min x/y scale down
+    float scaleIncrement = 0.05f;                  //increment of scaling up/down each loop
+    float pinchThresh = 1f;                     //pinchAmount threshold before scaling begins
+
     void Start()
     {
 
@@ -100,22 +105,25 @@ public class MovieRotate : MonoBehaviour
                                 if (Mathf.Abs(DetectTouchPinch.pinchDistanceDelta) > 0)
                                 { //PINCH
                                     pinchAmount = DetectTouchPinch.pinchDistanceDelta;                              
-                                    Debug.Log("pinchAmount: " + pinchAmount);
+                                    
+                                  //  Debug.Log("pinchAmount: " + pinchAmount);
 
-                                    if (pinchAmount > 0)
+                                    if (pinchAmount > pinchThresh)
                                     {
                                         //positive pinch scale up
-                                        if (go.gameObject.transform.localScale.x < 3)
+                                        if (Mathf.Abs(go.gameObject.transform.localScale.x) < maxScale && Mathf.Abs(go.gameObject.transform.localScale.y) < maxScale)
                                         {                                         
-                                            go.gameObject.transform.localScale += new Vector3(0.05f, 0.05f, 0f); 
+                                           // go.gameObject.transform.localScale += new Vector3(scaleIncrement, scaleIncrement, 0f);
+                                            go.gameObject.transform.localScale *= (1 + scaleIncrement); 
                                         }                                 
                                     }
-                                    if (pinchAmount < 0)
+                                    if (pinchAmount < -pinchThresh)
                                     {
                                         //negative pinch scale down
-                                        if (go.gameObject.transform.localScale.x > 0.5)
+                                        if (Mathf.Abs(go.gameObject.transform.localScale.x) > minScale && Mathf.Abs(go.gameObject.transform.localScale.y) > minScale)
                                         {
-                                            go.gameObject.transform.localScale -= new Vector3(0.05f, 0.05f, 0f);
+                                            //go.gameObject.transform.localScale -= new Vector3(scaleIncrement, scaleIncrement, 0f);
+                                            go.gameObject.transform.localScale *= (1 - scaleIncrement);
                                         }
                                     }
                                 }
