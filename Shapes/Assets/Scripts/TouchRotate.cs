@@ -97,6 +97,8 @@ public class TouchRotate : MonoBehaviour
                                         desiredRotation *= Quaternion.Euler(rotationDeg);                                                    //update the desiredRotation to include this change in angle
 
                                         go.gameObject.transform.rotation = desiredRotation;                                                  //upate the shape rotated orientation
+
+                                       // Debug.Log("current rotation: " + go.transform.rotation.eulerAngles.z);  //////////////
                                     }
                                 }
                                 if (Input.touchCount == 1)
@@ -136,10 +138,21 @@ public class TouchRotate : MonoBehaviour
                         Vector3 TargetPosition = positionArray[System.Array.IndexOf(nameArray, go.name)];
                         Vector3 TargetRotation = rotationArray[System.Array.IndexOf(nameArray, go.name)];
 
+                        float TargetRotationOp = (TargetRotation.z + 180)%360; ///
+                       
+
                         if ((TargetPosition.x - Global.positionTolerance) < go.transform.position.x && go.transform.position.x < (TargetPosition.x + Global.positionTolerance)         
-                            & (TargetPosition.y - Global.positionTolerance) < go.transform.position.y && go.transform.position.y < (TargetPosition.y + Global.positionTolerance)
-                            & (TargetRotation.z - Global.rotationTolerance) < go.transform.rotation.eulerAngles.z && go.transform.rotation.eulerAngles.z < (TargetRotation.z + Global.rotationTolerance))                                                                                     //in the correct position, leave where it is
+                            && (TargetPosition.y - Global.positionTolerance) < go.transform.position.y && go.transform.position.y < (TargetPosition.y + Global.positionTolerance)
+                            && ((TargetRotation.z - Global.rotationTolerance) < go.transform.rotation.eulerAngles.z && go.transform.rotation.eulerAngles.z < (TargetRotation.z + Global.rotationTolerance) ||
+                             ((go.GetComponent<SpriteRenderer>().sprite.name == "Square") && (TargetRotationOp - Global.rotationTolerance) < go.transform.rotation.eulerAngles.z && go.transform.rotation.eulerAngles.z < (TargetRotationOp + Global.rotationTolerance))
+                            ))                                                                                     //in the correct position, leave where it is
+                      
                         {                                                                                                                                //if shape is placed within tolerances 
+                           // Debug.Log("Spite name: " + go.GetComponent<SpriteRenderer>().sprite.name); //////////
+                           // Debug.Log("Target rotation: " + TargetRotation.z);///////////
+                           // Debug.Log("Target rotation - 180: " + (Mathf.Abs(TargetRotation.z - 180)));//////////
+                           // Debug.Log("TargetRotationOP: " + TargetRotationOp);
+
                             Global.PieceActive = false;
 
                             activeArray[System.Array.IndexOf(nameArray, go.name)] = false;
@@ -173,8 +186,6 @@ public class TouchRotate : MonoBehaviour
                         }
                         else if (go.transform.position.y < Camera.main.ScreenToWorldPoint(GameObject.Find("Divider").transform.position).y)              //if piece is released inside toolbar
                         {
-                           // if (Global.SoundEffects == true)
-                           //    FindObjectOfType<AudioManager>().Play("Return"); //plays return to toolbar sound sound
 
                             go.transform.position = toolbarArray[System.Array.IndexOf(nameArray, go.name)];
                             go.transform.rotation = Quaternion.Euler(toolbarRotationArray[System.Array.IndexOf(nameArray, go.name)]);
