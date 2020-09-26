@@ -163,7 +163,9 @@ public class FarmHandler : MonoBehaviour
 
 
         //spawn target image
-        Global.RenderPuzzleImage("F1");  
+        Global.RenderPuzzleImage("F1");
+
+        Global.InstructionPopup(); //run instruction pop-up for first puzzle
 
     }
 

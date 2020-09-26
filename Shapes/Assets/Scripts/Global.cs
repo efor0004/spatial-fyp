@@ -438,4 +438,22 @@ public class Global : MonoBehaviour
         MovieRotate.playArray[n] = false;                            //set to not in play
     }
 
+    public static void InstructionPopup()
+    {
+        //loads the instruction popup
+        //triggered for the first puzzle in each puzzle world
+
+        GameObject.Find("InstructionPopup").transform.localPosition = Global.centrePosition; //move popup to front
+
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;         //de-activates buttons
+
+        Global.LeftArrowActive = false;
+        Global.RightArrowActive = false;
+
+        // de - activate shapes
+        Global.PieceActive = true;
+        Global.ActiveNameCopy = Global.ActiveName;  //saving the current active shape so that all shapes can be made inactive while menu is open
+        Global.ActiveName = "null";
+    }
+
 }

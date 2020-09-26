@@ -57,7 +57,7 @@ public class MouseHandler : MonoBehaviour
         //Puzzle13();
     }
     void Update()
-        {
+    {
         //called each frame
         if (Global.piecesPlaced == Global.puzzlePieces)                    //puzzle completion 
         {
@@ -119,6 +119,8 @@ public class MouseHandler : MonoBehaviour
 
         //spawn target image
         Global.RenderPuzzleImage("MS1");  //has the touchrotate script attached --> run after all shapes are loaded
+
+        Global.InstructionPopup(); //run instruction pop-up for first puzzle
 
     }
 

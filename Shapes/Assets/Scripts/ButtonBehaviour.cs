@@ -240,7 +240,18 @@ public class ButtonBehaviour : MonoBehaviour
         // presents a popup that explains the settings buttons
         // triggered by pressing the "i" button from the settings menu
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         GameObject.Find("HelpPopup").transform.localPosition = Global.centrePosition;
+
+        GameObject.Find("SettingsBackButton").GetComponent<Button>().interactable = false;         //deactivates buttons
+        GameObject.Find("MusicButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("SoundEffectsButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("EasyButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("MediumButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("HardButton").GetComponent<Button>().interactable = false;
+
     }
 
     public void ClosSettingsHelpButton()
@@ -248,7 +259,17 @@ public class ButtonBehaviour : MonoBehaviour
         // closes popup that explains the settings buttons
         // triggered by pressing the "X" button from the settings help popup
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
         GameObject.Find("HelpPopup").transform.localPosition = Global.rightPosition;
+
+        GameObject.Find("SettingsBackButton").GetComponent<Button>().interactable = true;         //activates buttons
+        GameObject.Find("MusicButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("SoundEffectsButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("EasyButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("MediumButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("HardButton").GetComponent<Button>().interactable = true;
     }
 
     public void ParentalinfoBackButton()
@@ -1037,6 +1058,27 @@ public class ButtonBehaviour : MonoBehaviour
         TuteMovieHandler.popUpIndex = 0;
 
         SceneManager.LoadScene("Worlds");
+    }
+
+    public void CloseInstructionPopup()
+    {
+        // close the instruction popup that appears at the first level of each puzzle world
+        // triggered by pressing the X button on the instruction popup
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        GameObject.Find("InstructionPopup").transform.localPosition = Global.leftPosition; //removes popup 
+        
+        GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //activates buttons
+
+        Global.LeftArrowActive = true;
+        Global.RightArrowActive = true;
+
+        // re - activate shapes
+        Global.PieceActive = false;
+        Global.ActiveName = Global.ActiveNameCopy;
+
     }
 
 
