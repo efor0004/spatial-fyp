@@ -183,7 +183,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: m8
-    clip: {fileID: 8300000, guid: b0f78dbfbf2be98468a72435413fb4d7, type: 3}
+    clip: {fileID: 8300000, guid: 92d921c22f8513c4c9b1161a28753b05, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -202,6 +202,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: m11
     clip: {fileID: 8300000, guid: 084d57b79a5b5a540a837503d9f23b06, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: m12
+    clip: {fileID: 8300000, guid: 69d1dd36f86b8c04e8f3295e6e293f5c, type: 3}
     volume: 1
     pitch: 1
     loop: 0

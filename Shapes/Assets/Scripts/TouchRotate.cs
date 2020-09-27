@@ -148,11 +148,6 @@ public class TouchRotate : MonoBehaviour
                             ))                                                                                     //in the correct position, leave where it is
                       
                         {                                                                                                                                //if shape is placed within tolerances 
-                           // Debug.Log("Spite name: " + go.GetComponent<SpriteRenderer>().sprite.name); //////////
-                           // Debug.Log("Target rotation: " + TargetRotation.z);///////////
-                           // Debug.Log("Target rotation - 180: " + (Mathf.Abs(TargetRotation.z - 180)));//////////
-                           // Debug.Log("TargetRotationOP: " + TargetRotationOp);
-
                             Global.PieceActive = false;
 
                             activeArray[System.Array.IndexOf(nameArray, go.name)] = false;

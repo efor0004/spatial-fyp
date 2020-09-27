@@ -16,11 +16,17 @@ public class TuteMovieHandler : MonoBehaviour
     public static bool tapFlag = false;
     public static bool toolbarFlag = false;
     public static bool disableFlag = false;
+    public static bool pinchFlag = false;
 
 
     private Collider2D myCollider;
     Vector3 wp;
     Vector2 touchPos;
+
+    float maxScale = 3;                           //maximum x/y scale up
+    float minScale = 0.5f;                        //min x/y scale down
+    float scaleIncrement = 0.05f;                  //increment of scaling up/down each loop
+    float pinchThresh = 1f;                     //pinchAmount threshold before scaling begins
 
     //Vector3 MaxHeight = new Vector3(0, 300f, 0);
     void Start()
@@ -79,29 +85,19 @@ public class TuteMovieHandler : MonoBehaviour
                 {
                     if (myCollider == Physics2D.OverlapPoint(touchPos))                                                             //if the touch position overlaps with the 2D collider of the shape
                     {
-                        //if (Input.touchCount == 1)
-                        //{                                                                                                             //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
-                        //    go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
-                        //                                               Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
-                        //                                                0.0f);
-                        //    if (popUpIndex == 5)
-                        //    {
-                        //        popUpIndex = 6; //////////////
-                        //        TuteLoadManager();
-                        //    }
-
-                        //}
 
                         if ((Input.touchCount == 2) && (rotateFlag == true))
                         {
 
                             Quaternion desiredRotation = go.gameObject.transform.rotation;                                           //start desiredRotation as the current orientation of the shape
-                            DetectTouchMovement.Calculate();                                                                         //determines turnAngle and turnAngleDelta from 2 finger rotation on screen
+                            DetectTouchPinch.Calculate();                                                                         //determines turnAngle and turnAngleDelta from 2 finger rotation on screen
+                           
+                            float pinchAmount = 0;
 
-                            if (Mathf.Abs(DetectTouchMovement.turnAngleDelta) > 0)                                                  //if the detected turn angle is large enough and the shape is not small/circular
-                            {
+                            if (Mathf.Abs(DetectTouchPinch.turnAngleDelta) > 0)                                                  //if the detected turn angle is large enough and the shape is not small/circular
+                            { //ROTATION
                                 Vector3 rotationDeg = Vector3.zero;
-                                rotationDeg.z = DetectTouchMovement.turnAngleDelta;
+                                rotationDeg.z = DetectTouchPinch.turnAngleDelta;
                                 desiredRotation *= Quaternion.Euler(rotationDeg);                                                    //update the desiredRotation to include this change in angle
 
                                 go.gameObject.transform.rotation = desiredRotation;                                                  //upate the shape rotated orientation
@@ -110,9 +106,49 @@ public class TuteMovieHandler : MonoBehaviour
                                 {
                                     popUpIndex = 7; //////////////
                                     TuteLoadManager();
-
                                 }
                             }
+
+                          
+                            if ((Mathf.Abs(DetectTouchPinch.pinchDistanceDelta) > 0) && pinchFlag == true)
+                            { //PINCH
+                                    pinchAmount = DetectTouchPinch.pinchDistanceDelta;
+
+                                    //  Debug.Log("pinchAmount: " + pinchAmount);
+
+                                    if (pinchAmount > pinchThresh)
+                                    {
+                                        //positive pinch scale up
+                                        if (Mathf.Abs(go.gameObject.transform.localScale.x) < maxScale && Mathf.Abs(go.gameObject.transform.localScale.y) < maxScale)
+                                        {
+                                            // go.gameObject.transform.localScale += new Vector3(scaleIncrement, scaleIncrement, 0f);
+                                            go.gameObject.transform.localScale *= (1 + scaleIncrement);
+
+                                           if (popUpIndex == 8)
+                                            {
+                                            popUpIndex = 9; //////////////
+                                            TuteLoadManager();
+                                            }
+                                    }
+                                        }
+                                    if (pinchAmount < -pinchThresh)
+                                    {
+                                        //negative pinch scale down
+                                        if (Mathf.Abs(go.gameObject.transform.localScale.x) > minScale && Mathf.Abs(go.gameObject.transform.localScale.y) > minScale)
+                                        {
+                                            //go.gameObject.transform.localScale -= new Vector3(scaleIncrement, scaleIncrement, 0f);
+                                            go.gameObject.transform.localScale *= (1 - scaleIncrement);
+
+                                           if (popUpIndex == 8)
+                                           {
+                                            popUpIndex = 9; //////////////
+                                            TuteLoadManager();
+                                           }
+                                        }
+                                    }                     
+
+                            }
+
                         }
 
                        foreach (UnityEngine.Touch touch in Input.touches)
@@ -163,13 +199,14 @@ public class TuteMovieHandler : MonoBehaviour
             {
                 if ((go.transform.position.y < Camera.main.ScreenToWorldPoint(GameObject.Find("Divider").transform.position).y) && (toolbarFlag == true))
                 {
-                    //if released in the toolbar return to correct place and orientation                  
+                    //if released in the toolbar return to correct place orientation and scale                 
                     go.transform.position = new Vector3(-0.0159f, Global.toolbarY, 0f);
                     go.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                    go.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
 
-                    if (popUpIndex == 8)
+                    if (popUpIndex == 9)
                     {
-                        popUpIndex = 9; //////////////
+                        popUpIndex = 10; ////////////////
                         TuteLoadManager();
                     }
                 }               
@@ -252,28 +289,35 @@ public class TuteMovieHandler : MonoBehaviour
                 break;
             case 8:
                 {
-                    FindObjectOfType<AudioManager>().Stop("m7");
+                    FindObjectOfType<AudioManager>().Stop("m7");  ////////////////////////
                     FindObjectOfType<AudioManager>().Play("m8");
-                    TuteMovieHandler.toolbarFlag = true; //enable toolbar return
+                    TuteMovieHandler.pinchFlag = true; //enable toolbar return
                 }
                 break;
             case 9:
                 {
                     FindObjectOfType<AudioManager>().Stop("m8");
                     FindObjectOfType<AudioManager>().Play("m9");
-                    TuteMovieHandler.disableFlag = true; //disable interaction with rooster
+                    TuteMovieHandler.toolbarFlag = true; //enable toolbar return
                 }
                 break;
             case 10:
                 {
                     FindObjectOfType<AudioManager>().Stop("m9");
                     FindObjectOfType<AudioManager>().Play("m10");
+                    TuteMovieHandler.disableFlag = true; //disable interaction with rooster
                 }
                 break;
             case 11:
                 {
                     FindObjectOfType<AudioManager>().Stop("m10");
                     FindObjectOfType<AudioManager>().Play("m11");
+                }
+                break;
+            case 12:
+                {
+                    FindObjectOfType<AudioManager>().Stop("m11");
+                    FindObjectOfType<AudioManager>().Play("m12");
                 }
                 break;
             default:
