@@ -1,6 +1,10 @@
 extends Node
 
 onready var character_menu = get_parent()
+onready var character = get_node("Sprite")
+
+func _ready():
+	character.play("idle")
 
 func pressed():
 	var character_no = get_index() + 1
