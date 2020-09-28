@@ -108,6 +108,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 1;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "HOUSE";  //updates title
 
         //set number of pieces in the puzzle (those to be placed)
         Global.puzzlePieces = 1;
@@ -138,6 +139,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "TREE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 1;
@@ -164,6 +166,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "HOUSE & TREE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 4;
@@ -194,6 +197,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "HOUSE & SUN";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;
@@ -225,6 +229,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "WAGON";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 2;
@@ -252,6 +257,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 1;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "BOOK";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 1;
@@ -277,6 +283,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "FISH";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;
@@ -308,6 +315,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "CAT";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 9;
@@ -341,6 +349,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "UNFINISHED...";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 8;
@@ -376,6 +385,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "UNFINISHED...";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;
@@ -408,6 +418,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 1;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "MOUSE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 12;
@@ -444,6 +455,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "MOUSE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 12;
@@ -481,6 +493,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "MOUSE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 12;
@@ -518,6 +531,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "CIRCLES";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 4;
@@ -546,6 +560,7 @@ public class MouseHandler : MonoBehaviour
         Global.MousePuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.MousePuzzle - 1, Mask, LevelText, Global.MouseLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "CHEESE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;

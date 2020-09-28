@@ -150,6 +150,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 1;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "HAY BALE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 2;
@@ -183,6 +184,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "PINE TREE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 1;
@@ -210,6 +212,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "TREE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 1;
@@ -236,6 +239,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "TROUGH";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 1;
@@ -262,6 +266,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "WAGON";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 2;
@@ -290,6 +295,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 1;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "NEST";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 3;
@@ -318,6 +324,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "TREE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 2;
@@ -345,6 +352,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "HAY BALE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 2;
@@ -372,6 +380,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "WAGON";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 3;
@@ -391,7 +400,7 @@ public class FarmHandler : MonoBehaviour
     void Puzzle10()
     {
         //puzzle 10 in the Farm scene
-        //the square blue wheel barrow
+        //the square bluewheel barrow
 
         Global.NextPuzzleReady = false;
 
@@ -400,6 +409,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "WHEELBARROW";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 4;
@@ -430,6 +440,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 1;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "TREE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 4;
@@ -459,6 +470,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "FENCE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -491,6 +503,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "FENCE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -523,6 +536,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "BEEHIVE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 4;
@@ -552,6 +566,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "APPLE TREE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -583,6 +598,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 1 ;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "TULIP";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;
@@ -613,6 +629,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "SUNFLOWER";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 4;
@@ -644,6 +661,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "SCARECROW";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;
@@ -676,6 +694,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "SCARECROW";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;
@@ -706,6 +725,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "LILY POND";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;
@@ -738,6 +758,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 1;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "DUCK";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 8;
@@ -771,6 +792,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "HEN";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;
@@ -802,6 +824,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "CHICK";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;
@@ -832,6 +855,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "CHICK";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -863,6 +887,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "DUCK";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 4;
@@ -892,6 +917,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 1;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "HEN";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -923,6 +949,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "ROOSTER";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;
@@ -955,6 +982,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "TRACTOR";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;
@@ -987,6 +1015,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "FRUIT TREE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 12;
@@ -1024,6 +1053,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "TURKEY";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;
@@ -1057,6 +1087,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 1;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "SHEEP";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;
@@ -1087,6 +1118,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "SHEEP";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -1118,6 +1150,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "COW";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;
@@ -1150,6 +1183,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "COW";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 9;
@@ -1184,6 +1218,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "WINDMILL";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -1215,6 +1250,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 1;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "BARN";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 5;
@@ -1245,6 +1281,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "PIG";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;
@@ -1277,6 +1314,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "PIG";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -1308,6 +1346,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "HORSE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;
@@ -1342,6 +1381,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "HORSE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 8;
@@ -1375,6 +1415,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 1;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "DOG";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;
@@ -1407,6 +1448,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "CAT";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 8;
@@ -1440,6 +1482,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "CAT";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -1471,6 +1514,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "BIRD";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -1502,6 +1546,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "BIRD";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -1533,6 +1578,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 1;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "OWL";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;
@@ -1565,6 +1611,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 2;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "OWL";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 7;
@@ -1597,6 +1644,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 3;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "FROG";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 9;
@@ -1631,6 +1679,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 4;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "BARN";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 6;
@@ -1664,6 +1713,7 @@ public class FarmHandler : MonoBehaviour
         Global.FarmPuzzle = 5;
 
         Global.ProgressBar(Global.PuzzlesPerLevel, Global.FarmPuzzle - 1, Mask, LevelText, Global.FarmLevel); //updates the progress bar
+        GameObject.Find("TitleText").GetComponent<Text>().text = "STILT HOUSE";  //updates title
 
         //set number of pieces in the puzzle
         Global.puzzlePieces = 9;
