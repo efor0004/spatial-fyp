@@ -41,7 +41,7 @@ public class MovieRotate : MonoBehaviour
     Vector3 wp;
     Vector2 touchPos;
 
-    float maxScale = 3;                           //maximum x/y scale up
+    float maxScale = 2;                           //maximum x/y scale up
     float minScale = 0.5f;                        //min x/y scale down
     float scaleIncrement = 0.05f;                  //increment of scaling up/down each loop
     float pinchThresh = 1f;                     //pinchAmount threshold before scaling begins
@@ -86,7 +86,7 @@ public class MovieRotate : MonoBehaviour
 
                 if (go)
                 {
-                    myCollider = go.gameObject.GetComponent<BoxCollider2D>();
+                    myCollider = go.gameObject.GetComponent<CircleCollider2D>();
 
                     if (myCollider)                                                                                                     //collider will not exist for the anchor shape0
                     {
@@ -113,7 +113,6 @@ public class MovieRotate : MonoBehaviour
                                         //positive pinch scale up
                                         if (Mathf.Abs(go.gameObject.transform.localScale.x) < maxScale && Mathf.Abs(go.gameObject.transform.localScale.y) < maxScale)
                                         {                                         
-                                           // go.gameObject.transform.localScale += new Vector3(scaleIncrement, scaleIncrement, 0f);
                                             go.gameObject.transform.localScale *= (1 + scaleIncrement); 
                                         }                                 
                                     }
@@ -122,7 +121,6 @@ public class MovieRotate : MonoBehaviour
                                         //negative pinch scale down
                                         if (Mathf.Abs(go.gameObject.transform.localScale.x) > minScale && Mathf.Abs(go.gameObject.transform.localScale.y) > minScale)
                                         {
-                                            //go.gameObject.transform.localScale -= new Vector3(scaleIncrement, scaleIncrement, 0f);
                                             go.gameObject.transform.localScale *= (1 - scaleIncrement);
                                         }
                                     }
@@ -172,7 +170,7 @@ public class MovieRotate : MonoBehaviour
 
                         go.transform.position = selectionArray[System.Array.IndexOf(movieArray, go.name)];
                         go.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-                        go.gameObject.transform.localScale = new Vector3(1f, 1f, 1f); 
+                        go.gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 1f); 
                     }
                     
                 }

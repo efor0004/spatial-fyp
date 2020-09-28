@@ -484,6 +484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1284226802}
   - component: {fileID: 1284226801}
+  - component: {fileID: 1284226803}
   m_Layer: 0
   m_Name: Semicircle
   m_TagString: Untagged
@@ -553,6 +554,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1284226803
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284226800}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.65
 --- !u!1 &1312386499
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1763648669}
   - component: {fileID: 1763648668}
+  - component: {fileID: 1763648670}
   m_Layer: 0
   m_Name: Circle (2)
   m_TagString: Untagged
@@ -869,6 +887,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1763648670
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763648667}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.21
 --- !u!1 &1957473470
 GameObject:
   m_ObjectHideFlags: 0

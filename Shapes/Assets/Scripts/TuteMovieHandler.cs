@@ -23,7 +23,7 @@ public class TuteMovieHandler : MonoBehaviour
     Vector3 wp;
     Vector2 touchPos;
 
-    float maxScale = 3;                           //maximum x/y scale up
+    float maxScale = 2;                           //maximum x/y scale up
     float minScale = 0.5f;                        //min x/y scale down
     float scaleIncrement = 0.05f;                  //increment of scaling up/down each loop
     float pinchThresh = 1f;                     //pinchAmount threshold before scaling begins
@@ -78,7 +78,7 @@ public class TuteMovieHandler : MonoBehaviour
 
             if (go)
             {
-                myCollider = go.gameObject.GetComponent<BoxCollider2D>();
+                myCollider = go.gameObject.GetComponent<CircleCollider2D>();
 
 
                 if (myCollider)                                                                                                     //collider will not exist for the anchor shape0

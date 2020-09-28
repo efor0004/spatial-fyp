@@ -78,6 +78,7 @@ public class Global : MonoBehaviour
    // public static float toolbarXstart = -4.8f;
     public static float toolbarXstart = -2.3f;
 
+    public static float movieCollider = 1.65f; //(75% of 2.21 )
     public static float smallCollider = 4.5f;                   //a larger collider for small shapes
     public static float regularCollider = 2.5f;                 //a regular sized collider for regular shapes
 
@@ -400,22 +401,6 @@ public class Global : MonoBehaviour
         Save.SaveProgress();
     }
 
-   //public static void RenderMovieFixed(string Name, string Sprite, Vector3 Position, Vector3 Scale, string SortingLayer)
-   // {
-   //     //renders the background in MovieMaker
-
-   //     GameObject objToSpawn = new GameObject(Name);                                            //assign name
-   //     objToSpawn.AddComponent<SpriteRenderer>();                                               //add a sprite renderer
-   //     objToSpawn.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Sprite);       //assign sprite from resources folder
-   //     objToSpawn.transform.position = Position;                                                //set position vector  
-   //     objToSpawn.transform.localScale = (Scale);                                               //set scale vector
-
-   //     objToSpawn.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-
-   //     objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer;               //set sorting layer by name
-
-   // }
-
     public static void RenderMovieVariable(string Name, Vector3 Scale, string SortingLayer,int n)
     {
         //renders the puzzles in MovieMaker
@@ -426,7 +411,10 @@ public class Global : MonoBehaviour
 
         objToSpawn.transform.localScale = (Scale);                                               //set scale vector
         objToSpawn.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer;               //set sorting layer by name
-        objToSpawn.AddComponent<BoxCollider2D>();                                              //assign box collider  
+        //objToSpawn.AddComponent<BoxCollider2D>();                                              //assign box collider  
+        objToSpawn.AddComponent<CircleCollider2D>();
+        //objToSpawn.AddComponent<PolygonCollider2D>();
+        objToSpawn.GetComponent<CircleCollider2D>().radius = movieCollider; //make radius of circle smaller
 
         objToSpawn.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
        // objToSpawn.GetComponent<CircleCollider2D>().radius = Global.regularCollider;

@@ -144,7 +144,7 @@ public class TouchRotate : MonoBehaviour
                         if ((TargetPosition.x - Global.positionTolerance) < go.transform.position.x && go.transform.position.x < (TargetPosition.x + Global.positionTolerance)         
                             && (TargetPosition.y - Global.positionTolerance) < go.transform.position.y && go.transform.position.y < (TargetPosition.y + Global.positionTolerance)
                             && ((TargetRotation.z - Global.rotationTolerance) < go.transform.rotation.eulerAngles.z && go.transform.rotation.eulerAngles.z < (TargetRotation.z + Global.rotationTolerance) ||
-                             ((go.GetComponent<SpriteRenderer>().sprite.name == "Square") && (TargetRotationOp - Global.rotationTolerance) < go.transform.rotation.eulerAngles.z && go.transform.rotation.eulerAngles.z < (TargetRotationOp + Global.rotationTolerance))
+                             ((go.GetComponent<SpriteRenderer>().sprite.name == "Square" || go.GetComponent<SpriteRenderer>().sprite.name == "Parallelogram") && (TargetRotationOp - Global.rotationTolerance) < go.transform.rotation.eulerAngles.z && go.transform.rotation.eulerAngles.z < (TargetRotationOp + Global.rotationTolerance))
                             ))                                                                                     //in the correct position, leave where it is
                       
                         {                                                                                                                                //if shape is placed within tolerances 
