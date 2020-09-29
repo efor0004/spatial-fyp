@@ -38,3 +38,7 @@ func _on_Exit_Button_button_up():
 		get_tree().change_scene("res://Character Menu.tscn")
 	elif (current_scene == "Free Play"):
 		get_tree().change_scene("res://Format Menu.tscn")
+	elif (current_scene == "Story"):
+		get_tree().change_scene("res://Format Menu.tscn")
+	else:
+		get_tree().change_scene("res://Main Menu.tscn")

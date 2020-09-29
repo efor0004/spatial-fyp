@@ -15,4 +15,8 @@ func _on_Puzzles_Button_button_down():
 
 func _on_Puzzles_Button_button_up():
 	set_button_icon(normal_texture)
-	get_tree().change_scene("res://Game.tscn")
+	
+	if (global.current_level == 1 and global.current_question == 1):
+		get_tree().change_scene("res://Story.tscn")
+	else:
+		get_tree().change_scene("res://Game.tscn")
