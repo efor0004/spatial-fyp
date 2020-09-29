@@ -25,6 +25,10 @@ public class Global : MonoBehaviour
     public static bool Music = true;
     public static bool SoundEffects = true;
 
+    public static bool GenPopup = true;
+    public static bool MousePopup = true;
+    public static bool FarmPopup = true;
+
     public static bool Easy = false;
     public static bool Medium = true;
     public static bool Hard = false;
@@ -91,7 +95,9 @@ public class Global : MonoBehaviour
     public static int FarmComplete = 0;
 
     // Menu
-    public static bool StartUp = true;
+    public static bool StartUpMenu = true;
+    public static bool StartUpMouse = true;
+    public static bool StartUpFarm = true;
 
 
     public static void DestroyShapes()
@@ -431,17 +437,68 @@ public class Global : MonoBehaviour
         //loads the instruction popup
         //triggered for the first puzzle in each puzzle world
 
-        GameObject.Find("InstructionPopup").transform.localPosition = Global.centrePosition; //move popup to front
+        GameObject.Find("InstructionPopup").transform.localPosition = centrePosition; //move popup to front
 
         GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;         //de-activates buttons
 
-        Global.LeftArrowActive = false;
-        Global.RightArrowActive = false;
+        LeftArrowActive = false;
+        RightArrowActive = false;
 
         // de - activate shapes
-        Global.PieceActive = true;
-        Global.ActiveNameCopy = Global.ActiveName;  //saving the current active shape so that all shapes can be made inactive while menu is open
-        Global.ActiveName = "null";
+        PieceActive = true;
+        ActiveNameCopy = ActiveName;  //saving the current active shape so that all shapes can be made inactive while menu is open
+        ActiveName = "null";
+
+        string name = GameObject.Find("InstructionPopup").scene.name;
+        if (name == "Farm" && Global.Music == true)
+        {
+            FindObjectOfType<AudioManager>().Stop("BackgroundMusic"); // stops background
+            FindObjectOfType<AudioManager>().Play("OldMcDonald"); // starts Old McDonald
+        }
+
     }
+
+    public static void LoadParentalPopup()
+    {
+        // loads parental info popups in menu, Mouse Shapes and Farm World
+        // triggered by loading that scene if the "do not show this again" tickbox is unchecked
+
+        string name = GameObject.Find("ParentalPopup").scene.name;
+
+        switch (name)                                            //find which scene it was called in, and reduce puzzle number by 1
+        {
+            case "Menu":
+                GameObject.Find("StartButton").GetComponent<Button>().interactable = false;
+                GameObject.Find("SettingsButton").GetComponent<Button>().interactable = false;
+                GameObject.Find("ParentalButton").GetComponent<Button>().interactable = false;
+                break;
+            case "Mouse":
+                GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;         //de-activates buttons
+                GameObject.Find("CloseInstructionPopup").GetComponent<Button>().interactable = false;
+                Global.LeftArrowActive = false;
+                Global.RightArrowActive = false;
+                Global.PieceActive = true;
+                Global.ActiveNameCopy = Global.ActiveName;  //saving the current active shape so that all shapes can be made inactive while menu is open
+                Global.ActiveName = "null";
+                break;
+            case "Farm":
+                GameObject.Find("MenuButton").GetComponent<Button>().interactable = false;         //de-activates buttons
+                GameObject.Find("CloseInstructionPopup").GetComponent<Button>().interactable = false;
+                Global.LeftArrowActive = false;
+                Global.RightArrowActive = false;
+                Global.PieceActive = true;
+                Global.ActiveNameCopy = Global.ActiveName;  //saving the current active shape so that all shapes can be made inactive while menu is open
+                Global.ActiveName = "null";
+                break;
+            default:
+                Debug.Log("Error in Switch Statement/ LoadParentalPopup()");
+                break;
+        }
+
+        GameObject.Find("ParentalPopup").transform.localPosition = Global.centrePosition; //move popup to front
+
+    }
+
+
 
 }

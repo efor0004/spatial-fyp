@@ -49,13 +49,23 @@ public class Save : MonoBehaviour
 
 	}
 
+	public static void SavePopup()
+	{
+		PlayerPrefsX.SetBool("GenPopup", Global.GenPopup);
+		PlayerPrefsX.SetBool("MousePopup", Global.MousePopup);
+		PlayerPrefsX.SetBool("FarmPopup", Global.FarmPopup);
+
+		PlayerPrefs.Save();
+		Debug.Log("Popup preference data saved!");
+	}
+
 	public static void LoadGame()
 	{
 		//loads game data - progress and settings preferences
 		//triggered when app opens after being closed
 
 		if (PlayerPrefs.HasKey("MouseLevel")) //if one piece of data exists, assume rest of data exists
-		{
+		{  //progress data
 
 			//Global.PlaygroundLevel = PlayerPrefs.GetInt("PlaygroundLevel");
 			//Global.PlaygroundPuzzle = PlayerPrefs.GetInt("PlaygroundPuzzle");
@@ -66,22 +76,45 @@ public class Save : MonoBehaviour
 			Global.MouseLevel = PlayerPrefs.GetInt("MouseLevel");
 			Global.MousePuzzle = PlayerPrefs.GetInt("MousePuzzle");
 
-		//	Global.WildLevel = PlayerPrefs.GetInt("WildLevel");
-		//	Global.WildPuzzle = PlayerPrefs.GetInt("WildPuzzle");
+			//	Global.WildLevel = PlayerPrefs.GetInt("WildLevel");
+			//	Global.WildPuzzle = PlayerPrefs.GetInt("WildPuzzle");
 
 			Global.FarmLevel = PlayerPrefs.GetInt("FarmLevel");
 			Global.FarmPuzzle = PlayerPrefs.GetInt("FarmPuzzle");
+		}
+		else
+		{
+			Debug.Log("there is no saved progress data");  		
+		}
+
+		if (PlayerPrefs.HasKey("Music"))
+		{   //settings data
 
 			Global.Music = PlayerPrefsX.GetBool("Music");
 			Global.SoundEffects = PlayerPrefsX.GetBool("SoundEffects");
 			Global.Easy = PlayerPrefsX.GetBool("Easy");
 			Global.Medium = PlayerPrefsX.GetBool("Medium");
 			Global.Hard = PlayerPrefsX.GetBool("Hard");
-
-			Debug.Log("Game data loaded!");
 		}
 		else
-			Debug.LogError("There is no save data!");
+		{
+			Debug.Log("there is no saved settings data");
+		}
+
+		if (PlayerPrefs.HasKey("GenPopup"))
+		{   //popup data
+			Global.GenPopup = PlayerPrefsX.GetBool("GenPopup");
+			Global.MousePopup = PlayerPrefsX.GetBool("MousePopup");
+			Global.FarmPopup = PlayerPrefsX.GetBool("FarmPopup");
+		}
+		else
+		{
+			Debug.Log("there is no saved popup data");
+		}
+
+		Debug.Log("Game data loaded!");
+		
+		
 	}
 
 
@@ -96,10 +129,15 @@ public class Save : MonoBehaviour
 	    Global.Medium = true;
 	    Global.Hard = false;
 
-	//	Global.PlaygroundLevel = 1;              
-	//	Global.PlaygroundPuzzle = 0;
-	//	Global.TriangleLevel = 1;
-	//	Global.TrianglePuzzle = 0;
+		Global.GenPopup = true;
+		Global.MousePopup = true;
+		Global.FarmPopup = true;
+
+
+		//	Global.PlaygroundLevel = 1;              
+		//	Global.PlaygroundPuzzle = 0;
+		//	Global.TriangleLevel = 1;
+		//	Global.TrianglePuzzle = 0;
 		Global.MouseLevel = 1;
 		Global.MousePuzzle = 0;
 	//	Global.WildLevel = 1;

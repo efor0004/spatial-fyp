@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 1469112330}
   - component: {fileID: 1469112329}
   m_Layer: 5
-  m_Name: ClosePopup
+  m_Name: CloseInstructionPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,6 +865,193 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469112327}
   m_CullTransparentMesh: 0
+--- !u!1001 &1559143668
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1938414869}
+    m_Modifications:
+    - target: {fileID: 2988579241908393155, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_Name
+      value: ParentalPopup
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2416
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1402.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1855.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241908393156, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579241996654905, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1021997910}
+    - target: {fileID: 2988579241996654905, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseParentalPopup
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579242015138964, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_ShowMaskGraphic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579242015138964, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243380380216, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -554.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243380380216, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2125.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243380380217, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_Text
+      value: "MOUSE SHAPES\n\nRead the \u201CMouse Shapes\u201D book with them first,
+        without using the app\r\n\r\nRead each page of the \u201CMouse Shapes\u201D
+        world again and help them to complete the puzzles as they come up \r\n\r\nSupport
+        them by following the steps shown in the general \"Notes to parents/caregivers\"
+        - ask/tell them why the shapes they have chosen is not the correct choice,
+        use spatial words to supplement their answers, help them rotate the shapes,
+        use gestures etc.\r\n\r\nDo something else if they seem frustrated, tired,
+        or bored. Don't force them to keep going, we would like this to be a good
+        experience for them."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243490940285, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1021997910}
+    - target: {fileID: 2988579243490940285, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TickBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243880512026, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243880512026, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243880512026, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2742b14b85522b2459a3121c7940b098, type: 3}
 --- !u!1 &1660003486
 GameObject:
   m_ObjectHideFlags: 0

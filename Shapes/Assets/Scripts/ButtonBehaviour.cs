@@ -1080,8 +1080,112 @@ public class ButtonBehaviour : MonoBehaviour
         Global.PieceActive = false;
         Global.ActiveName = Global.ActiveNameCopy;
 
+        string name = GameObject.Find("InstructionPopup").scene.name;
+        if (name == "Farm" && Global.Music == true)
+        { 
+            FindObjectOfType<AudioManager>().Stop("OldMcDonald"); // stops Old McDonald
+            FindObjectOfType<AudioManager>().Play("BackgroundMusic"); // starts background
+        }
+
     }
 
+    public void CloseParentalPopup()
+    {
+        // closes parental info popups in menu, Mouse Shapes and Farm World
+        //triggered by pressing X button on popup
 
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        string name = GameObject.Find("ParentalPopup").scene.name;
+
+        switch (name)                                            
+        {
+            case "Menu":
+                GameObject.Find("StartButton").GetComponent<Button>().interactable = true;
+                GameObject.Find("SettingsButton").GetComponent<Button>().interactable = true;
+                GameObject.Find("ParentalButton").GetComponent<Button>().interactable = true;
+                break;
+            case "Mouse":
+                GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //activates buttons
+                GameObject.Find("CloseInstructionPopup").GetComponent<Button>().interactable = true;
+                Global.LeftArrowActive = true;
+                Global.RightArrowActive = true;
+                Global.PieceActive = false;
+                Global.ActiveName = Global.ActiveNameCopy;
+                break;
+            case "Farm":
+                GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //activates buttons
+                GameObject.Find("CloseInstructionPopup").GetComponent<Button>().interactable = true;
+                Global.LeftArrowActive = true;
+                Global.RightArrowActive = true;
+                Global.PieceActive = false;
+                Global.ActiveName = Global.ActiveNameCopy;
+                break;
+            default:
+                Debug.Log("Error in Switch Statement/ LoadParentalPopup()");
+                break;
+        }
+
+        GameObject.Find("ParentalPopup").transform.localPosition = Global.rightPosition; //move popup away
+
+
+        Save.SavePopup(); 
+    }
+
+    public void TickBox()
+    {
+        //ticks or unticks the checkbox on the Parental Info Popup
+        //triggered by tapping checkbox on popup
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        string name = GameObject.Find("ParentalPopup").scene.name;
+
+        switch (name)                                            //find which scene it was called in, and reduce puzzle number by 1
+        {
+            case "Menu":
+                Global.GenPopup = !Global.GenPopup;
+
+                if (Global.GenPopup == true)
+                {
+                    GameObject.Find("TickBoxButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("TickBox"); //option in unchecked; continue making popups
+                }
+                else
+                {
+                    GameObject.Find("TickBoxButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("Tick"); //option is checked; do not show again
+                }
+                break;
+            case "Mouse":
+                Global.MousePopup = !Global.MousePopup;
+
+                if (Global.MousePopup == true)
+                {
+                    GameObject.Find("TickBoxButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("TickBox"); //option in unchecked; continue making popups
+                }
+                else
+                {
+                    GameObject.Find("TickBoxButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("Tick"); //option is checked; do not show again
+                }
+                break;
+            case "Farm":
+                Global.FarmPopup = !Global.FarmPopup;
+
+                if (Global.FarmPopup == true)
+                {
+                    GameObject.Find("TickBoxButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("TickBox"); //option in unchecked; continue making popups
+                }
+                else
+                {
+                    GameObject.Find("TickBoxButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("Tick"); //option is checked; do not show again
+                }
+                break;
+            default:
+                Debug.Log("Error in Switch Statement/ Tickbox()");
+                break;
+        }
+
+    }
 
 }

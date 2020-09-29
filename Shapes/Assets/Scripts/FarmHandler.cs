@@ -96,7 +96,19 @@ public class FarmHandler : MonoBehaviour
         Global.RightArrowActive = true;
 
        CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
-        //Puzzle11();
+                                                                        //Puzzle11();
+
+
+        if (Global.StartUpFarm)
+        {
+            //Save.LoadGame();             
+            Global.StartUpFarm = false;
+
+            if (Global.FarmPopup == true)
+            {
+                Global.LoadParentalPopup();
+            }
+        }
 
     }
     void Update()

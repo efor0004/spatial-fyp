@@ -15,15 +15,20 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
+        //Save.SavePopup(); 
 
-        if (Global.StartUp)
+        if (Global.StartUpMenu)
         {
             Save.LoadGame();             //load saved data
-            Global.StartUp = false;
-        }
+            Global.StartUpMenu = false;
 
-        //GameObject.Find("MusicButton").GetComponent<Button>().interactable = false;
-       // GameObject.Find("SoundEffectsButton").GetComponent<Button>().interactable = false;
+            Debug.Log("GenPopup: " + Global.GenPopup); 
+
+            if (Global.GenPopup == true)
+            {
+                Global.LoadParentalPopup(); 
+            }
+        }
 
     }
 

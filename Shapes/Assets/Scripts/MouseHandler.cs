@@ -54,7 +54,20 @@ public class MouseHandler : MonoBehaviour
         Global.RightArrowActive = true;
 
         CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world 
-        //Puzzle13();
+                                                                         //Puzzle13();
+
+
+        if (Global.StartUpMouse)  
+        {
+            //Save.LoadGame();             
+            Global.StartUpMouse = false;
+
+            if (Global.MousePopup == true)
+            {
+                Global.LoadParentalPopup();
+            }
+        }
+
     }
     void Update()
     {
