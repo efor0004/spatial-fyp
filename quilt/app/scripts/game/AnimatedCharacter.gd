@@ -1,7 +1,14 @@
 extends AnimatedSprite
 
+onready var branch = get_node("Branch")
+
 func _ready():
 	idle()
+	
+	if (global.character_index == 5):
+		branch.visible = true
+	else:
+		branch.visible = false
 
 func idle():
 	play_animation("idle")
