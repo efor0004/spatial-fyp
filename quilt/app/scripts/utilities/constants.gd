@@ -1,5 +1,7 @@
 extends Node
 
+var level_1_incorrect_reasons = 0
+
 export var FLIP_NONE = "flip-none"
 
 # All rotations are clockwise

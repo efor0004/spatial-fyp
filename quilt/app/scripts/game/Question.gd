@@ -137,15 +137,15 @@ func get_file_index_for_question():
 	return file_index
 
 func get_holey_quilt():
-	var holey_quilt = get_node("Layer1/HoleyQuilt")
+	var holey_quilt = get_node("Layer/HoleyQuilt")
 	return holey_quilt
 
 func get_holey_quilt_fabric():
-	var holey_quilt_fabric = get_node("Layer1/HoleyQuilt/Fabric Texture")
+	var holey_quilt_fabric = get_node("Layer/HoleyQuilt/Fabric Texture")
 	return holey_quilt_fabric
 
 func get_holey_quilt_shape():
-	var holey_quilt_shape = get_node("Layer1/HoleyQuilt/Light2D")
+	var holey_quilt_shape = get_node("Layer/HoleyQuilt/Light2D")
 	return holey_quilt_shape
 
 func get_new_y_offset(y_offset):
@@ -202,12 +202,12 @@ func set_options_shapes():
 		option_border.region_rect = Rect2(x_region, new_y_region, quilt_size, quilt_size)
 
 func get_option_shape(i):
-	var node_path = "AnimationPlayer%d/Layer%d/Option %d/Light2D" % [i, i+1, i]
+	var node_path = "AnimationPlayer%d/Layer/Option/Light2D" % i
 	var option_mask = get_node(node_path)
 	return option_mask
 
 func get_option_border(i):
-	var node_path = "AnimationPlayer%d/Layer%d/Option %d/Border" % [i, i+1, i]
+	var node_path = "AnimationPlayer%d/Layer/Option/Border" % i
 	var option_border = get_node(node_path)
 	return option_border
 
@@ -218,7 +218,7 @@ func set_question_fabric():
 	holey_quilt_fabric.set_texture(fabric)
 	
 	for i in range(1,4):
-		var node_path = "AnimationPlayer%d/Layer%d/Option %d/Fabric Texture" % [i, i+1, i]
+		var node_path = "AnimationPlayer%d/Layer/Option/Fabric Texture" % i
 		var option_fabric = get_node(node_path)
 		option_fabric.set_texture(fabric)
 
@@ -231,7 +231,7 @@ func reset_option_positions():
 	holey_quilt.visible = true
 	
 	for i in range(1,4):
-		var node_path = "AnimationPlayer%d/Layer%d/Option %d" % [i, i+1, i]
+		var node_path = "AnimationPlayer%d/Layer/Option" % i
 		var option = get_node(node_path)
 		option.visible = true
 		option.transform.origin = option_positions[i - 1]
@@ -244,7 +244,7 @@ func add_quilt_piece():
 	holey_quilt.visible = false
 	
 	for i in range(1,4):
-		var node_path = "AnimationPlayer%d/Layer%d/Option %d" % [i, i+1, i]
+		var node_path = "AnimationPlayer%d/Layer/Option" % i
 		var option = get_node(node_path)
 		option.visible = false
 	
