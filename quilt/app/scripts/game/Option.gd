@@ -7,7 +7,6 @@ var option_file_text = "option_"
 onready var animation_player = get_parent().get_parent()
 onready var question = animation_player.get_parent()
 onready var scene = get_tree().current_scene
-onready var character = scene.get_node("Character")
 onready var all_animation_players = get_all_animation_players()
 
 const Constants = preload("../utilities/constants.gd")
@@ -22,14 +21,12 @@ func pressed():
 		if (option_rotation != 0):
 			add_option_rotation_animation()
 		
-		character.on_correct_option()
 		animation_player.play("Correct")
 		yield(animation_player, "animation_finished")
 		question.next_question()
 		yield(question, "piece_added")
 		reset_animations()
 	else:
-		character.on_incorrect_option()
 		animation_player.play("Incorrect")
 		yield(animation_player, "animation_finished")
 

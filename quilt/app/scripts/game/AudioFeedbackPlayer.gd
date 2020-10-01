@@ -11,16 +11,21 @@ var incorrect_clips = [
 	"res://assets/audio/game/incorrect_3.wav"
 ]
 
+const Constants = preload("../utilities/constants.gd")
+onready var constants = Constants.new()
+
 onready var question = get_parent()
 
 func play_audio_feedback(index):
 	var is_correct = is_correct_answer(index)
 	
+	print(is_correct)
+	
 	if (is_correct):
 		stream = load(correct_clip)
 	else:
-		var option_index = get_option_index(index)
-		stream = load(incorrect_clips[option_index])
+		var incorrect_reason = get_incorrect_reason(index)
+		stream = load(incorrect_clips[incorrect_reason])
 	
 	play()
 
@@ -41,3 +46,15 @@ func get_option_index(animation_player_index):
 		return 3
 	else:
 		return 0
+
+func get_incorrect_reason(animation_player_index):
+	var current_level_index = global.current_level - 1
+	var current_question_index = global.current_shuffled_question - 1
+	var current_level_difficulty = global.current_level_difficulty
+	
+	var level_incorrect_reasons = constants.level_incorrect_reasons[current_level_index][current_level_difficulty]
+	var option_index = get_option_index(animation_player_index)
+	
+	var incorrect_reason = level_incorrect_reasons[current_question_index][option_index - 2]
+	
+	return incorrect_reason

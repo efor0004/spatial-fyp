@@ -68,13 +68,14 @@ _global_script_class_icons={
 
 [application]
 
-config/name="quilt-app"
+config/name="Quilt App"
 run/main_scene="res://Main Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 global="*res://scripts/utilities/global.gd"
+BackgroundMusic="*res://BackgroundMusic.tscn"
 
 [display]
 
