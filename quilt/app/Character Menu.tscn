@@ -562,6 +562,8 @@ margin_left = 1873.0
 margin_top = 25.0
 margin_right = 2023.0
 margin_bottom = 175.0
+focus_mode = 0
+enabled_focus_mode = 0
 icon = ExtResource( 2 )
 expand_icon = true
 __meta__ = {
@@ -573,6 +575,8 @@ margin_left = 1873.0
 margin_top = 25.0
 margin_right = 1885.0
 margin_bottom = 45.0
+focus_mode = 0
+enabled_focus_mode = 0
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false

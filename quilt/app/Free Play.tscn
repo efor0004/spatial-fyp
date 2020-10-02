@@ -188,6 +188,8 @@ margin_top = 10.0
 margin_right = 2002.0
 margin_bottom = 226.0
 rect_scale = Vector2( 0.4, 0.4 )
+focus_mode = 0
+enabled_focus_mode = 0
 icon = ExtResource( 14 )
 flat = true
 script = ExtResource( 15 )
@@ -200,6 +202,8 @@ margin_left = 1946.0
 margin_top = 102.0
 margin_right = 1958.0
 margin_bottom = 122.0
+focus_mode = 0
+enabled_focus_mode = 0
 script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false

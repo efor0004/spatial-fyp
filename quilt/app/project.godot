@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "AnimatedSprite",
+"class": "AnimatedCharacter",
+"language": "GDScript",
+"path": "res://scripts/story/AnimatedCharacter.gd"
+}, {
 "base": "AudioStreamPlayer",
 "class": "AudioFeedbackPlayer",
 "language": "GDScript",
@@ -49,12 +54,18 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/game/Option.gd"
 }, {
+"base": "Button",
+"class": "PlayButton",
+"language": "GDScript",
+"path": "res://scripts/main_menu/PlayButton.gd"
+}, {
 "base": "Area2D",
 "class": "SquareOption",
 "language": "GDScript",
 "path": "res://scripts/free_play/SquareOption.gd"
 } ]
 _global_script_class_icons={
+"AnimatedCharacter": "",
 "AudioFeedbackPlayer": "",
 "CharacterModal": "",
 "ConfirmationModal": "",
@@ -63,6 +74,7 @@ _global_script_class_icons={
 "Modal": "",
 "ModalButton": "",
 "Option": "",
+"PlayButton": "",
 "SquareOption": ""
 }
 

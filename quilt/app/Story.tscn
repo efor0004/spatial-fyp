@@ -1,4 +1,4 @@
-[gd_scene load_steps=146 format=2]
+[gd_scene load_steps=308 format=2]
 
 [ext_resource path="res://scripts/Background.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Exit Button.gd" type="Script" id=2]
@@ -69,6 +69,592 @@
 [ext_resource path="res://assets/sprites/characters/5/crouched/idle/6.png" type="Texture" id=67]
 [ext_resource path="res://assets/sprites/characters/5/crouched/idle/3.png" type="Texture" id=68]
 [ext_resource path="res://assets/sprites/characters/6/idle/__white_rabbit_idle.png" type="Texture" id=69]
+[ext_resource path="res://assets/screens/story/small_spot.png" type="Texture" id=70]
+[ext_resource path="res://assets/screens/story/large_spot.png" type="Texture" id=71]
+[ext_resource path="res://assets/screens/story/bubble.png" type="Texture" id=72]
+[ext_resource path="res://assets/screens/story/medium_spot.png" type="Texture" id=73]
+[ext_resource path="res://assets/screens/progress/quilt/level_10.png" type="Texture" id=74]
+[ext_resource path="res://assets/screens/progress/characters/1.png" type="Texture" id=75]
+[ext_resource path="res://assets/screens/progress/characters/2.png" type="Texture" id=76]
+[ext_resource path="res://assets/screens/progress/characters/3.png" type="Texture" id=77]
+[ext_resource path="res://assets/screens/progress/characters/6.png" type="Texture" id=78]
+[ext_resource path="res://assets/screens/progress/characters/4.png" type="Texture" id=79]
+[ext_resource path="res://assets/screens/progress/characters/5.png" type="Texture" id=80]
+[ext_resource path="res://assets/sprites/characters/4/incorrect/__white_goat_kick.png" type="Texture" id=81]
+[ext_resource path="res://scripts/story/AnimatedCharacter.gd" type="Script" id=82]
+[ext_resource path="res://assets/sprites/characters/1/no_branch/flap_wings/9.png" type="Texture" id=83]
+[ext_resource path="res://assets/sprites/characters/1/no_branch/flap_wings/2.png" type="Texture" id=84]
+[ext_resource path="res://assets/sprites/characters/1/no_branch/flap_wings/6.png" type="Texture" id=85]
+[ext_resource path="res://assets/sprites/characters/1/no_branch/flap_wings/7.png" type="Texture" id=86]
+[ext_resource path="res://assets/sprites/characters/1/no_branch/flap_wings/8.png" type="Texture" id=87]
+[ext_resource path="res://assets/sprites/characters/1/no_branch/flap_wings/5.png" type="Texture" id=88]
+[ext_resource path="res://assets/sprites/characters/1/no_branch/flap_wings/0.png" type="Texture" id=89]
+[ext_resource path="res://assets/sprites/characters/1/no_branch/flap_wings/4.png" type="Texture" id=90]
+[ext_resource path="res://assets/sprites/characters/1/no_branch/flap_wings/1.png" type="Texture" id=91]
+[ext_resource path="res://assets/sprites/characters/1/no_branch/flap_wings/3.png" type="Texture" id=92]
+[ext_resource path="res://assets/sprites/characters/2/correct/7.png" type="Texture" id=93]
+[ext_resource path="res://assets/sprites/characters/2/correct/1.png" type="Texture" id=94]
+[ext_resource path="res://assets/sprites/characters/2/correct/5.png" type="Texture" id=95]
+[ext_resource path="res://assets/sprites/characters/2/correct/9.png" type="Texture" id=96]
+[ext_resource path="res://assets/sprites/characters/2/correct/8.png" type="Texture" id=97]
+[ext_resource path="res://assets/sprites/characters/2/correct/0.png" type="Texture" id=98]
+[ext_resource path="res://assets/sprites/characters/2/correct/2.png" type="Texture" id=99]
+[ext_resource path="res://assets/sprites/characters/2/correct/4.png" type="Texture" id=100]
+[ext_resource path="res://assets/sprites/characters/2/correct/3.png" type="Texture" id=101]
+[ext_resource path="res://assets/sprites/characters/2/correct/6.png" type="Texture" id=102]
+[ext_resource path="res://assets/sprites/characters/3/correct/__alsation_bark.png" type="Texture" id=103]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/12.png" type="Texture" id=104]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/13.png" type="Texture" id=105]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/14.png" type="Texture" id=106]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/15.png" type="Texture" id=107]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/0.png" type="Texture" id=108]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/1.png" type="Texture" id=109]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/2.png" type="Texture" id=110]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/3.png" type="Texture" id=111]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/5.png" type="Texture" id=112]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/6.png" type="Texture" id=113]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/7.png" type="Texture" id=114]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/9.png" type="Texture" id=115]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/10.png" type="Texture" id=116]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/8.png" type="Texture" id=117]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/4.png" type="Texture" id=118]
+[ext_resource path="res://assets/sprites/characters/5/crouched/walk/11.png" type="Texture" id=119]
+[ext_resource path="res://assets/sprites/characters/6/correct/__white_rabbit_jump.png" type="Texture" id=120]
+[ext_resource path="res://assets/sprites/characters/2/walk/5.png" type="Texture" id=121]
+[ext_resource path="res://assets/sprites/characters/2/walk/3.png" type="Texture" id=122]
+[ext_resource path="res://assets/sprites/characters/2/walk/4.png" type="Texture" id=123]
+[ext_resource path="res://assets/sprites/characters/2/walk/6.png" type="Texture" id=124]
+[ext_resource path="res://assets/sprites/characters/2/walk/9.png" type="Texture" id=125]
+[ext_resource path="res://assets/sprites/characters/2/walk/7.png" type="Texture" id=126]
+[ext_resource path="res://assets/sprites/characters/2/walk/8.png" type="Texture" id=127]
+[ext_resource path="res://assets/sprites/characters/2/walk/10.png" type="Texture" id=128]
+[ext_resource path="res://assets/sprites/characters/2/walk/11.png" type="Texture" id=129]
+[ext_resource path="res://assets/sprites/characters/2/walk/2.png" type="Texture" id=130]
+[ext_resource path="res://assets/sprites/characters/2/walk/1.png" type="Texture" id=131]
+[ext_resource path="res://assets/sprites/characters/2/walk/0.png" type="Texture" id=132]
+[ext_resource path="res://assets/sprites/characters/3/walk/__alsation_walk.png" type="Texture" id=133]
+[ext_resource path="res://assets/sprites/characters/4/walk/__white_goat_walk.png" type="Texture" id=134]
+[ext_resource path="res://assets/sprites/characters/6/walk/__white_rabbit_walk.png" type="Texture" id=135]
+[ext_resource path="res://scripts/story/NarrationPlayer.gd" type="Script" id=136]
+[ext_resource path="res://scripts/story/Play Button.gd" type="Script" id=137]
+[ext_resource path="res://assets/sprites/buttons/play_button/normal/play_button.png" type="Texture" id=138]
+
+[sub_resource type="Animation" id=80]
+resource_name = "1_dream"
+length = 4.25
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/OwlPlayer/Owl/Thought Bubble/Small Spot:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/OwlPlayer/Owl/Thought Bubble/Medium Spot:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.75, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer/OwlPlayer/Owl/Thought Bubble/Large Spot:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.75, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer/OwlPlayer/Owl/Thought Bubble/Bubble:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer/OwlPlayer/Owl/Sleeping Animal:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=81]
+resource_name = "2_dream"
+length = 4.25
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/ChickenPlayer/Chicken/Thought Bubble/Small Spot:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/ChickenPlayer/Chicken/Thought Bubble/Medium Spot:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.75, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer/ChickenPlayer/Chicken/Thought Bubble/Large Spot:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.75, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer/ChickenPlayer/Chicken/Thought Bubble/Bubble:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer/ChickenPlayer/Chicken/Sleeping Animal:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=79]
+resource_name = "3_dream"
+length = 4.25
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/DogPlayer/Dog/Thought Bubble/Small Spot:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/DogPlayer/Dog/Thought Bubble/Medium Spot:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.75, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer/DogPlayer/Dog/Thought Bubble/Large Spot:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.75, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer/DogPlayer/Dog/Thought Bubble/Bubble:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer/DogPlayer/Dog/Sleeping Animal:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=82]
+resource_name = "4_dream"
+length = 4.25
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/GoatPlayer/Goat/Thought Bubble/Small Spot:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/GoatPlayer/Goat/Thought Bubble/Medium Spot:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.75, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer/GoatPlayer/Goat/Thought Bubble/Large Spot:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.75, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer/GoatPlayer/Goat/Thought Bubble/Bubble:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer/GoatPlayer/Goat/Sleeping Animal:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=83]
+resource_name = "5_dream"
+length = 4.25
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble/Small Spot:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble/Medium Spot:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.75, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble/Large Spot:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.75, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble/Bubble:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer/MonkeyPlayer/Monkey/Sleeping Animal:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=84]
+resource_name = "6_dream"
+length = 4.25
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble/Small Spot:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble/Medium Spot:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.75, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble/Large Spot:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.75, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble/Bubble:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer/RabbitPlayer/Rabbit/Sleeping Animal:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=85]
+resource_name = "react"
+length = 3.75
+step = 0.25
+tracks/0/type = "method"
+tracks/0/path = NodePath("AnimationPlayer/GoatPlayer/Goat")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.25 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "react", false ],
+"method": "play"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("AnimationPlayer/OwlPlayer/Owl")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2.25 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "react", false ],
+"method": "play"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("AnimationPlayer/ChickenPlayer/Chicken")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.75 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "react", false ],
+"method": "play"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("AnimationPlayer/DogPlayer/Dog")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "react", false ],
+"method": "play"
+} ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("AnimationPlayer/MonkeyPlayer/Monkey")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1.25 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "react", false ],
+"method": "play"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("AnimationPlayer/RabbitPlayer/Rabbit")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1.75 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "react", false ],
+"method": "play"
+} ]
+}
+
+[sub_resource type="Animation" id=166]
+resource_name = "move"
+length = 2.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("OwlPlayer/Owl:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1887.59, -0.25, 0, 0.25, 0, 1943.79, -0.25, 0, 0.25, 0, 2186.47, -0.25, 0, 0.25, 0, 2300, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 2, 2.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("OwlPlayer/Owl:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 675.558, -0.25, 0, 0.25, 0, 604.032, -0.25, 0, 0.25, 0, 383.068, -0.25, 0, 0.25, 0, 383.068, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 2, 2.5 )
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("OwlPlayer/Owl")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "", false ],
+"method": "play"
+} ]
+}
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -76,7 +662,51 @@ animations = [ {
 "loop": true,
 "name": "idle",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 89 ), ExtResource( 91 ), ExtResource( 84 ), ExtResource( 92 ), ExtResource( 90 ), ExtResource( 88 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 83 ) ],
+"loop": true,
+"name": "move",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 89 ), ExtResource( 91 ), ExtResource( 84 ), ExtResource( 92 ), ExtResource( 90 ), ExtResource( 88 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 83 ) ],
+"loop": false,
+"name": "react",
+"speed": 8.0
 } ]
+
+[sub_resource type="Animation" id=167]
+resource_name = "move"
+length = 4.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("ChickenPlayer/Chicken:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1690.7, 1087.4 ), Vector2( -300, 1087.4 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("ChickenPlayer/Chicken")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ "move", false ],
+"method": "play"
+}, {
+"args": [  ],
+"method": "stop"
+} ]
+}
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -84,7 +714,50 @@ animations = [ {
 "loop": true,
 "name": "idle",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 132 ), ExtResource( 131 ), ExtResource( 130 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 121 ), ExtResource( 124 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 125 ), ExtResource( 128 ), ExtResource( 129 ) ],
+"loop": true,
+"name": "move",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 98 ), ExtResource( 94 ), ExtResource( 99 ), ExtResource( 101 ), ExtResource( 100 ), ExtResource( 95 ), ExtResource( 102 ), ExtResource( 93 ), ExtResource( 97 ), ExtResource( 96 ) ],
+"loop": false,
+"name": "react",
+"speed": 8.0
 } ]
+
+[sub_resource type="Animation" id=168]
+resource_name = "move"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("DogPlayer/Dog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 373.905, 1013.34 ), Vector2( 2500, 1013.34 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("DogPlayer/Dog")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ "move", false ],
+"method": "play"
+}, {
+"args": [  ],
+"method": "stop"
+} ]
+}
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -186,13 +859,181 @@ flags = 4
 atlas = ExtResource( 47 )
 region = Rect2( 2816, 1710, 704, 570 )
 
+[sub_resource type="AtlasTexture" id=121]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 0, 0, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=122]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 760, 0, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=123]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 1520, 0, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=124]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 2280, 0, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=125]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 3040, 0, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=126]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 0, 580, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=127]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 760, 580, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=128]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 1520, 580, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=129]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 2280, 580, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=130]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 3040, 580, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=131]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 0, 1160, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=132]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 760, 1160, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=133]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 1520, 1160, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=134]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 2280, 1160, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=135]
+flags = 4
+atlas = ExtResource( 133 )
+region = Rect2( 3040, 1160, 760, 580 )
+
+[sub_resource type="AtlasTexture" id=96]
+flags = 4
+atlas = ExtResource( 103 )
+region = Rect2( 0, 0, 704, 613 )
+
+[sub_resource type="AtlasTexture" id=97]
+flags = 4
+atlas = ExtResource( 103 )
+region = Rect2( 704, 0, 704, 613 )
+
+[sub_resource type="AtlasTexture" id=98]
+flags = 4
+atlas = ExtResource( 103 )
+region = Rect2( 1408, 0, 704, 613 )
+
+[sub_resource type="AtlasTexture" id=99]
+flags = 4
+atlas = ExtResource( 103 )
+region = Rect2( 2112, 0, 704, 613 )
+
+[sub_resource type="AtlasTexture" id=100]
+flags = 4
+atlas = ExtResource( 103 )
+region = Rect2( 2816, 0, 704, 613 )
+
+[sub_resource type="AtlasTexture" id=101]
+flags = 4
+atlas = ExtResource( 103 )
+region = Rect2( 0, 613, 704, 613 )
+
+[sub_resource type="AtlasTexture" id=102]
+flags = 4
+atlas = ExtResource( 103 )
+region = Rect2( 704, 613, 704, 613 )
+
+[sub_resource type="AtlasTexture" id=103]
+flags = 4
+atlas = ExtResource( 103 )
+region = Rect2( 1408, 613, 704, 613 )
+
+[sub_resource type="AtlasTexture" id=104]
+flags = 4
+atlas = ExtResource( 103 )
+region = Rect2( 2112, 613, 704, 613 )
+
+[sub_resource type="AtlasTexture" id=105]
+flags = 4
+atlas = ExtResource( 103 )
+region = Rect2( 2816, 613, 704, 613 )
+
 [sub_resource type="SpriteFrames" id=23]
 animations = [ {
 "frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
 "loop": true,
 "name": "idle",
 "speed": 8.0
+}, {
+"frames": [ SubResource( 121 ), SubResource( 122 ), SubResource( 123 ), SubResource( 124 ), SubResource( 125 ), SubResource( 126 ), SubResource( 127 ), SubResource( 128 ), SubResource( 129 ), SubResource( 130 ), SubResource( 131 ), SubResource( 132 ), SubResource( 133 ), SubResource( 134 ), SubResource( 135 ) ],
+"loop": true,
+"name": "move",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 96 ), SubResource( 97 ), SubResource( 98 ), SubResource( 99 ), SubResource( 100 ), SubResource( 101 ), SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ) ],
+"loop": false,
+"name": "react",
+"speed": 8.0
 } ]
+
+[sub_resource type="Animation" id=169]
+resource_name = "move"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("GoatPlayer/Goat:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1240.93, 1049.46 ), Vector2( -400, 1049.46 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("GoatPlayer/Goat")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ "move", false ],
+"method": "play"
+}, {
+"args": [  ],
+"method": "stop"
+} ]
+}
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
@@ -319,13 +1160,181 @@ flags = 4
 atlas = ExtResource( 48 )
 region = Rect2( 2872, 2480, 718, 620 )
 
+[sub_resource type="AtlasTexture" id=136]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 0, 0, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=137]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 718, 0, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=138]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 1436, 0, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=139]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 2154, 0, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=140]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 2872, 0, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=141]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 0, 620, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=142]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 718, 620, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=143]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 1436, 620, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=144]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 2154, 620, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=145]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 2872, 620, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=146]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 0, 1240, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=147]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 718, 1240, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=148]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 1436, 1240, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=149]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 2154, 1240, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=150]
+flags = 4
+atlas = ExtResource( 134 )
+region = Rect2( 2872, 1240, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=86]
+flags = 4
+atlas = ExtResource( 81 )
+region = Rect2( 0, 0, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=87]
+flags = 4
+atlas = ExtResource( 81 )
+region = Rect2( 718, 0, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=88]
+flags = 4
+atlas = ExtResource( 81 )
+region = Rect2( 1436, 0, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=89]
+flags = 4
+atlas = ExtResource( 81 )
+region = Rect2( 2154, 0, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=90]
+flags = 4
+atlas = ExtResource( 81 )
+region = Rect2( 2872, 0, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=91]
+flags = 4
+atlas = ExtResource( 81 )
+region = Rect2( 0, 620, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=92]
+flags = 4
+atlas = ExtResource( 81 )
+region = Rect2( 718, 620, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=93]
+flags = 4
+atlas = ExtResource( 81 )
+region = Rect2( 1436, 620, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=94]
+flags = 4
+atlas = ExtResource( 81 )
+region = Rect2( 2154, 620, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=95]
+flags = 4
+atlas = ExtResource( 81 )
+region = Rect2( 2872, 620, 718, 620 )
+
 [sub_resource type="SpriteFrames" id=49]
 animations = [ {
 "frames": [ SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ) ],
 "loop": true,
 "name": "idle",
 "speed": 8.0
+}, {
+"frames": [ SubResource( 136 ), SubResource( 137 ), SubResource( 138 ), SubResource( 139 ), SubResource( 140 ), SubResource( 141 ), SubResource( 142 ), SubResource( 143 ), SubResource( 144 ), SubResource( 145 ), SubResource( 146 ), SubResource( 147 ), SubResource( 148 ), SubResource( 149 ), SubResource( 150 ) ],
+"loop": true,
+"name": "move",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ) ],
+"loop": false,
+"name": "react",
+"speed": 8.0
 } ]
+
+[sub_resource type="Animation" id=170]
+resource_name = "move"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("MonkeyPlayer/Monkey:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 435.319, 182.437 ), Vector2( 738.778, -247.463 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("MonkeyPlayer/Monkey")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ "move", false ],
+"method": "play"
+}, {
+"args": [  ],
+"method": "stop"
+} ]
+}
 
 [sub_resource type="SpriteFrames" id=50]
 animations = [ {
@@ -333,7 +1342,50 @@ animations = [ {
 "loop": true,
 "name": "idle",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 118 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 117 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 119 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ) ],
+"loop": true,
+"name": "move",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 118 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 117 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 119 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ) ],
+"loop": false,
+"name": "react",
+"speed": 8.0
 } ]
+
+[sub_resource type="Animation" id=171]
+resource_name = "move"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("RabbitPlayer/Rabbit:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 776.711, 1159.65 ), Vector2( 2400, 1159.65 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("RabbitPlayer/Rabbit")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ "move", false ],
+"method": "play"
+}, {
+"args": [  ],
+"method": "stop"
+} ]
+}
 
 [sub_resource type="AtlasTexture" id=51]
 flags = 4
@@ -460,17 +1512,180 @@ flags = 4
 atlas = ExtResource( 69 )
 region = Rect2( 2776, 1568, 694, 392 )
 
+[sub_resource type="AtlasTexture" id=151]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 0, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=152]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 694, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=153]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 1388, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=154]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 2082, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=155]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 2776, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=156]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 0, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=157]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 694, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=158]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 1388, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=159]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 2082, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=160]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 2776, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=161]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 0, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=162]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 694, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=163]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 1388, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=164]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 2082, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=165]
+flags = 4
+atlas = ExtResource( 135 )
+region = Rect2( 2776, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=106]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 0, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=107]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 694, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=108]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 1388, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=109]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 2082, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=110]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 2776, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=111]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 0, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=112]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 694, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=113]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 1388, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=114]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 2082, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=115]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 2776, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=116]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 0, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=117]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 694, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=118]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 1388, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=119]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 2082, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=120]
+flags = 4
+atlas = ExtResource( 120 )
+region = Rect2( 2776, 784, 694, 392 )
+
 [sub_resource type="SpriteFrames" id=76]
 animations = [ {
 "frames": [ SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ) ],
 "loop": true,
 "name": "idle",
 "speed": 8.0
+}, {
+"frames": [ SubResource( 151 ), SubResource( 152 ), SubResource( 153 ), SubResource( 154 ), SubResource( 155 ), SubResource( 156 ), SubResource( 157 ), SubResource( 158 ), SubResource( 159 ), SubResource( 160 ), SubResource( 161 ), SubResource( 162 ), SubResource( 163 ), SubResource( 164 ), SubResource( 165 ) ],
+"loop": true,
+"name": "move",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ), SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ), SubResource( 114 ), SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ), SubResource( 120 ) ],
+"loop": false,
+"name": "react",
+"speed": 8.0
 } ]
 
 [node name="Story" type="Node2D"]
 
-[node name="Exit Button" type="Button" parent="."]
+[node name="Buttons" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Exit Button" type="Button" parent="Buttons"]
 margin_right = 12.0
 margin_bottom = 20.0
 script = ExtResource( 2 )
@@ -478,53 +1693,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ForestBackground" type="Sprite" parent="."]
-position = Vector2( 1024, 769 )
-z_index = -1
-texture = ExtResource( 26 )
-script = ExtResource( 1 )
+[node name="Play Button" type="Button" parent="Buttons"]
+visible = false
+margin_left = 658.0
+margin_top = 647.0
+margin_right = 1390.0
+margin_bottom = 893.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 138 )
+flat = true
+script = ExtResource( 137 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Animals" type="Node2D" parent="."]
-z_index = 1
-script = ExtResource( 25 )
-
-[node name="Owl" type="AnimatedSprite" parent="Animals"]
-position = Vector2( 1887.59, 675.558 )
-scale = Vector2( 0.5, 0.5 )
-z_index = 1
-frames = SubResource( 1 )
-animation = "idle"
-
-[node name="Chicken" type="AnimatedSprite" parent="Animals"]
-position = Vector2( 1690.7, 1087.4 )
-scale = Vector2( 0.75, 0.75 )
-frames = SubResource( 2 )
-animation = "idle"
-
-[node name="Dog" type="AnimatedSprite" parent="Animals"]
-position = Vector2( 373.905, 1013.34 )
-scale = Vector2( -1, 1 )
-frames = SubResource( 23 )
-animation = "idle"
-
-[node name="Goat" type="AnimatedSprite" parent="Animals"]
-position = Vector2( 1240.93, 1049.46 )
-frames = SubResource( 49 )
-animation = "idle"
-
-[node name="Monkey" type="AnimatedSprite" parent="Animals"]
-position = Vector2( 435.319, 182.437 )
-scale = Vector2( -0.6, 0.6 )
-frames = SubResource( 50 )
-animation = "idle"
-
-[node name="Rabbit" type="AnimatedSprite" parent="Animals"]
-position = Vector2( 776.711, 1159.65 )
-scale = Vector2( -0.75, 0.75 )
-frames = SubResource( 76 )
-animation = "idle"
-
-[node name="Skip Button" type="Button" parent="."]
+[node name="Skip Button" type="Button" parent="Buttons"]
 margin_left = 1805.0
 margin_top = 1340.0
 margin_right = 2087.0
@@ -538,7 +1722,309 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="button_down" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_down"]
-[connection signal="button_up" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_up"]
-[connection signal="button_down" from="Skip Button" to="Skip Button" method="_on_Skip_Button_button_down"]
-[connection signal="button_up" from="Skip Button" to="Skip Button" method="_on_Skip_Button_button_up"]
+
+[node name="Narrative" type="Node2D" parent="."]
+z_index = -1
+
+[node name="ForestBackground" type="Sprite" parent="Narrative"]
+position = Vector2( 1024, 769 )
+z_index = -1
+texture = ExtResource( 26 )
+script = ExtResource( 1 )
+
+[node name="Animals" type="Node2D" parent="Narrative"]
+z_index = 1
+script = ExtResource( 25 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Narrative/Animals"]
+anims/1_dream = SubResource( 80 )
+anims/2_dream = SubResource( 81 )
+anims/3_dream = SubResource( 79 )
+anims/4_dream = SubResource( 82 )
+anims/5_dream = SubResource( 83 )
+anims/6_dream = SubResource( 84 )
+anims/react = SubResource( 85 )
+
+[node name="OwlPlayer" type="AnimationPlayer" parent="Narrative/Animals/AnimationPlayer"]
+anims/move = SubResource( 166 )
+
+[node name="Owl" type="AnimatedSprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer"]
+position = Vector2( 1887.59, 675.558 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+frames = SubResource( 1 )
+animation = "move"
+script = ExtResource( 82 )
+
+[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl"]
+position = Vector2( -875.18, -551.116 )
+rotation = -3.14159
+scale = Vector2( 0.4, -0.4 )
+
+[node name="Small Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 70 )
+
+[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 73 )
+
+[node name="Large Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 71 )
+
+[node name="Bubble" type="Sprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 72 )
+
+[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl"]
+visible = false
+position = Vector2( -1125.18, -651.116 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Animal" type="Sprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl/Sleeping Animal"]
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="Quilt" type="Sprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl/Sleeping Animal"]
+texture = ExtResource( 74 )
+
+[node name="ChickenPlayer" type="AnimationPlayer" parent="Narrative/Animals/AnimationPlayer"]
+anims/move = SubResource( 167 )
+
+[node name="Chicken" type="AnimatedSprite" parent="Narrative/Animals/AnimationPlayer/ChickenPlayer"]
+position = Vector2( 1690.7, 1087.4 )
+scale = Vector2( 0.75, 0.75 )
+frames = SubResource( 2 )
+animation = "move"
+script = ExtResource( 82 )
+
+[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/AnimationPlayer/ChickenPlayer/Chicken"]
+position = Vector2( -487.6, -516.533 )
+rotation = -3.14159
+scale = Vector2( 0.266667, -0.266667 )
+
+[node name="Small Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/ChickenPlayer/Chicken/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 70 )
+
+[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/ChickenPlayer/Chicken/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 73 )
+
+[node name="Large Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/ChickenPlayer/Chicken/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 71 )
+
+[node name="Bubble" type="Sprite" parent="Narrative/Animals/AnimationPlayer/ChickenPlayer/Chicken/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 72 )
+
+[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/AnimationPlayer/ChickenPlayer/Chicken"]
+visible = false
+position = Vector2( -654.267, -583.2 )
+scale = Vector2( 0.266667, 0.266667 )
+
+[node name="Animal" type="Sprite" parent="Narrative/Animals/AnimationPlayer/ChickenPlayer/Chicken/Sleeping Animal"]
+scale = Vector2( 1, 1 )
+texture = ExtResource( 76 )
+
+[node name="Quilt" type="Sprite" parent="Narrative/Animals/AnimationPlayer/ChickenPlayer/Chicken/Sleeping Animal"]
+texture = ExtResource( 74 )
+
+[node name="DogPlayer" type="AnimationPlayer" parent="Narrative/Animals/AnimationPlayer"]
+anims/move = SubResource( 168 )
+
+[node name="Dog" type="AnimatedSprite" parent="Narrative/Animals/AnimationPlayer/DogPlayer"]
+position = Vector2( 373.905, 1013.34 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+frames = SubResource( 23 )
+animation = "move"
+script = ExtResource( 82 )
+
+[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/AnimationPlayer/DogPlayer/Dog"]
+position = Vector2( -625, -425 )
+rotation = 3.14159
+scale = Vector2( 0.2, -0.2 )
+
+[node name="Small Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/DogPlayer/Dog/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 70 )
+
+[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/DogPlayer/Dog/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 73 )
+
+[node name="Large Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/DogPlayer/Dog/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 71 )
+
+[node name="Bubble" type="Sprite" parent="Narrative/Animals/AnimationPlayer/DogPlayer/Dog/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 72 )
+
+[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/AnimationPlayer/DogPlayer/Dog"]
+visible = false
+position = Vector2( -740, -460 )
+rotation = 1.50996e-07
+scale = Vector2( 0.19, 0.19 )
+
+[node name="Animal" type="Sprite" parent="Narrative/Animals/AnimationPlayer/DogPlayer/Dog/Sleeping Animal"]
+position = Vector2( 0, -50 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 77 )
+
+[node name="Quilt" type="Sprite" parent="Narrative/Animals/AnimationPlayer/DogPlayer/Dog/Sleeping Animal"]
+texture = ExtResource( 74 )
+
+[node name="GoatPlayer" type="AnimationPlayer" parent="Narrative/Animals/AnimationPlayer"]
+anims/move = SubResource( 169 )
+
+[node name="Goat" type="AnimatedSprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer"]
+position = Vector2( 1240.93, 1049.46 )
+frames = SubResource( 49 )
+animation = "move"
+script = ExtResource( 82 )
+
+[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat"]
+position = Vector2( -500, -350 )
+rotation = 3.14159
+scale = Vector2( 0.2, -0.2 )
+
+[node name="Small Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 70 )
+
+[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 73 )
+
+[node name="Large Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 71 )
+
+[node name="Bubble" type="Sprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 72 )
+
+[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat"]
+visible = false
+position = Vector2( -650, -400 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Animal" type="Sprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat/Sleeping Animal"]
+position = Vector2( 0, -50 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 79 )
+
+[node name="Quilt" type="Sprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat/Sleeping Animal"]
+texture = ExtResource( 74 )
+
+[node name="MonkeyPlayer" type="AnimationPlayer" parent="Narrative/Animals/AnimationPlayer"]
+anims/move = SubResource( 170 )
+
+[node name="Monkey" type="AnimatedSprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer"]
+position = Vector2( 435.319, 182.437 )
+rotation = -3.14159
+scale = Vector2( 0.6, -0.6 )
+frames = SubResource( 50 )
+animation = "move"
+script = ExtResource( 82 )
+
+[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey"]
+position = Vector2( -800, 350 )
+rotation = -3.14159
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Small Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 70 )
+
+[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 73 )
+
+[node name="Large Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 71 )
+
+[node name="Bubble" type="Sprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 72 )
+
+[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey"]
+visible = false
+position = Vector2( -1000, 375 )
+rotation = -1.50996e-07
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Animal" type="Sprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey/Sleeping Animal"]
+position = Vector2( 0, -50 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 80 )
+
+[node name="Quilt" type="Sprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey/Sleeping Animal"]
+texture = ExtResource( 74 )
+
+[node name="RabbitPlayer" type="AnimationPlayer" parent="Narrative/Animals/AnimationPlayer"]
+anims/move = SubResource( 171 )
+
+[node name="Rabbit" type="AnimatedSprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer"]
+position = Vector2( 776.711, 1159.65 )
+rotation = -3.14159
+scale = Vector2( 0.75, -0.75 )
+frames = SubResource( 76 )
+animation = "move"
+script = ExtResource( 82 )
+
+[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit"]
+position = Vector2( -625, -325 )
+rotation = 3.14159
+scale = Vector2( 0.267, -0.267 )
+
+[node name="Small Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 70 )
+
+[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 73 )
+
+[node name="Large Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 71 )
+
+[node name="Bubble" type="Sprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 72 )
+
+[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit"]
+visible = false
+position = Vector2( -800, -375 )
+rotation = -1.50996e-07
+scale = Vector2( 0.253333, 0.253333 )
+
+[node name="Animal" type="Sprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit/Sleeping Animal"]
+position = Vector2( 0, -50 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 78 )
+
+[node name="Quilt" type="Sprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit/Sleeping Animal"]
+texture = ExtResource( 74 )
+
+[node name="NarrationPlayer" type="AudioStreamPlayer" parent="Narrative/Animals"]
+volume_db = 5.0
+script = ExtResource( 136 )
+[connection signal="button_down" from="Buttons/Exit Button" to="Buttons/Exit Button" method="_on_Exit_Button_button_down"]
+[connection signal="button_up" from="Buttons/Exit Button" to="Buttons/Exit Button" method="_on_Exit_Button_button_up"]
+[connection signal="button_down" from="Buttons/Play Button" to="Buttons/Play Button" method="_on_Play_Button_button_down"]
+[connection signal="button_up" from="Buttons/Play Button" to="Buttons/Play Button" method="_on_Play_Button_button_up"]
+[connection signal="button_down" from="Buttons/Skip Button" to="Buttons/Skip Button" method="_on_Skip_Button_button_down"]
+[connection signal="button_up" from="Buttons/Skip Button" to="Buttons/Skip Button" method="_on_Skip_Button_button_up"]
+[connection signal="animation_finished" from="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl" to="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl" method="_on_Character_animation_finished"]
+[connection signal="animation_finished" from="Narrative/Animals/AnimationPlayer/ChickenPlayer/Chicken" to="Narrative/Animals/AnimationPlayer/ChickenPlayer/Chicken" method="_on_Character_animation_finished"]
+[connection signal="animation_finished" from="Narrative/Animals/AnimationPlayer/DogPlayer/Dog" to="Narrative/Animals/AnimationPlayer/DogPlayer/Dog" method="_on_Character_animation_finished"]
+[connection signal="animation_finished" from="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat" to="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat" method="_on_Character_animation_finished"]
+[connection signal="animation_finished" from="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey" to="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey" method="_on_Character_animation_finished"]
+[connection signal="animation_finished" from="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit" to="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit" method="_on_Character_animation_finished"]
