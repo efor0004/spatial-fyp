@@ -1039,24 +1039,23 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by the button at the end of the movie maker or puzzle tutoris
         //resets variables and loads Worlds scene
 
-
         FindObjectOfType<AudioManager>().Stop("p10"); //cuts off audio
         FindObjectOfType<AudioManager>().Stop("m12");
 
-        TutePuzzleHandler.translateFlag = false;
-        TutePuzzleHandler.rotateFlag = false;
-        TutePuzzleHandler.toolbarFlag = false;
-        TutePuzzleHandler.completeFlag = false;
+        //TutePuzzleHandler.translateFlag = false;
+        //TutePuzzleHandler.rotateFlag = false;
+        //TutePuzzleHandler.toolbarFlag = false;
+        //TutePuzzleHandler.completeFlag = false;
 
-        TuteMovieHandler.translateFlag = false;
-        TuteMovieHandler.rotateFlag = false;
-        TuteMovieHandler.tapFlag = false;
-        TuteMovieHandler.toolbarFlag = false;
-        TuteMovieHandler.disableFlag = false;
-        TuteMovieHandler.pinchFlag = false;
+        //TuteMovieHandler.translateFlag = false;
+        //TuteMovieHandler.rotateFlag = false;
+        //TuteMovieHandler.tapFlag = false;
+        //TuteMovieHandler.toolbarFlag = false;
+        //TuteMovieHandler.disableFlag = false;
+        //TuteMovieHandler.pinchFlag = false;
 
-        TutePuzzleHandler.popUpIndex = 0;
-        TuteMovieHandler.popUpIndex = 0;
+        //TutePuzzleHandler.popUpIndex = 0;
+        //TuteMovieHandler.popUpIndex = 0;
 
         SceneManager.LoadScene("Worlds");
     }
@@ -1107,20 +1106,26 @@ public class ButtonBehaviour : MonoBehaviour
                 GameObject.Find("ParentalButton").GetComponent<Button>().interactable = true;
                 break;
             case "Mouse":
-                GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //activates buttons
+                if (GameObject.Find("InstructionPopup").transform.localPosition != Global.centrePosition)
+                {
+                    GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //activates buttons
+                    Global.LeftArrowActive = true;
+                    Global.RightArrowActive = true;
+                    Global.PieceActive = false;
+                    Global.ActiveName = Global.ActiveNameCopy;
+                }
                 GameObject.Find("CloseInstructionPopup").GetComponent<Button>().interactable = true;
-                Global.LeftArrowActive = true;
-                Global.RightArrowActive = true;
-                Global.PieceActive = false;
-                Global.ActiveName = Global.ActiveNameCopy;
                 break;
             case "Farm":
-                GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //activates buttons
+                if (GameObject.Find("InstructionPopup").transform.localPosition != Global.centrePosition)
+                {
+                    GameObject.Find("MenuButton").GetComponent<Button>().interactable = true;         //activates buttons
+                    Global.LeftArrowActive = true;
+                    Global.RightArrowActive = true;
+                    Global.PieceActive = false;
+                    Global.ActiveName = Global.ActiveNameCopy;
+                }
                 GameObject.Find("CloseInstructionPopup").GetComponent<Button>().interactable = true;
-                Global.LeftArrowActive = true;
-                Global.RightArrowActive = true;
-                Global.PieceActive = false;
-                Global.ActiveName = Global.ActiveNameCopy;
                 break;
             default:
                 Debug.Log("Error in Switch Statement/ LoadParentalPopup()");

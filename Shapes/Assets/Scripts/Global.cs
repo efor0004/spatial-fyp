@@ -435,7 +435,7 @@ public class Global : MonoBehaviour
     public static void InstructionPopup()
     {
         //loads the instruction popup
-        //triggered for the first puzzle in each puzzle world
+        //triggered for the first puzzle in each puzzle world  
 
         GameObject.Find("InstructionPopup").transform.localPosition = centrePosition; //move popup to front
 
@@ -444,7 +444,7 @@ public class Global : MonoBehaviour
         LeftArrowActive = false;
         RightArrowActive = false;
 
-        // de - activate shapes
+        // de-activate shapes
         PieceActive = true;
         ActiveNameCopy = ActiveName;  //saving the current active shape so that all shapes can be made inactive while menu is open
         ActiveName = "null";

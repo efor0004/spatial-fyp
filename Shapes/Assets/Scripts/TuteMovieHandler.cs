@@ -32,6 +32,14 @@ public class TuteMovieHandler : MonoBehaviour
     void Start()
     {
 
+        TuteMovieHandler.translateFlag = false;
+        TuteMovieHandler.rotateFlag = false;
+        TuteMovieHandler.tapFlag = false;
+        TuteMovieHandler.toolbarFlag = false;
+        TuteMovieHandler.disableFlag = false;
+        TuteMovieHandler.pinchFlag = false;
+        TuteMovieHandler.popUpIndex = 0;
+
         for (int i = 0; i < popUps.Length; i++) //only display first popup
         {
             if (i == 0)
@@ -70,7 +78,6 @@ public class TuteMovieHandler : MonoBehaviour
         if ((Input.touchCount > 0) && (translateFlag == true) && (disableFlag == false))                                                                                                         //at least one touch detected                                                                    
         {
 
-
             wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);                                                              //Vector3 of the touch location on the screen
             touchPos = new Vector2(wp.x, wp.y);
 
@@ -85,6 +92,7 @@ public class TuteMovieHandler : MonoBehaviour
                 {
                     if (myCollider == Physics2D.OverlapPoint(touchPos))                                                             //if the touch position overlaps with the 2D collider of the shape
                     {
+                        Debug.Log("1. touch ocrrued within collider"); /////////// failure occurrs here
 
                         if ((Input.touchCount == 2) && (rotateFlag == true))
                         {
@@ -228,7 +236,7 @@ public class TuteMovieHandler : MonoBehaviour
         objToSpawn2.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);                                           //set scale vector
         
         objToSpawn2.GetComponent<SpriteRenderer>().sortingLayerName = "Shape2";                                      //set sorting layer by name  
-        objToSpawn2.AddComponent<BoxCollider2D>();
+        objToSpawn2.AddComponent<CircleCollider2D>();
     }
 
     public static void TuteLoadManager()
@@ -271,6 +279,7 @@ public class TuteMovieHandler : MonoBehaviour
                     FindObjectOfType<AudioManager>().Play("m5");
                     TuteLoadRooster();
                     TuteMovieHandler.translateFlag = true; //enable translation
+                    //Debug.Log("transalte flag: " + translateFlag); ////////////////////
                 }
                 break;
             case 6:

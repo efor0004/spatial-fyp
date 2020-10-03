@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
             {
                 if (MovieRotate.playArray[System.Array.IndexOf(MovieRotate.movieArray, go.name)] == false) //if "not in play"
                 {
-                    go.GetComponent<BoxCollider2D>().enabled = false;
+                    go.GetComponent<CircleCollider2D>().enabled = false;
                     go.GetComponent<SpriteRenderer>().enabled = false;
                 }
 
@@ -69,7 +69,7 @@ public class UIManager : MonoBehaviour
 
             if (go)
             {
-                go.GetComponent<BoxCollider2D>().enabled = true;
+                go.GetComponent<CircleCollider2D>().enabled = true;
                 go.GetComponent<SpriteRenderer>().enabled = true;
             }
         }

@@ -28,6 +28,13 @@ public class TutePuzzleHandler : MonoBehaviour
 
     void Start()
     {
+
+        TutePuzzleHandler.translateFlag = false;
+        TutePuzzleHandler.rotateFlag = false;
+        TutePuzzleHandler.toolbarFlag = false;
+        TutePuzzleHandler.completeFlag = false;
+        TutePuzzleHandler.popUpIndex = 0;
+
         for (int i = 0; i < popUps.Length; i++) //only display first popup
         {
             if (i == 0)

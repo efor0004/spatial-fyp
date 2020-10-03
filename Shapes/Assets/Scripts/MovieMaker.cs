@@ -15,7 +15,7 @@ public class MovieMaker : MonoBehaviour
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;
         GameObject.Find("StopRecordButton").GetComponent<Button>().interactable = false;
         
-        FarmAnimals();
+        PuzzleCharacters();
     }
     void Update()
     {
@@ -24,9 +24,11 @@ public class MovieMaker : MonoBehaviour
     }
 
 
-    void FarmAnimals()
+    void PuzzleCharacters()
     {
-        //loads farm puzzles the Movie Maker
+        //loads farm and MouseShapes puzzles the Movie Maker
+
+        //Farm World
 
         Global.RenderMovieVariable("F1", new Vector3(0.5f, 0.5f, 1.0f), "Shape2", 0);
         Global.RenderMovieVariable("F2", new Vector3(0.5f, 0.5f, 1.0f), "Shape2", 1);
@@ -82,6 +84,8 @@ public class MovieMaker : MonoBehaviour
         Global.RenderMovieVariable("F48", new Vector3(0.5f, 0.5f, 1.0f), "Shape2", 47);
         Global.RenderMovieVariable("F49", new Vector3(0.5f, 0.5f, 1.0f), "Shape2", 48);
         Global.RenderMovieVariable("F50", new Vector3(0.5f, 0.5f, 1.0f), "Shape2", 49);
+
+        //MouseShapes
 
         Global.RenderMovieVariable("MS1", new Vector3(0.5f, 0.5f, 1.0f), "Shape2", 50);
         Global.RenderMovieVariable("MS2", new Vector3(0.5f, 0.5f, 1.0f), "Shape2", 51);
