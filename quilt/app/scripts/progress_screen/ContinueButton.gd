@@ -11,6 +11,8 @@ onready var is_last_level = false
 
 const Constants = preload("../utilities/constants.gd")
 
+const GeneralUtils = preload("../utilities/general.gd")
+
 func _ready():
 	var constants = Constants.new()
 	if (global.current_level >= constants.max_levels && global.current_question >= constants.questions_per_level):
@@ -27,4 +29,5 @@ func _on_Continue_Button_button_down():
 func _on_Continue_Button_button_up():
 	if (not is_last_level):
 		set_button_icon(normal_texture)
-		get_tree().change_scene("res://Game.tscn")
+		var general_utils = GeneralUtils.new()
+		general_utils.go_to_scene("res://Game.tscn", self)

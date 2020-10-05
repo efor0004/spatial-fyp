@@ -9,6 +9,9 @@ var pressed_texture_path = "%s/pressed/play_button_pressed.png" % play_button_pa
 onready var normal_texture = load(normal_texture_path)
 onready var pressed_texture = load(pressed_texture_path)
 
+const GeneralUtils = preload("../utilities/general.gd")
+var general_utils = GeneralUtils.new()
+
 var next_scene = "res://Character Menu.tscn"
 
 func _ready():
@@ -20,4 +23,4 @@ func _on_Play_Button_button_down():
 func _on_Play_Button_button_up():
 	set_button_icon(normal_texture)
 	global.character_name = "Test"
-	get_tree().change_scene(next_scene)
+	general_utils.go_to_scene(next_scene, self)

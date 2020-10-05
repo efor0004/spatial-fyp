@@ -13,6 +13,9 @@ var pressed_texture_path = "%s/pressed/exit_button_pressed.png" % exit_button_pa
 onready var normal_texture = load(normal_texture_path)
 onready var pressed_texture = load(pressed_texture_path)
 
+const GeneralUtils = preload("utilities/general.gd")
+var general_utils = GeneralUtils.new()
+
 func _ready():
 	set_position(position)
 	set_size(size)
@@ -29,16 +32,16 @@ func _on_Exit_Button_button_up():
 	var current_scene = get_tree().get_current_scene().get_name()
 	
 	if (current_scene == "Game"):
-		get_tree().change_scene("res://Format Menu.tscn")
+		general_utils.go_to_scene("res://Format Menu.tscn", self)
 	elif (current_scene == "Character Menu"):
-		get_tree().change_scene("res://Main Menu.tscn")
+		general_utils.go_to_scene("res://Main Menu.tscn", self)
 	elif (current_scene == "Progress Screen"):
-		get_tree().change_scene("res://Character Menu.tscn")
+		general_utils.go_to_scene("res://Character Menu.tscn", self)
 	elif (current_scene == "Format Menu"):
-		get_tree().change_scene("res://Character Menu.tscn")
+		general_utils.go_to_scene("res://Character Menu.tscn", self)
 	elif (current_scene == "Free Play"):
-		get_tree().change_scene("res://Format Menu.tscn")
+		general_utils.go_to_scene("res://Format Menu.tscn", self)
 	elif (current_scene == "Story"):
-		get_tree().change_scene("res://Format Menu.tscn")
+		general_utils.go_to_scene("res://Format Menu.tscn", self)
 	else:
-		get_tree().change_scene("res://Main Menu.tscn")
+		general_utils.go_to_scene("res://Main Menu.tscn", self)

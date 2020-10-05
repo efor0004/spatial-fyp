@@ -27,7 +27,7 @@ signal ready_for_options
 
 func _ready():
 	if (global.current_level >= constants.max_levels && global.current_question >= constants.questions_per_level):
-		get_tree().change_scene("res://Progress Screen.tscn")
+		general_utils.go_to_scene("res://Progress Screen.tscn", self)
 	
 	set_textures_for_question()
 	set_shapes()
@@ -59,7 +59,7 @@ func next_question():
 		global.current_shuffled_question = global.question_order[global.current_question - 1]
 		save_utils.save_progress()
 		
-		get_tree().change_scene("res://Progress Screen.tscn")
+		general_utils.go_to_scene("res://Progress Screen.tscn", self)
 		return
 	
 	if (global.current_level_difficulty == "normal" && global.current_question > num_normal_questions_for_level):

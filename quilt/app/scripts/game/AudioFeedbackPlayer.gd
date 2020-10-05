@@ -18,9 +18,6 @@ onready var question = get_parent()
 
 func play_audio_feedback(index):
 	var is_correct = is_correct_answer(index)
-	
-	print(is_correct)
-	
 	if (is_correct):
 		stream = load(correct_clip)
 	else:
