@@ -16,8 +16,7 @@ onready var constants = Constants.new()
 
 onready var question = get_parent()
 
-func play_audio_feedback(index):
-	var is_correct = is_correct_answer(index)
+func play_audio_feedback(is_correct, index):
 	if (is_correct):
 		stream = load(correct_clip)
 	else:
@@ -25,11 +24,6 @@ func play_audio_feedback(index):
 		stream = load(incorrect_clips[incorrect_reason])
 	
 	play()
-
-func is_correct_answer(index):
-	var option_index = get_option_index(index)
-	
-	return option_index == 1
 
 func get_option_index(animation_player_index):
 	var light2D = question.get_node("AnimationPlayer%d/Layer/Option/Light2D" % animation_player_index)

@@ -13,6 +13,12 @@ func _ready():
 func idle():
 	play_animation("idle")
 
+func on_option(is_correct):
+	if (is_correct):
+		on_correct_option()
+	else:
+		on_incorrect_option()
+
 func on_correct_option():
 	play_animation("correct")
 

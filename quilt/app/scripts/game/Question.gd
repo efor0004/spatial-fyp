@@ -11,6 +11,11 @@ var x_regions = [quilt_size, quilt_size * 2, quilt_size * 3]
 
 var option_positions = [Vector2(821, 768), Vector2(1256, 768), Vector2(1721, 768)]
 
+var animation_wait_times = {
+	"Correct": [5.5, 6.5, 8.5],
+	"Incorrect": [4.5, 5.5, 6.5]
+}
+
 const Constants = preload("../utilities/constants.gd")
 onready var constants = Constants.new()
 
@@ -20,7 +25,12 @@ var general_utils = GeneralUtils.new()
 const SaveUtils = preload("../utilities/save.gd")
 var save_utils = SaveUtils.new()
 
-onready var progress_quilt = get_parent().get_node("Progress Quilt")
+onready var game_scene = get_parent()
+onready var progress_quilt = game_scene.get_node("Progress Quilt")
+onready var character = game_scene.get_node("Character")
+onready var audio_player = get_node("AudioFeedbackPlayer")
+
+var timer
 
 signal piece_added
 signal ready_for_options
@@ -251,3 +261,17 @@ func add_quilt_piece():
 	progress_quilt.animate_quilt_piece()
 	yield(progress_quilt, "done_animating")
 	emit_signal("piece_added")
+
+func _on_AnimationPlayer_animation_started(animation_name, index):
+	var is_correct = animation_name == "Correct"
+	timer = Timer.new()
+	add_child(timer)
+	timer.wait_time = animation_wait_times[animation_name][index - 1]
+	timer.connect("timeout", self, "_feedback", [is_correct, index])
+	timer.start()
+
+func _feedback(is_correct, index):
+	timer.stop()
+	remove_child(timer)
+	audio_player.play_audio_feedback(is_correct, index)
+	character.on_option(is_correct)

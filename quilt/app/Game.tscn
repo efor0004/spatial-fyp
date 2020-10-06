@@ -209,34 +209,6 @@ tracks/4/keys = {
 "update": 1,
 "values": [ true, true, false, false ]
 }
-tracks/5/type = "method"
-tracks/5/path = NodePath("AudioFeedbackPlayer")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 5.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 1 ],
-"method": "play_audio_feedback"
-} ]
-}
-tracks/6/type = "method"
-tracks/6/path = NodePath("../Character")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 5.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "on_correct_option"
-} ]
-}
 
 [sub_resource type="Animation" id=3]
 resource_name = "Incorrect"
@@ -300,34 +272,6 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, true, false, false ]
-}
-tracks/5/type = "method"
-tracks/5/path = NodePath("AudioFeedbackPlayer")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 4.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 1 ],
-"method": "play_audio_feedback"
-} ]
-}
-tracks/6/type = "method"
-tracks/6/path = NodePath("../Character")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 4.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "on_incorrect_option"
-} ]
 }
 
 [sub_resource type="CanvasItemMaterial" id=4]
@@ -405,34 +349,6 @@ tracks/4/keys = {
 "update": 1,
 "values": [ false, true, true, false, false ]
 }
-tracks/5/type = "method"
-tracks/5/path = NodePath("AudioFeedbackPlayer")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 6.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 2 ],
-"method": "play_audio_feedback"
-} ]
-}
-tracks/6/type = "method"
-tracks/6/path = NodePath("../Character")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 6.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "on_correct_option"
-} ]
-}
 
 [sub_resource type="Animation" id=9]
 length = 10.0
@@ -496,34 +412,6 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ true, true, false, false ]
-}
-tracks/5/type = "method"
-tracks/5/path = NodePath("AudioFeedbackPlayer")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 5.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 2 ],
-"method": "play_audio_feedback"
-} ]
-}
-tracks/6/type = "method"
-tracks/6/path = NodePath("../Character")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 5.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "on_incorrect_option"
-} ]
 }
 
 [sub_resource type="CanvasItemMaterial" id=10]
@@ -598,34 +486,6 @@ tracks/4/keys = {
 "update": 1,
 "values": [ false, true, true, false, false ]
 }
-tracks/5/type = "method"
-tracks/5/path = NodePath("AudioFeedbackPlayer")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 7.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 3 ],
-"method": "play_audio_feedback"
-} ]
-}
-tracks/6/type = "method"
-tracks/6/path = NodePath("../Character")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 7.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "on_correct_option"
-} ]
-}
 
 [sub_resource type="Animation" id=14]
 length = 11.0
@@ -689,34 +549,6 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ true, true, false, false ]
-}
-tracks/5/type = "method"
-tracks/5/path = NodePath("AudioFeedbackPlayer")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 6.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 3 ],
-"method": "play_audio_feedback"
-} ]
-}
-tracks/6/type = "method"
-tracks/6/path = NodePath("../Character")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 6.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "on_incorrect_option"
-} ]
 }
 
 [sub_resource type="AtlasTexture" id=15]
@@ -1901,6 +1733,9 @@ script = ExtResource( 139 )
 [connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer1/Layer/Option" method="_on_Question_ready_for_options"]
 [connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer2/Layer/Option" method="_on_Question_ready_for_options"]
 [connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer3/Layer/Option" method="_on_Question_ready_for_options"]
+[connection signal="animation_started" from="Question/AnimationPlayer1" to="Question" method="_on_AnimationPlayer_animation_started" binds= [ 1 ]]
+[connection signal="animation_started" from="Question/AnimationPlayer2" to="Question" method="_on_AnimationPlayer_animation_started" binds= [ 2 ]]
+[connection signal="animation_started" from="Question/AnimationPlayer3" to="Question" method="_on_AnimationPlayer_animation_started" binds= [ 3 ]]
 [connection signal="button_down" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_down"]
 [connection signal="button_up" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_up"]
 [connection signal="animation_finished" from="Character" to="Character" method="_on_Character_animation_finished"]
