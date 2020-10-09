@@ -11,6 +11,11 @@ var x_regions = [quilt_size, quilt_size * 2, quilt_size * 3]
 
 var option_positions = [Vector2(821, 768), Vector2(1256, 768), Vector2(1721, 768)]
 
+var animation_wait_times = {
+	"Correct": [5.5, 6.5, 8.5],
+	"Incorrect": [4.5, 5.5, 6.5]
+}
+
 const Constants = preload("../utilities/constants.gd")
 onready var constants = Constants.new()
 
@@ -20,14 +25,19 @@ var general_utils = GeneralUtils.new()
 const SaveUtils = preload("../utilities/save.gd")
 var save_utils = SaveUtils.new()
 
-onready var progress_quilt = get_parent().get_node("Progress Quilt")
+onready var game_scene = get_parent()
+onready var progress_quilt = game_scene.get_node("Progress Quilt")
+onready var character = game_scene.get_node("Character")
+onready var audio_player = get_node("AudioFeedbackPlayer")
+
+var timer
 
 signal piece_added
 signal ready_for_options
 
 func _ready():
 	if (global.current_level >= constants.max_levels && global.current_question >= constants.questions_per_level):
-		get_tree().change_scene("res://Progress Screen.tscn")
+		general_utils.go_to_scene("res://Progress Screen.tscn", self)
 	
 	set_textures_for_question()
 	set_shapes()
@@ -59,7 +69,7 @@ func next_question():
 		global.current_shuffled_question = global.question_order[global.current_question - 1]
 		save_utils.save_progress()
 		
-		get_tree().change_scene("res://Progress Screen.tscn")
+		general_utils.go_to_scene("res://Progress Screen.tscn", self)
 		return
 	
 	if (global.current_level_difficulty == "normal" && global.current_question > num_normal_questions_for_level):
@@ -137,15 +147,15 @@ func get_file_index_for_question():
 	return file_index
 
 func get_holey_quilt():
-	var holey_quilt = get_node("Layer1/HoleyQuilt")
+	var holey_quilt = get_node("Layer/HoleyQuilt")
 	return holey_quilt
 
 func get_holey_quilt_fabric():
-	var holey_quilt_fabric = get_node("Layer1/HoleyQuilt/Fabric Texture")
+	var holey_quilt_fabric = get_node("Layer/HoleyQuilt/Fabric Texture")
 	return holey_quilt_fabric
 
 func get_holey_quilt_shape():
-	var holey_quilt_shape = get_node("Layer1/HoleyQuilt/Light2D")
+	var holey_quilt_shape = get_node("Layer/HoleyQuilt/Light2D")
 	return holey_quilt_shape
 
 func get_new_y_offset(y_offset):
@@ -202,12 +212,12 @@ func set_options_shapes():
 		option_border.region_rect = Rect2(x_region, new_y_region, quilt_size, quilt_size)
 
 func get_option_shape(i):
-	var node_path = "AnimationPlayer%d/Layer%d/Option %d/Light2D" % [i, i+1, i]
+	var node_path = "AnimationPlayer%d/Layer/Option/Light2D" % i
 	var option_mask = get_node(node_path)
 	return option_mask
 
 func get_option_border(i):
-	var node_path = "AnimationPlayer%d/Layer%d/Option %d/Border" % [i, i+1, i]
+	var node_path = "AnimationPlayer%d/Layer/Option/Border" % i
 	var option_border = get_node(node_path)
 	return option_border
 
@@ -218,7 +228,7 @@ func set_question_fabric():
 	holey_quilt_fabric.set_texture(fabric)
 	
 	for i in range(1,4):
-		var node_path = "AnimationPlayer%d/Layer%d/Option %d/Fabric Texture" % [i, i+1, i]
+		var node_path = "AnimationPlayer%d/Layer/Option/Fabric Texture" % i
 		var option_fabric = get_node(node_path)
 		option_fabric.set_texture(fabric)
 
@@ -231,7 +241,7 @@ func reset_option_positions():
 	holey_quilt.visible = true
 	
 	for i in range(1,4):
-		var node_path = "AnimationPlayer%d/Layer%d/Option %d" % [i, i+1, i]
+		var node_path = "AnimationPlayer%d/Layer/Option" % i
 		var option = get_node(node_path)
 		option.visible = true
 		option.transform.origin = option_positions[i - 1]
@@ -244,10 +254,24 @@ func add_quilt_piece():
 	holey_quilt.visible = false
 	
 	for i in range(1,4):
-		var node_path = "AnimationPlayer%d/Layer%d/Option %d" % [i, i+1, i]
+		var node_path = "AnimationPlayer%d/Layer/Option" % i
 		var option = get_node(node_path)
 		option.visible = false
 	
 	progress_quilt.animate_quilt_piece()
 	yield(progress_quilt, "done_animating")
 	emit_signal("piece_added")
+
+func _on_AnimationPlayer_animation_started(animation_name, index):
+	var is_correct = animation_name == "Correct"
+	timer = Timer.new()
+	add_child(timer)
+	timer.wait_time = animation_wait_times[animation_name][index - 1]
+	timer.connect("timeout", self, "_feedback", [is_correct, index])
+	timer.start()
+
+func _feedback(is_correct, index):
+	timer.stop()
+	remove_child(timer)
+	audio_player.play_audio_feedback(is_correct, index)
+	character.on_option(is_correct)

@@ -1,55 +1,455 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=143 format=2]
 
 [ext_resource path="res://scripts/character_menu/CharacterOption.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/buttons/delete_button/delete_icon.png" type="Texture" id=2]
 [ext_resource path="res://scripts/character_menu/Character Menu.gd" type="Script" id=3]
 [ext_resource path="res://scripts/Exit Button.gd" type="Script" id=4]
+[ext_resource path="res://assets/sprites/characters/1/idle/0.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/characters/2/idle/0.png" type="Texture" id=6]
+[ext_resource path="res://scripts/Background.gd" type="Script" id=7]
+[ext_resource path="res://assets/sprites/characters/1/idle/1.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/characters/1/idle/2.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/characters/1/idle/5.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/characters/1/idle/7.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/characters/1/idle/12.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/characters/1/idle/14.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/characters/1/idle/13.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/characters/1/idle/17.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/characters/1/idle/8.png" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/characters/1/idle/9.png" type="Texture" id=17]
+[ext_resource path="res://assets/sprites/characters/1/idle/18.png" type="Texture" id=18]
+[ext_resource path="res://assets/sprites/characters/1/idle/15.png" type="Texture" id=19]
+[ext_resource path="res://assets/sprites/characters/1/idle/16.png" type="Texture" id=20]
+[ext_resource path="res://assets/sprites/characters/1/idle/10.png" type="Texture" id=21]
+[ext_resource path="res://assets/sprites/characters/1/idle/4.png" type="Texture" id=22]
+[ext_resource path="res://assets/sprites/characters/1/idle/3.png" type="Texture" id=23]
+[ext_resource path="res://assets/sprites/characters/1/idle/19.png" type="Texture" id=24]
+[ext_resource path="res://assets/sprites/characters/1/idle/11.png" type="Texture" id=25]
+[ext_resource path="res://assets/sprites/characters/1/idle/6.png" type="Texture" id=26]
+[ext_resource path="res://assets/sprites/characters/2/idle/13.png" type="Texture" id=27]
+[ext_resource path="res://assets/sprites/characters/2/idle/2.png" type="Texture" id=28]
+[ext_resource path="res://assets/sprites/characters/2/idle/11.png" type="Texture" id=29]
+[ext_resource path="res://assets/sprites/characters/2/idle/4.png" type="Texture" id=30]
+[ext_resource path="res://assets/sprites/characters/2/idle/3.png" type="Texture" id=31]
+[ext_resource path="res://assets/sprites/characters/2/idle/16.png" type="Texture" id=32]
+[ext_resource path="res://assets/sprites/characters/2/idle/17.png" type="Texture" id=33]
+[ext_resource path="res://assets/sprites/characters/2/idle/8.png" type="Texture" id=34]
+[ext_resource path="res://assets/sprites/characters/2/idle/6.png" type="Texture" id=35]
+[ext_resource path="res://assets/sprites/characters/2/idle/5.png" type="Texture" id=36]
+[ext_resource path="res://assets/sprites/characters/2/idle/7.png" type="Texture" id=37]
+[ext_resource path="res://assets/sprites/characters/2/idle/12.png" type="Texture" id=38]
+[ext_resource path="res://assets/sprites/characters/2/idle/14.png" type="Texture" id=39]
+[ext_resource path="res://assets/sprites/characters/2/idle/18.png" type="Texture" id=40]
+[ext_resource path="res://assets/sprites/characters/2/idle/1.png" type="Texture" id=41]
+[ext_resource path="res://assets/sprites/characters/2/idle/19.png" type="Texture" id=42]
+[ext_resource path="res://assets/sprites/characters/2/idle/15.png" type="Texture" id=43]
+[ext_resource path="res://assets/sprites/characters/2/idle/10.png" type="Texture" id=44]
+[ext_resource path="res://assets/sprites/characters/2/idle/9.png" type="Texture" id=45]
+[ext_resource path="res://assets/sprites/characters/3/idle/__white_goat_idle.png" type="Texture" id=46]
+[ext_resource path="res://assets/sprites/characters/4/idle/__frog_idle_spritesheet_564px_by_702px_per_frame.png" type="Texture" id=47]
+[ext_resource path="res://assets/sprites/characters/5/idle/17.png" type="Texture" id=48]
+[ext_resource path="res://assets/sprites/characters/5/idle/18.png" type="Texture" id=49]
+[ext_resource path="res://assets/sprites/characters/5/idle/3.png" type="Texture" id=50]
+[ext_resource path="res://assets/sprites/characters/5/idle/0.png" type="Texture" id=51]
+[ext_resource path="res://assets/sprites/characters/5/idle/16.png" type="Texture" id=52]
+[ext_resource path="res://assets/sprites/characters/5/idle/12.png" type="Texture" id=53]
+[ext_resource path="res://assets/sprites/characters/5/idle/14.png" type="Texture" id=54]
+[ext_resource path="res://assets/sprites/characters/5/idle/15.png" type="Texture" id=55]
+[ext_resource path="res://assets/sprites/characters/5/idle/10.png" type="Texture" id=56]
+[ext_resource path="res://assets/sprites/characters/5/idle/7.png" type="Texture" id=57]
+[ext_resource path="res://assets/sprites/characters/5/idle/1.png" type="Texture" id=58]
+[ext_resource path="res://assets/sprites/characters/5/idle/2.png" type="Texture" id=59]
+[ext_resource path="res://assets/sprites/characters/5/idle/4.png" type="Texture" id=60]
+[ext_resource path="res://assets/sprites/characters/5/idle/6.png" type="Texture" id=61]
+[ext_resource path="res://assets/sprites/characters/5/idle/5.png" type="Texture" id=62]
+[ext_resource path="res://assets/sprites/characters/5/idle/8.png" type="Texture" id=63]
+[ext_resource path="res://assets/sprites/characters/5/idle/11.png" type="Texture" id=64]
+[ext_resource path="res://assets/sprites/characters/5/idle/19.png" type="Texture" id=65]
+[ext_resource path="res://assets/sprites/characters/5/idle/9.png" type="Texture" id=66]
+[ext_resource path="res://assets/sprites/characters/5/idle/13.png" type="Texture" id=67]
+[ext_resource path="res://assets/sprites/characters/6/idle/__white_rabbit_idle.png" type="Texture" id=68]
+[ext_resource path="res://assets/sprites/characters/5/branch.png" type="Texture" id=69]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 200, 200 )
 
-[sub_resource type="Gradient" id=2]
-offsets = PoolRealArray( 0, 0 )
-colors = PoolColorArray( 1, 0, 0, 1, 1, 0, 0, 1 )
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 10 ), ExtResource( 26 ), ExtResource( 11 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 25 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "idle",
+"speed": 8.0
+} ]
 
-[sub_resource type="GradientTexture" id=3]
-gradient = SubResource( 2 )
-width = 400
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 41 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 37 ), ExtResource( 34 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 29 ), ExtResource( 38 ), ExtResource( 27 ), ExtResource( 39 ), ExtResource( 43 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 40 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "idle",
+"speed": 8.0
+} ]
 
-[sub_resource type="Gradient" id=4]
-colors = PoolColorArray( 1, 0.654902, 0, 1, 1, 0.654902, 0, 1 )
+[sub_resource type="AtlasTexture" id=94]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 0, 0, 718, 620 )
 
-[sub_resource type="GradientTexture" id=5]
-gradient = SubResource( 4 )
-width = 400
+[sub_resource type="AtlasTexture" id=95]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 718, 0, 718, 620 )
 
-[sub_resource type="Gradient" id=6]
-colors = PoolColorArray( 1, 0.960784, 0, 1, 1, 0.960784, 0, 1 )
+[sub_resource type="AtlasTexture" id=96]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 1436, 0, 718, 620 )
 
-[sub_resource type="GradientTexture" id=7]
-gradient = SubResource( 6 )
-width = 400
+[sub_resource type="AtlasTexture" id=97]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 2154, 0, 718, 620 )
 
-[sub_resource type="Gradient" id=8]
-colors = PoolColorArray( 0, 1, 0, 1, 0, 1, 0, 1 )
+[sub_resource type="AtlasTexture" id=98]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 2872, 0, 718, 620 )
 
-[sub_resource type="GradientTexture" id=9]
-gradient = SubResource( 8 )
-width = 400
+[sub_resource type="AtlasTexture" id=99]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 0, 620, 718, 620 )
 
-[sub_resource type="Gradient" id=10]
-colors = PoolColorArray( 0.0313726, 0, 1, 1, 0.0313726, 0, 1, 1 )
+[sub_resource type="AtlasTexture" id=100]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 718, 620, 718, 620 )
 
-[sub_resource type="GradientTexture" id=11]
-gradient = SubResource( 10 )
-width = 400
+[sub_resource type="AtlasTexture" id=101]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 1436, 620, 718, 620 )
 
-[sub_resource type="Gradient" id=12]
-colors = PoolColorArray( 0.521569, 0, 1, 1, 0.521569, 0, 1, 1 )
+[sub_resource type="AtlasTexture" id=102]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 2154, 620, 718, 620 )
 
-[sub_resource type="GradientTexture" id=13]
-gradient = SubResource( 12 )
-width = 400
+[sub_resource type="AtlasTexture" id=103]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 2872, 620, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=104]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 0, 1240, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=105]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 718, 1240, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=106]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 1436, 1240, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=107]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 2154, 1240, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=108]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 2872, 1240, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=109]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 0, 1860, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=110]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 718, 1860, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=111]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 1436, 1860, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=112]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 2154, 1860, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=113]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 2872, 1860, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=114]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 0, 2480, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=115]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 718, 2480, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=116]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 1436, 2480, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=117]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 2154, 2480, 718, 620 )
+
+[sub_resource type="AtlasTexture" id=118]
+flags = 4
+atlas = ExtResource( 46 )
+region = Rect2( 2872, 2480, 718, 620 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ), SubResource( 99 ), SubResource( 100 ), SubResource( 101 ), SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ), SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ), SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ), SubResource( 114 ), SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ) ],
+"loop": true,
+"name": "idle",
+"speed": 8.0
+} ]
+
+[sub_resource type="AtlasTexture" id=78]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 0, 0, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=79]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 564, 0, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=80]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 1128, 0, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=81]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 1692, 0, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=82]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 0, 702, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=83]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 564, 702, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=84]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 1128, 702, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=85]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 1692, 702, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=86]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 0, 1404, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=87]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 564, 1404, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=88]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 1128, 1404, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=89]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 1692, 1404, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=90]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 0, 2106, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=91]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 564, 2106, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=92]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 1128, 2106, 564, 702 )
+
+[sub_resource type="AtlasTexture" id=93]
+flags = 4
+atlas = ExtResource( 47 )
+region = Rect2( 1692, 2106, 564, 702 )
+
+[sub_resource type="SpriteFrames" id=50]
+animations = [ {
+"frames": [ SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ) ],
+"loop": true,
+"name": "idle",
+"speed": 8.0
+} ]
+
+[sub_resource type="SpriteFrames" id=51]
+animations = [ {
+"frames": [ ExtResource( 51 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 50 ), ExtResource( 60 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 57 ), ExtResource( 63 ), ExtResource( 66 ), ExtResource( 56 ), ExtResource( 64 ), ExtResource( 53 ), ExtResource( 67 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 52 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 65 ) ],
+"loop": true,
+"name": "idle",
+"speed": 8.0
+} ]
+
+[sub_resource type="AtlasTexture" id=52]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 0, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=53]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 694, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=54]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 1388, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=55]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 2082, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=56]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 2776, 0, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=57]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 0, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=58]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 694, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=59]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 1388, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=60]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 2082, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=61]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 2776, 392, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=62]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 0, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=63]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 694, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=64]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 1388, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=65]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 2082, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=66]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 2776, 784, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=67]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 0, 1176, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=68]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 694, 1176, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=69]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 1388, 1176, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=70]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 2082, 1176, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=71]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 2776, 1176, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=72]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 0, 1568, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=73]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 694, 1568, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=74]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 1388, 1568, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=75]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 2082, 1568, 694, 392 )
+
+[sub_resource type="AtlasTexture" id=76]
+flags = 4
+atlas = ExtResource( 68 )
+region = Rect2( 2776, 1568, 694, 392 )
+
+[sub_resource type="SpriteFrames" id=77]
+animations = [ {
+"frames": [ SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ) ],
+"loop": true,
+"name": "idle",
+"speed": 8.0
+} ]
 
 [node name="Character Menu" type="Node2D"]
 script = ExtResource( 3 )
@@ -62,10 +462,10 @@ script = ExtResource( 1 )
 visible = false
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Character 1"]
-texture = SubResource( 3 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 400, 400 )
+[node name="Sprite" type="AnimatedSprite" parent="Character 1"]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "idle"
 
 [node name="Character 2" type="Area2D" parent="."]
 position = Vector2( 1024, 445 )
@@ -75,10 +475,11 @@ script = ExtResource( 1 )
 visible = false
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Character 2"]
-texture = SubResource( 5 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 400, 400 )
+[node name="Sprite" type="AnimatedSprite" parent="Character 2"]
+position = Vector2( -137.279, -9.03152 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 3 )
+animation = "idle"
 
 [node name="Character 3" type="Area2D" parent="."]
 position = Vector2( 1648, 445 )
@@ -88,10 +489,10 @@ script = ExtResource( 1 )
 visible = false
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Character 3"]
-texture = SubResource( 7 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 400, 400 )
+[node name="Sprite" type="AnimatedSprite" parent="Character 3"]
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 24 )
+animation = "idle"
 
 [node name="Character 4" type="Area2D" parent="."]
 position = Vector2( 400, 1091 )
@@ -101,10 +502,10 @@ script = ExtResource( 1 )
 visible = false
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Character 4"]
-texture = SubResource( 9 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 400, 400 )
+[node name="Sprite" type="AnimatedSprite" parent="Character 4"]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 50 )
+animation = "idle"
 
 [node name="Character 5" type="Area2D" parent="."]
 position = Vector2( 1024, 1091 )
@@ -114,10 +515,15 @@ script = ExtResource( 1 )
 visible = false
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Character 5"]
-texture = SubResource( 11 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 400, 400 )
+[node name="Branch" type="Sprite" parent="Character 5"]
+position = Vector2( -61.4146, -186.049 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 69 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Character 5"]
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 51 )
+animation = "idle"
 
 [node name="Character 6" type="Area2D" parent="."]
 position = Vector2( 1648, 1091 )
@@ -127,16 +533,18 @@ script = ExtResource( 1 )
 visible = false
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Character 6"]
-texture = SubResource( 13 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 400, 400 )
+[node name="Sprite" type="AnimatedSprite" parent="Character 6"]
+scale = Vector2( 0.75, 0.75 )
+frames = SubResource( 77 )
+animation = "idle"
 
 [node name="Delete Button" type="ToolButton" parent="."]
 margin_left = 1873.0
 margin_top = 25.0
 margin_right = 2023.0
 margin_bottom = 175.0
+focus_mode = 0
+enabled_focus_mode = 0
 icon = ExtResource( 2 )
 expand_icon = true
 __meta__ = {
@@ -148,10 +556,15 @@ margin_left = 1873.0
 margin_top = 25.0
 margin_right = 1885.0
 margin_bottom = 45.0
+focus_mode = 0
+enabled_focus_mode = 0
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ForestBackground" type="Sprite" parent="."]
+script = ExtResource( 7 )
 [connection signal="button_up" from="Delete Button" to="." method="_on_Delete_Button_button_up"]
 [connection signal="button_down" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_down"]
 [connection signal="button_up" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_up"]

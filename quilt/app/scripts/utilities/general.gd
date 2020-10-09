@@ -1,5 +1,7 @@
 extends Node
 
+const PRELOADED_SCENES = ["res://Story.tscn", "res://Game.tscn", "res://Character Menu.tscn"]
+
 const Constants = preload("../utilities/constants.gd")
 var constants = Constants.new()
 
@@ -40,3 +42,13 @@ func shuffle_question_order(current_level):
 func get_fabric(level, question):
 	var fabric_path = "res://assets/sprites/fabrics/level_%d/fabric_%d.jpg" % [level, question]
 	return fabric_path
+
+func go_to_scene(scene_path, node):
+	var result
+	if (PRELOADED_SCENES.has(scene_path)):
+		global.next_scene = scene_path
+		result = node.get_tree().change_scene("res://Loading Screen.tscn")
+	else:
+		result = node.get_tree().change_scene(scene_path)
+	if (result != 0):
+		print(result)
