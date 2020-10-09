@@ -3,8 +3,7 @@ extends Button
 class_name ExitButton
 
 var position = Vector2(20, 20)
-var size = Vector2(732, 246)
-var scale = 0.5
+var size = Vector2(360, 120)
 
 var exit_button_path = "res://assets/sprites/buttons/exit_button"
 var normal_texture_path = "%s/normal/exit_button.png" % exit_button_path
@@ -19,7 +18,6 @@ var general_utils = GeneralUtils.new()
 func _ready():
 	set_position(position)
 	set_size(size)
-	set_scale(Vector2(scale, scale))
 	set_button_icon(normal_texture)
 	set_flat(true)
 	set_enabled_focus_mode(FOCUS_NONE)

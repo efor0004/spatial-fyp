@@ -14,9 +14,8 @@ script = ExtResource( 6 )
 [node name="Puzzles Button" type="Button" parent="."]
 margin_left = 193.0
 margin_top = 675.0
-margin_right = 1165.0
-margin_bottom = 921.0
-rect_scale = Vector2( 0.75, 0.75 )
+margin_right = 205.0
+margin_bottom = 695.0
 focus_mode = 0
 enabled_focus_mode = 0
 icon = ExtResource( 2 )
@@ -29,9 +28,8 @@ __meta__ = {
 [node name="Free Play Button" type="Button" parent="."]
 margin_left = 972.0
 margin_top = 675.0
-margin_right = 2148.0
-margin_bottom = 921.0
-rect_scale = Vector2( 0.75, 0.75 )
+margin_right = 984.0
+margin_bottom = 695.0
 focus_mode = 0
 enabled_focus_mode = 0
 icon = ExtResource( 4 )

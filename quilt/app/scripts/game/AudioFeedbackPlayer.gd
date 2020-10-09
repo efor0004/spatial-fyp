@@ -2,14 +2,9 @@ extends AudioStreamPlayer
 
 class_name AudioFeedbackPlayer
 
-var correct_clip = "res://assets/audio/game/correct.wav"
+var correct_clip_path = "res://assets/audio/game/correct"
 
-var incorrect_clips = [
-	"res://assets/audio/game/incorrect_0.wav",
-	"res://assets/audio/game/incorrect_1.wav",
-	"res://assets/audio/game/incorrect_2.wav",
-	"res://assets/audio/game/incorrect_3.wav"
-]
+var incorrect_clip_path = "res://assets/audio/game/incorrect"
 
 const Constants = preload("../utilities/constants.gd")
 onready var constants = Constants.new()
@@ -18,10 +13,14 @@ onready var question = get_parent()
 
 func play_audio_feedback(is_correct, index):
 	if (is_correct):
-		stream = load(correct_clip)
+		randomize()
+		var i = randi() % 10 + 1
+		var path = "%s/%d.wav" % [correct_clip_path, i]
+		stream = load(path)
 	else:
-		var incorrect_reason = get_incorrect_reason(index)
-		stream = load(incorrect_clips[incorrect_reason])
+		var incorrect_reason_index = get_incorrect_reason(index)
+		var path = "%s/%d.wav" % [incorrect_clip_path, incorrect_reason_index]
+		stream = load(path)
 	
 	play()
 
