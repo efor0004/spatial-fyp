@@ -12,9 +12,12 @@ public class MovieMaker : MonoBehaviour
     {
         Global.LeftArrowActiveMovie = true;                                              //instantiate buttons
         Global.RightArrowActiveMovie = true;
+        // GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;
+        // GameObject.Find("StopRecordButton").GetComponent<Button>().interactable = false;
+
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;
         GameObject.Find("StopRecordButton").GetComponent<Button>().interactable = false;
-        
+
         PuzzleCharacters();
     }
     void Update()

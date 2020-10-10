@@ -86,7 +86,6 @@ public class FarmHandler : MonoBehaviour
     
     void Start()
     {
-        // Start is called before the first frame update
 
         Global.NextPuzzleReady = true;                                     //set as true every time the scene is opened
         Mask = GameObject.Find("Mask").GetComponent<Image>();
@@ -96,7 +95,7 @@ public class FarmHandler : MonoBehaviour
         Global.RightArrowActive = true;
 
        CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
-                                                                        //Puzzle11();
+      // Puzzle13();                                                        //to load a specific puzzle comment out CreateList(); and uncomment PuzzleX();  
 
 
         if (Global.StartUpFarm)
@@ -113,7 +112,6 @@ public class FarmHandler : MonoBehaviour
     }
     void Update()
         {
-        //called each frame
         if (Global.piecesPlaced == Global.puzzlePieces)                    //puzzle completion 
         {
             if (n + 1 == TotalPuzzles)
@@ -488,16 +486,15 @@ public class FarmHandler : MonoBehaviour
         Global.puzzlePieces = 6;
 
         //spawn anchor shape
-        Global.RenderShapeFixed("Shape0", "Square", new Vector3(0.019f, -0.142f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.07232f, 0.065f, 1f), "Shape1", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 0, false);
-        Global.RenderShapeFixed("Shape1", "Square", new Vector3(0.021f, -1.136f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.07232f, 0.065f, 1f), "Shape1", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 1, false);  //note: 2 anchor shapes toolbar shapes start 1 place over
+        Global.RenderShapeFixed("Shape0", "Square", new Vector3(0.004f, -0.44f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.359094f, 0.113f, 1f), "Shape1", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 0, false);
 
         //spawn movable shapes   
-        Global.RenderShapeVariable("Shape2", "Square", new Vector3(-1.427f, -0.669f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.132f, 0.408f, 1f), "Shape2", new Vector4(1f, 0.7064719f, 0f, 1f), false, 2, false);
-        Global.RenderShapeVariable("Shape3", "Square", new Vector3(0.02f, -0.67f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.132f, 0.408f, 1f), "Shape2", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 3, false);
-        Global.RenderShapeVariable("Shape4", "Square", new Vector3(1.48f, -0.67f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.132f, 0.408f, 1f), "Shape2", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), false, 4, false);
-        Global.RenderShapeVariable("Shape5", "TriangleI", new Vector3(-1.427f, 0.502f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1066068f, 0.1253439f, 1f), "Shape4", new Vector4(1f, 0.7064719f, 0f, 1f), true, 5, false);
-        Global.RenderShapeVariable("Shape6", "TriangleI", new Vector3(0.022f, 0.506f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1066068f, 0.1253439f, 1f), "Shape4", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), true, 6, false);
-        Global.RenderShapeVariable("Shape7", "TriangleI", new Vector3(1.481f, 0.504f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1066068f, 0.1253439f, 1f), "Shape4", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), true, 7, false);
+        Global.RenderShapeVariable("Shape1", "Square", new Vector3(-1.99f, -1.13f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1941928f, 0.610878f, 1f), "Shape2", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape2", "Square", new Vector3(0.005f, -1.12f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1930075f, 0.610878f, 1f), "Shape2", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 2, false);
+        Global.RenderShapeVariable("Shape3", "Square", new Vector3(2.01f, -1.13f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1912816f, 0.610878f, 1f), "Shape2", new Vector4(0.6320754f, 0.3734991f, 0.1580189f, 1f), false, 3, false);
+        Global.RenderShapeVariable("Shape4", "TriangleI", new Vector3(-1.99f, 0.5322f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1574605f, 0.1473383f, 0.1531583f), "Shape3", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), true, 4, false);
+        Global.RenderShapeVariable("Shape5", "TriangleI", new Vector3(-0.001f, 0.544f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1574605f, 0.1473383f, 0.1531583f), "Shape3", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), true, 5, false);
+        Global.RenderShapeVariable("Shape6", "TriangleI", new Vector3(2.01f, 0.538f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1574605f, 0.1473383f, 0.1531583f), "Shape3", new Vector4(0.6320754f, 0.3734991f, 0.1580189f, 1f), true, 6, false);
 
         //spawn target image
         Global.RenderPuzzleImage("F12");
@@ -521,16 +518,15 @@ public class FarmHandler : MonoBehaviour
         Global.puzzlePieces = 6;
 
         //spawn anchor shape
-        Global.RenderShapeFixed("Shape0", "Square", new Vector3(0.03f, -0.2f, 0f), new Vector3(0f, 0f, 17.39989f), new Vector3(1.07232f, 0.065f, 1f), "Shape1", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 0, false);
-        Global.RenderShapeFixed("Shape1", "Square", new Vector3(0.11f, -1.09f, 0f), new Vector3(0f, 0f, 17.39989f), new Vector3(1.07232f, 0.065f, 1f), "Shape1", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 1, false);
+        Global.RenderShapeFixed("Shape0", "Square", new Vector3(0.03999996f, -0.44f, 0f), new Vector3(0f, 0f, 13.11361f), new Vector3(1.359094f, 0.113f, 1f), "Shape1", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 0, false);
 
         //spawn movable shapes 
-        Global.RenderShapeVariable("Shape2", "Square", new Vector3(-1.48f, -1.11f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.132f, 0.408f, 1f), "Shape2", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), false, 2, false);
-        Global.RenderShapeVariable("Shape3", "Square", new Vector3(0.04f, -0.63f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.132f, 0.408f, 1f), "Shape2", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 3, false);
-        Global.RenderShapeVariable("Shape4", "Square", new Vector3(1.54f, -0.18f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.132f, 0.408f, 1f), "Shape2", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 4, false);
-        Global.RenderShapeVariable("Shape5", "TriangleI", new Vector3(-1.478f, 0.062f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1066068f, 0.1253439f, 1f), "Shape4", new Vector4(0.4056604f, 0.2916426f, 0.01722142f, 1f), true, 5, false);
-        Global.RenderShapeVariable("Shape6", "TriangleI", new Vector3(0.04f, 0.541f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1066068f, 0.1253439f, 1f), "Shape4", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), true, 6, false);
-        Global.RenderShapeVariable("Shape7", "TriangleI", new Vector3(1.543f, 0.995f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1066068f, 0.1253439f, 1f), "Shape4", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), true, 7, false);
+        Global.RenderShapeVariable("Shape1", "Square", new Vector3(-2.08f, -1.47f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1941928f, 0.610878f, 1f), "Shape2", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape2", "Square", new Vector3(0.03999996f, -1f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1930075f, 0.610878f, 1f), "Shape2", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 2, false);
+        Global.RenderShapeVariable("Shape3", "Square", new Vector3(2.06f, -0.53f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1912816f, 0.610878f, 1f), "Shape2", new Vector4(0.6320754f, 0.3734991f, 0.1580189f, 1f), false, 3, false);
+        Global.RenderShapeVariable("Shape4", "TriangleI", new Vector3(-2.073f, 0.1799999f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1574605f, 0.1473383f, 0.1531583f), "Shape3", new Vector4(0.764151f, 0.3647237f, 0.03244036f, 1f), true, 4, false);
+        Global.RenderShapeVariable("Shape5", "TriangleI", new Vector3(0.041f, 0.66f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1574605f, 0.1473383f, 0.1531583f), "Shape3", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), true, 5, false);
+        Global.RenderShapeVariable("Shape6", "TriangleI", new Vector3(2.06f, 1.11f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1574605f, 0.1473383f, 0.1531583f), "Shape3", new Vector4(0.6320754f, 0.3734991f, 0.1580189f, 1f), true, 6, false);
 
         //spawn target image
         Global.RenderPuzzleImage("F13");

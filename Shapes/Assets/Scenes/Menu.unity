@@ -2694,7 +2694,7 @@ MonoBehaviour:
     as using spatial language, playing with shapes, visualising and rotating things,
     and using gestures, are some of the first steps towards developing good spatial
     reasoning skills.\r\n\r\nIf you have any questions or feedback please contact
-    us at ha.dang@monash.edu\n"
+    us at spatialapps@monash.edu\n"
 --- !u!222 &1418321146
 CanvasRenderer:
   m_ObjectHideFlags: 0

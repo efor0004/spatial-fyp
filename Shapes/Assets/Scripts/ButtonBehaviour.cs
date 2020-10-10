@@ -1039,23 +1039,29 @@ public class ButtonBehaviour : MonoBehaviour
         //triggered by the button at the end of the movie maker or puzzle tutoris
         //resets variables and loads Worlds scene
 
+        FindObjectOfType<AudioManager>().Stop("p1");
+        FindObjectOfType<AudioManager>().Stop("p2");
+        FindObjectOfType<AudioManager>().Stop("p3");
+        FindObjectOfType<AudioManager>().Stop("p4");
+        FindObjectOfType<AudioManager>().Stop("p5");
+        FindObjectOfType<AudioManager>().Stop("p6");
+        FindObjectOfType<AudioManager>().Stop("p7");
+        FindObjectOfType<AudioManager>().Stop("p8");
+        FindObjectOfType<AudioManager>().Stop("p9");
         FindObjectOfType<AudioManager>().Stop("p10"); //cuts off audio
+
+        FindObjectOfType<AudioManager>().Stop("m1");
+        FindObjectOfType<AudioManager>().Stop("m2");
+        FindObjectOfType<AudioManager>().Stop("m3");
+        FindObjectOfType<AudioManager>().Stop("m4");
+        FindObjectOfType<AudioManager>().Stop("m5");
+        FindObjectOfType<AudioManager>().Stop("m6");
+        FindObjectOfType<AudioManager>().Stop("m7");
+        FindObjectOfType<AudioManager>().Stop("m8");
+        FindObjectOfType<AudioManager>().Stop("m9");
+        FindObjectOfType<AudioManager>().Stop("m10");
+        FindObjectOfType<AudioManager>().Stop("m11");
         FindObjectOfType<AudioManager>().Stop("m12");
-
-        //TutePuzzleHandler.translateFlag = false;
-        //TutePuzzleHandler.rotateFlag = false;
-        //TutePuzzleHandler.toolbarFlag = false;
-        //TutePuzzleHandler.completeFlag = false;
-
-        //TuteMovieHandler.translateFlag = false;
-        //TuteMovieHandler.rotateFlag = false;
-        //TuteMovieHandler.tapFlag = false;
-        //TuteMovieHandler.toolbarFlag = false;
-        //TuteMovieHandler.disableFlag = false;
-        //TuteMovieHandler.pinchFlag = false;
-
-        //TutePuzzleHandler.popUpIndex = 0;
-        //TuteMovieHandler.popUpIndex = 0;
 
         SceneManager.LoadScene("Worlds");
     }

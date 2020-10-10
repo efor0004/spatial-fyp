@@ -75,7 +75,7 @@ public class TuteMovieHandler : MonoBehaviour
         }
 
         //touchrotate script here
-        if ((Input.touchCount > 0) && (translateFlag == true) && (disableFlag == false))                                                                                                         //at least one touch detected                                                                    
+        if ((Input.touchCount > 0) && (translateFlag == true) && (disableFlag == false))                                                   //at least one touch detected                                                                    
         {
 
             wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);                                                              //Vector3 of the touch location on the screen
@@ -231,7 +231,10 @@ public class TuteMovieHandler : MonoBehaviour
         objToSpawn2.AddComponent<SpriteRenderer>();                                                                  //add a sprite renderer
         objToSpawn2.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("F27");                           //assign sprite from resources folder
 
-        objToSpawn2.transform.position = new Vector3(-0.0159f, Global.toolbarY, 0f);
+        float SpawnY = Camera.main.ScreenToWorldPoint(GameObject.Find("LeftArrowMovie").transform.position).y;
+
+        //objToSpawn2.transform.position = new Vector3(-0.0159f, Global.toolbarY, 0f);
+        objToSpawn2.transform.position = new Vector3(-0.0159f, SpawnY, 0f);
         objToSpawn2.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         objToSpawn2.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);                                           //set scale vector
         
@@ -279,7 +282,6 @@ public class TuteMovieHandler : MonoBehaviour
                     FindObjectOfType<AudioManager>().Play("m5");
                     TuteLoadRooster();
                     TuteMovieHandler.translateFlag = true; //enable translation
-                    //Debug.Log("transalte flag: " + translateFlag); ////////////////////
                 }
                 break;
             case 6:
@@ -335,29 +337,6 @@ public class TuteMovieHandler : MonoBehaviour
                 }
                 break;
         }
-
-        //if (popUpIndex == 5)
-        //{
-        //    TuteLoadRooster();
-        //    TuteMovieHandler.translateFlag = true; //enable translation
-        //}
-        //else if (popUpIndex == 6)
-        //{
-        //    TuteMovieHandler.rotateFlag = true; //enable rotation
-
-        //}
-        //else if (popUpIndex == 7)
-        //{
-        //    TuteMovieHandler.tapFlag = true; //enable translation
-        //}
-        //else if (popUpIndex == 8)
-        //{
-        //    TuteMovieHandler.toolbarFlag = true; //enable toolbar return
-        //}
-        //else if (popUpIndex == 9)
-        //{
-        //    TuteMovieHandler.disableFlag = true; //disable interaction with rooster
-        //}
 
     }
 }

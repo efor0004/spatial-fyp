@@ -190,7 +190,11 @@ public class TutePuzzleHandler : MonoBehaviour
         objToSpawn2.AddComponent<SpriteRenderer>();                                                                  //add a sprite renderer
         objToSpawn2.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("TriangleI");                     //assign sprite from resources folder
         //objToSpawn2.transform.position = new Vector3(-0.0159f, 0.61f, 0f);                                           //set position vector
-        objToSpawn2.transform.position = new Vector3(-0.0159f, Global.toolbarY, 0f);
+        
+        float SpawnY = Camera.main.ScreenToWorldPoint(GameObject.Find("LeftArrow").transform.position).y;
+        //objToSpawn2.transform.position = new Vector3(-0.0159f, Global.toolbarY, 0f);
+        objToSpawn2.transform.position = new Vector3(-0.0159f, SpawnY, 0f);
+        
         objToSpawn2.transform.localScale = new Vector3(0.487235f, 0.285789f, 0.439f);                                //set scale vector
         objToSpawn2.GetComponent<SpriteRenderer>().sortingLayerName = "Shape2";                                      //set sorting layer by name
         objToSpawn2.GetComponent<SpriteRenderer>().color = new Vector4(0.7169812f, 0f, 0.03755178f, 1f);             //set colour vector (RGBA) 

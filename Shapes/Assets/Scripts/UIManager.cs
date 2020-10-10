@@ -16,8 +16,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        //GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;
-        //GameObject.Find("StopRecordButton").GetComponent<Button>().interactable = false;
+        
     }
 
     public void StartVid()
