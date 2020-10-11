@@ -21,8 +21,8 @@ func _on_Puzzles_Button_button_up():
 	set_button_icon(normal_texture)
 	
 	if (global.current_level == 1 and global.current_question == 1):
-		# global.next_scene = "res://Story.tscn"
-		global.next_scene = "res://Game.tscn"
+		global.next_scene = "res://Story.tscn"
+		# global.next_scene = "res://Game.tscn"
 	else:
 		global.next_scene = "res://Game.tscn"
 	

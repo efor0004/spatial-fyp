@@ -6,7 +6,14 @@ onready var buttons = get_parent().get_parent().get_node("Buttons")
 onready var skip_button = buttons.get_node("Skip Button")
 onready var play_button = buttons.get_node("Play Button")
 
+onready var last_animal = animation_player.get_child(5).get_child(0)
+
 func _ready():
+	for animal_player in animation_player.get_children():
+		var animal = animal_player.get_child(0)
+		animal.enter()
+		yield(animal, "setup_done")
+	
 	for animal_player in animation_player.get_children():
 		var animal = animal_player.get_child(0)
 		animal.play("idle")
@@ -16,7 +23,11 @@ func _ready():
 	
 	narration_player.play_early_winter()
 	yield(narration_player, "finished")
-
+	
+	for animal_player in animation_player.get_children():
+		var animal = animal_player.get_child(0)
+		animal.load_react()
+	
 	animation_player.play("react")
 	yield(animation_player, "animation_finished")
 	
@@ -27,7 +38,7 @@ func _ready():
 	for animal_player in animation_player.get_children():
 		i = i + 1
 		if (i != global.character_index):
-			animal_player.play("move")
+			animal_player.play("exit")
 	
 	yield(narration_player, "finished")
 	
