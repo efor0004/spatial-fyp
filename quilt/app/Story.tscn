@@ -1,74 +1,11 @@
-[gd_scene load_steps=173 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://scripts/Background.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Exit Button.gd" type="Script" id=2]
 [ext_resource path="res://assets/sprites/buttons/skip_button/normal/skip_button.png" type="Texture" id=3]
 [ext_resource path="res://scripts/story/Skip Button.gd" type="Script" id=4]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/4.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/5.png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/14.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/15.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/11.png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/12.png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/6.png" type="Texture" id=11]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/7.png" type="Texture" id=12]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/8.png" type="Texture" id=13]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/10.png" type="Texture" id=14]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/17.png" type="Texture" id=15]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/19.png" type="Texture" id=16]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/18.png" type="Texture" id=17]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/16.png" type="Texture" id=18]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/13.png" type="Texture" id=19]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/3.png" type="Texture" id=20]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/9.png" type="Texture" id=21]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/0.png" type="Texture" id=22]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/1.png" type="Texture" id=23]
-[ext_resource path="res://assets/sprites/characters/1/no_branch/idle_awake/2.png" type="Texture" id=24]
 [ext_resource path="res://scripts/story/Animals.gd" type="Script" id=25]
 [ext_resource path="res://assets/screens/forest/forest.png" type="Texture" id=26]
-[ext_resource path="res://assets/sprites/characters/2/idle/9.png" type="Texture" id=27]
-[ext_resource path="res://assets/sprites/characters/2/idle/13.png" type="Texture" id=28]
-[ext_resource path="res://assets/sprites/characters/2/idle/0.png" type="Texture" id=29]
-[ext_resource path="res://assets/sprites/characters/2/idle/3.png" type="Texture" id=30]
-[ext_resource path="res://assets/sprites/characters/2/idle/5.png" type="Texture" id=31]
-[ext_resource path="res://assets/sprites/characters/2/idle/7.png" type="Texture" id=32]
-[ext_resource path="res://assets/sprites/characters/2/idle/15.png" type="Texture" id=33]
-[ext_resource path="res://assets/sprites/characters/2/idle/16.png" type="Texture" id=34]
-[ext_resource path="res://assets/sprites/characters/2/idle/17.png" type="Texture" id=35]
-[ext_resource path="res://assets/sprites/characters/2/idle/1.png" type="Texture" id=36]
-[ext_resource path="res://assets/sprites/characters/2/idle/6.png" type="Texture" id=37]
-[ext_resource path="res://assets/sprites/characters/2/idle/8.png" type="Texture" id=38]
-[ext_resource path="res://assets/sprites/characters/2/idle/10.png" type="Texture" id=39]
-[ext_resource path="res://assets/sprites/characters/2/idle/12.png" type="Texture" id=40]
-[ext_resource path="res://assets/sprites/characters/2/idle/14.png" type="Texture" id=41]
-[ext_resource path="res://assets/sprites/characters/2/idle/11.png" type="Texture" id=42]
-[ext_resource path="res://assets/sprites/characters/2/idle/18.png" type="Texture" id=43]
-[ext_resource path="res://assets/sprites/characters/2/idle/4.png" type="Texture" id=44]
-[ext_resource path="res://assets/sprites/characters/2/idle/2.png" type="Texture" id=45]
-[ext_resource path="res://assets/sprites/characters/2/idle/19.png" type="Texture" id=46]
-[ext_resource path="res://assets/sprites/characters/3/idle/0.png" type="Texture" id=47]
-[ext_resource path="res://assets/sprites/characters/4/idle/0.png" type="Texture" id=48]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/1.png" type="Texture" id=49]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/7.png" type="Texture" id=50]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/0.png" type="Texture" id=51]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/4.png" type="Texture" id=52]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/8.png" type="Texture" id=53]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/10.png" type="Texture" id=54]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/11.png" type="Texture" id=55]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/12.png" type="Texture" id=56]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/14.png" type="Texture" id=57]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/15.png" type="Texture" id=58]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/16.png" type="Texture" id=59]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/17.png" type="Texture" id=60]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/18.png" type="Texture" id=61]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/19.png" type="Texture" id=62]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/13.png" type="Texture" id=63]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/9.png" type="Texture" id=64]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/5.png" type="Texture" id=65]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/2.png" type="Texture" id=66]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/6.png" type="Texture" id=67]
-[ext_resource path="res://assets/sprites/characters/5/crouched/idle/3.png" type="Texture" id=68]
-[ext_resource path="res://assets/sprites/characters/6/idle/24.png" type="Texture" id=69]
 [ext_resource path="res://assets/screens/story/small_spot.png" type="Texture" id=70]
 [ext_resource path="res://assets/screens/story/large_spot.png" type="Texture" id=71]
 [ext_resource path="res://assets/screens/story/bubble.png" type="Texture" id=72]
@@ -84,550 +21,73 @@
 [ext_resource path="res://scripts/story/NarrationPlayer.gd" type="Script" id=136]
 [ext_resource path="res://scripts/story/Play Button.gd" type="Script" id=137]
 [ext_resource path="res://assets/sprites/buttons/play_button/normal/play_button.png" type="Texture" id=138]
-[ext_resource path="res://assets/sprites/characters/3/idle/3.png" type="Texture" id=149]
-[ext_resource path="res://assets/sprites/characters/3/idle/5.png" type="Texture" id=150]
-[ext_resource path="res://assets/sprites/characters/3/idle/8.png" type="Texture" id=151]
-[ext_resource path="res://assets/sprites/characters/3/idle/9.png" type="Texture" id=152]
-[ext_resource path="res://assets/sprites/characters/3/idle/11.png" type="Texture" id=153]
-[ext_resource path="res://assets/sprites/characters/3/idle/16.png" type="Texture" id=154]
-[ext_resource path="res://assets/sprites/characters/3/idle/18.png" type="Texture" id=155]
-[ext_resource path="res://assets/sprites/characters/3/idle/21.png" type="Texture" id=156]
-[ext_resource path="res://assets/sprites/characters/3/idle/22.png" type="Texture" id=157]
-[ext_resource path="res://assets/sprites/characters/3/idle/23.png" type="Texture" id=158]
-[ext_resource path="res://assets/sprites/characters/3/idle/24.png" type="Texture" id=159]
-[ext_resource path="res://assets/sprites/characters/3/idle/2.png" type="Texture" id=160]
-[ext_resource path="res://assets/sprites/characters/3/idle/17.png" type="Texture" id=161]
-[ext_resource path="res://assets/sprites/characters/3/idle/19.png" type="Texture" id=162]
-[ext_resource path="res://assets/sprites/characters/3/idle/13.png" type="Texture" id=163]
-[ext_resource path="res://assets/sprites/characters/3/idle/14.png" type="Texture" id=164]
-[ext_resource path="res://assets/sprites/characters/3/idle/6.png" type="Texture" id=165]
-[ext_resource path="res://assets/sprites/characters/3/idle/20.png" type="Texture" id=166]
-[ext_resource path="res://assets/sprites/characters/3/idle/10.png" type="Texture" id=167]
-[ext_resource path="res://assets/sprites/characters/3/idle/12.png" type="Texture" id=168]
-[ext_resource path="res://assets/sprites/characters/3/idle/7.png" type="Texture" id=169]
-[ext_resource path="res://assets/sprites/characters/3/idle/1.png" type="Texture" id=170]
-[ext_resource path="res://assets/sprites/characters/3/idle/15.png" type="Texture" id=171]
-[ext_resource path="res://assets/sprites/characters/3/idle/4.png" type="Texture" id=172]
-[ext_resource path="res://assets/sprites/characters/4/idle/1.png" type="Texture" id=182]
-[ext_resource path="res://assets/sprites/characters/4/idle/2.png" type="Texture" id=183]
-[ext_resource path="res://assets/sprites/characters/4/idle/3.png" type="Texture" id=184]
-[ext_resource path="res://assets/sprites/characters/4/idle/4.png" type="Texture" id=185]
-[ext_resource path="res://assets/sprites/characters/4/idle/5.png" type="Texture" id=186]
-[ext_resource path="res://assets/sprites/characters/4/idle/6.png" type="Texture" id=187]
-[ext_resource path="res://assets/sprites/characters/4/idle/7.png" type="Texture" id=188]
-[ext_resource path="res://assets/sprites/characters/4/idle/11.png" type="Texture" id=189]
-[ext_resource path="res://assets/sprites/characters/4/idle/12.png" type="Texture" id=190]
-[ext_resource path="res://assets/sprites/characters/4/idle/13.png" type="Texture" id=191]
-[ext_resource path="res://assets/sprites/characters/4/idle/14.png" type="Texture" id=192]
-[ext_resource path="res://assets/sprites/characters/4/idle/9.png" type="Texture" id=193]
-[ext_resource path="res://assets/sprites/characters/4/idle/10.png" type="Texture" id=194]
-[ext_resource path="res://assets/sprites/characters/4/idle/8.png" type="Texture" id=195]
-[ext_resource path="res://assets/sprites/characters/4/idle/15.png" type="Texture" id=196]
-[ext_resource path="res://assets/sprites/characters/6/idle/13.png" type="Texture" id=226]
-[ext_resource path="res://assets/sprites/characters/6/idle/16.png" type="Texture" id=227]
-[ext_resource path="res://assets/sprites/characters/6/idle/22.png" type="Texture" id=228]
-[ext_resource path="res://assets/sprites/characters/6/idle/23.png" type="Texture" id=229]
-[ext_resource path="res://assets/sprites/characters/6/idle/2.png" type="Texture" id=230]
-[ext_resource path="res://assets/sprites/characters/6/idle/1.png" type="Texture" id=231]
-[ext_resource path="res://assets/sprites/characters/6/idle/11.png" type="Texture" id=232]
-[ext_resource path="res://assets/sprites/characters/6/idle/12.png" type="Texture" id=233]
-[ext_resource path="res://assets/sprites/characters/6/idle/10.png" type="Texture" id=234]
-[ext_resource path="res://assets/sprites/characters/6/idle/4.png" type="Texture" id=235]
-[ext_resource path="res://assets/sprites/characters/6/idle/21.png" type="Texture" id=236]
-[ext_resource path="res://assets/sprites/characters/6/idle/17.png" type="Texture" id=237]
-[ext_resource path="res://assets/sprites/characters/6/idle/15.png" type="Texture" id=238]
-[ext_resource path="res://assets/sprites/characters/6/idle/14.png" type="Texture" id=239]
-[ext_resource path="res://assets/sprites/characters/6/idle/18.png" type="Texture" id=240]
-[ext_resource path="res://assets/sprites/characters/6/idle/19.png" type="Texture" id=241]
-[ext_resource path="res://assets/sprites/characters/6/idle/20.png" type="Texture" id=242]
-[ext_resource path="res://assets/sprites/characters/6/idle/3.png" type="Texture" id=243]
-[ext_resource path="res://assets/sprites/characters/6/idle/5.png" type="Texture" id=244]
-[ext_resource path="res://assets/sprites/characters/6/idle/6.png" type="Texture" id=245]
-[ext_resource path="res://assets/sprites/characters/6/idle/7.png" type="Texture" id=246]
-[ext_resource path="res://assets/sprites/characters/6/idle/8.png" type="Texture" id=247]
-[ext_resource path="res://assets/sprites/characters/6/idle/9.png" type="Texture" id=248]
-[ext_resource path="res://assets/sprites/characters/6/idle/0.png" type="Texture" id=249]
 
-[sub_resource type="Animation" id=1]
-resource_name = "1_dream"
-length = 4.25
+[sub_resource type="Animation" id=26]
+resource_name = "dream"
+length = 4.0
 step = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationPlayer/OwlPlayer/Owl/Thought Bubble/Small Spot:modulate")
+tracks/0/path = NodePath("OwlPlayer/Owl/Thought Bubble/Small Spot:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationPlayer/OwlPlayer/Owl/Thought Bubble/Medium Spot:modulate")
+tracks/1/path = NodePath("OwlPlayer/Owl/Thought Bubble/Medium Spot:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.75, 2 ),
+"times": PoolRealArray( 0, 1.25, 2.25 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer/OwlPlayer/Owl/Thought Bubble/Large Spot:modulate")
+tracks/2/path = NodePath("OwlPlayer/Owl/Thought Bubble/Large Spot:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1.75, 3 ),
+"times": PoolRealArray( 0, 2, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("AnimationPlayer/OwlPlayer/Owl/Thought Bubble/Bubble:modulate")
+tracks/3/path = NodePath("OwlPlayer/Owl/Thought Bubble/Bubble:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 2.75, 4 ),
+"times": PoolRealArray( 0, 2.75, 3.75 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("AnimationPlayer/OwlPlayer/Owl/Sleeping Animal:visible")
+tracks/4/path = NodePath("OwlPlayer/Owl/Sleeping Animal:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 4.25 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 3.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ false, false, true ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "2_dream"
-length = 4.25
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationPlayer/ChameleonPlayer/Chameleon/Thought Bubble/Small Spot:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationPlayer/ChameleonPlayer/Chameleon/Thought Bubble/Medium Spot:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.75, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer/ChameleonPlayer/Chameleon/Thought Bubble/Large Spot:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.75, 3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("AnimationPlayer/ChameleonPlayer/Chameleon/Thought Bubble/Bubble:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 2.75, 4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("AnimationPlayer/ChameleonPlayer/Chameleon/Sleeping Animal:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 4.25 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "3_dream"
-length = 4.25
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationPlayer/GoatPlayer/Goat/Thought Bubble/Small Spot:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationPlayer/GoatPlayer/Goat/Thought Bubble/Medium Spot:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.75, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer/GoatPlayer/Goat/Thought Bubble/Large Spot:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.75, 3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("AnimationPlayer/GoatPlayer/Goat/Thought Bubble/Bubble:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 2.75, 4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("AnimationPlayer/GoatPlayer/Goat/Sleeping Animal:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 4.25 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "4_dream"
-length = 4.25
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationPlayer/FrogPlayer/Frog/Thought Bubble/Small Spot:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationPlayer/FrogPlayer/Frog/Thought Bubble/Medium Spot:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.75, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer/FrogPlayer/Frog/Thought Bubble/Large Spot:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.75, 3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("AnimationPlayer/FrogPlayer/Frog/Thought Bubble/Bubble:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 2.75, 4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("AnimationPlayer/FrogPlayer/Frog/Sleeping Animal:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 4.25 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "5_dream"
-length = 4.25
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble/Small Spot:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble/Medium Spot:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.75, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble/Large Spot:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.75, 3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble/Bubble:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 2.75, 4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("AnimationPlayer/MonkeyPlayer/Monkey/Sleeping Animal:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 4.25 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "6_dream"
-length = 4.25
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble/Small Spot:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble/Medium Spot:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.75, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble/Large Spot:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.75, 3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble/Bubble:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 2.75, 4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("AnimationPlayer/RabbitPlayer/Rabbit/Sleeping Animal:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 4.25 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=7]
-resource_name = "react"
-length = 3.75
-step = 0.25
-tracks/0/type = "method"
-tracks/0/path = NodePath("AnimationPlayer/FrogPlayer/Frog")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0.25 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ "react", false ],
-"method": "play"
-} ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath("AnimationPlayer/OwlPlayer/Owl")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 2.25 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ "react", false ],
-"method": "play"
-} ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath("AnimationPlayer/ChameleonPlayer/Chameleon")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.75 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ "react", false ],
-"method": "play"
-} ]
-}
-tracks/3/type = "method"
-tracks/3/path = NodePath("AnimationPlayer/GoatPlayer/Goat")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ "react", false ],
-"method": "play"
-} ]
-}
-tracks/4/type = "method"
-tracks/4/path = NodePath("AnimationPlayer/MonkeyPlayer/Monkey")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 1.25 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ "react", false ],
-"method": "play"
-} ]
-}
-tracks/5/type = "method"
-tracks/5/path = NodePath("AnimationPlayer/RabbitPlayer/Rabbit")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 1.75 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ "react", false ],
-"method": "play"
-} ]
-}
-
-[sub_resource type="Animation" id=72]
+[sub_resource type="Animation" id=8]
 resource_name = "enter"
 length = 2.5
 step = 0.5
@@ -669,56 +129,75 @@ tracks/2/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "exit"
-length = 2.5
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("OwlPlayer/Owl:position:x")
+[sub_resource type="SpriteFrames" id=10]
+animations = [  ]
+
+[sub_resource type="Animation" id=27]
+resource_name = "dream"
+length = 4.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("ChameleonPlayer/Chameleon/Thought Bubble/Small Spot:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 1887.59, -0.25, 0, 0.25, 0, 1943.79, -0.25, 0, 0.25, 0, 2186.47, -0.25, 0, 0.25, 0, 2300, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.5, 2, 2.5 )
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("OwlPlayer/Owl:position:y")
+tracks/1/type = "value"
+tracks/1/path = NodePath("ChameleonPlayer/Chameleon/Thought Bubble/Medium Spot:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 675.558, -0.25, 0, 0.25, 0, 604.032, -0.25, 0, 0.25, 0, 383.068, -0.25, 0, 0.25, 0, 383.068, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.5, 2, 2.5 )
+"times": PoolRealArray( 0, 1.25, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/2/type = "method"
-tracks/2/path = NodePath("OwlPlayer/Owl")
+tracks/2/type = "value"
+tracks/2/path = NodePath("ChameleonPlayer/Chameleon/Thought Bubble/Large Spot:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 2.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [ "move", false ],
-"method": "play"
-}, {
-"args": [  ],
-"method": "stop"
-} ]
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ChameleonPlayer/Chameleon/Thought Bubble/Bubble:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.75, 3.75 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ChameleonPlayer/Chameleon/Sleeping Animal:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 3.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
 }
 
-[sub_resource type="SpriteFrames" id=66]
-animations = [ {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 20 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 21 ), ExtResource( 14 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "idle",
-"speed": 8.0
-} ]
-
-[sub_resource type="Animation" id=73]
+[sub_resource type="Animation" id=11]
 resource_name = "enter"
 length = 4.0
 step = 0.5
@@ -752,49 +231,75 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=10]
-resource_name = "exit"
+[sub_resource type="SpriteFrames" id=13]
+animations = [  ]
+
+[sub_resource type="Animation" id=28]
+resource_name = "dream"
 length = 4.0
 step = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("ChameleonPlayer/Chameleon:position")
+tracks/0/path = NodePath("GoatPlayer/Goat/Thought Bubble/Small Spot:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1690.7, 1135 ), Vector2( -400, 1135 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath("ChameleonPlayer/Chameleon")
+tracks/1/type = "value"
+tracks/1/path = NodePath("GoatPlayer/Goat/Thought Bubble/Medium Spot:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [ "move", false ],
-"method": "play"
-}, {
-"args": [  ],
-"method": "stop"
-} ]
+"times": PoolRealArray( 0, 1.25, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GoatPlayer/Goat/Thought Bubble/Large Spot:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("GoatPlayer/Goat/Thought Bubble/Bubble:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.75, 3.75 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("GoatPlayer/Goat/Sleeping Animal:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 3.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
 }
 
-[sub_resource type="SpriteFrames" id=67]
-animations = [ {
-"frames": [ ExtResource( 29 ), ExtResource( 36 ), ExtResource( 45 ), ExtResource( 30 ), ExtResource( 44 ), ExtResource( 31 ), ExtResource( 37 ), ExtResource( 32 ), ExtResource( 38 ), ExtResource( 27 ), ExtResource( 39 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 28 ), ExtResource( 41 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 43 ), ExtResource( 46 ) ],
-"loop": true,
-"name": "idle",
-"speed": 8.0
-} ]
-
-[sub_resource type="Animation" id=74]
+[sub_resource type="Animation" id=14]
 resource_name = "enter"
 length = 4.0
 step = 0.5
@@ -828,48 +333,75 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=12]
-resource_name = "exit"
+[sub_resource type="SpriteFrames" id=16]
+animations = [  ]
+
+[sub_resource type="Animation" id=29]
+resource_name = "dream"
 length = 4.0
+step = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("GoatPlayer/Goat:position")
+tracks/0/path = NodePath("FrogPlayer/Frog/Thought Bubble/Small Spot:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 373.905, 1075 ), Vector2( 2500, 1075 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath("GoatPlayer/Goat")
+tracks/1/type = "value"
+tracks/1/path = NodePath("FrogPlayer/Frog/Thought Bubble/Medium Spot:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [ "move", false ],
-"method": "play"
-}, {
-"args": [  ],
-"method": "stop"
-} ]
+"times": PoolRealArray( 0, 1.25, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("FrogPlayer/Frog/Thought Bubble/Large Spot:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("FrogPlayer/Frog/Thought Bubble/Bubble:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.75, 3.75 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("FrogPlayer/Frog/Sleeping Animal:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 3.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
 }
 
-[sub_resource type="SpriteFrames" id=68]
-animations = [ {
-"frames": [ ExtResource( 47 ), ExtResource( 170 ), ExtResource( 160 ), ExtResource( 149 ), ExtResource( 172 ), ExtResource( 150 ), ExtResource( 165 ), ExtResource( 169 ), ExtResource( 151 ), ExtResource( 152 ), ExtResource( 167 ), ExtResource( 153 ), ExtResource( 168 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 171 ), ExtResource( 154 ), ExtResource( 161 ), ExtResource( 155 ), ExtResource( 162 ), ExtResource( 166 ), ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ) ],
-"loop": true,
-"name": "idle",
-"speed": 8.0
-} ]
-
-[sub_resource type="Animation" id=75]
+[sub_resource type="Animation" id=17]
 resource_name = "enter"
 length = 3.0
 step = 0.5
@@ -903,48 +435,75 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=29]
-resource_name = "exit"
-length = 3.0
+[sub_resource type="SpriteFrames" id=19]
+animations = [  ]
+
+[sub_resource type="Animation" id=30]
+resource_name = "dream"
+length = 4.0
+step = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("FrogPlayer/Frog:position")
+tracks/0/path = NodePath("MonkeyPlayer/Monkey/Thought Bubble/Small Spot:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1240.93, 1120 ), Vector2( -400, 1120 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath("FrogPlayer/Frog")
+tracks/1/type = "value"
+tracks/1/path = NodePath("MonkeyPlayer/Monkey/Thought Bubble/Medium Spot:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [ "move", false ],
-"method": "play"
-}, {
-"args": [  ],
-"method": "stop"
-} ]
+"times": PoolRealArray( 0, 1.25, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MonkeyPlayer/Monkey/Thought Bubble/Large Spot:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MonkeyPlayer/Monkey/Thought Bubble/Bubble:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.75, 3.75 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MonkeyPlayer/Monkey/Sleeping Animal:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 3.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
 }
 
-[sub_resource type="SpriteFrames" id=69]
-animations = [ {
-"frames": [ ExtResource( 48 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ), ExtResource( 185 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 188 ), ExtResource( 195 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 196 ) ],
-"loop": true,
-"name": "idle",
-"speed": 8.0
-} ]
-
-[sub_resource type="Animation" id=76]
+[sub_resource type="Animation" id=20]
 resource_name = "enter"
 length = 2.0
 step = 0.5
@@ -978,48 +537,75 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=47]
-resource_name = "exit"
-length = 2.0
+[sub_resource type="SpriteFrames" id=22]
+animations = [  ]
+
+[sub_resource type="Animation" id=31]
+resource_name = "dream"
+length = 4.0
+step = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("MonkeyPlayer/Monkey:position")
+tracks/0/path = NodePath("RabbitPlayer/Rabbit/Thought Bubble/Small Spot:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 435.319, 182.437 ), Vector2( 738.778, -247.463 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath("MonkeyPlayer/Monkey")
+tracks/1/type = "value"
+tracks/1/path = NodePath("RabbitPlayer/Rabbit/Thought Bubble/Medium Spot:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [ "move", false ],
-"method": "play"
-}, {
-"args": [  ],
-"method": "stop"
-} ]
+"times": PoolRealArray( 0, 1.25, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("RabbitPlayer/Rabbit/Thought Bubble/Large Spot:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("RabbitPlayer/Rabbit/Thought Bubble/Bubble:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.75, 3.75 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("RabbitPlayer/Rabbit/Sleeping Animal:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 3.75, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
 }
 
-[sub_resource type="SpriteFrames" id=70]
-animations = [ {
-"frames": [ ExtResource( 51 ), ExtResource( 49 ), ExtResource( 66 ), ExtResource( 68 ), ExtResource( 52 ), ExtResource( 65 ), ExtResource( 67 ), ExtResource( 50 ), ExtResource( 53 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 63 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ) ],
-"loop": true,
-"name": "idle",
-"speed": 8.0
-} ]
-
-[sub_resource type="Animation" id=77]
+[sub_resource type="Animation" id=23]
 resource_name = "enter"
 length = 3.0
 step = 0.5
@@ -1053,46 +639,8 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=49]
-resource_name = "exit"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("RabbitPlayer/Rabbit:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 776.711, 1159.65 ), Vector2( 2400, 1159.65 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath("RabbitPlayer/Rabbit")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [ "move", false ],
-"method": "play"
-}, {
-"args": [  ],
-"method": "stop"
-} ]
-}
-
-[sub_resource type="SpriteFrames" id=71]
-animations = [ {
-"frames": [ ExtResource( 249 ), ExtResource( 231 ), ExtResource( 230 ), ExtResource( 243 ), ExtResource( 235 ), ExtResource( 244 ), ExtResource( 245 ), ExtResource( 246 ), ExtResource( 247 ), ExtResource( 248 ), ExtResource( 234 ), ExtResource( 232 ), ExtResource( 233 ), ExtResource( 226 ), ExtResource( 239 ), ExtResource( 238 ), ExtResource( 227 ), ExtResource( 237 ), ExtResource( 240 ), ExtResource( 241 ), ExtResource( 242 ), ExtResource( 236 ), ExtResource( 228 ), ExtResource( 229 ), ExtResource( 69 ) ],
-"loop": true,
-"name": "idle",
-"speed": 8.0
-} ]
+[sub_resource type="SpriteFrames" id=25]
+animations = [  ]
 
 [node name="Story" type="Node2D"]
 
@@ -1149,71 +697,62 @@ script = ExtResource( 1 )
 z_index = 1
 script = ExtResource( 25 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Narrative/Animals"]
-anims/1_dream = SubResource( 1 )
-anims/2_dream = SubResource( 2 )
-anims/3_dream = SubResource( 3 )
-anims/4_dream = SubResource( 4 )
-anims/5_dream = SubResource( 5 )
-anims/6_dream = SubResource( 6 )
-anims/react = SubResource( 7 )
+[node name="OwlPlayer" type="AnimationPlayer" parent="Narrative/Animals"]
+anims/dream = SubResource( 26 )
+anims/enter = SubResource( 8 )
 
-[node name="OwlPlayer" type="AnimationPlayer" parent="Narrative/Animals/AnimationPlayer"]
-anims/enter = SubResource( 72 )
-anims/exit = SubResource( 8 )
-
-[node name="Owl" type="AnimatedSprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer"]
+[node name="Owl" type="AnimatedSprite" parent="Narrative/Animals/OwlPlayer"]
 position = Vector2( 2186.47, 383.068 )
 scale = Vector2( 0.5, 0.5 )
 z_index = 1
-frames = SubResource( 66 )
+frames = SubResource( 10 )
 animation = "idle"
 script = ExtResource( 82 )
 
-[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl"]
+[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/OwlPlayer/Owl"]
 position = Vector2( -875.18, -551.116 )
 rotation = -3.14159
 scale = Vector2( 0.4, -0.4 )
 
-[node name="Small Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl/Thought Bubble"]
+[node name="Small Spot" type="Sprite" parent="Narrative/Animals/OwlPlayer/Owl/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 70 )
 
-[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl/Thought Bubble"]
+[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/OwlPlayer/Owl/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 73 )
 
-[node name="Large Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl/Thought Bubble"]
+[node name="Large Spot" type="Sprite" parent="Narrative/Animals/OwlPlayer/Owl/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 71 )
 
-[node name="Bubble" type="Sprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl/Thought Bubble"]
+[node name="Bubble" type="Sprite" parent="Narrative/Animals/OwlPlayer/Owl/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 72 )
 
-[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl"]
+[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/OwlPlayer/Owl"]
 visible = false
 position = Vector2( -1125.18, -651.116 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Animal" type="Sprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl/Sleeping Animal"]
+[node name="Animal" type="Sprite" parent="Narrative/Animals/OwlPlayer/Owl/Sleeping Animal"]
 texture = ExtResource( 75 )
 
-[node name="Quilt" type="Sprite" parent="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl/Sleeping Animal"]
+[node name="Quilt" type="Sprite" parent="Narrative/Animals/OwlPlayer/Owl/Sleeping Animal"]
 texture = ExtResource( 74 )
 
-[node name="ChameleonPlayer" type="AnimationPlayer" parent="Narrative/Animals/AnimationPlayer"]
-anims/enter = SubResource( 73 )
-anims/exit = SubResource( 10 )
+[node name="ChameleonPlayer" type="AnimationPlayer" parent="Narrative/Animals"]
+anims/dream = SubResource( 27 )
+anims/enter = SubResource( 11 )
 
-[node name="Chameleon" type="AnimatedSprite" parent="Narrative/Animals/AnimationPlayer/ChameleonPlayer"]
+[node name="Chameleon" type="AnimatedSprite" parent="Narrative/Animals/ChameleonPlayer"]
 position = Vector2( 2100, 1135 )
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 67 )
+frames = SubResource( 13 )
 animation = "idle"
 script = ExtResource( 82 )
 
-[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/AnimationPlayer/ChameleonPlayer/Chameleon"]
+[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/ChameleonPlayer/Chameleon"]
 position = Vector2( -550, -516.533 )
 rotation = -3.14159
 scale = Vector2( 0.35, -0.35 )
@@ -1221,212 +760,212 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Small Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/ChameleonPlayer/Chameleon/Thought Bubble"]
+[node name="Small Spot" type="Sprite" parent="Narrative/Animals/ChameleonPlayer/Chameleon/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 70 )
 
-[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/ChameleonPlayer/Chameleon/Thought Bubble"]
+[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/ChameleonPlayer/Chameleon/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 73 )
 
-[node name="Large Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/ChameleonPlayer/Chameleon/Thought Bubble"]
+[node name="Large Spot" type="Sprite" parent="Narrative/Animals/ChameleonPlayer/Chameleon/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 71 )
 
-[node name="Bubble" type="Sprite" parent="Narrative/Animals/AnimationPlayer/ChameleonPlayer/Chameleon/Thought Bubble"]
+[node name="Bubble" type="Sprite" parent="Narrative/Animals/ChameleonPlayer/Chameleon/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 72 )
 
-[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/AnimationPlayer/ChameleonPlayer/Chameleon"]
+[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/ChameleonPlayer/Chameleon"]
 visible = false
 position = Vector2( -775, -583.2 )
 scale = Vector2( 0.35, 0.35 )
 
-[node name="Animal" type="Sprite" parent="Narrative/Animals/AnimationPlayer/ChameleonPlayer/Chameleon/Sleeping Animal"]
+[node name="Animal" type="Sprite" parent="Narrative/Animals/ChameleonPlayer/Chameleon/Sleeping Animal"]
 texture = ExtResource( 76 )
 
-[node name="Quilt" type="Sprite" parent="Narrative/Animals/AnimationPlayer/ChameleonPlayer/Chameleon/Sleeping Animal"]
+[node name="Quilt" type="Sprite" parent="Narrative/Animals/ChameleonPlayer/Chameleon/Sleeping Animal"]
 texture = ExtResource( 74 )
 
-[node name="GoatPlayer" type="AnimationPlayer" parent="Narrative/Animals/AnimationPlayer"]
-anims/enter = SubResource( 74 )
-anims/exit = SubResource( 12 )
+[node name="GoatPlayer" type="AnimationPlayer" parent="Narrative/Animals"]
+anims/dream = SubResource( 28 )
+anims/enter = SubResource( 14 )
 
-[node name="Goat" type="AnimatedSprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer"]
+[node name="Goat" type="AnimatedSprite" parent="Narrative/Animals/GoatPlayer"]
 position = Vector2( -250, 1075 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-frames = SubResource( 68 )
+frames = SubResource( 16 )
 animation = "idle"
 script = ExtResource( 82 )
 
-[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat"]
+[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/GoatPlayer/Goat"]
 position = Vector2( -500, -350 )
 rotation = 3.14159
 scale = Vector2( 0.2, -0.2 )
 
-[node name="Small Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat/Thought Bubble"]
+[node name="Small Spot" type="Sprite" parent="Narrative/Animals/GoatPlayer/Goat/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 70 )
 
-[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat/Thought Bubble"]
+[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/GoatPlayer/Goat/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 73 )
 
-[node name="Large Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat/Thought Bubble"]
+[node name="Large Spot" type="Sprite" parent="Narrative/Animals/GoatPlayer/Goat/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 71 )
 
-[node name="Bubble" type="Sprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat/Thought Bubble"]
+[node name="Bubble" type="Sprite" parent="Narrative/Animals/GoatPlayer/Goat/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 72 )
 
-[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat"]
+[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/GoatPlayer/Goat"]
 visible = false
 position = Vector2( -650, -400 )
 rotation = 1.50996e-07
 scale = Vector2( 0.19, 0.19 )
 
-[node name="Animal" type="Sprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat/Sleeping Animal"]
+[node name="Animal" type="Sprite" parent="Narrative/Animals/GoatPlayer/Goat/Sleeping Animal"]
 position = Vector2( 0, -50 )
 texture = ExtResource( 77 )
 
-[node name="Quilt" type="Sprite" parent="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat/Sleeping Animal"]
+[node name="Quilt" type="Sprite" parent="Narrative/Animals/GoatPlayer/Goat/Sleeping Animal"]
 texture = ExtResource( 74 )
 
-[node name="FrogPlayer" type="AnimationPlayer" parent="Narrative/Animals/AnimationPlayer"]
-anims/enter = SubResource( 75 )
-anims/exit = SubResource( 29 )
+[node name="FrogPlayer" type="AnimationPlayer" parent="Narrative/Animals"]
+anims/dream = SubResource( 29 )
+anims/enter = SubResource( 17 )
 
-[node name="Frog" type="AnimatedSprite" parent="Narrative/Animals/AnimationPlayer/FrogPlayer"]
+[node name="Frog" type="AnimatedSprite" parent="Narrative/Animals/FrogPlayer"]
 position = Vector2( 2200, 1120 )
-frames = SubResource( 69 )
+frames = SubResource( 19 )
 animation = "idle"
 script = ExtResource( 82 )
 
-[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/AnimationPlayer/FrogPlayer/Frog"]
-position = Vector2( -800, -600 )
+[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/FrogPlayer/Frog"]
+position = Vector2( -400, -300 )
 rotation = 3.14159
-scale = Vector2( 0.35, -0.35 )
+scale = Vector2( 0.18, -0.18 )
 
-[node name="Small Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/FrogPlayer/Frog/Thought Bubble"]
+[node name="Small Spot" type="Sprite" parent="Narrative/Animals/FrogPlayer/Frog/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 70 )
 
-[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/FrogPlayer/Frog/Thought Bubble"]
+[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/FrogPlayer/Frog/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 73 )
 
-[node name="Large Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/FrogPlayer/Frog/Thought Bubble"]
+[node name="Large Spot" type="Sprite" parent="Narrative/Animals/FrogPlayer/Frog/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 71 )
 
-[node name="Bubble" type="Sprite" parent="Narrative/Animals/AnimationPlayer/FrogPlayer/Frog/Thought Bubble"]
+[node name="Bubble" type="Sprite" parent="Narrative/Animals/FrogPlayer/Frog/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 72 )
 
-[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/AnimationPlayer/FrogPlayer/Frog"]
+[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/FrogPlayer/Frog"]
 visible = false
-position = Vector2( -1050, -650 )
-scale = Vector2( 0.35, 0.35 )
+position = Vector2( -525, -325 )
+scale = Vector2( 0.18, 0.18 )
 
-[node name="Animal" type="Sprite" parent="Narrative/Animals/AnimationPlayer/FrogPlayer/Frog/Sleeping Animal"]
+[node name="Animal" type="Sprite" parent="Narrative/Animals/FrogPlayer/Frog/Sleeping Animal"]
 position = Vector2( 0, -50 )
 texture = ExtResource( 79 )
 
-[node name="Quilt" type="Sprite" parent="Narrative/Animals/AnimationPlayer/FrogPlayer/Frog/Sleeping Animal"]
+[node name="Quilt" type="Sprite" parent="Narrative/Animals/FrogPlayer/Frog/Sleeping Animal"]
 texture = ExtResource( 74 )
 
-[node name="MonkeyPlayer" type="AnimationPlayer" parent="Narrative/Animals/AnimationPlayer"]
-anims/enter = SubResource( 76 )
-anims/exit = SubResource( 47 )
+[node name="MonkeyPlayer" type="AnimationPlayer" parent="Narrative/Animals"]
+anims/dream = SubResource( 30 )
+anims/enter = SubResource( 20 )
 
-[node name="Monkey" type="AnimatedSprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer"]
+[node name="Monkey" type="AnimatedSprite" parent="Narrative/Animals/MonkeyPlayer"]
 position = Vector2( 738.778, -175 )
 rotation = -3.14159
 scale = Vector2( 0.6, -0.6 )
-frames = SubResource( 70 )
+frames = SubResource( 22 )
 animation = "idle"
 script = ExtResource( 82 )
 
-[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey"]
+[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/MonkeyPlayer/Monkey"]
 position = Vector2( -800, 350 )
 rotation = -3.14159
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Small Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble"]
+[node name="Small Spot" type="Sprite" parent="Narrative/Animals/MonkeyPlayer/Monkey/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 70 )
 
-[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble"]
+[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/MonkeyPlayer/Monkey/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 73 )
 
-[node name="Large Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble"]
+[node name="Large Spot" type="Sprite" parent="Narrative/Animals/MonkeyPlayer/Monkey/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 71 )
 
-[node name="Bubble" type="Sprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey/Thought Bubble"]
+[node name="Bubble" type="Sprite" parent="Narrative/Animals/MonkeyPlayer/Monkey/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 72 )
 
-[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey"]
+[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/MonkeyPlayer/Monkey"]
 visible = false
 position = Vector2( -1000, 375 )
 rotation = -1.50996e-07
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Animal" type="Sprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey/Sleeping Animal"]
+[node name="Animal" type="Sprite" parent="Narrative/Animals/MonkeyPlayer/Monkey/Sleeping Animal"]
 position = Vector2( 0, -50 )
 texture = ExtResource( 80 )
 
-[node name="Quilt" type="Sprite" parent="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey/Sleeping Animal"]
+[node name="Quilt" type="Sprite" parent="Narrative/Animals/MonkeyPlayer/Monkey/Sleeping Animal"]
 texture = ExtResource( 74 )
 
-[node name="RabbitPlayer" type="AnimationPlayer" parent="Narrative/Animals/AnimationPlayer"]
-anims/enter = SubResource( 77 )
-anims/exit = SubResource( 49 )
+[node name="RabbitPlayer" type="AnimationPlayer" parent="Narrative/Animals"]
+anims/dream = SubResource( 31 )
+anims/enter = SubResource( 23 )
 
-[node name="Rabbit" type="AnimatedSprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer"]
+[node name="Rabbit" type="AnimatedSprite" parent="Narrative/Animals/RabbitPlayer"]
 position = Vector2( -200, 1159.65 )
 rotation = -3.14159
 scale = Vector2( 0.75, -0.75 )
-frames = SubResource( 71 )
+frames = SubResource( 25 )
 animation = "idle"
 script = ExtResource( 82 )
 
-[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit"]
+[node name="Thought Bubble" type="Node2D" parent="Narrative/Animals/RabbitPlayer/Rabbit"]
 position = Vector2( -625, -325 )
 rotation = 3.14159
 scale = Vector2( 0.267, -0.267 )
 
-[node name="Small Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble"]
+[node name="Small Spot" type="Sprite" parent="Narrative/Animals/RabbitPlayer/Rabbit/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 70 )
 
-[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble"]
+[node name="Medium Spot" type="Sprite" parent="Narrative/Animals/RabbitPlayer/Rabbit/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 73 )
 
-[node name="Large Spot" type="Sprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble"]
+[node name="Large Spot" type="Sprite" parent="Narrative/Animals/RabbitPlayer/Rabbit/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 71 )
 
-[node name="Bubble" type="Sprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit/Thought Bubble"]
+[node name="Bubble" type="Sprite" parent="Narrative/Animals/RabbitPlayer/Rabbit/Thought Bubble"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 72 )
 
-[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit"]
+[node name="Sleeping Animal" type="Node2D" parent="Narrative/Animals/RabbitPlayer/Rabbit"]
 visible = false
 position = Vector2( -800, -375 )
 rotation = -1.50996e-07
 scale = Vector2( 0.253333, 0.253333 )
 
-[node name="Animal" type="Sprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit/Sleeping Animal"]
+[node name="Animal" type="Sprite" parent="Narrative/Animals/RabbitPlayer/Rabbit/Sleeping Animal"]
 position = Vector2( 0, -50 )
 texture = ExtResource( 78 )
 
-[node name="Quilt" type="Sprite" parent="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit/Sleeping Animal"]
+[node name="Quilt" type="Sprite" parent="Narrative/Animals/RabbitPlayer/Rabbit/Sleeping Animal"]
 texture = ExtResource( 74 )
 
 [node name="NarrationPlayer" type="AudioStreamPlayer" parent="Narrative/Animals"]
@@ -1438,9 +977,9 @@ script = ExtResource( 136 )
 [connection signal="button_up" from="Buttons/Play Button" to="Buttons/Play Button" method="_on_Play_Button_button_up"]
 [connection signal="button_down" from="Buttons/Skip Button" to="Buttons/Skip Button" method="_on_Skip_Button_button_down"]
 [connection signal="button_up" from="Buttons/Skip Button" to="Buttons/Skip Button" method="_on_Skip_Button_button_up"]
-[connection signal="animation_finished" from="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl" to="Narrative/Animals/AnimationPlayer/OwlPlayer/Owl" method="_on_Character_animation_finished"]
-[connection signal="animation_finished" from="Narrative/Animals/AnimationPlayer/ChameleonPlayer/Chameleon" to="Narrative/Animals/AnimationPlayer/ChameleonPlayer/Chameleon" method="_on_Character_animation_finished"]
-[connection signal="animation_finished" from="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat" to="Narrative/Animals/AnimationPlayer/GoatPlayer/Goat" method="_on_Character_animation_finished"]
-[connection signal="animation_finished" from="Narrative/Animals/AnimationPlayer/FrogPlayer/Frog" to="Narrative/Animals/AnimationPlayer/FrogPlayer/Frog" method="_on_Character_animation_finished"]
-[connection signal="animation_finished" from="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey" to="Narrative/Animals/AnimationPlayer/MonkeyPlayer/Monkey" method="_on_Character_animation_finished"]
-[connection signal="animation_finished" from="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit" to="Narrative/Animals/AnimationPlayer/RabbitPlayer/Rabbit" method="_on_Character_animation_finished"]
+[connection signal="animation_finished" from="Narrative/Animals/OwlPlayer/Owl" to="Narrative/Animals/OwlPlayer/Owl" method="_on_Character_animation_finished"]
+[connection signal="animation_finished" from="Narrative/Animals/ChameleonPlayer/Chameleon" to="Narrative/Animals/ChameleonPlayer/Chameleon" method="_on_Character_animation_finished"]
+[connection signal="animation_finished" from="Narrative/Animals/GoatPlayer/Goat" to="Narrative/Animals/GoatPlayer/Goat" method="_on_Character_animation_finished"]
+[connection signal="animation_finished" from="Narrative/Animals/FrogPlayer/Frog" to="Narrative/Animals/FrogPlayer/Frog" method="_on_Character_animation_finished"]
+[connection signal="animation_finished" from="Narrative/Animals/MonkeyPlayer/Monkey" to="Narrative/Animals/MonkeyPlayer/Monkey" method="_on_Character_animation_finished"]
+[connection signal="animation_finished" from="Narrative/Animals/RabbitPlayer/Rabbit" to="Narrative/Animals/RabbitPlayer/Rabbit" method="_on_Character_animation_finished"]

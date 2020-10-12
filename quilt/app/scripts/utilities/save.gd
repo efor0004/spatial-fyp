@@ -147,7 +147,7 @@ func close_data_file(config):
 	config.save(data_file_path)
 
 func clear_all_data():
-	for i in range(1, constants.num_characters):
+	for i in range(1, constants.num_characters + 1):
 		clear_character_data(i)
 
 func clear_character_data(character_index):

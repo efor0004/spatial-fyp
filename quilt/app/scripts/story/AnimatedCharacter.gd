@@ -100,13 +100,14 @@ func enter():
 	add_animation("move", true, 8)
 	animation_player.play("enter")
 	yield(animation_player, "animation_finished")
-	yield(get_tree().create_timer(1), "timeout")
+	add_animation("idle", true, 8)
+	yield(get_tree().create_timer(0.5), "timeout")
 	play("idle")
 	emit_signal("setup_done")
 
-func load_react():
-	print("loading react")
+func react():
 	add_animation("react", false, 8)
+	play("react")
 
 func add_animation(animation_name, loop, speed):
 	frames.add_animation(animation_name)
