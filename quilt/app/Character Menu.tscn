@@ -1,7 +1,7 @@
-[gd_scene load_steps=140 format=2]
+[gd_scene load_steps=141 format=2]
 
 [ext_resource path="res://scripts/character_menu/CharacterOption.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/buttons/delete_button/delete_icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/Gotham-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scripts/character_menu/Character Menu.gd" type="Script" id=3]
 [ext_resource path="res://scripts/Exit Button.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/characters/1/idle/0.png" type="Texture" id=5]
@@ -184,6 +184,10 @@ animations = [ {
 "speed": 8.0
 } ]
 
+[sub_resource type="DynamicFont" id=8]
+size = 76
+font_data = ExtResource( 2 )
+
 [node name="Character Menu" type="Node2D"]
 script = ExtResource( 3 )
 
@@ -270,19 +274,6 @@ scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 7 )
 animation = "idle"
 
-[node name="Delete Button" type="ToolButton" parent="."]
-margin_left = 1873.0
-margin_top = 25.0
-margin_right = 2023.0
-margin_bottom = 175.0
-focus_mode = 0
-enabled_focus_mode = 0
-icon = ExtResource( 2 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Exit Button" type="Button" parent="."]
 margin_left = 1873.0
 margin_top = 25.0
@@ -297,6 +288,18 @@ __meta__ = {
 
 [node name="ForestBackground" type="Sprite" parent="."]
 script = ExtResource( 7 )
-[connection signal="button_up" from="Delete Button" to="." method="_on_Delete_Button_button_up"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 624.0
+margin_top = 75.0
+margin_right = 1424.0
+margin_bottom = 155.0
+custom_fonts/normal_font = SubResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[center]Choose a character![/center]"
+text = "Choose a character!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="button_down" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_down"]
 [connection signal="button_up" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_up"]

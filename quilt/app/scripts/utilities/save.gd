@@ -13,7 +13,6 @@ var DEFAULT_USER_PROGRESS = [
 		"difficulty": "normal",
 		"index": 1,
 		"level": 1,
-		"name": "Test",
 		"question": 1,
 		"question_order": [],
 		"shuffled_question": 1
@@ -22,7 +21,6 @@ var DEFAULT_USER_PROGRESS = [
 		"difficulty": "normal",
 		"index": 2,
 		"level": 1,
-		"name": "Test",
 		"question": 1,
 		"question_order": [],
 		"shuffled_question": 1
@@ -31,7 +29,6 @@ var DEFAULT_USER_PROGRESS = [
 		"difficulty": "normal",
 		"index": 3,
 		"level": 1,
-		"name": "Test",
 		"question": 1,
 		"question_order": []
 	},
@@ -39,7 +36,6 @@ var DEFAULT_USER_PROGRESS = [
 		"difficulty": "normal",
 		"index": 4,
 		"level": 1,
-		"name": "Test",
 		"question": 1,
 		"question_order": []
 	},
@@ -47,7 +43,6 @@ var DEFAULT_USER_PROGRESS = [
 		"difficulty": "normal",
 		"index": 5,
 		"level": 1,
-		"name": "Test",
 		"question": 1,
 		"question_order": []
 	},
@@ -55,7 +50,6 @@ var DEFAULT_USER_PROGRESS = [
 		"difficulty": "normal",
 		"index": 6,
 		"level": 1,
-		"name": "Test",
 		"question": 1,
 		"question_order": [],
 		"shuffled_question": 1
@@ -71,7 +65,6 @@ func set_state_for_player():
 	global.current_shuffled_question = state["shuffled_question"]
 
 func get_state_for_player(character_index):
-	var name = "Test"
 	var level = 1
 	var question = 1
 	var difficulty = "normal"
@@ -85,7 +78,6 @@ func get_state_for_player(character_index):
 		var index = progress["index"]
 		
 		if (index == character_index):
-			name = progress["name"]
 			level = progress["level"]
 			question = progress["question"]
 			question_order = progress["question_order"]
@@ -97,7 +89,6 @@ func get_state_for_player(character_index):
 	shuffled_question = question_order[question - 1]
 	
 	return {
-		"name": name,
 		"level": level,
 		"question": question,
 		"question_order": question_order,
@@ -107,7 +98,6 @@ func get_state_for_player(character_index):
 
 func save_progress():
 	var progress = {
-		"name": global.character_name,
 		"index": global.character_index,
 		"level": global.current_level,
 		"question": global.current_question,
@@ -151,13 +141,11 @@ func clear_all_data():
 		clear_character_data(i)
 
 func clear_character_data(character_index):
-	var current_state = get_state_for_player(character_index)
-	var no_progress = get_no_progress(character_index, current_state["name"])
+	var no_progress = get_no_progress(character_index)
 	set_user_progress(character_index, no_progress)
 
-func get_no_progress(character_index, character_name):
+func get_no_progress(character_index):
 	return {
-		"name": character_name,
 		"index": character_index,
 		"level": 1,
 		"question": 1,

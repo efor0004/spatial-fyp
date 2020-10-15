@@ -30,8 +30,9 @@ var modal_pages = [
 ]
 
 var modal_button_path = "res://assets/sprites/modals/buttons/open_button/open_button.png"
+var modal_button_pressed_path = "res://assets/sprites/modals/buttons/open_button/open_button_pressed.png"
 
 func _ready():
-	var modal = CustomModal.new(modal_pages, modal_button_path)
+	var modal = PaginationModal.new(modal_pages, modal_button_path, modal_button_pressed_path)
 	
 	add_child(modal)

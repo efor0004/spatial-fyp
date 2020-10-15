@@ -22,7 +22,6 @@ func _on_Puzzles_Button_button_up():
 	
 	if (global.current_level == 1 and global.current_question == 1):
 		global.next_scene = "res://Story.tscn"
-		# global.next_scene = "res://Game.tscn"
 	else:
 		global.next_scene = "res://Game.tscn"
 	

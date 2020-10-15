@@ -7,40 +7,40 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1200"
-   height="800"
-   viewBox="0 0 317.49999 211.66667"
-   version="1.1"
-   id="svg8"
-   inkscape:version="1.0 (4035a4f, 2020-05-01)"
-   sodipodi:docname="modal.svg"
-   inkscape:export-filename="/Users/Eleanor/monash/spatial-fyp/quilt/app/assets/sprites/modals/modal.png"
+   inkscape:export-ydpi="96"
    inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   inkscape:export-filename="/Users/Eleanor/monash/spatial-fyp/quilt/app/assets/sprites/modals/modal.png"
+   sodipodi:docname="modal.svg"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 317.49999 211.66667"
+   height="800"
+   width="1200">
   <defs
      id="defs2" />
   <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.71"
-     inkscape:cx="536.61972"
-     inkscape:cy="541.69014"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     inkscape:document-rotation="0"
-     showgrid="false"
-     units="px"
-     inkscape:pagecheckerboard="true"
-     inkscape:window-width="1549"
-     inkscape:window-height="1318"
-     inkscape:window-x="0"
-     inkscape:window-y="23"
+     showguides="false"
      inkscape:window-maximized="0"
-     showguides="false" />
+     inkscape:window-y="23"
+     inkscape:window-x="0"
+     inkscape:window-height="1318"
+     inkscape:window-width="1549"
+     inkscape:pagecheckerboard="true"
+     units="px"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="547.32394"
+     inkscape:cx="564.08451"
+     inkscape:zoom="0.71"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -54,24 +54,24 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
+     id="layer1"
      inkscape:groupmode="layer"
-     id="layer1">
+     inkscape:label="Layer 1">
+    <rect
+       style="fill:#0587c3;stroke:#000000;stroke-width:1.3228;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect30"
+       width="312.19186"
+       height="206.35013"
+       x="4.6467395"
+       y="4.6551385"
+       ry="12.296053" />
     <rect
        ry="12.296053"
-       y="4.6551385"
-       x="4.6467395"
-       height="206.35013"
-       width="312.19186"
-       id="rect30"
-       style="fill:#0587c3;stroke:#000000;stroke-width:1.3228;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke" />
-    <rect
-       style="fill:#69cdfb;fill-opacity:1;stroke:#000000;stroke-width:1.3228;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-       id="rect28"
-       width="312.19186"
-       height="206.35013"
-       x="0.66140085"
        y="0.66140091"
-       ry="12.296053" />
+       x="0.66140085"
+       height="206.35013"
+       width="312.19186"
+       id="rect28"
+       style="fill:#69cdfb;fill-opacity:1;stroke:#000000;stroke-width:1.3228;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke" />
   </g>
 </svg>

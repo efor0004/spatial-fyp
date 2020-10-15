@@ -1,7 +1,6 @@
 extends Node
 
 var character_index = 0
-var character_name = ''
 
 var current_level = 1
 var current_question = 1

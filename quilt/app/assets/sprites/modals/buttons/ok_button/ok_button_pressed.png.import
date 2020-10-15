@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/delete_icon.png-057bc91774be896a7466e0dca19cef0e.stex"
+path="res://.import/ok_button_pressed.png-ae511037f129984778c84a594b5ead30.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/buttons/delete_button/delete_icon.png"
-dest_files=[ "res://.import/delete_icon.png-057bc91774be896a7466e0dca19cef0e.stex" ]
+source_file="res://assets/sprites/modals/buttons/ok_button/ok_button_pressed.png"
+dest_files=[ "res://.import/ok_button_pressed.png-ae511037f129984778c84a594b5ead30.stex" ]
 
 [params]
 

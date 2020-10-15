@@ -997,3 +997,5 @@ export var max_levels = 10
 export var max_questions_per_file = 10
 
 export var num_characters = 6
+
+export var character_names = ['Owl', 'Chameleon', 'Goat', 'Frog', 'Monkey', 'Rabbit']
