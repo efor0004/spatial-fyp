@@ -73,15 +73,16 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 4, 5, 7.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 4.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true, true, false, false ]
+"values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=3]
 resource_name = "Incorrect"
 length = 9.0
+step = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer1/Layer/Option:position")
 tracks/0/interp = 1
@@ -137,10 +138,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1, 3, 4, 9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 3.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ false, true, true, false, false ]
+"values": [ true, false ]
 }
 
 [sub_resource type="CanvasItemMaterial" id=4]
@@ -213,10 +214,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1, 5, 6, 8.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 5.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ false, true, true, false, false ]
+"values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=9]
@@ -277,10 +278,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 4, 5, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 4.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true, true, false, false ]
+"values": [ true, false ]
 }
 
 [sub_resource type="CanvasItemMaterial" id=10]
@@ -350,10 +351,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1, 6, 7, 9.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 6.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ false, true, true, false, false ]
+"values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=14]
@@ -414,10 +415,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 5, 6, 11 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 5.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true, true, false, false ]
+"values": [ true, false ]
 }
 
 [sub_resource type="SpriteFrames" id=15]
@@ -547,7 +548,6 @@ range_layer_min = 3
 range_layer_max = 3
 
 [node name="Border" type="Sprite" parent="Question/AnimationPlayer2/Layer/Option"]
-visible = false
 scale = Vector2( 1.1, 1.1 )
 z_index = -1
 texture = ExtResource( 2 )
@@ -600,7 +600,6 @@ range_layer_min = 4
 range_layer_max = 4
 
 [node name="Border" type="Sprite" parent="Question/AnimationPlayer3/Layer/Option"]
-visible = false
 scale = Vector2( 1.1, 1.1 )
 z_index = -1
 texture = ExtResource( 2 )
@@ -639,9 +638,9 @@ __meta__ = {
 
 [node name="ForestBackground" type="Sprite" parent="."]
 script = ExtResource( 139 )
-[connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer1/Layer/Option" method="_on_Question_ready_for_options"]
 [connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer2/Layer/Option" method="_on_Question_ready_for_options"]
 [connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer3/Layer/Option" method="_on_Question_ready_for_options"]
+[connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer1/Layer/Option" method="_on_Question_ready_for_options"]
 [connection signal="animation_started" from="Question/AnimationPlayer1" to="Question" method="_on_AnimationPlayer_animation_started" binds= [ 1 ]]
 [connection signal="animation_started" from="Question/AnimationPlayer2" to="Question" method="_on_AnimationPlayer_animation_started" binds= [ 2 ]]
 [connection signal="animation_started" from="Question/AnimationPlayer3" to="Question" method="_on_AnimationPlayer_animation_started" binds= [ 3 ]]

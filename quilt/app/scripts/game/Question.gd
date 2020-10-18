@@ -97,6 +97,7 @@ func set_textures_for_question():
 		option_shape.set_texture(question_texture)
 		
 		var option_border = get_option_border(i)
+		option_border.visible = true
 		option_border.set_texture(question_texture)
 
 func set_texture_offsets():

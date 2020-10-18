@@ -80,7 +80,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Quilt App"
+config/name="Winter Quilt"
 run/main_scene="res://Main Menu.tscn"
 config/icon="res://icon.png"
 
