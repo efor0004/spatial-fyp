@@ -12,7 +12,7 @@ var x_regions = [quilt_size, quilt_size * 2, quilt_size * 3]
 var option_positions = [Vector2(821, 768), Vector2(1256, 768), Vector2(1721, 768)]
 
 var animation_wait_times = {
-	"Correct": [5.5, 6.5, 8.5],
+	"Correct": [5, 6, 8],
 	"Incorrect": [4.5, 5.5, 6.5]
 }
 
@@ -140,7 +140,8 @@ func get_question_path():
 	return "res://assets/sprites/questions/level_%d/%s/pngs/%d.png" % [global.current_level, global.current_level_difficulty, file_index]
 
 func get_file_index_for_question():
-	var file_index = ceil(global.current_shuffled_question / constants.max_questions_per_file) - 1
+	var division = float(global.current_shuffled_question) / float(constants.max_questions_per_file)
+	var file_index = ceil(division) - 1
 	
 	if (file_index < 0):
 		file_index = 0
