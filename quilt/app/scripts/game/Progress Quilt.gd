@@ -136,12 +136,10 @@ func get_piece_animation(end_pos, piece_sprite, mask_node, fabric_node):
 
 func get_animation_duration():
 	if (global.current_level == 1):
-		if (global.current_question <= 3):
-			return 4
-		elif (global.current_question <= 6):
-			return 3
-	
-	return 2
+		if (global.current_question <= 2):
+			return 2.5
+		else:
+			return 1.5
 
 func get_sprite_name():
 	var current_piece_index = get_current_piece_index()

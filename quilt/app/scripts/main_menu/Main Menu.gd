@@ -26,13 +26,22 @@ var modal_pages = [
 	
 	You could try incorporating more spatial language into your everyday conversations with your child(ren). Please refer to the Spatial Reasoning Skills for Preschoolers leaflet for more ideas.
 	
-	Early and rich exposure to spatial concepts, such as using spatial language, mentally visualising and rotating things, and using gestures, are some of the first steps towards developing good spatial reasoning skills."""
+	Early and rich exposure to spatial concepts, such as using spatial language, mentally visualising and rotating things, and using gestures, are some of the first steps towards developing good spatial reasoning skills.""",
+	"""ACKNOWLEDGEMENTS
+	
+	Animal animations from Robert Brooks on Game Dev Market
+	Forest background from vrozenfeld on Game Dev Market
+	Royalty Free Music from Benjamin Tissor (Bensound)
+	Delete icon from The Noun Project on Wikimedia Commons"""
 ]
 
 var modal_button_path = "res://assets/sprites/modals/buttons/open_button/open_button.png"
 var modal_button_pressed_path = "res://assets/sprites/modals/buttons/open_button/open_button_pressed.png"
 
+var gotham_medium = load("res://assets/fonts/gotham_medium.tres")
+
 func _ready():
 	var modal = PaginationModal.new(modal_pages, modal_button_path, modal_button_pressed_path)
+	modal.text_font = gotham_medium
 	
 	add_child(modal)
