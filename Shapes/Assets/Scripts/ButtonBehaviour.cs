@@ -10,17 +10,17 @@ public class ButtonBehaviour : MonoBehaviour
     //lists all of the methods that could be executed when a given button is pressed
 
     private Vector3 velocity = Vector3.zero;
-    public void LeftArrow() 
+    public void LeftArrow()
     {
         //triggered by left arrow controlling the displayed shapes in the toolbar in a given puzzle
         //selection of this button shifts all displayed shapes right letting the user "scroll left"
 
-        if(Global.SoundEffects == true)
-           FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
 
         for (int i = 0; i < TouchRotate.toolbarArray.Length; i++)
         {
-            TouchRotate.toolbarArray[i]  = TouchRotate.toolbarArray[i] + Global.shapeOffset; 
+            TouchRotate.toolbarArray[i] = TouchRotate.toolbarArray[i] + Global.shapeOffset;
         }
 
         Global.RightArrowActive = true;                      //if the left arrow is pushed, the right arrow must become active
@@ -116,7 +116,7 @@ public class ButtonBehaviour : MonoBehaviour
 
         GameObject.Find("MainMenu").transform.localPosition = Global.topPosition;
         GameObject.Find("ParentalinfoMenu").transform.localPosition = Global.centrePosition;
-       // GameObject.Find("ScrollArea").transform.localPosition = Global.centrePosition; ///////////////////////
+        // GameObject.Find("ScrollArea").transform.localPosition = Global.centrePosition; ///////////////////////
 
     }
 
@@ -251,6 +251,7 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("EasyButton").GetComponent<Button>().interactable = false;
         GameObject.Find("MediumButton").GetComponent<Button>().interactable = false;
         GameObject.Find("HardButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("ResetButton").GetComponent<Button>().interactable = false;
 
     }
 
@@ -270,6 +271,47 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("EasyButton").GetComponent<Button>().interactable = true;
         GameObject.Find("MediumButton").GetComponent<Button>().interactable = true;
         GameObject.Find("HardButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("ResetButton").GetComponent<Button>().interactable = true;
+    }
+
+    public void ResetDataButton()
+    {
+        //resets all saved data and returns settings to default value and throws up a popup for confirmation
+        //triggered by pressing reset data in settings menu
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        Save.ResetData();
+
+        GameObject.Find("ResetPopup").transform.localPosition = Global.centrePosition;
+
+        GameObject.Find("SettingsBackButton").GetComponent<Button>().interactable = false;         //activates buttons
+        GameObject.Find("MusicButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("SoundEffectsButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("EasyButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("MediumButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("HardButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("ResetButton").GetComponent<Button>().interactable = false;
+    }
+
+    public void CloseResetPopup()
+    {
+        //closes the popup which appears after reset data is pressed
+        //triggered by pressing the x on the reset data popup
+
+        if (Global.SoundEffects == true)
+            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
+
+        GameObject.Find("ResetPopup").transform.localPosition = Global.rightPosition;
+
+        GameObject.Find("SettingsBackButton").GetComponent<Button>().interactable = true;         //activates buttons
+        GameObject.Find("MusicButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("SoundEffectsButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("EasyButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("MediumButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("HardButton").GetComponent<Button>().interactable = true;
+        GameObject.Find("ResetButton").GetComponent<Button>().interactable = true;
     }
 
     public void ParentalinfoBackButton()
@@ -855,18 +897,6 @@ public class ButtonBehaviour : MonoBehaviour
             FindObjectOfType<AudioManager>().Stop("BackgroundMusic"); //stops background music
 
         SceneManager.LoadScene("Moviemaker");
-    }
-
-    public void ResetDataButton()
-    {
-        //resets all saved data and returns settings to default value 
-        //triggered by pressing reset data in settings menu
-
-        if (Global.SoundEffects == true)
-            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
-
-        Save.ResetData(); 
-
     }
 
     public void RestartMovieButton()

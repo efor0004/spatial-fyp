@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
 {
     //handles screen capture
     //https://www.youtube.com/watch?v=j3zGzbe9V1o
+    // api 21-26 inclusive 
 
 
     public RecordManager recordManager;
@@ -52,7 +53,7 @@ public class UIManager : MonoBehaviour
 
     public void StopVid()
     {
-         recordManager.StopRecord();
+        recordManager.StopRecord();
 
         Global.Recording = false; 
 
