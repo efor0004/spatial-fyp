@@ -265,7 +265,7 @@ public class ButtonBehaviour : MonoBehaviour
 
         GameObject.Find("HelpPopup").transform.localPosition = Global.rightPosition;
 
-        GameObject.Find("SettingsBackButton").GetComponent<Button>().interactable = true;         //activates buttons
+        GameObject.Find("SettingsBackButton").GetComponent<Button>().interactable = true;  //activates buttons
         GameObject.Find("MusicButton").GetComponent<Button>().interactable = true;
         GameObject.Find("SoundEffectsButton").GetComponent<Button>().interactable = true;
         GameObject.Find("EasyButton").GetComponent<Button>().interactable = true;
@@ -293,6 +293,8 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("MediumButton").GetComponent<Button>().interactable = false;
         GameObject.Find("HardButton").GetComponent<Button>().interactable = false;
         GameObject.Find("ResetButton").GetComponent<Button>().interactable = false;
+
+        GameObject.Find("SettingsHelpButton").GetComponent<Button>().interactable = false;
     }
 
     public void CloseResetPopup()
@@ -312,6 +314,8 @@ public class ButtonBehaviour : MonoBehaviour
         GameObject.Find("MediumButton").GetComponent<Button>().interactable = true;
         GameObject.Find("HardButton").GetComponent<Button>().interactable = true;
         GameObject.Find("ResetButton").GetComponent<Button>().interactable = true;
+
+        GameObject.Find("SettingsHelpButton").GetComponent<Button>().interactable = true;
     }
 
     public void ParentalinfoBackButton()

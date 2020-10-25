@@ -31,3 +31,7 @@ Global.RenderShapeVariable("Shape6", "TriangleI", new Vector3(-1.101f, -1.673f, 
 Global.RenderShapeVariable("Shape7", "TriangleI", new Vector3(-0.431f, -2.139f, 0f), new Vector3(0f, 0f, 158.741f), new Vector3(0.1242408f, 0.1453881f, 1.1219f), "Shape2", new Vector4(0.9750406f, 1f, 0f, 1f), true, 7,false);
 Global.RenderShapeVariable("Shape8", "TriangleI", new Vector3(0.442f, -2.139f, 0f), new Vector3(0f, 0f, 203.1844f), new Vector3(0.1242408f, 0.1453881f, 1.1219f), "Shape2", new Vector4(0.9852834f, 1f, 0.4103774f, 1f), true, 8,false);
 Global.RenderShapeVariable("Shape9", "TriangleI", new Vector3(1.079f, -1.667f, 0f), new Vector3(0f, 0f, 230.751f), new Vector3(0.1242408f, 0.1453881f, 1.1219f), "Shape2", new Vector4(0.9528302f, 0.8443089f, 0.5797881f, 1f), true, 9,false);
+
+ *********************** NEW TEST ************************ 
+
+Global.RenderShapeFixed("Shape0", "FrameBackground", new Vector3(0.004f, 0.002f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.7812948f, 0.7811999f, 1f), "Default", new Vector4(1f, 1f, 1f, 1f), false, 0, false);
