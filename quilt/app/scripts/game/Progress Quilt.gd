@@ -138,8 +138,7 @@ func get_animation_duration():
 	if (global.current_level == 1):
 		if (global.current_question <= 2):
 			return 2.5
-		else:
-			return 1.5
+	return 1.5
 
 func get_sprite_name():
 	var current_piece_index = get_current_piece_index()
