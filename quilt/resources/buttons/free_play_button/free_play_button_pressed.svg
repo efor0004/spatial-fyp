@@ -9,12 +9,12 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="432"
    inkscape:export-xdpi="432"
-   inkscape:export-filename="/Users/Eleanor/monash/spatial-fyp/quilt/app/assets/sprites/buttons/free_play_button/normal/free_play_button.png"
-   sodipodi:docname="free_play_button.svg"
+   inkscape:export-filename="/Users/Eleanor/monash/spatial-fyp/quilt/app/assets/sprites/buttons/free_play_button/pressed/free_play_button_pressed.png"
+   sodipodi:docname="free_play_button copy.svg"
    inkscape:version="1.0 (4035a4f, 2020-05-01)"
-   width="194"
+   width="245"
    height="40"
-   viewBox="0 0 194 40"
+   viewBox="0 0 245 40"
    version="1.1"
    id="SVGRoot">
   <defs
@@ -31,7 +31,7 @@
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      inkscape:cy="-13.625"
-     inkscape:cx="52.19844"
+     inkscape:cx="47.69844"
      inkscape:zoom="4"
      inkscape:pageshadow="0"
      inkscape:pageopacity="0"
@@ -60,9 +60,9 @@
        y="0"
        x="0"
        height="40"
-       width="194"
+       width="245"
        id="rect49"
-       style="fill:#05d516;fill-opacity:1;stroke-width:1.383" />
+       style="fill:#34a63d;fill-opacity:1;stroke-width:1.55419" />
     <text
        transform="scale(0.99857489,1.0014271)"
        id="text876"
@@ -74,6 +74,6 @@
          y="31.675976"
          x="8.4442635"
          id="tspan874"
-         sodipodi:role="line">FREE PLAY</tspan></text>
+         sodipodi:role="line">QUILT MAKER</tspan></text>
   </g>
 </svg>

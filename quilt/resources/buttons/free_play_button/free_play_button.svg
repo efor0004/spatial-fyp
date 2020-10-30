@@ -9,12 +9,12 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="SVGRoot"
    version="1.1"
-   viewBox="0 0 194 40"
+   viewBox="0 0 245 40"
    height="40"
-   width="194"
+   width="245"
    inkscape:version="1.0 (4035a4f, 2020-05-01)"
-   sodipodi:docname="free_play_button_pressed.svg"
-   inkscape:export-filename="/Users/Eleanor/monash/spatial-fyp/quilt/app/assets/sprites/buttons/free_play_button/pressed/free_play_button_pressed.png"
+   sodipodi:docname="free_play_button.svg"
+   inkscape:export-filename="/Users/Eleanor/monash/spatial-fyp/quilt/app/assets/sprites/buttons/free_play_button/normal/free_play_button.png"
    inkscape:export-xdpi="432"
    inkscape:export-ydpi="432">
   <defs
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,9 +56,9 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#34a63d;fill-opacity:1;stroke-width:1.383"
+       style="fill:#05d516;fill-opacity:1;stroke-width:1.55419"
        id="rect49"
-       width="194"
+       width="245"
        height="40"
        x="0"
        y="0"
@@ -74,6 +74,6 @@
          id="tspan874"
          x="8.4442635"
          y="31.675976"
-         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:32.9671px;font-family:Avenir;-inkscape-font-specification:'Avenir Ultra-Bold';fill:#ffffff;fill-opacity:1;stroke-width:1.03022">FREE PLAY</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:32.9671px;font-family:Avenir;-inkscape-font-specification:'Avenir Ultra-Bold';fill:#ffffff;fill-opacity:1;stroke-width:1.03022">QUILT MAKER</tspan></text>
   </g>
 </svg>
