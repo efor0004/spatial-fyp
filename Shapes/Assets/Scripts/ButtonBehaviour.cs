@@ -679,7 +679,7 @@ public class ButtonBehaviour : MonoBehaviour
 
                 else
                 {
-                    Global.MouseLevel = Global.MouseLevel - 1;
+                    Global.MousePuzzle = Global.MousePuzzle - 2;
                 }
                 break;
             case "Farm":
@@ -702,78 +702,78 @@ public class ButtonBehaviour : MonoBehaviour
 
                 else
                 {
-                    Global.FarmLevel = Global.FarmLevel - 1;
+                    Global.FarmPuzzle = Global.FarmPuzzle - 2;
                 }
                 break;
-            case "Wild":
-                if (Global.WildLevel == 1)
-                {
-                    Global.WildPuzzle = Global.WildPuzzle - 2;
-                }
+            //case "Wild":
+            //    if (Global.WildLevel == 1)
+            //    {
+            //        Global.WildPuzzle = Global.WildPuzzle - 2;
+            //    }
 
-                else if (Global.WildPuzzle == 1)
-                {
-                    Global.WildLevel = Global.WildLevel - 1;
-                    Global.WildPuzzle = 4;
-                }
+            //    else if (Global.WildPuzzle == 1)
+            //    {
+            //        Global.WildLevel = Global.WildLevel - 1;
+            //        Global.WildPuzzle = 4;
+            //    }
 
-                else if (Global.WildPuzzle == 2)
-                {
-                    Global.WildLevel = Global.WildLevel - 1;
-                    Global.WildPuzzle = 5;
-                }
+            //    else if (Global.WildPuzzle == 2)
+            //    {
+            //        Global.WildLevel = Global.WildLevel - 1;
+            //        Global.WildPuzzle = 5;
+            //    }
 
-                else
-                {
-                    Global.WildLevel = Global.WildLevel - 1;
-                }
-                break;
-            case "Playground":
-                if (Global.PlaygroundLevel == 1)
-                {
-                    Global.PlaygroundPuzzle = Global.PlaygroundPuzzle - 2;
-                }
+            //    else
+            //    {
+            //        Global.WildPuzzle = Global.WildPuzzle - 2;
+            //    }
+            //    break;
+            //case "Playground":
+            //    if (Global.PlaygroundLevel == 1)
+            //    {
+            //        Global.PlaygroundPuzzle = Global.PlaygroundPuzzle - 2;
+            //    }
 
-                else if (Global.PlaygroundPuzzle == 1)
-                {
-                    Global.PlaygroundLevel = Global.PlaygroundLevel - 1;
-                    Global.PlaygroundPuzzle = 4;
-                }
+            //    else if (Global.PlaygroundPuzzle == 1)
+            //    {
+            //        Global.PlaygroundLevel = Global.PlaygroundLevel - 1;
+            //        Global.PlaygroundPuzzle = 4;
+            //    }
 
-                else if (Global.PlaygroundPuzzle == 2)
-                {
-                    Global.PlaygroundLevel = Global.PlaygroundLevel - 1;
-                    Global.PlaygroundPuzzle = 5;
-                }
+            //    else if (Global.PlaygroundPuzzle == 2)
+            //    {
+            //        Global.PlaygroundLevel = Global.PlaygroundLevel - 1;
+            //        Global.PlaygroundPuzzle = 5;
+            //    }
 
-                else
-                {
-                    Global.PlaygroundLevel = Global.PlaygroundLevel - 1;
-                }
-                break;
-            case "Triangle":
-                if (Global.TriangleLevel == 1)
-                {
-                    Global.TrianglePuzzle = Global.TrianglePuzzle - 2;
-                }
+            //    else
+            //    {
+            //        Global.PlaygroundPuzzle = Global.PlaygroundPuzzle - 2;
+            //    }
+            //    break;
+            //case "Triangle":
+            //    if (Global.TriangleLevel == 1)
+            //    {
+            //        Global.TrianglePuzzle = Global.TrianglePuzzle - 2;
+            //    }
 
-                else if (Global.TrianglePuzzle == 1)
-                {
-                    Global.TriangleLevel = Global.TriangleLevel - 1;
-                    Global.TrianglePuzzle = 4;
-                }
+            //    else if (Global.TrianglePuzzle == 1)
+            //    {
+            //        Global.TriangleLevel = Global.TriangleLevel - 1;
+            //        Global.TrianglePuzzle = 4;
+            //    }
 
-                else if (Global.TrianglePuzzle == 2)
-                {
-                    Global.TriangleLevel = Global.TriangleLevel - 1;
-                    Global.TrianglePuzzle = 5;
-                }
+            //    else if (Global.TrianglePuzzle == 2)
+            //    {
+            //        Global.TriangleLevel = Global.TriangleLevel - 1;
+            //        Global.TrianglePuzzle = 5;
+            //    }
 
-                else
-                {
-                    Global.TriangleLevel = Global.TriangleLevel - 1;
-                }
-                break;
+            //    else
+            //    {
+            //        Global.TrianglePuzzle = Global.TrianglePuzzle - 2;
+            //    }
+            //    break;
             default:
                 Debug.Log("Error in Switch Statement/ RestartButton()");
                 break;

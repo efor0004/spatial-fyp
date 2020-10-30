@@ -36,13 +36,13 @@ public class Global : MonoBehaviour
     public static bool Recording = false; 
 
     public static float EasyPositionTolerance = 1.2f;
-    public static float EasyRotationTolerance = 30.0f;
+    public static float EasyRotationTolerance = 40.0f;
 
     public static float MediumPositionTolerance = 0.8f;
-    public static float MediumRotationTolerance = 20.0f;
+    public static float MediumRotationTolerance = 30.0f;
 
     public static float HardPositionTolerance = 0.4f;
-    public static float HardRotationTolerance = 10.0f;
+    public static float HardRotationTolerance = 20.0f;
 
     //TouchRotate
     public static Vector3 shapeOffset = new Vector3(2.5f, 0f, 0f);  //toolbar shifting
