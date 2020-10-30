@@ -1215,6 +1215,46 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2988579243036367301, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 568.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243036367301, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 887.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243036367301, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -762.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243036367301, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 164.80005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243036367301, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243036367301, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243036367301, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243036367301, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2988579243036367302, guid: 2742b14b85522b2459a3121c7940b098,
         type: 3}
       propertyPath: m_Color.g
@@ -1229,6 +1269,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.25882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988579243036367302, guid: 2742b14b85522b2459a3121c7940b098,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2988579243380380216, guid: 2742b14b85522b2459a3121c7940b098,
         type: 3}
@@ -1474,7 +1519,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 90
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1

@@ -127,9 +127,9 @@ public class MouseHandler : MonoBehaviour
         Global.puzzlePieces = 1;
 
         //spawn shapes
-        Global.RenderShapeFixed("Shape0", "Square", new Vector3(-0.02f, -1.19f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.4931631f, 0.4931631f, 0.4931631f), "Shape1", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 0, false);
+        Global.RenderShapeFixed("Shape0", "Square", new Vector3(-0.02f, -1.19f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.4931631f, 0.4931631f, 0.4931631f), "Shape1", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 0, true);
 
-        Global.RenderShapeVariable("Shape1", "TriangleI", new Vector3(-0.0159f, 0.61f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.487235f, 0.285789f, 0.439f), "Shape2", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape1", "TriangleI", new Vector3(-0.0159f, 0.61f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.487235f, 0.285789f, 0.439f), "Shape2", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 1, true);
 
         //spawn target image
         Global.RenderPuzzleImage("MS1");  //has the touchrotate script attached --> run after all shapes are loaded
@@ -160,7 +160,7 @@ public class MouseHandler : MonoBehaviour
         //spawn shapes
         Global.RenderShapeFixed("Shape0", "Square", new Vector3(0.09f, -1.71f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1159224f, 0.1780652f, 1.309f), "Shape3", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), true, 0, false);
 
-        Global.RenderShapeVariable("Shape1", "TriangleI", new Vector3(0.08f, -0.1f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2759099f, 0.5331357f, 1.254f), "Shape2", new Vector4(0f, 0.7735849f, 0.03656648f, 1f), false, 1, false);
+        Global.RenderShapeVariable("Shape1", "TriangleI", new Vector3(0.08f, -0.1f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2759099f, 0.5331357f, 1.254f), "Shape2", new Vector4(0f, 0.7735849f, 0.03656648f, 1f), false, 1, true);
 
         //spawn target image
         Global.RenderPuzzleImage("MS2");  //has the touchrotate script attached --> run after all shapes are loaded
@@ -185,12 +185,12 @@ public class MouseHandler : MonoBehaviour
         Global.puzzlePieces = 4;
 
         //spawn shapes
-        Global.RenderShapeFixed("Shape0", "Square", new Vector3(0f, -0.58f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.7401015f, 0.5834169f, 1f), "Shape1", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 0, false);
+        Global.RenderShapeFixed("Shape0", "Square", new Vector3(0f, -0.58f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.7401015f, 0.5834169f, 1f), "Shape1", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 0, true);
 
         Global.RenderShapeVariable("Shape1", "Square", new Vector3(-0.902f, -1.227f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.3335518f, 0.2961208f, 0.8318f), "Shape2", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), true, 1, false);
-        Global.RenderShapeVariable("Shape2", "TriangleI", new Vector3(-0.92f, 0.11f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.3371702f, 0.2719221f, 0.2719221f), "Shape2", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 2, false);
+        Global.RenderShapeVariable("Shape2", "TriangleI", new Vector3(-0.92f, 0.11f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.3371702f, 0.2719221f, 0.2719221f), "Shape2", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 2, true);
         Global.RenderShapeVariable("Shape3", "Square", new Vector3(1.441f, -1.57f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.088558f, 0.1360315f, 1f), "Shape3", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), true, 3, false);
-        Global.RenderShapeVariable("Shape4", "TriangleI", new Vector3(1.44f, -0.243f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2200239f, 0.4251481f, 1f), "Shape2", new Vector4(0f, 0.7735849f, 0.03656648f, 1f), false, 4, false);
+        Global.RenderShapeVariable("Shape4", "TriangleI", new Vector3(1.44f, -0.243f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2200239f, 0.4251481f, 1f), "Shape2", new Vector4(0f, 0.7735849f, 0.03656648f, 1f), false, 4, true);
 
 
         //spawn target image
@@ -216,12 +216,12 @@ public class MouseHandler : MonoBehaviour
         Global.puzzlePieces = 5;
 
         //spawn shapes
-        Global.RenderShapeFixed("Shape0", "Square", new Vector3(-0.009f, -0.4584f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.029177f, 0.5834169f, 1f), "Shape1", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 0, false);
+        Global.RenderShapeFixed("Shape0", "Square", new Vector3(-0.009f, -0.4584f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.029177f, 0.5834169f, 1f), "Shape1", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 0, true);
 
         Global.RenderShapeVariable("Shape1", "Square", new Vector3(-1.56f, -1.102f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.3335518f, 0.2961208f, 0.8318f), "Shape2", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), true, 1, false);
-        Global.RenderShapeVariable("Shape2", "TriangleI", new Vector3(-1.55f, 0.21f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.3371702f, 0.2719221f, 0.2719221f), "Shape2", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 2, false);
+        Global.RenderShapeVariable("Shape2", "TriangleI", new Vector3(-1.55f, 0.21f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.3371702f, 0.2719221f, 0.2719221f), "Shape2", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 2, true);
         Global.RenderShapeVariable("Shape3", "Square", new Vector3(0.31f, -1.44f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.088558f, 0.1360315f, 1f), "Shape3", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), true, 3, false);
-        Global.RenderShapeVariable("Shape4", "TriangleI", new Vector3(0.284f, -0.114f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2200239f, 0.4251481f, 1f), "Shape2", new Vector4(0f, 0.7735849f, 0.03656648f, 1f), false, 4, false);
+        Global.RenderShapeVariable("Shape4", "TriangleI", new Vector3(0.284f, -0.114f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2200239f, 0.4251481f, 1f), "Shape2", new Vector4(0f, 0.7735849f, 0.03656648f, 1f), false, 4, true);
         Global.RenderShapeVariable("Shape5", "Circle", new Vector3(1.65f, 0.22f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.27654f, 0.27654f, 0.27654f), "Shape2", new Vector4(1f, 0.7064719f, 0f, 1f), false, 5, true);
 
 
@@ -248,7 +248,7 @@ public class MouseHandler : MonoBehaviour
         Global.puzzlePieces = 2;
 
         //spawn shapes
-        Global.RenderShapeFixed("Shape0", "Square", new Vector3(0.12f, -0.49f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.005744f, 0.2132736f, 1.12888f), "Shape1", new Vector4(1f, 0.3766058f, 0f, 1f), false, 0, false);
+        Global.RenderShapeFixed("Shape0", "Square", new Vector3(0.12f, -0.49f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.005744f, 0.2132736f, 1.12888f), "Shape1", new Vector4(1f, 0.3766058f, 0f, 1f), false, 0, true);
         Global.RenderShapeVariable("Shape1", "Circle", new Vector3(-1.09f, -1.098f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.345744f, 0.345744f, 0.345744f), "Shape2", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 1, true);
         Global.RenderShapeVariable("Shape2", "Circle", new Vector3(1.32f, -1.14f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.345744f, 0.345744f, 0.345744f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 2, true);
 
@@ -302,10 +302,10 @@ public class MouseHandler : MonoBehaviour
         Global.puzzlePieces = 5;
 
         //spawn  shapes
-        Global.RenderShapeFixed("Shape0", "Circle", new Vector3(0.45f, -0.97f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.109f, 0.592f, 1f), "Shape1", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), false, 0, false);
+        Global.RenderShapeFixed("Shape0", "Circle", new Vector3(0.45f, -0.97f, 0f), new Vector3(0f, 0f, 0f), new Vector3(1.109f, 0.592f, 1f), "Shape1", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), false, 0, true);
 
         Global.RenderShapeVariable("Shape1", "TriangleR", new Vector3(-3.23f, -0.86f, 0f), new Vector3(0f, 0f, 132.8008f), new Vector3(0.4183661f, 0.3734069f, 0.495f), "Shape3", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 1, false);
-        Global.RenderShapeVariable("Shape2", "TriangleR", new Vector3(0.48f, 0.62f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.4347749f, 0.1773904f, 0.291346f), "Shape2", new Vector4(0f, 0.7135715f, 1f, 1f), false, 2, false);
+        Global.RenderShapeVariable("Shape2", "TriangleR", new Vector3(0.48f, 0.62f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.4347749f, 0.1773904f, 0.291346f), "Shape2", new Vector4(0f, 0.7135715f, 1f, 1f), false, 2, true);
         Global.RenderShapeVariable("Shape3", "TriangleR", new Vector3(0.259f, -0.721f, 0f), new Vector3(0f, 0f, 27.04025f), new Vector3(0.3475402f, 0.2874415f, 0.264f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 3, false);
         Global.RenderShapeVariable("Shape4", "Circle", new Vector3(1.6992f, -0.5492f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1752192f, 0.1752192f, 0.162f), "Shape3", new Vector4(1f, 0.4678748f, 0f, 1f), true, 4, true);
         Global.RenderShapeVariable("Shape5", "Circle", new Vector3(1.71f, -0.549f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1362686f, 0.1318552f, 0.1186388f), "Shape4", new Vector4(0f, 0f, 0f, 1f), true, 5, true);
