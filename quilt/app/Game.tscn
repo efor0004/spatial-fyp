@@ -1,44 +1,649 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://assets/sprites/questions/level_1/question_1/option_3.png" type="Texture" id=1]
-[ext_resource path="res://assets/sprites/buttons/refresh.png" type="Texture" id=2]
-[ext_resource path="res://scripts/Question.gd" type="Script" id=3]
-[ext_resource path="res://assets/sprites/questions/level_1/question_1/holey_quilt.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/questions/level_1/question_1/option_1.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/questions/level_1/question_1/option_2.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/fabrics/level_1/fabric_1.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/questions/level_1/normal/pngs/0.png" type="Texture" id=2]
+[ext_resource path="res://scripts/game/Question.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Exit Button.gd" type="Script" id=5]
+[ext_resource path="res://scripts/game/Progress Quilt.gd" type="Script" id=7]
+[ext_resource path="res://scripts/game/Option.gd" type="Script" id=8]
+[ext_resource path="res://scripts/game/AnimatedCharacter.gd" type="Script" id=27]
+[ext_resource path="res://scripts/Background.gd" type="Script" id=139]
+[ext_resource path="res://assets/sprites/characters/5/extended_branch.png" type="Texture" id=140]
+[ext_resource path="res://scripts/game/AudioFeedbackPlayer.gd" type="Script" id=141]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+light_mode = 2
+
+[sub_resource type="Animation" id=2]
+resource_name = "Correct"
+length = 7.5
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer1/Layer/Option:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 821, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer1/Layer/Option/Sub Layer/Colour Overlay:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5.5, 6, 6.5, 7, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer1/Layer/Option/Sub Layer/Colour Overlay:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 821, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer1/Layer/Option:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3.5, 4, 5, 5.5, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer1/Layer/Option/Border:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Incorrect"
+length = 8.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer1/Layer/Option:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2.3, 7, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 821, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer1/Layer/Option/Sub Layer/Colour Overlay:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4.5, 5, 5.5, 6, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer1/Layer/Option/Sub Layer/Colour Overlay:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2.3, 7, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 821, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer1/Layer/Option:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.5, 3, 4, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer1/Layer/Option/Border:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 3.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=4]
+light_mode = 2
+
+[sub_resource type="Gradient" id=5]
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
+width = 368
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 192, 192 )
+
+[sub_resource type="Animation" id=8]
+length = 8.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer2/Layer/Option:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1256, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer2/Layer/Option/SubLayer/Colour Overlay:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 6.5, 7, 7.5, 8, 8.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer2/Layer/Option/SubLayer/Colour Overlay:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1256, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer2/Layer/Option:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 4.5, 5, 6, 6.5, 8.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer2/Layer/Option/Border:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 9.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer2/Layer/Option:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 2.5, 3.25, 8, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1256, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer2/Layer/Option/SubLayer/Colour Overlay:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5.5, 6, 6.5, 7, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer2/Layer/Option/SubLayer/Colour Overlay:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 2.5, 3.25, 8, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1256, 768 ), Vector2( 358, 356 ), Vector2( 358, 356 ), Vector2( 358, 768 ), Vector2( 358, 768 ), Vector2( 358, 1750 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer2/Layer/Option:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 3.5, 4, 5, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer2/Layer/Option/Border:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=10]
+light_mode = 2
+
+[sub_resource type="Gradient" id=11]
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=12]
+gradient = SubResource( 11 )
+width = 384
+
+[sub_resource type="Animation" id=13]
+length = 9.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer3/Layer/Option:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 4.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1721, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer3/Layer/Option:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5.5, 6, 7, 7.5, 9.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer3/Layer/Option/SubLayer/Colour Overlay:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 7.5, 8, 8.5, 9, 9.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.105882, 0.827451, 0.105882, 0.27451 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer3/Layer/Option/SubLayer/Colour Overlay:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3, 4.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1721, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer3/Layer/Option/Border:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 6.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 10.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer3/Layer/Option:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 3.5, 4.25, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1721, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer3/Layer/Option:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 4.5, 5, 6, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer3/Layer/Option/SubLayer/Colour Overlay:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 6.5, 7, 7.5, 8, 8.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ), Color( 0.811765, 0.152941, 0.152941, 0.27451 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer3/Layer/Option/SubLayer/Colour Overlay:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3, 3.5, 4.25, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1721, 768 ), Vector2( 356, 356 ), Vector2( 356, 356 ), Vector2( 356, 768 ), Vector2( 356, 768 ), Vector2( 356, 1750 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer3/Layer/Option/Border:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Game" type="Node2D"]
 
 [node name="Question" type="Sprite" parent="."]
 script = ExtResource( 3 )
 
-[node name="Holey Quilt" type="Sprite" parent="Question"]
-position = Vector2( 328, 768 )
-texture = ExtResource( 4 )
-region_rect = Rect2( 0, 0, 64, 64 )
+[node name="Layer" type="CanvasLayer" parent="Question"]
 
-[node name="Option 1" type="Sprite" parent="Question"]
-position = Vector2( 792, 768 )
-texture = ExtResource( 5 )
-region_rect = Rect2( 64, 0, 64, 64 )
+[node name="HoleyQuilt" type="Sprite" parent="Question/Layer"]
+position = Vector2( 356, 768 )
 
-[node name="Option 2" type="Sprite" parent="Question"]
-position = Vector2( 1256, 768 )
-texture = ExtResource( 6 )
-region_rect = Rect2( 128, 0, 64, 64 )
+[node name="Light2D" type="Light2D" parent="Question/Layer/HoleyQuilt"]
+texture = ExtResource( 2 )
+offset = Vector2( 576, 1728 )
+mode = 2
+range_layer_min = 1
+range_layer_max = 1
 
-[node name="Option 3" type="Sprite" parent="Question"]
-position = Vector2( 1720, 768 )
+[node name="Fabric Texture" type="Sprite" parent="Question/Layer/HoleyQuilt"]
+material = SubResource( 1 )
+z_index = 5
 texture = ExtResource( 1 )
-region_rect = Rect2( 192, 0, 64, 64 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 384, 384 )
 
-[node name="Next Button" type="Button" parent="."]
-margin_left = 1748.0
-margin_top = 1234.0
-margin_right = 1982.0
-margin_bottom = 1467.0
-icon = ExtResource( 2 )
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="Question"]
+anims/Correct = SubResource( 2 )
+anims/Incorrect = SubResource( 3 )
+
+[node name="Layer" type="CanvasLayer" parent="Question/AnimationPlayer1"]
+layer = 2
+
+[node name="Option" type="Area2D" parent="Question/AnimationPlayer1/Layer"]
+position = Vector2( 821, 768 )
+z_index = 1
+script = ExtResource( 8 )
+
+[node name="Sub Layer" type="CanvasLayer" parent="Question/AnimationPlayer1/Layer/Option"]
+layer = 2
+
+[node name="Colour Overlay" type="Sprite" parent="Question/AnimationPlayer1/Layer/Option/Sub Layer"]
+self_modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 4 )
+position = Vector2( 821, 768 )
+z_index = 1
+texture = SubResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 368, 368 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question/AnimationPlayer1/Layer/Option"]
+self_modulate = Color( 1, 1, 1, 0 )
+z_index = 1
+shape = SubResource( 7 )
+
+[node name="Fabric Texture" type="Sprite" parent="Question/AnimationPlayer1/Layer/Option"]
+material = SubResource( 1 )
+z_index = 4
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 384, 384 )
+
+[node name="Light2D" type="Light2D" parent="Question/AnimationPlayer1/Layer/Option"]
+texture = ExtResource( 2 )
+offset = Vector2( 192, 1728 )
+mode = 2
+range_height = 1.0
+range_layer_min = 2
+range_layer_max = 2
+
+[node name="Border" type="Sprite" parent="Question/AnimationPlayer1/Layer/Option"]
+scale = Vector2( 1.1, 1.1 )
+z_index = -1
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 384, 0, 384, 384 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Question"]
+anims/Correct = SubResource( 8 )
+anims/Incorrect = SubResource( 9 )
+
+[node name="Layer" type="CanvasLayer" parent="Question/AnimationPlayer2"]
+layer = 3
+
+[node name="Option" type="Area2D" parent="Question/AnimationPlayer2/Layer"]
+position = Vector2( 1256, 768 )
+z_index = 1
+script = ExtResource( 8 )
+
+[node name="SubLayer" type="CanvasLayer" parent="Question/AnimationPlayer2/Layer/Option"]
+layer = 3
+
+[node name="Colour Overlay" type="Sprite" parent="Question/AnimationPlayer2/Layer/Option/SubLayer"]
+self_modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 10 )
+position = Vector2( 1256, 768 )
+texture = SubResource( 12 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 384, 384 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question/AnimationPlayer2/Layer/Option"]
+self_modulate = Color( 1, 1, 1, 0 )
+z_index = 1
+shape = SubResource( 7 )
+
+[node name="Fabric Texture" type="Sprite" parent="Question/AnimationPlayer2/Layer/Option"]
+material = SubResource( 1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 384, 384 )
+
+[node name="Light2D" type="Light2D" parent="Question/AnimationPlayer2/Layer/Option"]
+position = Vector2( 0, -2.5545 )
+texture = ExtResource( 2 )
+offset = Vector2( -192, 1728 )
+mode = 2
+range_height = 1.0
+range_layer_min = 3
+range_layer_max = 3
+
+[node name="Border" type="Sprite" parent="Question/AnimationPlayer2/Layer/Option"]
+scale = Vector2( 1.1, 1.1 )
+z_index = -1
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 768, 0, 384, 384 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Question"]
+anims/Correct = SubResource( 13 )
+anims/Incorrect = SubResource( 14 )
+
+[node name="Layer" type="CanvasLayer" parent="Question/AnimationPlayer3"]
+layer = 4
+
+[node name="Option" type="Area2D" parent="Question/AnimationPlayer3/Layer"]
+position = Vector2( 1721, 768 )
+z_index = 1
+script = ExtResource( 8 )
+
+[node name="SubLayer" type="CanvasLayer" parent="Question/AnimationPlayer3/Layer/Option"]
+layer = 4
+
+[node name="Colour Overlay" type="Sprite" parent="Question/AnimationPlayer3/Layer/Option/SubLayer"]
+self_modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 10 )
+position = Vector2( 1721, 768 )
+texture = SubResource( 12 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 384, 384 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question/AnimationPlayer3/Layer/Option"]
+self_modulate = Color( 1, 1, 1, 0 )
+z_index = 1
+shape = SubResource( 7 )
+
+[node name="Fabric Texture" type="Sprite" parent="Question/AnimationPlayer3/Layer/Option"]
+material = SubResource( 1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 384, 384 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Light2D" type="Light2D" parent="Question/AnimationPlayer3/Layer/Option"]
+texture = ExtResource( 2 )
+offset = Vector2( -576, 1728 )
+mode = 2
+range_height = 1.0
+range_layer_min = 4
+range_layer_max = 4
+
+[node name="Border" type="Sprite" parent="Question/AnimationPlayer3/Layer/Option"]
+scale = Vector2( 1.1, 1.1 )
+z_index = -1
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1152, 0, 384, 384 )
+
+[node name="AudioFeedbackPlayer" type="AudioStreamPlayer" parent="Question"]
+script = ExtResource( 141 )
+
+[node name="Progress Quilt" type="Sprite" parent="."]
+script = ExtResource( 7 )
+
+[node name="Character" type="AnimatedSprite" parent="."]
+position = Vector2( 1800, 1300 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+frames = SubResource( 15 )
+script = ExtResource( 27 )
+
+[node name="Branch" type="Sprite" parent="Character"]
+visible = false
+position = Vector2( 30, -300 )
+scale = Vector2( 0.25, 0.25 )
+z_index = -1
+texture = ExtResource( 140 )
+
+[node name="Exit Button" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+focus_mode = 0
+enabled_focus_mode = 0
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Next Button" to="Question" method="_on_Next_Button_pressed"]
+
+[node name="ForestBackground" type="Sprite" parent="."]
+script = ExtResource( 139 )
+[connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer2/Layer/Option" method="_on_Question_ready_for_options"]
+[connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer3/Layer/Option" method="_on_Question_ready_for_options"]
+[connection signal="ready_for_options" from="Question" to="Question/AnimationPlayer1/Layer/Option" method="_on_Question_ready_for_options"]
+[connection signal="animation_started" from="Question/AnimationPlayer1" to="Question" method="_on_AnimationPlayer_animation_started" binds= [ 1 ]]
+[connection signal="animation_started" from="Question/AnimationPlayer2" to="Question" method="_on_AnimationPlayer_animation_started" binds= [ 2 ]]
+[connection signal="animation_started" from="Question/AnimationPlayer3" to="Question" method="_on_AnimationPlayer_animation_started" binds= [ 3 ]]
+[connection signal="animation_finished" from="Character" to="Character" method="_on_Character_animation_finished"]
+[connection signal="button_down" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_down"]
+[connection signal="button_up" from="Exit Button" to="Exit Button" method="_on_Exit_Button_button_up"]
