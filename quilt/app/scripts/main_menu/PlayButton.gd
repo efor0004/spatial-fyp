@@ -22,5 +22,4 @@ func _on_Play_Button_button_down():
 
 func _on_Play_Button_button_up():
 	set_button_icon(normal_texture)
-	global.character_name = "Test"
 	general_utils.go_to_scene(next_scene, self)

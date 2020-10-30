@@ -1,12 +1,18 @@
 extends Node
 
+## Incorrect reasons
+# 0 - Correct shape / too big
+# 1 - Correct shape / too small
+# 2 - Incorrect shape
+# 3 - Correct shape / mirror image
+
 var level_1_incorrect_reasons = [
 	[2, 0],
 	[2, 0],
 	[2, 0],
 	[2, 2],
 	[2, 2],
-	[2, 2],
+	[2, 0],
 	[2, 2],
 	[2, 2],
 	[0, 2],
@@ -19,7 +25,7 @@ var level_1_incorrect_reasons = [
 	[2, 2],
 	[2, 2],
 	[2, 2],
-	[1, 2],
+	[2, 2],
 	[2, 2],
 	[1, 2],
 	# 20 ^
@@ -38,7 +44,7 @@ var level_1_incorrect_reasons = [
 
 var level_1_hard_incorrect_reasons = [
 	[2, 2],
-	[2, 2],
+	[1, 2],
 	[0, 2],
 	[2, 2],
 	[1, 2],
@@ -49,7 +55,7 @@ var level_1_hard_incorrect_reasons = [
 	[2, 2],
 	# 10 ^
 	[1, 2],
-	[2, 2],
+	[1, 2],
 	[1, 2]
 ]
 
@@ -73,7 +79,7 @@ var level_2_incorrect_reasons = [
 	[1, 2],
 	[2, 2],
 	[2, 2],
-	[2, 2],
+	[2, 1],
 	[0, 2],
 	# 20 ^
 	[2, 1],
@@ -108,11 +114,11 @@ var level_2_hard_incorrect_reasons = [
 	[2, 2],
 	[0, 2],
 	[1, 2],
-	[2, 2],
+	[0, 2],
 	[1, 2],
-	[2, 2],
-	[2, 2],
-	[2, 2],
+	[0, 2],
+	[0, 2],
+	[1, 2],
 	# 10 ^
 	[2, 2],
 	[2, 2],
@@ -997,3 +1003,5 @@ export var max_levels = 10
 export var max_questions_per_file = 10
 
 export var num_characters = 6
+
+export var character_names = ['Owl', 'Chameleon', 'Goat', 'Frog', 'Monkey', 'Rabbit']

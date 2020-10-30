@@ -3,9 +3,6 @@ extends Area2D
 var display_state = "all_levels"
 var level_to_display = 0
 
-# TODO: use global.max_level once all levels are in
-var total_levels = 10
-
 onready var back_button = get_node("Back Button")
 
 const DraggableSquare = preload("./DraggableSquare.gd")
@@ -35,7 +32,7 @@ func back():
 	render()
 
 func render():
-	for i in range(1, total_levels + 1):
+	for i in range(1, constants.max_levels + 1):
 		var option = get_node(str(i))
 		var fabric = option.get_node("Fabric")
 		

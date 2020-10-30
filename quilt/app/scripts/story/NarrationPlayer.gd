@@ -11,6 +11,9 @@ var can_you_help_path = [
 	"res://assets/audio/story/help_5.wav",
 	"res://assets/audio/story/help_6.wav"
 ]
+var fabric_bits_path = "res://assets/audio/story/fabric_bits.wav"
+var pick_piece_path = "res://assets/audio/story/pick_piece.wav"
+var make_squares_path = "res://assets/audio/story/make_squares.wav"
 
 func play_file(path):
 	stream = load(path)
@@ -27,3 +30,12 @@ func play_cold():
 
 func play_help():
 	play_file(can_you_help_path[global.character_index - 1])
+
+func play_fabric_bits():
+	play_file(fabric_bits_path)
+
+func play_pick_piece():
+	play_file(pick_piece_path)
+
+func play_make_squares():
+	play_file(make_squares_path)

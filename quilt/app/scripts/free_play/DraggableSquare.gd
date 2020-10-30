@@ -1,7 +1,7 @@
 extends Area2D
 
-var square_size = 160
-var fabric_scale = 0.5
+var square_size = 200
+var fabric_scale = 0.75
 var region_size = square_size / fabric_scale
 
 var min_x = square_size / 2

@@ -19,15 +19,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/game/AudioFeedbackPlayer.gd"
 }, {
-"base": "Modal",
-"class": "CharacterModal",
+"base": "CustomModal",
+"class": "ConfirmModal",
 "language": "GDScript",
-"path": "res://scripts/character_menu/character_modal/CharacterModal.gd"
+"path": "res://scripts/modal/ConfirmModal.gd"
 }, {
-"base": "ConfirmationDialog",
-"class": "ConfirmationModal",
+"base": "Node2D",
+"class": "CustomModal",
 "language": "GDScript",
-"path": "res://scripts/character_menu/ConfirmationModal.gd"
+"path": "res://scripts/modal/CustomModal.gd"
 }, {
 "base": "Button",
 "class": "ExitButton",
@@ -39,20 +39,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/Background.gd"
 }, {
-"base": "WindowDialog",
-"class": "Modal",
-"language": "GDScript",
-"path": "res://scripts/character_menu/Modal.gd"
-}, {
 "base": "Button",
-"class": "ModalButton",
+"class": "GenericButton",
 "language": "GDScript",
-"path": "res://scripts/character_menu/character_modal/ModalButton.gd"
+"path": "res://scripts/GenericButton.gd"
 }, {
 "base": "Area2D",
 "class": "Option",
 "language": "GDScript",
 "path": "res://scripts/game/Option.gd"
+}, {
+"base": "CustomModal",
+"class": "PaginationModal",
+"language": "GDScript",
+"path": "res://scripts/modal/PaginationModal.gd"
 }, {
 "base": "Button",
 "class": "PlayButton",
@@ -67,20 +67,20 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "AnimatedCharacter": "",
 "AudioFeedbackPlayer": "",
-"CharacterModal": "",
-"ConfirmationModal": "",
+"ConfirmModal": "",
+"CustomModal": "",
 "ExitButton": "",
 "ForestBackground": "",
-"Modal": "",
-"ModalButton": "",
+"GenericButton": "",
 "Option": "",
+"PaginationModal": "",
 "PlayButton": "",
 "SquareOption": ""
 }
 
 [application]
 
-config/name="Quilt App"
+config/name="Winter Quilt"
 run/main_scene="res://Main Menu.tscn"
 config/icon="res://icon.png"
 
