@@ -10,32 +10,30 @@ public class Save : MonoBehaviour
 
 	public static void SaveProgress()
 	{
-		//saves game data
+		//saves progress data
 		//triggered when puzzle is completed 
 
+		PlayerPrefs.SetInt("MouseLevel", Global.MouseLevel);
+		PlayerPrefs.SetInt("MousePuzzle", Global.MousePuzzle);
 
-		//PlayerPrefs.SetInt("PlaygroundLevel", Global.PlaygroundLevel);
+		PlayerPrefs.SetInt("FarmLevel", Global.FarmLevel);
+		PlayerPrefs.SetInt("FarmPuzzle", Global.FarmPuzzle);
+
+		//PlayerPrefs.SetInt("PlaygroundLevel", Global.PlaygroundLevel);        //related scenes are not currently in use
 		//PlayerPrefs.SetInt("PlaygroundPuzzle", Global.PlaygroundPuzzle);
 
 		//PlayerPrefs.SetInt("TriangleLevel", Global.TriangleLevel);
 		//PlayerPrefs.SetInt("TrianglePuzzle", Global.TrianglePuzzle);
 
-		PlayerPrefs.SetInt("MouseLevel", Global.MouseLevel);
-		PlayerPrefs.SetInt("MousePuzzle", Global.MousePuzzle);
-
 		//PlayerPrefs.SetInt("WildLevel", Global.WildLevel);
 		//PlayerPrefs.SetInt("WildPuzzle", Global.WildPuzzle);
 
-		PlayerPrefs.SetInt("FarmLevel", Global.FarmLevel);
-		PlayerPrefs.SetInt("FarmPuzzle", Global.FarmPuzzle);
-
 		PlayerPrefs.Save();
 		Debug.Log("Game Progress data saved!");
-
 }
 	public static void SaveSettings()
 	{
-		//saves game data
+		//saves settings data
 		//triggered when settings are changed
 
 		PlayerPrefsX.SetBool("Music", Global.Music);
@@ -46,11 +44,14 @@ public class Save : MonoBehaviour
 
 		PlayerPrefs.Save();
 		Debug.Log("Game Settings data saved!");
-
 	}
 
 	public static void SavePopup()
 	{
+		//saves popup preferences 
+		//whether or not "do not show me again" checkbox was ticked
+		//triggered when popups are closed
+
 		PlayerPrefsX.SetBool("GenPopup", Global.GenPopup);
 		PlayerPrefsX.SetBool("MousePopup", Global.MousePopup);
 		PlayerPrefsX.SetBool("FarmPopup", Global.FarmPopup);
@@ -64,30 +65,31 @@ public class Save : MonoBehaviour
 		//loads game data - progress and settings preferences
 		//triggered when app opens after being closed
 
-		if (PlayerPrefs.HasKey("MouseLevel")) //if one piece of data exists, assume rest of data exists
+		if (PlayerPrefs.HasKey("MouseLevel"))    //if one piece of data exists, assume rest of data exists
 		{  //progress data
 
-			//Global.PlaygroundLevel = PlayerPrefs.GetInt("PlaygroundLevel");
+			Global.MouseLevel = PlayerPrefs.GetInt("MouseLevel");
+			Global.MousePuzzle = PlayerPrefs.GetInt("MousePuzzle");
+
+			Global.FarmLevel = PlayerPrefs.GetInt("FarmLevel");
+			Global.FarmPuzzle = PlayerPrefs.GetInt("FarmPuzzle");
+
+			//Global.PlaygroundLevel = PlayerPrefs.GetInt("PlaygroundLevel");    //related scenes are not currently in use
 			//Global.PlaygroundPuzzle = PlayerPrefs.GetInt("PlaygroundPuzzle");
 
 			//Global.TriangleLevel = PlayerPrefs.GetInt("TriangleLevel");
 			//Global.TrianglePuzzle = PlayerPrefs.GetInt("TrianglePuzzle");
 
-			Global.MouseLevel = PlayerPrefs.GetInt("MouseLevel");
-			Global.MousePuzzle = PlayerPrefs.GetInt("MousePuzzle");
+			//Global.WildLevel = PlayerPrefs.GetInt("WildLevel");
+			//Global.WildPuzzle = PlayerPrefs.GetInt("WildPuzzle");
 
-			//	Global.WildLevel = PlayerPrefs.GetInt("WildLevel");
-			//	Global.WildPuzzle = PlayerPrefs.GetInt("WildPuzzle");
-
-			Global.FarmLevel = PlayerPrefs.GetInt("FarmLevel");
-			Global.FarmPuzzle = PlayerPrefs.GetInt("FarmPuzzle");
 		}
 		else
 		{
 			Debug.Log("there is no saved progress data");  		
 		}
 
-		if (PlayerPrefs.HasKey("Music"))
+		if (PlayerPrefs.HasKey("Music"))  //if one piece of data exists, assume rest of data exists
 		{   //settings data
 
 			Global.Music = PlayerPrefsX.GetBool("Music");
@@ -101,7 +103,7 @@ public class Save : MonoBehaviour
 			Debug.Log("there is no saved settings data");
 		}
 
-		if (PlayerPrefs.HasKey("GenPopup"))
+		if (PlayerPrefs.HasKey("GenPopup"))  //if one piece of data exists, assume rest of data exists
 		{   //popup data
 			Global.GenPopup = PlayerPrefsX.GetBool("GenPopup");
 			Global.MousePopup = PlayerPrefsX.GetBool("MousePopup");
@@ -113,8 +115,7 @@ public class Save : MonoBehaviour
 		}
 
 		Debug.Log("Game data loaded!");
-		
-		
+			
 	}
 
 
@@ -133,19 +134,18 @@ public class Save : MonoBehaviour
 		Global.MousePopup = true;
 		Global.FarmPopup = true;
 
-
-		//	Global.PlaygroundLevel = 1;              
+		Global.MouseLevel = 1;
+		Global.MousePuzzle = 0;
+		Global.FarmLevel = 1;
+		Global.FarmPuzzle = 0;
+		//	Global.PlaygroundLevel = 1;               //related scenes are not currently in use 
 		//	Global.PlaygroundPuzzle = 0;
 		//	Global.TriangleLevel = 1;
 		//	Global.TrianglePuzzle = 0;
-		Global.MouseLevel = 1;
-		Global.MousePuzzle = 0;
-	//	Global.WildLevel = 1;
-	//	Global.WildPuzzle = 0;
-		Global.FarmLevel = 1;
-		Global.FarmPuzzle = 0;
+		//	Global.WildLevel = 1;
+		//	Global.WildPuzzle = 0;
 
-	Debug.Log("Data reset complete");
+		Debug.Log("Data reset complete");
 	}
 
 }

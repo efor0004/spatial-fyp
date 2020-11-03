@@ -9,20 +9,16 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     // Controls the Menu scene
-    // In particular loading Settings
-                        
-
-
+    // Loads saved data and manages Settings
+    // triggered when app is opened (menu scene runs)
+                      
     void Start()
     {
-        //Save.SavePopup(); 
 
-        if (Global.StartUpMenu)
+        if (Global.StartUpMenu)              //if it is the first loading of this scene in a session
         {
-            Save.LoadGame();             //load saved data
+            Save.LoadGame();                 //load saved data
             Global.StartUpMenu = false;
-
-            Debug.Log("GenPopup: " + Global.GenPopup); 
 
             if (Global.GenPopup == true)
             {
@@ -32,12 +28,10 @@ public class Menu : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-        //update difficulty display
-        if (Global.Easy)
+  
+        if (Global.Easy)                                                                  //update difficulty display in settings
         {
             Global.positionTolerance = Global.EasyPositionTolerance;
             Global.rotationTolerance = Global.EasyRotationTolerance;
@@ -71,8 +65,8 @@ public class Menu : MonoBehaviour
             Debug.Log("Error. neither easy nor medium nor hard is true");
         }
 
-        //update sound effects display
-        if (Global.SoundEffects == true)
+        
+        if (Global.SoundEffects == true)                                            //update sound effects display in settings
         {
             GameObject.Find("SoundEffectsButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("on");
         }
@@ -82,8 +76,8 @@ public class Menu : MonoBehaviour
         }
 
 
-        //update music display
-        if (Global.Music == true)
+       
+        if (Global.Music == true)                                                   //update music display in settings
         {
             GameObject.Find("MusicButton").GetComponent<Image>().sprite = Resources.Load<Sprite>("on");
         }

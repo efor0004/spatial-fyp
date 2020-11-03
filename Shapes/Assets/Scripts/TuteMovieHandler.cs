@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class TuteMovieHandler : MonoBehaviour
 {
-
-    //handles the tutorial for standard puzzles
-    //https://www.youtube.com/watch?v=a1RFxtuTVsk
+    //handles the tutorial for movie maker
+    //triggered when movie maker tutorial is loaded
+    //array of popups adapted from: https://www.youtube.com/watch?v=a1RFxtuTVsk
 
     public GameObject[] popUps;
     public static int popUpIndex = 0;
@@ -18,17 +18,14 @@ public class TuteMovieHandler : MonoBehaviour
     public static bool disableFlag = false;
     public static bool pinchFlag = false;
 
-
     private Collider2D myCollider;
     Vector3 wp;
     Vector2 touchPos;
 
-    float maxScale = 2;                           //maximum x/y scale up
-    float minScale = 0.5f;                        //min x/y scale down
+    float maxScale = 2;                            //maximum x/y scale up
+    float minScale = 0.5f;                         //min x/y scale down
     float scaleIncrement = 0.05f;                  //increment of scaling up/down each loop
-    float pinchThresh = 1f;                     //pinchAmount threshold before scaling begins
-
-    //Vector3 MaxHeight = new Vector3(0, 300f, 0);
+    float pinchThresh = 1f;                       //pinchAmount threshold before scaling begins
     void Start()
     {
 
@@ -54,9 +51,6 @@ public class TuteMovieHandler : MonoBehaviour
             }
 
         }
-
-
-      // TuteLoadManager(); 
     }
 
 
@@ -74,7 +68,7 @@ public class TuteMovieHandler : MonoBehaviour
             }
         }
 
-        //touchrotate script here
+        //adapted movierotate script here (actions are stopped by flags depending on tutorial progress)
         if ((Input.touchCount > 0) && (translateFlag == true) && (disableFlag == false))                                                   //at least one touch detected                                                                    
         {
 
@@ -91,8 +85,7 @@ public class TuteMovieHandler : MonoBehaviour
                 if (myCollider)                                                                                                     //collider will not exist for the anchor shape0
                 {
                     if (myCollider == Physics2D.OverlapPoint(touchPos))                                                             //if the touch position overlaps with the 2D collider of the shape
-                    {
-                        Debug.Log("1. touch ocrrued within collider"); /////////// failure occurrs here
+                    {           
 
                         if ((Input.touchCount == 2) && (rotateFlag == true))
                         {
@@ -112,7 +105,7 @@ public class TuteMovieHandler : MonoBehaviour
 
                                 if (popUpIndex == 6)
                                 {
-                                    popUpIndex = 7; //////////////
+                                    popUpIndex = 7; 
                                     TuteLoadManager();
                                 }
                             }
@@ -122,19 +115,16 @@ public class TuteMovieHandler : MonoBehaviour
                             { //PINCH
                                     pinchAmount = DetectTouchPinch.pinchDistanceDelta;
 
-                                    //  Debug.Log("pinchAmount: " + pinchAmount);
-
                                     if (pinchAmount > pinchThresh)
                                     {
                                         //positive pinch scale up
                                         if (Mathf.Abs(go.gameObject.transform.localScale.x) < maxScale && Mathf.Abs(go.gameObject.transform.localScale.y) < maxScale)
                                         {
-                                            // go.gameObject.transform.localScale += new Vector3(scaleIncrement, scaleIncrement, 0f);
                                             go.gameObject.transform.localScale *= (1 + scaleIncrement);
 
                                            if (popUpIndex == 8)
                                             {
-                                            popUpIndex = 9; //////////////
+                                            popUpIndex = 9; 
                                             TuteLoadManager();
                                             }
                                     }
@@ -144,12 +134,11 @@ public class TuteMovieHandler : MonoBehaviour
                                         //negative pinch scale down
                                         if (Mathf.Abs(go.gameObject.transform.localScale.x) > minScale && Mathf.Abs(go.gameObject.transform.localScale.y) > minScale)
                                         {
-                                            //go.gameObject.transform.localScale -= new Vector3(scaleIncrement, scaleIncrement, 0f);
                                             go.gameObject.transform.localScale *= (1 - scaleIncrement);
 
                                            if (popUpIndex == 8)
                                            {
-                                            popUpIndex = 9; //////////////
+                                            popUpIndex = 9; 
                                             TuteLoadManager();
                                            }
                                         }
@@ -160,8 +149,8 @@ public class TuteMovieHandler : MonoBehaviour
                         }
 
                        foreach (UnityEngine.Touch touch in Input.touches)
-                      {                                                                                                                     //https://answers.unity.com/questions/369230/how-to-detect-double-tap-in-android.html?childToView=1695525#answer-1695525
-                            if ((touch.tapCount >= 2) ) //flips on vertical axis if double tapped (finnicky)
+                      {                                                                     //https://answers.unity.com/questions/369230/how-to-detect-double-tap-in-android.html?childToView=1695525#answer-1695525
+                            if ((touch.tapCount >= 2) )                                     //flips on vertical axis if double tapped (finnicky)
                             {
                                     Vector3 temp = go.gameObject.transform.localScale;
                                     temp.x *= -1;
@@ -170,12 +159,12 @@ public class TuteMovieHandler : MonoBehaviour
 
                                 if (popUpIndex == 7)
                                 {
-                                        popUpIndex = 8; //////////////
+                                        popUpIndex = 8; 
                                         TuteLoadManager();
                                 }
                             }
                             else if (Input.touchCount == 1)
-                            {                                                                                                             //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
+                            {                                                             //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
                                 if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < Camera.main.ScreenToWorldPoint(GameObject.Find("MaxHeight").transform.position).y) // stops shape going behind instructions
                                 {
                                     go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
@@ -184,7 +173,7 @@ public class TuteMovieHandler : MonoBehaviour
 
                                     if (popUpIndex == 5)
                                     {
-                                        popUpIndex = 6; //////////////
+                                        popUpIndex = 6; 
                                         TuteLoadManager();
                                     }
                                 }
@@ -214,7 +203,7 @@ public class TuteMovieHandler : MonoBehaviour
 
                     if (popUpIndex == 9)
                     {
-                        popUpIndex = 10; ////////////////
+                        popUpIndex = 10; 
                         TuteLoadManager();
                     }
                 }               
@@ -227,13 +216,15 @@ public class TuteMovieHandler : MonoBehaviour
 
     public static void TuteLoadRooster()
     {
-        GameObject objToSpawn2 = new GameObject("Rooster");                                                        //assign name
+        //loads rooster gameobject for use in movie tutorial
+        //triggered when relateed popup is loaded
+
+        GameObject objToSpawn2 = new GameObject("Rooster");                                                         //assign name
         objToSpawn2.AddComponent<SpriteRenderer>();                                                                  //add a sprite renderer
         objToSpawn2.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("F27");                           //assign sprite from resources folder
 
         float SpawnY = Camera.main.ScreenToWorldPoint(GameObject.Find("LeftArrowMovie").transform.position).y;
 
-        //objToSpawn2.transform.position = new Vector3(-0.0159f, Global.toolbarY, 0f);
         objToSpawn2.transform.position = new Vector3(-0.0159f, SpawnY, 0f);
         objToSpawn2.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         objToSpawn2.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);                                           //set scale vector
@@ -244,12 +235,14 @@ public class TuteMovieHandler : MonoBehaviour
 
     public static void TuteLoadManager()
     {
+        //handles the switching of popups as the tutorial progresses
+        //triggered when the OK button is pressed or the correct action is performed in the tutorial
 
         switch (popUpIndex)
         {
             case 0:
                 {
-                   // FindObjectOfType<AudioManager>().Play("m0");
+                   // FindObjectOfType<AudioManager>().Play("m0");  //(errors when voice over starts upon loading instead of waiting for a button press)
                 }
                 break;
             case 1:
@@ -300,7 +293,7 @@ public class TuteMovieHandler : MonoBehaviour
                 break;
             case 8:
                 {
-                    FindObjectOfType<AudioManager>().Stop("m7");  ////////////////////////
+                    FindObjectOfType<AudioManager>().Stop("m7");  
                     FindObjectOfType<AudioManager>().Play("m8");
                     TuteMovieHandler.pinchFlag = true; //enable toolbar return
                 }

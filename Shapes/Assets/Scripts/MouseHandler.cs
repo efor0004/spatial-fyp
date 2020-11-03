@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
 public class MouseHandler : MonoBehaviour
 {
     //the script that controls all of the puzzles in the Mouse Shapes scene
+    //triggered when Mouse scene is run
 
     delegate void PuzzleMethod();                                       //creates an empty method
     List<PuzzleMethod> Puzzle = new List<PuzzleMethod>();               //creates a list of empty methods
 
-   // int PuzzlesPerLevel = 5;
     Image Mask;
     Text LevelText;
     int TotalPuzzles = 15;
@@ -44,43 +44,39 @@ public class MouseHandler : MonoBehaviour
     
     void Start()
     {
-        // Start is called before the first frame update
-
-        Global.NextPuzzleReady = true;                                     //set as true every time the scene is opened        
+        Global.NextPuzzleReady = true;                                      //set as true every time the scene is opened        
         Mask = GameObject.Find("Mask").GetComponent<Image>();
         LevelText = GameObject.Find("LevelText").GetComponent<Text>();
 
-        Global.LeftArrowActive = true;  //reset arrow flags to true
+        Global.LeftArrowActive = true;                                      //reset arrow flags to true
         Global.RightArrowActive = true;
 
-        CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world 
-        //Puzzle8();
+        CreateList();                                                      //initiate this list with function calls for all avilable puzzles in this world 
+        //Puzzle8();                                                       //to test a specific scene comment out CreateList() and uncomment PuzzleX();
 
 
-        if (Global.StartUpMouse)  
-        {
-            //Save.LoadGame();             
+        if (Global.StartUpMouse)                                           //if it is the first time loading this scene in a session
+        {        
             Global.StartUpMouse = false;
 
             if (Global.MousePopup == true)
             {
-                Global.LoadParentalPopup();
+                Global.LoadParentalPopup();              
             }
         }
 
     }
     void Update()
     {
-        //called each frame
         if (Global.piecesPlaced == Global.puzzlePieces)                    //puzzle completion 
         {
             if (n + 1 == TotalPuzzles)
-            {                                                            //if this is the last puzzle in the world
+            {                                                             //if this is the last puzzle in the world
                 Global.WorldComplete();
             }
 
             else if (Global.MousePuzzle == 5)
-            {                                                            //if this is the last puzzle in the level
+            {                                                             //if this is the last puzzle in the level
                 Global.LevelComplete();
             }
 
@@ -92,10 +88,10 @@ public class MouseHandler : MonoBehaviour
 
         if (Global.NextPuzzleReady == true)
         {
-            if (n + 1 == TotalPuzzles) //if there are no more games
+            if (n + 1 == TotalPuzzles)                                 //if there are no more games
             {
                 Global.MouseComplete = 1;
-                SceneManager.LoadScene("Worlds"); //go to main menu
+                SceneManager.LoadScene("Worlds");                      //load main menu
             }
             else
             {
@@ -195,7 +191,6 @@ public class MouseHandler : MonoBehaviour
 
         //spawn target image
         Global.RenderPuzzleImage("MS3");  //has the touchrotate script attached --> run after all shapes are loaded
-
     }
 
     void Puzzle4()
@@ -227,7 +222,6 @@ public class MouseHandler : MonoBehaviour
 
         //spawn target image
         Global.RenderPuzzleImage("MS4");  //has the touchrotate script attached --> run after all shapes are loaded
-
     }
 
     void Puzzle5()
@@ -252,10 +246,8 @@ public class MouseHandler : MonoBehaviour
         Global.RenderShapeVariable("Shape1", "Circle", new Vector3(-1.09f, -1.098f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.345744f, 0.345744f, 0.345744f), "Shape2", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), false, 1, true);
         Global.RenderShapeVariable("Shape2", "Circle", new Vector3(1.32f, -1.14f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.345744f, 0.345744f, 0.345744f), "Shape2", new Vector4(0.495283f, 0.8554347f, 1f, 1f), false, 2, true);
 
-
         //spawn target image
         Global.RenderPuzzleImage("MS5");  //has the touchrotate script attached --> run after all shapes are loaded
-
     }
 
     void Puzzle6()
@@ -281,7 +273,6 @@ public class MouseHandler : MonoBehaviour
 
         //spawn target image
         Global.RenderPuzzleImage("MS6");  //has the touchrotate script attached --> run after all shapes are loaded
-
     }
 
     void Puzzle7()
@@ -312,7 +303,6 @@ public class MouseHandler : MonoBehaviour
 
         //spawn target image
         Global.RenderPuzzleImage("MS7");  //has the touchrotate script attached --> run after all shapes are loaded
-
     }
 
 
@@ -370,7 +360,6 @@ public class MouseHandler : MonoBehaviour
         //spawn shape
         Global.RenderShapeFixed("Shape0", "Circle", new Vector3(0.06f, -1.02f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.5137529f, 0.4958907f, 0.4252922f), "Shape2", new Vector4(0.7169812f, 0f, 0.03755178f, 1f), false, 0, true);
 
-
         Global.RenderShapeVariable("Shape1", "TriangleI", new Vector3(0.05999997f, -0.1f, 0.01f), new Vector3(0f, 0f, 179.1464f), new Vector3(0.3603483f, 0.4349289f, 0.3603483f), "Shape3", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), true, 1, false);
         Global.RenderShapeVariable("Shape2", "Circle", new Vector3(-0.71f, 0.71f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2379704f, 0.2379704f, 0.2379704f), "Shape4", new Vector4(1f, 0.3026949f, 0f, 1f), false, 2, true);
         Global.RenderShapeVariable("Shape3", "Circle", new Vector3(0.86f, 0.71f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2471231f, 0.2471231f, 0.2471231f), "Shape4", new Vector4(1f, 0.6183392f, 0.1179245f, 1f), false, 3, true);
@@ -379,8 +368,6 @@ public class MouseHandler : MonoBehaviour
         Global.RenderShapeVariable("Shape6", "Circle", new Vector3(-0.241f, -0.18f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09979951f, 0.09979951f, 0.09979952f), "Shape5", new Vector4(0f, 0.4716981f, 0.02229664f, 1f), true, 6, true);
         Global.RenderShapeVariable("Shape7", "Circle", new Vector3(0.448f, -0.198f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09902804f, 0.09902804f, 0.09902804f), "Shape5", new Vector4(0f, 0.7735849f, 0.03656648f, 1f), true, 7, true);
         Global.RenderShapeVariable("Shape8", "Square", new Vector3(0.9f, -2.28f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.208962f, 0.08692878f, 1f), "Shape3", new Vector4(1f, 0.6183392f, 0.1179245f, 1f), true, 8, false);
-
-
 
         //spawn target image
         Global.RenderPuzzleImage("MS9");  //has the touchrotate script attached --> run after all shapes are loaded
@@ -413,7 +400,6 @@ public class MouseHandler : MonoBehaviour
         Global.RenderShapeVariable("Shape5", "Circle", new Vector3(-0.43f, -2.18f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1562387f, 0.1562387f, 0.1562387f), "Shape4", new Vector4(1f, 0.7064719f, 0f, 1f), true, 5, true);
         Global.RenderShapeVariable("Shape6", "Circle", new Vector3(-0.92f, -1.65f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09426609f, 0.09426609f, 0.0942661f), "Shape5", new Vector4(0.0201524f, 0f, 0.754717f, 1f), true, 6, true);
         Global.RenderShapeVariable("Shape7", "Circle", new Vector3(-0.4f, -2.18f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.09814046f, 0.09814046f, 0.09814046f), "Shape5", new Vector4(0f, 0.5116174f, 0.7169812f, 1f), true, 7, true);
-
 
         //spawn target image
         Global.RenderPuzzleImage("MS10");  //has the touchrotate script attached --> run after all shapes are loaded
@@ -489,7 +475,6 @@ public class MouseHandler : MonoBehaviour
         Global.RenderShapeVariable("Shape11", "Square", new Vector3(1.47f, -0.264f, 0f), new Vector3(0f, 0f, 43.73672f), new Vector3(0.2899614f, 0.06707884f, 1f), "Shape3", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 11, false);
         Global.RenderShapeVariable("Shape12", "TriangleR", new Vector3(-1.693f, -1.458f, -0.004f), new Vector3(357.9538f, 9.454397f, 92.49583f), new Vector3(-0.08116494f, 0.2991237f, 1f), "Shape3", new Vector4(1f, 0.3766058f, 0f, 1f), true, 12, false);
 
-
         //spawn target image
         Global.RenderPuzzleImage("MS12");  //has the touchrotate script attached --> run after all shapes are loaded
     }
@@ -526,7 +511,6 @@ public class MouseHandler : MonoBehaviour
         Global.RenderShapeVariable("Shape10", "Square", new Vector3(-1.512f, -0.203f, 0f), new Vector3(359.8121f, 359.8167f, 330.4486f), new Vector3(0.2858144f, 0.06361307f, 1f), "Shape3", new Vector4(1f, 0.3766058f, 0f, 1f), false, 10, false);
         Global.RenderShapeVariable("Shape11", "Square", new Vector3(1.308f, -0.823f, 0f), new Vector3(0f, 0f, 13.58755f), new Vector3(0.2899614f, 0.06707884f, 1f), "Shape3", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), false, 11, false);
         Global.RenderShapeVariable("Shape12", "Semicircle", new Vector3(1.645f, -1.528f, -0.569f), new Vector3(0f, 0f, 203.4635f), new Vector3(-0.2493712f, 0.2019982f, 1f), "Shape1", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), true, 12, false);
-
 
         //spawn target image
         Global.RenderPuzzleImage("MS13");  //has the touchrotate script attached --> run after all shapes are loaded
@@ -588,7 +572,6 @@ public class MouseHandler : MonoBehaviour
         Global.RenderShapeVariable("Shape5", "Circle", new Vector3(-1.042f, -0.598f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.2328496f, 0.2328496f, 0.2328496f), "Shape2", new Vector4(1f, 0.7064719f, 0f, 1f), false, 5, true);
         Global.RenderShapeVariable("Shape6", "Circle", new Vector3(-0.8f, -1.6f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1196847f, 0.1196847f, 0.1196847f), "Shape4", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), true, 6, true);
         Global.RenderShapeVariable("Shape7", "Circle", new Vector3(-1.99f, -0.484f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.1201737f, 0.1201737f, 0.1201737f), "Shape5", new Vector4(0.7818722f, 0.8018868f, 0f, 1f), true, 7, true);
-
 
         //spawn target image
         Global.RenderPuzzleImage("MS15");  //has the touchrotate script attached --> run after all shapes are loaded

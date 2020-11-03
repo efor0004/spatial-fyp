@@ -7,7 +7,7 @@ using System.Linq;
 
 public class TouchRotate : MonoBehaviour
 {
-    // controls the shape 2-finger rotation and placement
+    // controls the shape 2-finger rotation and placement in puzzle worlds
 
     //values updated at puzzle instantiation (max 15 shapes in a puzzle)
     public static string[] nameArray = new string[] {"Shape0", "Shape1", "Shape2", "Shape3", "Shape4", "Shape5", "Shape6", "Shape7", "Shape8", "Shape9", "Shape10", "Shape11", "Shape12", "Shape13", "Shape14"};  //the array of shape names
@@ -24,7 +24,6 @@ public class TouchRotate : MonoBehaviour
     Vector3 wp;
     Vector2 touchPos;
 
-
     void Start()
     {
     
@@ -34,8 +33,8 @@ public class TouchRotate : MonoBehaviour
 
     void Update()
     {
-        //WORKING CODE FOR ARROW DIRECTIONAL LIMIT
-        if (Global.PieceActive == true)
+        
+        if (Global.PieceActive == true)                                                          //determines whether toolbar arrows are active or not
         {
                 GameObject.Find("LeftArrow").GetComponent<Button>().interactable = false;
                 GameObject.Find("RightArrow").GetComponent<Button>().interactable = false;
@@ -61,7 +60,6 @@ public class TouchRotate : MonoBehaviour
             }
 
         }
-
 
 
         //adapted code from http://wiki.unity3d.com/index.php/DetectTouchMovement
@@ -97,8 +95,6 @@ public class TouchRotate : MonoBehaviour
                                         desiredRotation *= Quaternion.Euler(rotationDeg);                                                    //update the desiredRotation to include this change in angle
 
                                         go.gameObject.transform.rotation = desiredRotation;                                                  //upate the shape rotated orientation
-
-                                       // Debug.Log("current rotation: " + go.transform.rotation.eulerAngles.z);  //////////////
                                     }
                                 }
                                 if (Input.touchCount == 1)
@@ -111,8 +107,6 @@ public class TouchRotate : MonoBehaviour
                                 }
 
                             }
-
-
 
                         }
 
@@ -145,9 +139,9 @@ public class TouchRotate : MonoBehaviour
                             && (TargetPosition.y - Global.positionTolerance) < go.transform.position.y && go.transform.position.y < (TargetPosition.y + Global.positionTolerance)
                             && ((TargetRotation.z - Global.rotationTolerance) < go.transform.rotation.eulerAngles.z && go.transform.rotation.eulerAngles.z < (TargetRotation.z + Global.rotationTolerance) ||
                              ((go.GetComponent<SpriteRenderer>().sprite.name == "Square" || go.GetComponent<SpriteRenderer>().sprite.name == "Parallelogram") && (TargetRotationOp - Global.rotationTolerance) < go.transform.rotation.eulerAngles.z && go.transform.rotation.eulerAngles.z < (TargetRotationOp + Global.rotationTolerance))
-                            ))                                                                                     //in the correct position, leave where it is
+                            ))                                                                                    //in the correct position, leave where it is
                       
-                        {                                                                                                                                //if shape is placed within tolerances 
+                        {                                                                                         //if shape is placed within tolerances 
                             Global.PieceActive = false;
 
                             activeArray[System.Array.IndexOf(nameArray, go.name)] = false;
@@ -212,7 +206,6 @@ public class TouchRotate : MonoBehaviour
         //makes object flash colours for a certain time
         //triggered by correctly placing a piece
         //adapted from https://answers.unity.com/questions/1367570/how-to-make-enemies-flash-on-hit.html
-
 
         float flashingFor = 0;
         Color newColor = flashColor;

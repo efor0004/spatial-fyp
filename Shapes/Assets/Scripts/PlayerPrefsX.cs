@@ -5,6 +5,7 @@ using UnityEngine;
 
 	public class PlayerPrefsX
 	{
+
 	//makes an equivalent PlayerPref save function for booleans
 	// from: http://wiki.unity3d.com/index.php/BoolPrefs
 	public static void SetBool(string name, bool booleanValue)

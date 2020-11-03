@@ -7,13 +7,13 @@ using UnityEngine.SceneManagement;
 public class MovieMaker : MonoBehaviour
 {
     //the script that controls all of the puzzles in the Mouse Shapes scene
+    //renders all of the puzzle characters and instantiates buttons
+    //is triggered when movie maker scene loads
 
     void Start()
     {
         Global.LeftArrowActiveMovie = true;                                              //instantiate buttons
         Global.RightArrowActiveMovie = true;
-        // GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;
-        // GameObject.Find("StopRecordButton").GetComponent<Button>().interactable = false;
 
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;
         GameObject.Find("StopRecordButton").GetComponent<Button>().interactable = false;
@@ -25,7 +25,6 @@ public class MovieMaker : MonoBehaviour
 
 
     }
-
 
     void PuzzleCharacters()
     {
@@ -106,8 +105,5 @@ public class MovieMaker : MonoBehaviour
         Global.RenderMovieVariable("MS13", new Vector3(0.5f, 0.5f, 1.0f), "Shape2", 62);
         Global.RenderMovieVariable("MS14", new Vector3(0.5f, 0.5f, 1.0f), "Shape2", 63);
         Global.RenderMovieVariable("MS15", new Vector3(0.5f, 0.5f, 1.0f), "Shape2", 64);
-
     }
-
-
 }

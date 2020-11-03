@@ -8,13 +8,11 @@ using System.Linq;
 
 public class UIManager : MonoBehaviour
 {
-    //handles screen capture
-    //https://www.youtube.com/watch?v=j3zGzbe9V1o
-    // api 21-26 inclusive 
-
+    //handles the prep work before and after screen capture
+    //screen capture adapted from https://www.youtube.com/watch?v=j3zGzbe9V1o
+    //api 21-26 inclusive 
 
     public RecordManager recordManager;
-
     void Start()
     {
         
@@ -24,20 +22,20 @@ public class UIManager : MonoBehaviour
     {
 
         if (Global.SoundEffects == true)
-            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound              //not working?
+            FindObjectOfType<AudioManager>().Play("Button"); 
 
-        GameObject.Find("Canvas").GetComponent<Canvas>().enabled = false; //disable UI during record
+        GameObject.Find("Canvas").GetComponent<Canvas>().enabled = false;                             //disable UI during record
 
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = false;
         GameObject.Find("StopRecordButton").GetComponent<Button>().interactable = true;
 
-        foreach (string name in MovieRotate.movieArray)  //disable toolbar shapes
+        foreach (string name in MovieRotate.movieArray)                                                  //disable toolbar shapes
         {
             GameObject go = GameObject.Find(name);
 
             if (go)
             {
-                if (MovieRotate.playArray[System.Array.IndexOf(MovieRotate.movieArray, go.name)] == false) //if "not in play"
+                if (MovieRotate.playArray[System.Array.IndexOf(MovieRotate.movieArray, go.name)] == false) //if "not in play" (in toolbar)
                 {
                     go.GetComponent<CircleCollider2D>().enabled = false;
                     go.GetComponent<SpriteRenderer>().enabled = false;
@@ -46,24 +44,24 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        Global.Recording = true; //flag to stop shapes returning to invisiable toolbar during recording
+        Global.Recording = true;                                                                       //flag to stop shapes returning to invisiable toolbar during recording
 
-        recordManager.StartRecord();
+        recordManager.StartRecord();                                                                  //starts recording (code from plug-in)
     }
 
     public void StopVid()
     {
-        recordManager.StopRecord();
+        recordManager.StopRecord();                                                                 //stops recording (code from plug-in)
 
         Global.Recording = false; 
 
         if (Global.SoundEffects == true)
-            FindObjectOfType<AudioManager>().Play("Button"); //plays button sound        //not working?
+            FindObjectOfType<AudioManager>().Play("Button");  
 
         GameObject.Find("StartRecordButton").GetComponent<Button>().interactable = true;
         GameObject.Find("StopRecordButton").GetComponent<Button>().interactable = false;
 
-        foreach (string name in MovieRotate.movieArray)  //enable toolbar shapes again
+        foreach (string name in MovieRotate.movieArray)                                             //enable toolbar shapes again
         {
             GameObject go = GameObject.Find(name);
 
@@ -74,7 +72,7 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        GameObject.Find("Canvas").GetComponent<Canvas>().enabled = true; //re-enable UI after record
+        GameObject.Find("Canvas").GetComponent<Canvas>().enabled = true;                           //re-enable UI after record
   
        
     }

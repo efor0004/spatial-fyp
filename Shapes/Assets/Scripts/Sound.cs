@@ -5,6 +5,7 @@ using UnityEngine.Audio;
 public class Sound
 {
     // lists sounds
+    // enter values in user interface of Unity 
     // adapted from https://www.youtube.com/watch?v=6OT43pvUyfY
 
     public string name; 
@@ -20,6 +21,4 @@ public class Sound
 
     [HideInInspector]
     public AudioSource source; 
-
-
 }

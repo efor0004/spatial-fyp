@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 // Protection level: dangerous permissions 2015/11/25
 // http://developer.android.com/intl/ja/reference/android/Manifest.permission.html
+// A part of the plug-in to allow recording audio/screen capture in moviemaker
+// https://www.youtube.com/watch?v=j3zGzbe9V1o
 public enum AndroidPermission
 {
     ACCESS_COARSE_LOCATION,

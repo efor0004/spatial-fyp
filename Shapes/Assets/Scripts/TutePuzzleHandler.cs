@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class TutePuzzleHandler : MonoBehaviour
 {
-    //handles the tutorial for standard puzzles
-    //https://www.youtube.com/watch?v=a1RFxtuTVsk
+    //handles the tutorial for puzle worlds
+    //triggered when puzzle tutorial is loaded
+    //array of popups adapted from: https://www.youtube.com/watch?v=a1RFxtuTVsk
 
     public GameObject[] popUps;
     public static int popUpIndex = 0;
@@ -50,12 +51,7 @@ public class TutePuzzleHandler : MonoBehaviour
 
         }
 
-        //TuteLoadManager();
-
-        //Debug.Log("Divider y position; " + Camera.main.ScreenToWorldPoint(GameObject.Find("Divider").transform.position).y); 
-
     }
-
 
     void Update()
     {
@@ -72,8 +68,8 @@ public class TutePuzzleHandler : MonoBehaviour
             }
         }
 
-        //touchrotate script here
-        if ((Input.touchCount > 0) && (translateFlag == true))                                                                                                         //at least one touch detected                                                                    
+        //adapted touchrotate script here (actions are stopped by flags depending on tutorial progress)
+        if ((Input.touchCount > 0) && (translateFlag == true))                                                                             //at least one touch detected                                                                    
         {
   
 
@@ -87,7 +83,7 @@ public class TutePuzzleHandler : MonoBehaviour
                     myCollider = go.gameObject.GetComponent<CircleCollider2D>();
    
                 
-                if (myCollider)                                                                                                     //collider will not exist for the anchor shape0
+                if (myCollider)                                                                                                         //collider will not exist for the anchor shape0
                     {
                         if (myCollider == Physics2D.OverlapPoint(touchPos))                                                             //if the touch position overlaps with the 2D collider of the shape
                         {
@@ -103,7 +99,7 @@ public class TutePuzzleHandler : MonoBehaviour
                                                                             0.0f);
                                 if (popUpIndex == 6)
                                 {
-                                    popUpIndex = 7; //////////////
+                                    popUpIndex = 7;
                                     TuteLoadManager();
                                 }
                             }
@@ -126,15 +122,14 @@ public class TutePuzzleHandler : MonoBehaviour
 
                                 if (popUpIndex == 7)
                                 {
-                                    popUpIndex = 8; //////////////
+                                    popUpIndex = 8; 
                                     TuteLoadManager();
                                  
                                 }
                                 }
                             }
                                                                                                                           //https://answers.unity.com/questions/369230/how-to-detect-double-tap-in-android.html?childToView=1695525#answer-1695525
-     
-                                 
+                              
                         }
                     }
                 }
@@ -156,7 +151,7 @@ public class TutePuzzleHandler : MonoBehaviour
 
                     if (popUpIndex == 8)
                     {
-                        popUpIndex = 9; //////////////
+                        popUpIndex = 9; 
                         TuteLoadManager();
                     }
                 }
@@ -171,7 +166,7 @@ public class TutePuzzleHandler : MonoBehaviour
 
                     if (popUpIndex == 9)
                     {
-                        popUpIndex = 10; //////////////
+                        popUpIndex = 10; 
                         TuteLoadManager();
                     }
                 }
@@ -186,13 +181,14 @@ public class TutePuzzleHandler : MonoBehaviour
 
     public static void TuteLoadTriangle()
     {
+        //loads moveable triangle for activity in puzzle tutorial
+        //triggered when appropriate popup is loaded
+
         GameObject objToSpawn2 = new GameObject("RedTriangle");                                                      //assign name
         objToSpawn2.AddComponent<SpriteRenderer>();                                                                  //add a sprite renderer
-        objToSpawn2.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("TriangleI");                     //assign sprite from resources folder
-        //objToSpawn2.transform.position = new Vector3(-0.0159f, 0.61f, 0f);                                           //set position vector
+        objToSpawn2.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("TriangleI");                     //assign sprite from resources folderr
         
         float SpawnY = Camera.main.ScreenToWorldPoint(GameObject.Find("LeftArrow").transform.position).y;
-        //objToSpawn2.transform.position = new Vector3(-0.0159f, Global.toolbarY, 0f);
         objToSpawn2.transform.position = new Vector3(-0.0159f, SpawnY, 0f);
         
         objToSpawn2.transform.localScale = new Vector3(0.487235f, 0.285789f, 0.439f);                                //set scale vector
@@ -204,6 +200,9 @@ public class TutePuzzleHandler : MonoBehaviour
 
    public static  void TuteLoadSquare()
     {
+        //loads static square for activity in puzzle tutorial
+        //triggered when appropriate popup is loaded
+
         GameObject objToSpawn = new GameObject("RedSquare");                                                          //assign name
         objToSpawn.AddComponent<SpriteRenderer>();                                                                    //add a sprite renderer
         objToSpawn.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Square");                          //assign sprite from resources folder
@@ -215,6 +214,9 @@ public class TutePuzzleHandler : MonoBehaviour
 
  public static void TuteLoadHouse()
     {
+        //loads target image of house for activity in puzzle tutorial
+        //triggered when appropriate popup is loaded
+
         GameObject objToSpawn3 = new GameObject("House");                                                            //assign name
         objToSpawn3.AddComponent<SpriteRenderer>();                                                                  //add a sprite renderer
         objToSpawn3.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("MS1");                           //assign sprite from resources folder
@@ -225,15 +227,15 @@ public class TutePuzzleHandler : MonoBehaviour
     }
 
     public static void TuteLoadManager()
-
-    // FindObjectOfType<AudioManager>().Play("Button"); //plays button sound
     {
+        //handles the switching of popups as the tutorial progresses
+        //triggered when the OK button is pressed or the correct action is performed in the tutorial
 
         switch (popUpIndex)
         {
             case 0:
                 {
-                   // FindObjectOfType<AudioManager>().Play("p0");
+                    // FindObjectOfType<AudioManager>().Play("p0");  //(errors when voice over starts upon loading instead of waiting for a button press)
                 }
                 break;
             case 1:
@@ -310,31 +312,6 @@ public class TutePuzzleHandler : MonoBehaviour
                 }
                 break;
         }
-
-
-        //if (popUpIndex == 5)
-        //{
-        //    TuteLoadHouse();
-        //}
-        //else if (popUpIndex == 6)
-        //{
-        //    TuteLoadTriangle();
-        //    TutePuzzleHandler.translateFlag = true; //enable translation
-
-        //}
-        //else if (popUpIndex == 7)
-        //{
-        //    TutePuzzleHandler.rotateFlag = true; //enable rotation
-        //}
-        //else if (popUpIndex == 8)
-        //{
-        //    TutePuzzleHandler.toolbarFlag = true; //enable toolbar return
-        //}
-        //else if (popUpIndex == 9)
-        //{
-        //    TuteLoadSquare();
-        //    TutePuzzleHandler.completeFlag = true; //enable correct placement
-        //}
 
     }
 }

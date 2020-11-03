@@ -6,24 +6,23 @@ using System;
 // background music: https://freesound.org/people/FoolBoyMedia/sounds/264295/
 // tap: https://freesound.org/people/kwahmah_02/sounds/256116/
 // successul placement: https://freesound.org/people/shinephoenixstormcrow/sounds/337049/
-// end of puzzle: https://freesound.org/people/LittleRobotSoundFactory/sounds/270404/
+// puzzle complete: https://freesound.org/people/LittleRobotSoundFactory/sounds/270404/
 
 public class AudioManager : MonoBehaviour
 {
-    // manages sounds
+    // manages background music and sound effects
     // adapted from https://www.youtube.com/watch?v=6OT43pvUyfY
 
     public Sound[] sounds;
 
-    public static AudioManager instance; //static reference to current instance of audiomanager
+    public static AudioManager instance; // static reference to current instance of audiomanager
 
     void Awake()
     {
-        //called before start
 
-        if (instance == null)
+        if (instance == null) // prevents multiplie instances from existing
         {
-            instance = this;
+            instance = this;  
         }
         else
         {
@@ -34,7 +33,7 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject); 
 
 
-        foreach (Sound s in sounds)
+        foreach (Sound s in sounds)  //creates AudioSources from array
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -55,7 +54,7 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);   //finding sound in sound array by name
+        Sound s = Array.Find(sounds, sound => sound.name == name);   //finds sound in sound array by name
         if (s == null)
         {
             Debug.LogWarning("Sound: " + name + " not found!"); 
@@ -66,7 +65,7 @@ public class AudioManager : MonoBehaviour
 
     public void Stop(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);   //finding sound in sound array by name
+        Sound s = Array.Find(sounds, sound => sound.name == name);   //finds sound in sound array by name
         if (s == null)
         {
             Debug.LogWarning("Sound: " + name + " not found!");

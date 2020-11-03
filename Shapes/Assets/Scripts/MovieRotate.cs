@@ -7,7 +7,9 @@ using System.Linq;
 
 public class MovieRotate : MonoBehaviour
 {
-    // controls translation and rotation for MovieMaker
+    // controls translation, rotation, pinch and double-tap in MovieMaker
+
+
     public static string[] movieArray = new string[] { "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10",
                                                        "F11", "F12", "F13", "F14", "F15", "F16", "F17", "F18", "F19", "F20",
                                                        "F21", "F22", "F23", "F24", "F25", "F26", "F27", "F28", "F29", "F30",
@@ -43,19 +45,17 @@ public class MovieRotate : MonoBehaviour
 
     float maxScale = 2;                           //maximum x/y scale up
     float minScale = 0.5f;                        //min x/y scale down
-    float scaleIncrement = 0.05f;                  //increment of scaling up/down each loop
-    float pinchThresh = 1f;                     //pinchAmount threshold before scaling begins
+    float scaleIncrement = 0.05f;                 //increment of scaling up/down each loop
+    float pinchThresh = 1f;                       //pinchAmount threshold before scaling begins
 
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-        if (Global.LeftArrowActiveMovie == true)   //controls left and right arrows (verify how two commands work)
+        if (Global.LeftArrowActiveMovie == true)                                           //updatesleft and right toolbat arrows
         {
             GameObject.Find("LeftArrowMovie").GetComponent<Button>().interactable = true;
         }
@@ -74,10 +74,9 @@ public class MovieRotate : MonoBehaviour
         }
 
 
-
-        if (Input.touchCount > 0)                                                                                                         //at least one touch detected                                                                    
+        if (Input.touchCount > 0)                                                                                                        //at least one touch detected                                                                    
         {
-            wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);                                                              //Vector3 of the touch location on the screen
+            wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);                                                             //Vector3 of the touch location on the screen
             touchPos = new Vector2(wp.x, wp.y);
 
             foreach (string name in movieArray)
@@ -103,11 +102,9 @@ public class MovieRotate : MonoBehaviour
                                 DetectTouchPinch.Calculate();
 
                                 if (Mathf.Abs(DetectTouchPinch.pinchDistanceDelta) > 0)
-                                { //PINCH
+                                {    //PINCH
                                     pinchAmount = DetectTouchPinch.pinchDistanceDelta;                              
                                     
-                                  //  Debug.Log("pinchAmount: " + pinchAmount);
-
                                     if (pinchAmount > pinchThresh)
                                     {
                                         //positive pinch scale up
@@ -126,25 +123,25 @@ public class MovieRotate : MonoBehaviour
                                     }
                                 }
                                                               
-                                if (Mathf.Abs(DetectTouchPinch.turnAngleDelta) > 0)                                                 //if the detected turn angle is large enough and the shape is not small/circular
-                                { //ROTATE 
+                                if (Mathf.Abs(DetectTouchPinch.turnAngleDelta) > 0)                                                    //if the detected turn angle is large enough and the shape is not small/circular
+                                {   //ROTATE 
                                     Vector3 rotationDeg = Vector3.zero;
                                     rotationDeg.z = DetectTouchPinch.turnAngleDelta;
-                                    desiredRotation *= Quaternion.Euler(rotationDeg);                                                    //update the desiredRotation to include this change in angle
+                                    desiredRotation *= Quaternion.Euler(rotationDeg);                                                  //update the desiredRotation to include this change in angle
 
-                                    go.gameObject.transform.rotation = desiredRotation;                                                  //upate the shape rotated orientation
+                                    go.gameObject.transform.rotation = desiredRotation;                                                //upate the shape rotated orientation
                                 }
                             }
                             foreach (UnityEngine.Touch touch in Input.touches)
-                            {                                                                                                                     //https://answers.unity.com/questions/369230/how-to-detect-double-tap-in-android.html?childToView=1695525#answer-1695525
-                                if (touch.tapCount >= 2) //flips on vertical axis if double tapped (finnicky)
-                                {
+                            {                                                                                                          //https://answers.unity.com/questions/369230/how-to-detect-double-tap-in-android.html?childToView=1695525#answer-1695525
+                                if (touch.tapCount >= 2)                                                                               //flips on vertical axis if double tapped (finnicky)
+                                {  //DOUBLE TAP
                                     Vector3 temp = go.gameObject.transform.localScale;
                                     temp.x *= -1;
                                     go.gameObject.transform.localScale = temp;
                                 }
                                 else if (Input.touchCount == 1)
-                                {                                                                                                             //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
+                                {   //TRANSLATE                                                                                          //updates shape translated position https://answers.unity.com/questions/991083/dragging-a-2d-sprite-with-touch.html 
                                     go.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
                                                                                Camera.main.ScreenToWorldPoint(Input.mousePosition).y,
                                                                                 0.0f);
@@ -166,7 +163,7 @@ public class MovieRotate : MonoBehaviour
                     if ((go.transform.position.y < Camera.main.ScreenToWorldPoint(GameObject.Find("Divider").transform.position).y) && (Global.Recording == false) )
                     {
                         //if released in the toolbar return to correct place, orientation and scale
-                        playArray[System.Array.IndexOf(movieArray, go.name)] = false;  //not in play
+                        playArray[System.Array.IndexOf(movieArray, go.name)] = false;                               //not in play
 
                         go.transform.position = selectionArray[System.Array.IndexOf(movieArray, go.name)];
                         go.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
@@ -176,9 +173,7 @@ public class MovieRotate : MonoBehaviour
                 }
             }
 
-
         }
-
 
     } //end update
 

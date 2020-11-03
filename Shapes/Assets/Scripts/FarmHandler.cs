@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
 public class FarmHandler : MonoBehaviour
 {
     //the script that controls all of the puzzles in the Farm scene
+    // runs when farm world scene is loaded
 
     delegate void PuzzleMethod();                                       //creates an empty method
     List<PuzzleMethod> Puzzle = new List<PuzzleMethod>();               //creates a list of empty methods
 
-   // int PuzzlesPerLevel = 5;
     Image Mask;
     Text LevelText;
     int TotalPuzzles = 50;
@@ -82,25 +82,24 @@ public class FarmHandler : MonoBehaviour
         Puzzle.Add(Puzzle49);
         Puzzle.Add(Puzzle50);
     }
-
     
     void Start()
     {
 
         Global.NextPuzzleReady = true;                                     //set as true every time the scene is opened
-        Mask = GameObject.Find("Mask").GetComponent<Image>();
+      
+        Mask = GameObject.Find("Mask").GetComponent<Image>();              //defines mask gameobject for progress bar to update
         LevelText = GameObject.Find("LevelText").GetComponent<Text>();
 
-        Global.LeftArrowActive = true; //reset arrow flags to true
+        Global.LeftArrowActive = true;                                     //reset arrow flags to true
         Global.RightArrowActive = true;
 
        CreateList();                                                    //initiate this list with function calls for all avilable puzzles in this world
-      // Puzzle13();                                                        //to load a specific puzzle comment out CreateList(); and uncomment PuzzleX();  
+      // Puzzle13();                                                    //to load a specific puzzle comment out CreateList(); and uncomment PuzzleX();  
 
 
-        if (Global.StartUpFarm)
-        {
-            //Save.LoadGame();             
+        if (Global.StartUpFarm)                                         //the first time the farm scene is loaded during a session
+        {      
             Global.StartUpFarm = false;
 
             if (Global.FarmPopup == true)
@@ -115,12 +114,12 @@ public class FarmHandler : MonoBehaviour
         if (Global.piecesPlaced == Global.puzzlePieces)                    //puzzle completion 
         {
             if (n + 1 == TotalPuzzles)
-            {                                                            //if this is the last puzzle in the world
+            {                                                              //if this is the last puzzle in the world
                 Global.WorldComplete();
             }
 
             else if (Global.FarmPuzzle == 5)
-            {                                                            //if this is the last puzzle in the level
+            {                                                              //if this is the last puzzle in the level
                 Global.LevelComplete();
             }
 
@@ -132,15 +131,15 @@ public class FarmHandler : MonoBehaviour
 
         if (Global.NextPuzzleReady == true)
         {
-            if (n + 1 == TotalPuzzles) //if there are no more games
+            if (n + 1 == TotalPuzzles)                                   //if there are no more games
             {
                 Global.FarmComplete = 1;
-                SceneManager.LoadScene("Worlds"); //go to main menu
+                SceneManager.LoadScene("Worlds");                        //load main menu
             }
             else
             {
-                n = (Global.FarmLevel - 1) * 5 + Global.FarmPuzzle;              //index of array = puzzle number -1
-                Puzzle[n]();                                                       //calls the puzzle by indexing the array of function calls
+                n = (Global.FarmLevel - 1) * 5 + Global.FarmPuzzle;     //index of array = puzzle number   ***IMPORTANT FOR UNDERSTANDING NEXT/PREVIOUS/RESTART***
+                Puzzle[n]();                                            //calls the puzzle by indexing the array of function calls
             }
         }
 
@@ -171,7 +170,6 @@ public class FarmHandler : MonoBehaviour
         //spawn movable shapes   
         Global.RenderShapeVariable("Shape1", "Circle", new Vector3(-0.62f, -0.7746f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.5103456f, 0.5074584f, 1.07212f), "Shape2", new Vector4(0.7735849f, 0.5361769f, 0f, 1f), false, 1, true);
         Global.RenderShapeVariable("Shape2", "Semicircle", new Vector3(1.208f, -0.774f, 0f), new Vector3(0f, 0f, 269.8332f), new Vector3(0.285349f, 0.1898621f, 1f), "Shape3", new Vector4(1f, 0.8103144f, 0.3537736f, 1f), true, 2, false);
-
 
         //spawn target image
         Global.RenderPuzzleImage("F1");
@@ -432,7 +430,6 @@ public class FarmHandler : MonoBehaviour
         Global.RenderShapeVariable("Shape2", "TriangleI", new Vector3(-0.73f, -1.74f, 0f), new Vector3(0f, 0f, 179.2627f), new Vector3(0.1038544f, 0.1471362f, 1f), "Shape5", new Vector4(0f, 0f, 0f, 1f), true, 2, false);
         Global.RenderShapeVariable("Shape3", "Circle", new Vector3(1.06f, -1.49f, 0f), new Vector3(0f, 0f, 0f), new Vector3(0.278747f, 0.278747f, 0.278747f), "Shape4", new Vector4(0.3490566f, 0.3490566f, 0.3490566f, 1f), false, 3, true);
         Global.RenderShapeVariable("Shape4", "Square", new Vector3(-0.48f, -0.75f, 0f), new Vector3(0f, 0f, 334.2581f), new Vector3(0.796f, -0.04065573f, 1f), "Shape5", new Vector4(0f, 0f, 0f, 1f), false, 4, false); //
-
 
         //spawn target image
         Global.RenderPuzzleImage("F10");

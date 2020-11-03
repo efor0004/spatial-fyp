@@ -11,14 +11,12 @@ public class TestBench : MonoBehaviour
     //the data is printed to the text file test.txt 
     //the data is printed to automatically create the funciton call that will render the shape  
  
-   
     void Start()
     {
-        WriteString();                                                                      // calls the method on start up 
-        
+        WriteString();                                                                      // calls the method on start up       
     }
 
-       // [MenuItem("Tools/Write file")]                                                     //update /*******************************************re-enter when running testbench**************************************************************/
+       // [MenuItem("Tools/Write file")]                                                     
     static void WriteString()                                                               //adapted from https://support.unity3d.com/hc/en-us/articles/115000341143-How-do-I-read-and-write-data-from-a-text-file-
     {
         string path = "Assets/TextFiles/test.txt";                                          //path to text file from current project directory
