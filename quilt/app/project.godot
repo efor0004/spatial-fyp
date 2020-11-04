@@ -1,0 +1,106 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "AnimatedSprite",
+"class": "AnimatedCharacter",
+"language": "GDScript",
+"path": "res://scripts/story/AnimatedCharacter.gd"
+}, {
+"base": "AudioStreamPlayer",
+"class": "AudioFeedbackPlayer",
+"language": "GDScript",
+"path": "res://scripts/game/AudioFeedbackPlayer.gd"
+}, {
+"base": "CustomModal",
+"class": "ConfirmModal",
+"language": "GDScript",
+"path": "res://scripts/modal/ConfirmModal.gd"
+}, {
+"base": "Node2D",
+"class": "CustomModal",
+"language": "GDScript",
+"path": "res://scripts/modal/CustomModal.gd"
+}, {
+"base": "Button",
+"class": "ExitButton",
+"language": "GDScript",
+"path": "res://scripts/Exit Button.gd"
+}, {
+"base": "Sprite",
+"class": "ForestBackground",
+"language": "GDScript",
+"path": "res://scripts/Background.gd"
+}, {
+"base": "Button",
+"class": "GenericButton",
+"language": "GDScript",
+"path": "res://scripts/GenericButton.gd"
+}, {
+"base": "Area2D",
+"class": "Option",
+"language": "GDScript",
+"path": "res://scripts/game/Option.gd"
+}, {
+"base": "CustomModal",
+"class": "PaginationModal",
+"language": "GDScript",
+"path": "res://scripts/modal/PaginationModal.gd"
+}, {
+"base": "Button",
+"class": "PlayButton",
+"language": "GDScript",
+"path": "res://scripts/main_menu/PlayButton.gd"
+}, {
+"base": "Area2D",
+"class": "SquareOption",
+"language": "GDScript",
+"path": "res://scripts/free_play/SquareOption.gd"
+} ]
+_global_script_class_icons={
+"AnimatedCharacter": "",
+"AudioFeedbackPlayer": "",
+"ConfirmModal": "",
+"CustomModal": "",
+"ExitButton": "",
+"ForestBackground": "",
+"GenericButton": "",
+"Option": "",
+"PaginationModal": "",
+"PlayButton": "",
+"SquareOption": ""
+}
+
+[application]
+
+config/name="Winter Quilt"
+run/main_scene="res://Main Menu.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+global="*res://scripts/utilities/global.gd"
+BackgroundMusic="*res://BackgroundMusic.tscn"
+
+[display]
+
+window/size/width=2048
+window/size/height=1536
+window/size/test_width=1048
+window/size/test_height=768
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+environment/default_clear_color=Color( 1, 1, 1, 1 )
+environment/default_environment="res://default_env.tres"

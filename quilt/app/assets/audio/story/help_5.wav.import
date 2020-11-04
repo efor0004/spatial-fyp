@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/help_5.wav-b183ad52c1ba3ca9dd57360f463b3d3b.sample"
+
+[deps]
+
+source_file="res://assets/audio/story/help_5.wav"
+dest_files=[ "res://.import/help_5.wav-b183ad52c1ba3ca9dd57360f463b3d3b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
