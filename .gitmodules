@@ -1,0 +1,3 @@
+[submodule "rosie"]
+	path = rosie
+	url = https://github.com/lhpei2/rosie-app.git
