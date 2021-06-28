@@ -988,8 +988,8 @@ export var questions_per_level = 10
 export(Array) var questions_available_per_level = [
 	30, # level 1
 	42, # level 2
-	39, # level 3
-	39, # level 4
+	40, # level 3
+	38, # level 4
 	46, # level 5
 	56, # level 6
 	31, # level 7
